@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html  lang="en">
+	<head>
+		<meta  content="text/html; charset=utf-8"  http-equiv="content-type">
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta  http-equiv="X-UA-Compatible"  content="IE=edge,chrome=1">
+		<title>Docker</title>
+		<meta  name="description"  content="">
+		<meta name="author" content="jacco" >
+		<link  rel="icon"  href="favicon.ico">
+		<link  rel="stylesheet"  type="text/css"  href="css/menu.css">
+		<link  rel="stylesheet"  type="text/css"  href="css/sober.css">
+		<link  rel="stylesheet"  type="text/css"  href="css/sober.css"  title="Default">
+		<link  rel="alternate stylesheet"  type="text/css"  href="css/pinned_menu.css"
+		title="pinned">
+		<link  rel="stylesheet"  type="text/css"  href="css/sober.css"  title="clean">
+		<link  rel="alternate stylesheet"  type="text/css"  href="css/nmap.css"  title="nmap">
+		<link  rel="alternate stylesheet"  type="text/css"  href="css/com_back.css"
+		title="grey">
+		<!--	<script src="scripts/nomouse.js"></script> -->
+		<script  type="text/javascript"  src="scripts/jquery-1.11.2.js"></script>
+		<script  type="text/javascript"  src="scripts/col-test.js"></script>
+		<script  src="scripts/swapstyle.js"></script>
+		<script  type="text/javascript">
+			if (self != top) {
+				document.write('<style type="text/css">\n#backlinks { display: none; }\n<\/style>');
+			}
+		</script>
+		<meta  name="viewport"  content="width=device-width; initial-scale=1.0">
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references
+		<link rel="shortcut icon" href="/favicon.ico">		<link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
+		<!--[if IE]><link rel="shortcut icon" href="path/to/favicon.ico"><![endif]-->
+		<!--
+		<link rel="icon" href="path/to/favicon.png">	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+		-->
+	</head>
+	<body>
+		<header>
+			<div>
+				<nav>
+					<ul>
+						<li><img  id="in_out"  onclick="changeStyle('pinned')"  src="images/Pin.png" height="30"  width="30">
+						</li>
+						<li>
+							<a  href="index.html">Home</a>
+							<ul>
+								<li>
+									<a  href="styles.html">Styles</a>
+									<ul>
+										<li>
+											<a  href="#"  onclick="changeStyle('grey');">cmd-line</a>
+										</li>
+										<li>
+											<a  href="#"  onclick="changeStyle('stars');">stars</a>
+										</li>
+										<!--
+										<li><a href="#" onClick="changeStyle('python');">python</a></li>
+										<li><a href="#" onClick="changeStyle('tcpdump');">tcpdump</a></li>
+										<li><a href="#" onClick="changeStyle('nmap');">nmap</a></li>
+										-->
+										<li>
+											<a  href="#"  onclick="changeStyle('Default');">Reset to default</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="index.html">Naslag_OS <span class="caret"></span></a>
+							<ul>
+								<li>
+									<a  href="linux_commands.html">Commands</a>
+								</li>
+								<li>
+									<a  href="tcpdump.html">Tcpdump</a>
+								</li>
+								<li>
+									<a  href="nmap.html">Nmap</a>
+								</li>
+								<li>
+									<a  href="vim.html">Vim</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a  href="index.html">Naslag<span  class="caret"></span></a>
+							<ul>
+								<li>
+									<a  href="cat_api.html">Elasticsearch</a>
+								</li>
+								<li>
+									<a  href="docker.html">Docker</a>
+								</li>
+								<li>
+									<a  href="Escape_code.html">Escape characters</a>
+								</li>
+								<li>
+									<a  href="git.html#table">Git</a>
+								</li>
+								<li>
+									<a  href="python.html">Python</a>
+									<ul>
+										<li>
+											<a  href="python_examples.html">Examples</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a  href="puppet.html">Puppet</a>
+									<ul>
+										<li>
+											<a  href="puppet_training.html">Puppet_Training</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a  href="url_naar.html">Off Site</a>
+							<ul>
+								<li>
+									<a  href="http://www.apache.org/"  target="_blank">apache</a>
+									<ul>
+										<li>
+											<a  href="http://httpd.apache.org/docs/2.0/misc/rewriteguide.html" target="_blank">rewrite</a>
+										</li>
+										<li>
+											<a  href="https://www.addedbytes.com/articles/for-beginners/url-rewriting-for-beginners/" target="_blank">rewrite_dummies </a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a  href="http://www.ibm.com">IBM</a>
+									<ul>
+										<li>
+											<a  href="http://www.ibm.com/developerworks"  target="_blank">developers</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a  href="http://nl.wikipedia.org/wiki/HyperText_Markup_Language">HTML</a>
+									<ul>
+										<li>
+											<a  href="http://www.w3.org/TR/html5/"  target="_blank">W3C</a>
+										</li>
+										<li>
+											<a  href="http://www.w3schools.com/html/html5_intro.asp" target="_blank">W3C_School</a>
+										</li>
+										<li>
+											<a  href="http://validator.w3.org/"  target="_blank">Validator</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a  href="http://nl.wikipedia.org/wiki/CSS">CSS</a>
+									<ul>
+										<li>
+											<a  href="http://www.w3.org/standards/techs/css"  target="_blank">Current_Status</a>
+										</li>
+										<li>
+											<a  href="http://www.w3schools.com/css/css3_intro.asp"  target="_blank">W3C_School</a>
+										</li>
+										<li>
+											<a  href="https://jigsaw.w3.org/css-validator/"  target="_blank">Validator</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a  href="about.html">About</a>
+						</li>
+						<li>
+							<a  href="help.html">Help</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<br>
+			<br>
+		</header>
+
+		<div  style="background-color: rgb(255, 255, 255);"  class="container"  id="container">
+			<!--
+			Kijken naar docker data center => om lokaal een regisgtry te draaien
+			Een container is een in pricipe een vorm van proces isolatie.
+			-->
+			
+			<h2>Install debian</h2>
+			<p>
+				install latest version on debian <br>
+				https://docs.docker.com/engine/installation/linux/ubuntulinux/
+			</p>
+			<h2>Windows</h2>
+			<p>
+				Boot2Docker
+				<br/>
+				https://github.com/boot2docker/windows-installer/releases
+				<br/>
+				https://github.com/boot2docker/osx-installer/releases
+				<br/>
+				Docker daemon draait niet op windows en osx, mbv boot2docker, die een vm installeert op virtualbox, wordt docker op je machine geinstalleerd.
+				<br/>
+				Voor windows bestaat er ook een optie om msysgit te installeren, dit is een alternatief voor de wndows cmd terminal.
+			</p>
+			<br/>
+			<p>
+				Om docker commando's te kunnen uitvoeren zonder het sudo commando, moet uw gebruiker worden toegevoegd aan de docker group:
+				<ul  class="command">
+					<li>sudo usermod -aG docker</li>
+				</ul>
+			</p>
+			<p>
+				hierdoor wordt het voltooien van docker commando's met de tab toets ook mogelijk.
+				<br/>
+				Op sommige distributies bestaat de docker groep niet, maak hem in dat geval aan met
+				<ul class="command">
+					sudo groupadd docker
+				</ul>
+				Realiseer je dat gebruikers in de docker groep in principe root toegang hebben.
+			</p>
+			<p>
+				uitloggen en opnieuw inloggen voor het resultaat
+
+				images are specified by repository:tag
+				<ul  class="command">
+					docker pull ubuntu:12.04
+				</ul>
+
+				<ul  class="command">
+					docker run [options] [image] [command] [args]
+				</ul>
+				image wordt aangeroepen met repository:tag,
+				<ul  class="command">
+					docker run ubuntu:14.04 echo "Hello World"
+				</ul>
+				<ul  class="command">
+					docker run ubuntu ps ax
+				</ul>
+				<ul  class="command">
+					docker version
+				</ul>
+			</p>
+			<p>
+				<h2>Find your container</h2>
+				<span  class="command">docker ps </span>to list running containers <span  class="command">-a </span>flag to list all containers
+			</p>
+			<p>
+				<h2>Container with Terminal</h2>
+				Gebruik de -i en -t flag met docker
+				<br>
+				-i flag verteld docker te verbinden met STDIN van de container,
+				<br>
+				-t flag specificeerd de pseudo-terminal
+				<br>
+				Je dient het terminal proces als commamndo mee te geven (bash)
+
+				<ul  class="command">
+					docker run -it ubuntu:latest bash
+				</ul>
+			</p>
+			<p>
+				<h2>Exit the Terminal</h2>
+				<span  class="command">Exit</span> om de terminal af te sluiten en terug te keren naar de host terminal, dit sluit de container
+				<br>
+				Om uit de terminal te stappen zonder de container te sluiten
+				<ul  class="command">
+					CTRL + P + Q
+				</ul>
+
+				<span  class="command">Docker ps command</span>
+				<br>
+				<br>
+				<span  class="command">docker ps -q </span> #om alleen het container ID te laten zien
+				<br>
+				<br>
+				<span  class="command">docker ps -l </span> #om de laatste container die is gestart te laten zien
+				<br>
+				<br>
+				<span  class="command">docker ps -aq </span> #all containers with only their short ID
+				<br>
+				<br>
+				<span  class="command">docker ps -lq </span> #list the short ID van de laatst gestarte container
+				<br>
+				<br>
+				<span  class="command">docker ps -a --filter "exited-1"</span> #past een filter toe op exit code 1 (exit with error), momenteel kan er worden gefiltert op exit-code en status ( restarting, running, exited and paused)
+				<br>
+				<br>
+				<br>
+				Running in detached mode, wordt ook wel op de achtergrond genoemd of als een daemon
+				-d flag,
+				om de output te bekijken gebruik je:
+				<ul  class="command">
+					docker logs [container id]
+				</ul>
+
+				maak een centos container en voor het ping commando 50 keer uit
+				<ul  class="command">
+					docker run -d centos:7 ping 127.0.0.0 -c 50
+				</ul>
+
+				<ul  class="command">
+					docker run -d -P nginx
+				</ul>
+				Met de -P flag wordt de container port gemapped met de host port
+			</p>
+			<p>
+				<h2>attach en detach</h2>
+				hier loop je het risico de container af te sluiten door per ongeluk op crtl C te drukken
+				vb,
+				<ul  class="command">
+					docker run -d ubuntu ping 127.0.0.1 -c 50
+				</ul>
+				<ul  class="command">
+					docker attach [container id]
+				</ul>
+				of naam, verlaat de container met Crtl + P + Q
+			</p>
+			<p>
+				<h2>docker exec </h2>commando wordt gebrukt om extra processen in de container te starten
+				<ul  class="command">
+					docker exec -i -t [container id] bash
+				</ul>
+				als men deze terminal (bash) afsluit blijft de container draaien.
+			</p>
+			<p>
+				<h2>docker logs bekijken</h2>
+				<ul  class="command">
+					docker logs container name
+				</ul>
+				-f optie als tail -f
+				<ul  class="command">
+					docker logs --tail 5 -f containerid
+				</ul>
+				<ul  class="command">
+					CRTL + C
+				</ul>
+				to exit
+			</p>
+			<p>
+				<h2>Stopping a container</h2>
+				<ul  class="command">
+					docker stop
+				</ul>
+				, sends a SIGTERM to the main container proces, proces then receives a SIGKILL after a grace period, -t flag grace period can be specified
+				<ul  class="command">
+					docker kill
+				</ul>
+				, sends SIGKILL immediately to mail container proces
+			</p>
+			<p>
+				<h2>Restart a container</h2>
+				docker start to restart a container that has been stopped, the container will start using the same options and command specified previously.
+				Can attach to the container with the -a flag
+			</p>
+			<p>
+				<h2>Formatting docker inspect output</h2>
+				<ul  class="command">
+					docker inspect --format=`{{.
+					<field1>
+						.
+						<field2>
+							}}' <container id>
+				</ul>
+				<ul  class="command">
+					docker inspect --format=`{{.Config.Cmd}}' <container id>
+				</ul>
+			</p>
+			<p>
+				Deleting containers
+				<ul  class="command">
+					docker rm <containerid>
+				</ul>
+
+				Delete all containers that are stopped
+				Use dockers ps -aq to list id's of all containers, feed the output to docker rm
+				<ul  class="command">
+					docker rm $(docker ps -aq)
+				</ul>
+			</p>
+			<p>
+				List all stopped containers
+				<ul  class="command">
+					docker ps --filter=`status=exited`
+				</ul>
+
+				delete the latest container that was run
+				<ul  class="command">
+					docker rm $(docker ps -ql)
+				</ul>
+			</p>
+			<p>
+				Comparing containes with docker diff
+				<ul  class="command">
+					docker diff mad_wilson
+				</ul>
+			</p>
+			<p>
+				<h2>Methoden om images te bouwen</h2>
+				1. commit changes from a container as a new image
+				allows you to build images interactively
+				get terminal access inside a container and instal the necessary pograms and your application
+				then save the container as a new image using the docker commit command
+				<ul  class="command">
+					docker commit [options] [container id] [repository:tag]
+				</ul>
+				<ul  class="command">
+					docker commit 984n5843j594857398c jaccokip/myapplication:1.0
+				</ul>
+
+				<h2>2. build from Dockerfile</h2>
+				create a Dockerfile in een nieuwe map of in een bestaande applicatie map
+				Schrijf de instructies om het image te bouwen (what program to install, what base image to use, what command to run)
+				Build examples
+				#comment in een build file
+				FROM ubuntu:14.04 of FROM johnytu/myapplicaiton:1.0 of FROM company.registry:5000/myapplication:1.0
+				RUN apt-get install vim
+				RUN apt-get install curl
+				draai docker build commando of het image te bouwen van het Dockerfilesd
+				<ul  class="command">
+					docker build -t johnytu/myimage:1.0 .
+				</ul>
+				# Build an image use the current folder as context path.
+				<ul  class="command">
+					docker build -t johnytu/myimage:1.0 myproject
+				</ul> # as above but use the project folder as context path
+
+				<h>
+					3. Import a tarbal into Docker as a standalone base layer
+				</h>
+			</p>
+			<p>
+				Docker uses exact strins in your Dockerfile to compare with the cache, simply changing the order of instructions will invalidate the cache. To disable the cache manually use:
+				--no-cache flag
+				<ul  class="command">
+					docker build --no-cache myimage
+				</ul>
+
+				<h2> Run instruction aggregation</h2>h
+				Can aggregate multiple RUN instructions by using &&
+				Commands will all be run in the same container and committed as a new image at the end
+				Reduces the number of image layers that are produced.
+			</p>
+			<p>
+				<h2>Docker history</h2> command shows us the layers that make up an image
+			</p>
+			<p>
+				<h2>CMD instruction</h2>
+				CMD defines a default command to execute when a container is created
+				Shell format and EXEC format
+				Can only be specified once in a Dockerfile, if specified multiple times the last CMD instruction is executed
+				<ul  class="command">
+					Can be overridden at run time
+					Shell format
+					CMD ping 127.0.0.1 -c 30
+					Exec format
+					CMD ["ping", "127.0.0.1", "-c", "30"]
+				</ul>
+
+				<h2>ENTRYPOINT instruction</h2>
+				Defines the command that wil be run when a container is excuted
+				Run time arguments and CMD instructions are passed as parameters to the ENTRYPOINT instruction
+				Container essentially runs as an executable
+				<ul  class="command">
+					ENTRYPOINT ["ping"]
+				</ul>
+
+				shell vs exec format
+				In shell form, the command will run inside a shell with /bin/sh -c
+				<ul  class="command">
+					RUN apt-get update
+				</ul>
+
+				Exec format allows execution of command in images that don't have /bin/sh
+				<ul  class="command">
+					RUN ["apt-get", "update"]
+				</ul>
+
+				Shell form is easier to write and you can perform shell parsing of variables
+				<ul  class="command">
+					CMD sudo -u $(USER) java ... .
+				</ul>
+
+				Exec form does not require image to have a shell
+				For ENTRYPOINT instructions, using shell form will prevent the ability to specify arguments at run time
+				- The CMD argument will not be used as parameters for ENTRYPOINT
+
+				Overriding ENTRYPOINT
+				To override teh command specified by ENTRYPOINT, use the --entrypoint flag, Useful for troubleshooting your images
+				<ul  class="command">
+					docker run -it --entrypoint bash myimage
+				</ul>
+			</p>
+			<p>
+				<h2>COPY instruction</h2>h
+				The copy instruction copies new files or directories from a specified source and adds them to the container filesystem at a specified place.
+				<ul  class="command">
+					COPY
+					<SRC>
+						<dest>
+				</ul>
+				The
+			<p>
+				path must be inside the build context, if the <> path is a directory, all files in de directory are copied, the directory itself is not copied. You can specify multiple
+				<ul>
+					directories
+					<ul  class="command">
+						COPY server.conf /
+					</ul># copy the server.conf file in the build content into the root folder of the container.
+
+					<h2>Specify a working directory</h2>
+					<ul  class="command">
+						WORKDIR
+					</ul>
+					instructions allow us to set the working directory for any subsequent RUN, CMD, ENTRYPOINT and COPY instructions to be executed.
+					<ul  class="command">
+						WORKDIR /path/to/folder
+					</ul>
+					# path can be absolute or relative to the current working directory. Instruction can be used multiple times
+			</p>
+			<p>
+				<h2>MAINTAINER Instruction</h2>
+
+				Specifies who wrote the Dockerfile
+				Optional but best practice to include
+				Usually placed straight after de FROM instraction
+			</p>
+			<p>
+				<h2>ENV instruction</h2>
+				Used to set environment variables in any container launched from the image
+				<br />
+				Syntax: ENV &lt;variable&gt;&lt;value&gt;
+				<br />
+				<ul  class="command">
+					ENV JAVA_HOME /usr/bin/java
+					<br />
+					ENV APP_PORT 8080
+				</ul>
+			</p>
+			<p>
+				<h2>ADD insntruction</h2>
+				Copies new files or directories from a specified source and adds them to the container filesystem at a specified destination.
+				<br />
+				Syntax:
+				<ul  class="command">
+					ADD &lt;src&gt; &lt;dest&gt;
+				</ul>
+				The src path is relative to the directory containing the Dockerfile
+				<br />
+				If the src path is a directory, all files in the directory are copied. The directory itself is not copied.
+				<br />
+				You can specify multiple src directory
+				<br />
+				<ul class="command">
+					ADD /src /myapp/src
+				</ul>
+			</p>
+			<p>
+				<h2>COPY vs ADD</h2>
+				Both instructions perform a near identical funtion
+				<span class="command-inline">ADD</span> has the ability to auto unpack tar files <span class="command-inline">ADD</span> instruction also allows you to specify  URL for you content (although this is not recommended)
+				<br />
+				Both instructions use a checksum against the files added.
+				<br />
+				If the checksum is not equal then the test fails and the build cache wil be invalidated, because it means we have modified the files
+			</p>
+			<p>
+				<h2>Best practice for writing Dockerfiles</h2>
+				Remember, each line in a Dockerfile creates a new layer
+				<br />
+				You need to find the right balance between having lots of layers created for the image and readability of the Dockerfile
+				<br />
+				Don't install unnecessary packages
+				<br />
+				One ENTRYPOINT per Dockerfile
+				<br />
+				Combine similar commands into one by using "&&" and "\"
+				<br />
+				Example: RUN apt-get update "&&" "\""
+				<br />
+				<ul class="command">
+					install -y curl
+					<br />
+					apt-get install -y vim && \
+				</ul>
+				Use the caching system to your advantage, the order of statments is important, add files that are least likely to change first and the ones most likely to change last.
+			</p>
+			<p>
+				<h2>Distibuting your image</h2>
+				2 options:
+				<br />
+				Push to Docker Hub (public or private repository)
+				<br />
+				Push to your own registy server
+				<br />
+
+				<h2>Pushing Images to Docker Hub</h2>
+				Use docker push command, syntax:
+				<ul class="command">
+					push [repo:tag]
+				</ul>
+				Local repo must have same name adn tag as the Docker Hub repo
+				<br />
+				Only the image layers that have changed get pushed
+				<br />
+				You will be prompted to login to your Docker Hub account
+
+				<h2>Tagging Images</h2>
+				Used to rename a local image repository before pushing to Docker Hub
+				<br />
+				Syntax:
+				<ul class="command">
+					tag [image ID] [repo:tag]
+					<br />
+					docker tag [local repo:tag] [Docker HUb repo:tag]
+					<br />
+					<br />
+					docker tag edfc212de17d trainingteam/testexample:1.0
+					<br />
+					docker tag johnnytu/testimage:1.5 trainingteam/testexam
+				</ul>
+
+				One image many tags
+			</p>
+			<p>
+				<h2>Deleting local images</h2>
+				<ul class="command">
+					docker rmi [image id]
+					<br />
+					docker rmi [repo:tag]
+				</ul>
+			</p>
+			<p>
+				<h2>Volumes</h2>
+				A Volume is a designated directory in a countainer, which is designed to persist data, independent of the container's life cycle.
+				<br />
+				Volume changes are excluded when updating an image
+				<br />
+				Persist when a container is deleted
+				<br />
+				Can be mapped to a host folder
+				<br />
+				Can be shared between containers
+				<br />
+				<br />
+				Volumes bypass the copy on write system
+				<br />
+				Act as passthrough to the host filesystem
+				<br />
+				When you commit a countainer as a new image, the content of the volume will not be brought into that image
+				<br />
+				If a RUN instruction is a Dockerfile changes the content th content of a volume, those changes are not recorded either.
+			</p>
+			<p>
+				De-couple the data that is stored, from the container which created the data
+				<br />
+				Good for sharing data between containers
+				<br />
+				Can setup a data container which has a volume you mount in other containers
+				<br />
+				Share directories between multiple containers
+				<br />
+				Bypassing the copy on write system to achieve native disk I/O
+				<br />
+				Share a host directory with a container
+				<br />
+				Share a single file between the host and container
+			</p>
+			<p>
+				<h2>Mount a Volume</h2>
+				Volumes can be mounted when running a container
+				<br />
+				Use the <span class="command-inline">-v</span> option on docker run
+				<br />
+				Volume paths specified must be absolute
+				<br />
+				Can mount multiple volumes by using the <span class="command-inline">-v</span> option multiple times
+				<br />
+				Execute a new container and mount the folder /myvolume into its system
+				<br />
+				<ul class="command">
+					docker run -d -P -v /myvolume nginx:1.7
+					Example of mounting multiple volumes
+					<br />
+					docker run -d -P -v /data/www -v /data/images nginx
+				</ul>
+			</p>
+			<p>
+				<h2>Where are your volumes</h2>
+				Volumes exist independently from containers, if a volume is stopped we can still access our volume.
+				<br />
+				To find where the volume is, use docker inspect on the container
+			</p>
+			<p>
+				<h2>Deleting a volume</h2>
+				Volumes are not deleted when you delete a container
+				<br />
+				To remove the volumes associated with a container use the -v option in the docker rm command.
+				<ul class="command">
+					docker rm -v &lt;container id&gt;
+				</ul>
+			</p>
+			<p>
+				<h2>Mounting host folders to a volume</h2>
+				When running a container, you can map folders on the host to a volume
+				<br />
+				The files from the host folder will be present in the volume
+				<br />
+				CHanges made on the host are reflected inside the container volume
+				<br />
+				Syntax:
+				<ul class="command">
+					docker run -v [host path]:[container path]:[rw|ro] # rw or ro controls the write status of the volume
+					<br />
+					docker run -d -v /home/user/public_html:/data/www ubuntu
+				</ul>
+				Files inside /home/user/public_html on the host will apear in the /data/www folder on the container.
+				<br />
+				If the host path or container path does not exist, it wil be created
+				<br />
+				If the container path is a folder with existing contenyt, the files will be replaced by host path
+			</p>
+			<p>
+				<h2>Volumes in Dockerfile</h2>
+				<span class="command-inline">VOLUME</span> instruction creates a mount point
+				<br />
+				Can specify arguments in a JSON array or string.
+				<br />
+				Cannot map volumes to host directories.
+				<br />
+				Volumes are initialized when the container is executed.
+				<br />
+				String example: <span class="command-inline"> VOLUME</span> /myvol
+				<br />
+				String example with multiple volumes: <span class="command-inline"> VOLUME /www/website.com /www/website2.com</span>
+				<br />
+				JSON example: <span class="command-inline"> VOLUME ["myvol", "myvol2"]</span>
+				<br />
+				Example Dockerfile with Volumes. When we run a container from this image, the volume will be initialized along with any data in the specified location.
+				<br />
+				If we want to setup default files in the volume folder, the folder and file must be created first
+				<br />
+			</p>
+			<p class="command">
+				FROM ubuntu:14.04
+				<br />
+				<br />
+				RUN apt-get update
+				<br />
+				RUN apt-get install -y vim &#92;
+				<br />
+				wget
+				<br />
+				<br />
+				RUN mkdir /data/myvol -p && &#92;
+				<br />
+				echo "hello world¨ > /data/myvol/testfile
+				<br />
+				VOLUME ["/data/myvol"]
+				<br />
+			</p>
+			<p>
+				<h2>Data containers</h2>
+				A data container is a container created for the purpose of referencing one or many volumes
+				<br />
+				Data containers don't run any application or proces
+				<br />
+				Used when you have persistent data that needs to be shared with other containers
+				<br />
+				When creating a data container, you should give it a custom name to make it easier to reference
+			</p>
+			<p>
+				<h2>Custom container names</h2>
+				By default, containers we create, have a randomly generated name to give your container a specific name,
+				use the "--name" option on the docker run command
+				<br />
+				Existing container can be renamed using the docker rename command docker rename &lt;old
+				name=""&gt; &lt;new  name=""&gt;
+				<br />
+				Create a container and name it mynginx
+				<ul class="command">docker run -d -P --name mynginx nginx
+				    docker rename happy_einstein mycontainer
+				</ul><br />
+				<br />
+				&lt;new>
+				&gt; &lt;old&gt;
+				<br />
+			</p>
+			<p>
+				<h2>creating data containers</h2>
+				<ul class="command">
+					docker run --name mydata -v /data/app1 busybox true
+				</ul>
+			</p>
+			<p>
+				<h2>chaining containers</h2>
+				<ul class="command">
+					docker run --name logdata -v /var/log/nginx busybox
+					<br />
+					docker run --name webdata -v /home/jacco/public_html:/usr/share/nginx/html busybox
+					<br />
+					docker run --name webserver -d -P --volumes-from webdata --volumes-from logdata nginx
+				</ul>
+			</p>
+			<p>
+				<h2> backup your data container</h2>
+				<ul class="command">docker run --volumes-from logdata \<br />
+				-v /home/jacco/backups:/backup \<br />
+				ubuntu:14.04 \<br />
+				tar cvf /backup/nginxlogs.tar /var/log/nginx</ul>
+				</p>
+				<p><h2>inspecting an image</h2>
+				<ul class="command"> docker inspect ubuntu:14.04</ul>
+				or
+				<ul class="command"> docker inspect &lt;image id&gt;</ul>
+				</p>
+			<p>
+			<p>
+				<h2>Docker networking model</h2>
+				Containers cannot have a public IPv4 addres
+				<br />
+				They are allocated in a private address range
+				<br />
+				Services running on a docker container must be exposed port by port
+				<br />
+				Container ports have to be mapped to the host port to avoid conflicts
+			</p>
+			<p>
+				<h2>The Docker bridge</h2>
+				When docker strart, it creates a virtual interface called docker0 on the host machine
+				<br />
+				docker0 is assigned a random ip addres and subnet from the private range defined by RFC1918
+				<br />
+				docker0 interface is a virtual Ethernet bridge interface
+				<br />
+				It passes or switches packets between two connected devices just like a physical bridge or switch (host to container - container to container)
+				<br />
+				Each new container gets one interface that is automatically attached to the docker0 bridge
+			</p>
+			<p>
+				<h2>Checking the bridge interface</h2>
+				We can use the brctl (bridge control) command to check the interface on our docker0 bridge
+				<br />
+				Install bridge-utils package to get the command (apt-get install bridge-utils)
+				<br />
+				<span class="command-inline"> run:brctl</span> show docker0
+			</p>
+
+			<p>
+				<h2> Check container network properties</h2>
+				use docker inspect command and look for the NeworkSettings field
+			</p>
+			<p>
+				<h2>Manual port mapping</h2>
+				Use <span class="command-inline"> -p</span> option (lowercase p) in the docker run command
+				<br />
+				syntax:<span class="command-inline"> -p [host port]:[container port]</span>
+				<br />
+				To map multiple ports, specify the -p option multiple times
+				<br />
+				Map port on the host to port 80 on the nginx container and port 81 on the host to port 8080 on the nginx container
+				<br />
+				<span class="command-inline">docker run -d -p 80:80 -p 81:8080 nginx</span>
+				<br />
+				<br />
+				We can use docker port command for displaying port mappings (and docker ps)
+			</p>
+			<p>
+				<h2>EXPOSE instruction</h2>
+				Configure which ports a container will listen on at runtime
+				<br />
+				Port still need to be mapped when containers is executed
+			</p>
+			<p class="command">
+				FROM ubuntu:14.04
+				<br />
+				RUN apt-get update
+				<br />
+				RUN apt-get install -y nginx
+				<br />
+				<br />
+				EXPOSE 80 443
+				<br />
+				<br />
+				CMD ["nginx", "-g", "daemon off;"]
+				<br />
+			</p>
+			<p>
+				<h2>linking Containers</h2>
+				Linking is a communication meethod between containers which allows them to securely transfer data from one to another
+				<br />
+				Source and recipient containers
+				<br />
+				Recepient containers have acce to data on a source container
+				<br />
+				Links are established based on container names.
+				<br />
+				Containers can talk to each other without having to expose ports to the host
+				<br />
+				Essential for micro service application architecture
+				<br />
+				Example:
+				<br />
+				- container with Tomcat running
+				<br />
+				- container with MySQL running
+				<br />
+				- Application on Tomcat needs to connect to MySQL
+				<br />
+			</p>
+			<p>
+				Create the source container first
+				Create the recipient container and use the --link option
+			</p>
+
+			<p>
+				Best Practice- give your container meaningful names
+				Format for linking: name:alias
+			</p>
+
+			<p>
+				Create the source container using the postgres
+				<ul class="command">
+					docker run -d --name database postgress
+				</ul>
+			</p>
+
+			<p>
+				Create the recipient container and link it
+				<ul class="command">
+					docker run -d -P --name website --link database:db nginx
+				</ul>
+			</p>
+			<p>
+				<h2>The underlyin mechanism</h2>
+				Linking provides a secure tunnel between the containers
+				<br />
+				Docker will create a set of environment variables based on your --link parameter
+				<br />
+				Docker also exposes the environment variables from the source container
+				<br />
+				- Only the variables created by Dockler are exposed
+				<br />
+				- Variabes are prefixed by the link alias
+				<br />
+				- ENV instruction in the container Dockfile
+				<br />
+				- Variables defined during docker run
+				<br />
+				DNS lookup entry will be added to /etc/hosts file based on your alias
+				<br />
+			</p>
+			<p>
+				<h2>Controlling and configuring the Daemon</h2>
+				The way you start/stop and configure docker depends on
+				<br />
+				- are we running it as a service
+				<br />
+				- What linux distribution
+				<br />
+				service vs systemctl command
+				<br />
+				Running interactively in the foreground (docker -d &), send SIGTERM to docker proces to stop
+				<br />
+				- run pidof docker
+				<br />
+				- sudo kill $(pidof docker)
+				<br />
+			</p>
+			<p>
+				If starting the Daemon from the Docker command you just specify the various options as a flag
+				sudo docker -d [options] &
+			</p>
+			<p>
+				For Ubuntu and Debian located in /etc/default/docker use DOCKER_OPTS to control the startup options for the daemon when running as a service
+				<br />
+				Example: Start daemon with log level of debug and allow connections to an insecure registry at the domain of myserver.org
+				<br />
+				<ul class="command">
+					DOCKER_OPS="--log-level=debug --insecure-registry=myserver.org:5000"
+				</ul>
+			</p>
+			<p>
+				CentOs uses systemd to run docker, look at the docker.service file to see how docker is started.
+				<br />
+				/usr/lib/systemd/system/docker.service
+			</p>
+			<p>
+				a full reference list of all daemon options:
+				<br />
+				https://docs.docker.com/reference/commandline/cli/#daemon
+			</p>
+			<p>
+				<h2>Docker daemon logging</h2>
+				Start the docker daemon with --log-level parameter and specify the logging level debug, info, warn, error and fatal
+			</p>
+			<p>
+				<h2>Connecting to a remote daemon</h2>
+				A few things we need to setup
+				<br />
+				First, the docker daemon we want to connect to needs to be listening on a tcp socket
+				<br />
+				For security purpost we should use a HTTPS encrypted socket, which will require us to setup TLS
+				<br />
+				Then we point our client to the remote Daemon
+			</p>
+			<p>
+				<h2>Docker Daemon socket option</h2>
+				The docker daemon listens for remote API request on three types of Socket
+				<br />
+				- unix
+				<br />
+				- tcp
+				<br />
+				- fd (for Linux distributions using Systemd)
+				<br />
+				<br />
+				The default socket is a unix domain socket created at /var/run/docker.sock
+				<br />
+				This socket requires root permission
+				<br />
+			</p>
+			<p>
+				<h2>Error connecting to socket</h2>
+				If you get the eror message below, it typically means
+				<br />
+				- The Docker daemon is not running
+				<br />
+				- You do not have permission to make an API call to the docker daemon (i.e. you didn't use sudo in your command or you are not in the docker group)
+				<br />
+				- Your docker client is trying to connect to the daemon using the unix socket but the daemon is nog listening on it
+				<br />
+				- You are not using TLS to connect to the daemon
+				<br />
+			</p>
+			<p class="command">
+				johnnytu@docker-ubuntu:~$ docker ps
+				<br />
+				FAT[0000] Get http:///var/run/docker.dock/v1.18/container/json:
+				<br />
+				dial unix /var/run/docker.sock: no such file or directory.
+				<br />
+				Are you trying to to conect to a TLS-enabled daemon without TLS?
+				<br />
+			</p>
+			<p>
+				<h2>Listening on TCP socket</h2>
+				To configure the Docker daemon to listen on a TCP socket, we start the daemon using the --host option and specify the TCP address and port
+				<br />
+				- Can also use -H
+				<br />
+				Be aware that by default the TCP socket is un-encrypted
+				<br />
+				For the address, you can specify an IP address to listen on or specify 0.0.0.0 to listen on all network interfaces.
+				<br />
+				Port numbers should be 2375 for un-encrypted communication and 2376 for encrypted communication
+				<br />
+				Using docker command, listen on TCP socket for all network interfaces
+				<br />
+				<ul class="command">
+					docker -d -H tcp://0.0.0.0:2375
+				</ul>
+				<br />
+				Using docker command, listen on TCP socket on a particular IP address
+				<ul class="command">
+					docker -d -H tcp://192.168.0.1:2375
+				</ul>
+				<br />
+				Configure via the upstart configuration file /etc/default/docker
+				<br />
+				<ul class="command">
+					DOCKER_OPS="-H tcp://192.168.0.1:2375"
+				</ul>
+			</p>
+			<p>
+				<h2>Connect the client to the daemon</h2>
+				By default the Docker client assumes the daemon is listening on a unix socket
+				<br />
+				if the daemon is listening on a TCP socket, we have to configure the cleint to connect to a particular host
+				<br />
+				Two metehod
+				<br />
+				- Use the -H flag on the docker command
+				<br />
+				<ul class="command">
+					docker -H tcp://localhost:2375
+					<br />
+					docker -H tcp://193.241.228.93:2375
+				</ul>
+
+				- Configure the DOCKER_HOST environment variable
+				<ul class="command">
+					export DOCKER_HOST="tcp://localhost:2375"
+				</ul>
+
+		</div>
+
+		<footer>
+			<p>
+				© NoCopyright  by me
+
+			</p>
+		</footer>
+	</body>
+</html>

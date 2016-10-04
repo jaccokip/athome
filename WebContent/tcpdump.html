@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+	Remove this if you use the .htaccess -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>HTML</title>
+	<meta name="description" content="">
+	<meta name="author" content="jacco" >
+	<!-- persistent stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/menu.css" />
+	<link rel="stylesheet" type="text/css" href="css/sober.css">
+	<link rel="stylesheet" type="text/css" href="css/sober.css" title="Default">
+	<link rel="alternate stylesheet" type="text/css" href="css/pinned_menu.css" title="pinned">
+	<link rel="alternate stylesheet" type="text/css" href="css/tcpdump.css" title="tcpdump">
+	<link rel="alternate stylesheet" type="text/css" href="css/com_back.css" title="grey">
+
+	<!-- default stylesheet because of rel="stylesheet" and title 
+	<link rel="stylesheet" type="text/css" href="css/sober.css" title="blue"> -->
+	<!-- alternate stylesheet because of rel="alternate" and title 
+	<link rel="alternate stylesheet" type="text/css" href="http://example.com/css/pink.css" title="pink"> --> 
+	
+	<!--	<script src="http://members.home.nl/jaccokip/scripts/nomouse.js"></script> -->
+	<script type="text/javascript" src="scripts/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src="scripts/col-test.js"></script>
+
+	<script src="scripts/swapstyle.js"></script>
+	<script type="text/javascript">
+	if( self != top ) { document.write('<style type="text/css">\n#backlinks { display: none; }\n<\/style>'); }
+	</script>
+
+	<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+	<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+
+
+<body>
+<header>
+	<div>
+		<nav>
+		<ul>
+			<li><img id="in_out" onclick="changeStyle('pinned')" src="images/Pin.png" width="30" height="30"></a></li>
+				<li><a href="index.html">Home</a>
+					<ul>
+					<li><a href="styles.html">Styles</a>
+						<ul>
+							<li><a href="#" onClick="changeStyle('grey');">cmd-line</a></li>
+							<li><a href="#" onClick="changeStyle('stars');">stars</a></li>
+							<!-- <li><a href="#" onClick="changeStyle('python');">python</a></li>
+							<li><a href="#" onClick="changeStyle('tcpdump');">tcpdump</a></li>
+							<li><a href="#" onClick="changeStyle('nmap');">nmap</a></li> -->
+							<li><a href="#" onClick="changeStyle('Default');">Reset to default</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+
+		<li><a href="index.html">Naslag_OS <span class="caret"></span></a>
+			<ul>
+				<li><a href="linux_commands.html">Commands</a></li>
+				<li><a href="tcpdump.html">Tcpdump</a></li>
+				<li><a href="nmap.html">Nmap</a></li>
+				<li><a href="vim.html">Vim</a></li>
+			</ul>
+		</li>
+		<li><a href="index.html">Naslag<span class="caret"></span></a>
+			<ul>
+				<li><a href="cat_api.html">Elasticsearch</a></li>
+				<li><a href="Escape_code.html">Escape characters</a></li>
+				<li><a href="git.html#table">Git</a></li>
+				<li><a href="python.html">Python</a>
+					<ul>
+						<li><a href="python_examples.html">Examples</a></li>
+					</ul>
+				</li>
+				<li><a href="puppet.html">Puppet</a>
+					<ul>
+						<li><a href="puppet_training.html">Puppet_Training</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="url_naar.html">Off Site</a>
+
+			<ul>
+				<li><a href="http://www.apache.org/" target="_blank">apache</a>
+					<ul>
+						<li><a href="http://httpd.apache.org/docs/2.0/misc/rewriteguide.html" target="_blank">rewrite</a></li>
+						<li><a href="https://www.addedbytes.com/articles/for-beginners/url-rewriting-for-beginners/" target="_blank">rewrite_dummies </a></li>
+					</ul>
+				</li>
+				<li><a href="http://www.ibm.com">IBM</a>
+					<ul>
+						<li><a href="http://www.ibm.com/developerworks" target="_blank">developers</a></li>
+					</ul>
+				</li>
+				<li><a href="http://nl.wikipedia.org/wiki/HyperText_Markup_Language">HTML</a>
+						<ul>
+							<li><a href="http://www.w3.org/TR/html5/" target="_blank">W3C</a></li>
+							<li><a href="http://www.w3schools.com/html/html5_intro.asp" target="_blank">W3C_School</a></li>
+							<li><a href="http://validator.w3.org/" target="_blank">Validator</a></li>
+						</ul>
+					</li>
+				<li><a href="http://nl.wikipedia.org/wiki/CSS">CSS</a>
+						<ul>
+							<li><a href="http://www.w3.org/standards/techs/css" target="_blank">Current_Status</a></li>
+							<li><a href="http://www.w3schools.com/css/css3_intro.asp" target="_blank">W3C_School</a></li>
+							<li><a href="https://jigsaw.w3.org/css-validator/" target="_blank">Validator</a></li>
+						</ul>
+					</li>
+			</ul>
+		</li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="help.html">Help</a></li>
+	</ul>
+</nav>
+	</div>
+	<br /> 
+	<br />
+	<div class="header">
+		<iframe src="srchform.htm" width="400px" height="34px" border="0" frameborder="0" scrolling="no"></iframe>
+	</div>		
+	<div class="sub-header">
+		<input type="button" id="more_cols" value="More columns" />
+    	<input type="button" id="less_cols" value="Less columns" />
+    	<input type="button" id="more_gap" value="More gap" />
+    	<input type="button" id="less_gap" value="Less gap" />
+	</div>
+		
+</div>
+
+	
+
+</header>
+<div class="container" id="container">
+
+<h2>Packet Analyzer</h2>
+
+<p>See the list of interfaces on which tcpdump can listen: (1)<br />
+Listen on any available interface (cannot be done in promiscuous mode. Requires Linux kernel 2.2 or greater): (2)
+<ul class="command pos_left">1. tcpdump -D<br />
+2. tcpdump -i any</ul>
+</p>
+<p>Capture packets from a particular ethernet interface using tcpdump -i When you execute tcpdump command without any option, it will capture all the packets flowing through all the interfaces. -i option with tcpdump command, allows you to filter on a particular ethernet interface.
+<ul class="command pos_left">tcpdump -i eth1</ul>
+<p>Capture verbose, more verbose and very verbose:
+<ul class="command pos_left">tcpdump -v, tcpdump -vv, tcpdump -vvv</ul>
+</p>
+<p>Capture only N number of packets using tcpdump -c When you execute tcpdump command it gives packets until you cancel the tcpdump command. Using -c option you can specify the number of packets to capture.
+<ul class="command pos_left">tcpdump -c 2 -i eth0</ul>
+</p>
+<p>Display Captured Packets in ASCII using tcpdump -A The following tcpdump syntax prints the packet in ASCII.
+<ul class="command pos_left">tcpdump -A -i eth0</ul>
+</p>
+<p>Display Captured Packets in HEX and ASCII using tcpdump -XX The following tcpdump syntax prints the packet in ASCII.
+<ul class="command pos_left">tcpdump -XX -i eth0</ul>
+</p>
+<p>Be verbose and print the data of each packet in both hex and ASCII, excluding and include the link level header:
+<ul class="command pos_left">tcpdump -v -X, tcpdump -v -XX</ul>
+</p>
+<p>Be less verbose (than the default) while capturing packets:
+<ul class="command pos_left">tcpdump -q</ul>
+</p>
+<p>Capture the packets and write into a file using tcpdump -w display on-screen -v tcpdump allows you to save the packets to a file, and later you can use the packet file for further analysis.
+<ul class="command pos_left">tcpdump -w 08232010.pcap -i eth0</ul>
+</p>
+<p>Reading the packets from a saved file using tcpdump -r You can read the captured pcap file and view the packets for analysis, as shown below.
+<ul class="command pos_left">tcpdump -tttt -r data.pcap</ul>
+</p>
+<p>Capture packets with IP address using tcpdump -n In all the above examples, it prints packets with the DNS address, but not the ip address. The following example captures the packets and it will display the IP address of the machines involved.
+<ul class="command pos_left">tcpdump -n -i eth0</ul>
+</p>
+<p>Capture packets with proper readable timestamp using tcpdump -tttt
+<ul class="command pos_left">tcpdump -n -tttt -i eth0</ul>
+</p>
+<p>Read packets longer than N bytes You can receive only the packets greater than n number of bytes using a filter ‘greater’ through tcpdump command
+<ul class="command pos_left">tcpdump -w g_1024.pcap greater 1024</ul>
+</p>
+<p>Receive only the packets of a specific protocol type You can receive the packets based on the protocol type. You can specify one of these protocols — fddi, tr, wlan, ip, ip6, arp, rarp, decnet, tcp and udp. The following example captures only arp packets flowing through the eth0 interface.
+<ul class="command pos_left">tcpdump -i eth0 arp</ul>
+</p>
+<p>Read packets lesser than N bytes You can receive only the packets lesser than n number of bytes using a filter ‘less’ through tcpdump command
+<ul class="command pos_left">tcpdump -w l_1024.pcap less 1024</ul>
+</p>
+<p>Receive packets flows on a particular port using tcpdump port If you want to know all the packets received by a particular port on a machine, you can use tcpdump command as shown below.
+<ul class="command pos_left">tcpdump -i eth0 port 22</ul>
+</p>
+<p>Capture packets for particular destination IP and Port The packets will have source and destination IP and port numbers. Using tcpdump we can apply filters on source or destination IP and port number. The following command captures packets flows in eth0, with a particular destination ip and port number 22.
+<ul class="command pos_left">tcpdump -w xpackets.pcap -i eth0 dst 10.181.140.216 and port 22</ul>
+</p>
+<p>Display IP addresses and port numbers instead of domain and service names when capturing packets (note: on some systems you need to specify -nn to display port numbers):
+<ul class="command pos_left">tcpdump -n</ul>
+</p>
+<p>To print all packets arriving at or departing from sundown: 
+<ul class="command pos_left">tcpdump host sundown</ul>
+</p>
+ <p>To print traffic between helios and either hot or ace:
+
+    <ul class="command pos_left">tcpdump host helios and \( hot or ace \)</ul>
+</p>
+
+<p>To print all IP packets between ace and any host except helios:
+
+    <ul class="command pos_left">tcpdump ip host ace and not helios</ul>
+</p>
+
+<p>To print all traffic between local hosts and hosts at Berkeley:
+
+    <ul class="command pos_left">tcpdump net ucb-ether</ul>
+</p>
+
+<p>To print all ftp traffic through internet gateway snup: (note that the expression is quoted to prevent the shell from (mis-)interpreting the parentheses):
+
+    <ul class="command pos_left">tcpdump 'gateway snup and (port ftp or ftp-data)'</ul>
+</p>
+
+<p>To print traffic neither sourced from nor destined for local hosts (if you gateway to one other net, this stuff should never make it onto your local net).
+
+    <ul class="command pos_left">tcpdump ip and not net localnet</ul>
+</p>
+
+<p>To print the start and end packets (the SYN and FIN packets) of each TCP conversation that involves a non-local host.
+
+    <ul class="command pos_left">tcpdump 'tcp[tcpflags] & (tcp-syn|tcp-fin) != 0 and not src and dst net localnet'</ul>
+</p>
+
+<p>To print all IPv4 HTTP packets to and from port 80, i.e. print only packets that contain data, not, for example, SYN and FIN packets and ACK-only packets. (IPv6 is left as an exercise for the reader.)
+
+    <ul class="command pos_left">tcpdump 'tcp port 80 and (((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)'</ul>
+</p>
+
+<p>To print IP packets longer than 576 bytes sent through gateway snup:
+
+    <ul class="command pos_left">tcpdump 'gateway snup and ip[2:2] > 576'</ul>
+</p>
+
+<p>To print IP broadcast or multicast packets that were not sent via Ethernet broadcast or multicast:
+
+    <ul class="command pos_left">tcpdump 'ether[0] & 1 = 0 and ip[16] >= 224'</ul>
+</p>
+
+<p>To print all ICMP packets that are not echo requests/replies (i.e., not ping packets):
+
+    <ul class="command pos_left">tcpdump 'icmp[icmptype] != icmp-echo and icmp[icmptype] != icmp-echoreply'</ul>
+</p>
+
+
+<p>Capture any packets where the source or destination host, destination host or source host is 192.168.1.1. Display IP addresses and port numbers:
+<ul class="command pos_left">tcpdump -n host 192.168.1.1, tcpdump -n dst host 192.168.1.1 and tcpdump -n src host 192.168.1.1</ul>
+</p>
+<p>Capture any packets where the source or destination network, destination network or source network is 192.168.1.0/24. Display IP addresses and port numbers:
+<ul class="command pos_left">tcpdump -n host 192.168.1.0/24, tcpdump -n dst host 192.168.1.0/24 and tcpdump -n src host 192.168.1.0/24</ul>
+</p>
+<p>Capture only TCP packets, only UDP packets and any packet where the destination port is between 1 and 1023 inclusive. Display IP addresses and port numbers:
+<ul class="command pos_left">tcpdump -n tcp dst portrange 1-1023, tcpdump -n udp dst portrange 1-1023 and tcpdump -n dst portrange 1-1023</ul>
+</p>
+<p>Capture TCP communication packets between two hosts If two different process from two different machines are communicating through tcp protocol, we can capture those packets using tcpdump as shown below.
+<ul class="command pos_left">tcpdump -w comm.pcap -i eth0 dst 16.181.170.246 and port 22</ul>
+</p>
+<p>tcpdump Filter Packets – Capture all the packets other than arp and rarp In tcpdump command, you can give “and”, “or” and “not” condition to filter the packets accordingly.
+<ul class="command pos_left">tcpdump -i eth0 not arp and not rarp</ul>
+</p>
+<p>Capture any packets that are broadcast or multicast:
+<ul class="command pos_left">tcpdump -n "broadcast or multicast"</ul>
+</p>
+<p>Capture 500 bytes of data for each packet rather than the default of 68 bytes:
+<ul class="command pos_left">tcpdump -s 500</ul>
+</p>
+<p>Capture all bytes of data within the packet:
+<ul class="command pos_left">tcpdump -s 0</ul> 
+</p>			
+</div>
+
+			<footer>
+				<p>
+<!--					&copy; Copyright  by jacco -->
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>

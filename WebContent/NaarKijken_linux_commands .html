@@ -1,0 +1,2167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+	Remove this if you use the .htaccess -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>HTML</title>
+	<meta name="description" content="">
+	<meta name="author" content="jacco">
+	<link rel="stylesheet" type="text/css" href="css/commando.css" />
+	<script type="text/javascript" src="scripts/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src="scripts/col-test.js"></script>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+	<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+
+<body>
+
+<header>
+
+	<div id="header">
+		
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="index.html">Naslag <span class="caret"></span></p></a>
+					<ul>
+						<li><a href="linux_commands.html#chair">Commands</a></li>
+						<li><a href="git.html#table">Git</a></li>
+						<li><a href="python.html">Python</a></li>
+						<li><a href="Quest_Guide.pdf">Puppet</a></li>
+						<li><a href="tcpdump.html">Tcpdump</a></li>
+						<li><a href="nmap.html">Nmap</a></li>
+					</ul>
+				</li>
+				<li><a href="url_naar.html">Off Site</a>
+
+					<ul>
+						<li><a href="http://www.apache.org/" target="_blank">apache</a>
+							<ul>
+								<li><a href="http://httpd.apache.org/docs/2.0/misc/rewriteguide.html" target="_blank">rewrite</a></li>
+								<li><a href="https://www.addedbytes.com/articles/for-beginners/url-rewriting-for-beginners/" target="_blank">rewrite_dummies </a></li>
+							</ul>
+						</li>
+						<li><a href="http://www.ibm.com">IBM</a>
+							<ul>
+								<li><a href="http://www.ibm.com/developerworks" target="_blank">developers</a></li>
+							</ul>
+						</li>
+						<li><a href="http://nl.wikipedia.org/wiki/HyperText_Markup_Language">HTML</a>
+							<ul>
+								<li><a href="http://www.w3.org/TR/html5/" target="_blank">W3C</a></li>
+								<li><a href="http://www.w3schools.com/html/html5_intro.asp" target="_blank">W3C_School</a></li>
+								<li><a href="http://validator.w3.org/" target="_blank">Validator</a></li>
+							</ul>
+						</li>
+						<li><a href="http://nl.wikipedia.org/wiki/CSS">CSS</a>
+							<ul>
+								<li><a href="http://www.w3.org/standards/techs/css" target="_blank">Current_Status</a></li>
+								<li><a href="http://www.w3schools.com/css/css3_intro.asp" target="_blank">W3C_School</a></li>
+								<li><a href="https://jigsaw.w3.org/css-validator/" target="_blank">Validator</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="help.html">Help</a></li>
+			</ul>
+		</nav>
+
+		<iframe src="srchform.htm" width="300" height="34" border="0" frameborder="0" scrolling="no"></iframe>
+		
+		<div class="controls">
+			<input type="button" id="more_cols" value="More columns" />
+    		<input type="button" id="less_cols" value="Less columns" />
+    		<input type="button" id="more_gap" value="More gap" />
+    		<input type="button" id="less_gap" value="Less gap" />
+		</div>
+		
+</div>
+
+</header>
+
+	
+	<!-- <div class="container" id="container"> -->
+<div class="container" id="container">
+	<h1>Linux commando's</h1>
+	<br /> 
+
+
+    <h2>1. Network Manager</h2>
+    <p>-<span id="titel">List hardware.</span></p> 
+	<p><span id="command" class="pos_left" title="List hardware">lshw</span></p>
+	<p>-<span id="titel">List network info.</span></p> 
+	<p><span id="command" class="pos_left">lshw -class network</span></p>
+	<p>-<span id="titel">Active internet connections</span></p>
+	<p><span id="command" class="pos_left">netstant -tanpu</span></p>
+    <p>-<span id="titel">read the configuration files again.</span></p> 
+	<p><span id="command" class="pos_left">nmcli connection reload</span></p>
+	to reload <span id="titel">only one changed file</span></p> ifcfg-ifname, issue a command as follows: 
+	<p><span id="command" class="pos_left">nmcli con load /etc/sysconfig/network-scripts/ifcfg-ifname</span></p>
+	Changes made using tools such as nmcli do not require a reload but do require the associated interface to be put down and then up again. <br />
+	That can be done by using commands in the following format:
+
+	<p><span id="command" class="pos_left">nmcli dev disconnect interface-name</span></p>
+
+	Followed by:
+
+	<p><span id="command" class="pos_left">nmcli con up interface-name</span></p>
+
+	nm-tool is utility to report NetworkManager state and devices
+	<p><span id="command" class="pos_left">nm-tool</span></p>
+
+   	<h2>2. handig</h2>
+   	<p>-<span id="titel">If you needed sudo but foregot</span></p>
+	<p><span id="command" class="pos_left">sudo !!</span></p>
+	- <span id="titel">The below command generates a simple web page over HTTP for the directory structure tree and can be accessed at port 8000 in browser till interrupt signal is sent.</span></p>
+	<p><span id="command" class="pos_left">python -m SimpleHTTPServer</span></p>
+	- <span id="titel">ping and traceroute combined</span></p>
+	<p><span id="command" class="pos_left">mtr google.com</span></p>
+	- <span id="titel">from terminal launch defaspant editor </span></p>
+	<p><span id="command" class="pos_left">Crtl x e</span></p>
+	- <span id="titel">set default editor</span></p>
+	<p><span id="command" class="pos_left">sudo update-alternative --config editor</span></p>
+	<p>-<span id="titel">The command “ss” </span> stands for socket statistics. <br />The command investigates the socket and shows information similar to netstat command. <br />It can display more TCP and state informations than other tools.</p>
+	<p><span id="command" class="pos_left">ss</span></p>
+   	<p>-<span id="titel">The “last” command show the history of last logged in users.</span></p>
+   	<p><span id="command" class="pos_left">last</span></p>
+   	<p>-<span id="titel">command output your external IP address right into your terminal.</span></p>
+	<p><span id="command" class="pos_left"># curl ifconfig.me</span></p>
+	<p>-<span id="titel">This commands shows all the processes running currently along with associated child process,</span></p>
+	<p><span id="command" class="pos_left">pstree</span></p>
+	<p>-<span id="titel">To prevent the given command being entered in history</span></p>
+	<p><span id="command" class="pos_left">&lt;space&gt; command</span></p>
+	<p>-<span id="titel">The stat </span> in Linux displays the status information of a file or filesystem. The stat shows a whole lot of information about the file which name is passed as argument. Status Information includes file Size, Blocks, Access Permission, Date-time of file last access, Modify, change, etc.</p>
+	<p><span id="command" class="pos_left">stat filename</span></p>
+	<p>-<span id="titel">show a list of all the mounted filesystem in a nice formatting with specification.</span></p>
+	<p><span id="command" class="pos_left">mount | column -t</span></p>
+	<p>-<span id="titel">clear (screen)</span></p>
+	<p><span id="command" class="pos_left">Ctr+l command</span></p>
+	<p>-<span id="titel">How about checking your unread mail from the command line.</span></p>
+	<p><span id="command" class="pos_left">curl -u avishek1210@gmail.com --silent "https://mail.google.com/mail/feed/atom" | perl -ne 'print "\t" if //; print "$2\n" if /<(title|name)>(.*)<\/\1>/;'</span></p>
+	<p>-<span id="titel">This command print real and effective user and group ids.</span></p>
+	<p><span id="command" class="pos_left">id</span></p>
+	 <p>-<span id="titel">^foo^bar Command<br /></span></p>
+	Run the last command with modification, in a single instance. <br />
+	Suppose I need to run a command ‘ls -l‘ to long list the content of a directory say ‘Desktop’. Accidentally, you type ‘lls -l‘.<br /> 
+	<p>-<span id="titel">So now you will have to retype the whole command</span> or edit the previous command using navigation key. That is painful when the command is long.</p>
+	<p><span id="command" class="pos_left">avi@localhost:~/Desktop$ lls -l </span></p>
+	<p><span id="command" class="pos_left">bash: lls: command not found</span></p>
+	<p><span id="command" class="pos_left">avi@localhost:~/Desktop$ ^lls^ls</span></p> 
+	<p><span id="command" class="pos_left">ls -l</span></p> 
+	<p>-<span id="titel">This expr command is very much useful in carrying out simple mathematical calculation in terminal.</span></p>
+	<p><span id="command" class="pos_left">expr 2 + 3, expr 6 – 3, expr 12 / 3, expr 2 \* 9</span></p>
+	<p>-<span id="titel">This command continues to print a given string, till interrupt instruction is given by you.</span></p>
+	<p><span id="command" class="pos_left">yes "Tecmint is one of the best site dedicated to Linux, how to"</span></p> 
+	<p>-<span id="titel">The strace is a debugging tool which is used primarily for troubleshooting purpose in Linux.</span></p>
+	<p><span id="command" class="pos_left">root@tecmint [~]# strace pwd</span></p>
+	<p>-<span id="titel">Display Date on the Terminal</span></p>
+	<p><span id="command" class="pos_left">while sleep 1;do tput sc;tput cup 0 $(($(tput cols)-29));date;tput rc;done &</span></p>
+	<p><span id="command" class="pos_left">watch -t -n1 “date +%T|figlet”</span></p>	
+	<p>-<span id="titel">This command will create an empty folder ‘forcefsck‘</span> under root directory. This will force Linux System to check the file system on the very next boot.</p>
+	<p><span id="command" class="pos_left">touch /forcefsck</span></p>
+	<p>-<span id="titel">Check if port 80 is open or not. We can replace ‘80‘ with any other port number to check if it is opened or closed.</span></p>
+	<p><span id="command" class="pos_left">nc -zv localhost 80</span></p>
+	<p>-<span id="titel">The below command will output the ‘Geographical Location‘ of the IP address, provided.</span></p>
+	<p><span id="command" class="pos_left">curl ipinfo.io </span></p>
+	<p>-<span id="titel">The below command outputs, name of process/service using a specific port 80. To better understand run the following command on port 80, it will list all services/processes running on port.</span></p>
+	<p><span id="command" class="pos_left">root@localhost:/home/avi# lsof -iTCP:80 -sTCP:LISTEN</span></p>
+	<p>-<span id="titel">The below command outputs processes and threads of a user. The option “L” (list threads) and “-F” (Full Format Listing).</span></p>
+	<p><span id="command" class="pos_left">$ ps -LF -u avi</span></p>
+	
+   	
+   	<h2>3. tar command examples</h2>- <span id="titel">Create</span> a new <span id="titel">tar</span></p> archive.</p>
+	<p><span id="command" class="pos_left">tar cvf archive_name.tar dirname/</span></p>
+	<br />- <span id="titel">Extract</span> from an existing <span id="titel">tar</span></p> archive.</p>
+	<p><span id="command" class="pos_left">tar xvf archive_name.tar</span></p> 
+
+	
+	- <span id="titel">View</span> an existing <span id="titel">tar</span> archive.</p>
+	<p><span id="command" class="pos_left">tar tvf archive_name.tar</span></p>
+	- <span id="titel">Extract</span> from an existing <span id="titel">tar</span></p> archive to specifiek folder</p>
+	<p><span id="command" class="pos_left">tar xvf archive_name.tar -C folder</span></p>
+  	
+	
+	- <span id="titel">View</span> an existing <span id="titel">tar</span></p> archive.</p>
+	<p><span id="command" class="pos_left">tar tvf archive_name.tar</span></p>
+	To <span id="titel">extract</span> / unpack a <span id="titel">.tar.gz</span></p> (gzip) file, enter (note -z option):</p>
+	<p><span id="command" class="pos_left">tar -xzvf file.tar.gz</span></p>
+	
+	
+	To <span id="titel">extract</span> / unpack a <span id="titel">.tar.bz2 </span></p>bzip2) file, enter (note -j option):</p>
+	<p><span id="command" class="pos_left">tar -xjvf file.tar.bz2</span></p>
+  	
+	
+	<span id="titel">extract</span> letters.<span id="titel">zip</span></p> to the current directory and subdirectories</p>
+	<p><span id="command" class="pos_left">unzip letters</span></p>
+	To <span id="titel">extract</span> all members of letters<span id="titel">.zip</span></p> into the current directory only:</p>
+	<p><span id="command" class="pos_left">unzip -j letters</span></p>
+	
+	<h2>2. grep command examples</h2>
+	- Search for a given string in a file (case in-sensitive search).
+ 	<p><span id="command" class="pos_left">grep -i "the" demo_file</span></p>
+	<br /><br />- Print the matched line, along with the 3 lines after it.
+	<p><span id="command" class="pos_left">grep -A 3 -i "example" demo_text</span></p>
+	
+ 	
+	- Search for a given string in all files recursively
+	<p><span id="command" class="pos_left">grep -r "ramesh" *<br /></span></p>
+	- search for a text string all files under each directory, recursively with -r option:
+	<p><span id="command" class="pos_left">$ grep -r "redeem reward" /home/tom/<br />
+	$ grep -R "redeem reward" /home/tom</span></p>
+	
+ 	
+
+	By default, the grep command prints the matching lines. <br />
+	You can pass -H option to print the filename for each match:
+	<p><span id="command" class="pos_left">$ grep -H -r "redeem reward" /home/tom</span></p>
+	Sample outputs:
+	<p><span id="command" class="pos_left">filename.txt: redeem reward<br />
+	foobar.txt: redeem reward
+	...</span></p>
+
+ 	
+	To just display the filename use the cut command as follows:
+	<p><span id="command" class="pos_left">$ grep -H -R vivek /etc/* | cut -d: -f1</span></p>
+	Sample outputs:
+	<p><span id="command" class="pos_left">filename.txt<br />
+	foobar.txt
+	...</span></p>
+	
+ 	
+
+	- Suppress file names, use -h option to exclude file names in the output:
+	<p><span id="command" class="pos_left">$ grep -h -R 'main()' ~/projects/*.c</span></p>
+	- Display only words search for word 'getMyData()' only in ~/projects/ dirctory:
+	<p><span id="command" class="pos_left">$ grep -w -R 'getMyData()' ~/projects/</span></p> 
+	
+ 	
+
+	- Search for two or more words, use the egrep command as follows:
+	<p><span id="command" class="pos_left">$ egrep -w -R 'word1|word2' ~/projects/</span></p> 
+	- Hide warning spam<br />
+	grep command generate error message as follows due to permission and other issues:<br />
+	<br />
+	No such file or directory<br />
+	No such device or address<br />
+	Permission denied<br />
+	<br />
+	To hide all errors or warning message spam generated by the grep command, append 2>/dev/null to grep command. <br />
+	This will send and hide unwanted output to /dev/null device:
+	<p><span id="command" class="pos_left">$ grep -w -R 'getMyData()' ~/projects/ 2>/dev/null</span></p> 
+	
+ 	
+
+	- Display matched text in color
+	<p><span id="command" class="pos_left"> 
+	grep --color <font color="red">'word'</font> file<br />
+	grep --color -R <font color="red">'word'</font> /path/to/dir<br />
+	grep --color -R <font color="red">"192.168.1.5"</font> /etc/<br />
+	grep --color -R -h <font color="red">"192.168.1.5"</font> /etc/<br />
+	grep --color -R -h <font color="red">"192.168.1.5"</font> /etc/ 2>/dev/null</span></p>
+
+	- Ignore case distinctions in both the search PATTERN and the input files:
+	<p><span id="command" class="pos_left">grep -i -R 'word' /path/to/dir <br />
+	grep -i -r 'income tax' ~/accounting/ </span></p>
+ 
+	
+ 	
+	<h2>3. find command examples</h2>
+	find <i>where-to-look <font color="red">criteria</font><font color="yellow"> what-to-do</font></i><br />
+	You can specify as many places to search as you wish:
+	<p><span id="command" class="pos_left">find /tmp /var/tmp . $HOME <font color="red">-name foo</font></span></p>
+	
+	- Find files using file-name ( case in-sensitve find)
+	<p><span id="command" class="pos_left">find -iname "MyCProgram.c"</span></p>
+	
+  	
+	- Execute commands on files found by the find command
+	<p><span id="command" class="pos_left">find -iname "MyCProgram.c" -exec md5sum {} \;</span></p>
+	Find all empty files in home directory
+	<p><span id="command" class="pos_left">find ~ -empty</span></p>
+	
+	
+	- Finding all files containing a text string
+	<p><span id="command" class="pos_left">find / -type f -exec grep -H 'text-to-find-here' {} \;</span></p>
+ 		
+	
+	
+
+	<h2>4. ssh command examples</h2>
+
+	- Login to remote host
+
+	<p><span id="command" class="pos_left">ssh -l jsmith remotehost.example.com</span></p>
+
+	- Debug ssh client
+
+	<p><span id="command" class="pos_left">ssh -v -l jsmith remotehost.example.com</span></p>
+
+	- Display ssh client version
+
+	<p><span id="command" class="pos_left">ssh -V<br />
+	OpenSSH_3.9p1, OpenSSL 0.9.7a Feb 19 2003</span></p>
+
+	<h2>5. sed command examples</h2>
+
+
+	- When you copy a DOS file to Unix, you could find \r\n in the end of each line.<br /> 
+    This example converts the DOS file format to Unix file format using sed command.
+
+	<p><span id="command" class="pos_left">sed 's/.$//' filename</span></p>
+
+	- Print file content in reverse order
+
+	<p><span id="command" class="pos_left">sed -n '1!G;h;$p' thegeekstuff.txt</span></p>
+
+	- Add line number for all non-empty-lines in a file
+
+	<p><span id="command" class="pos_left">sed '/./=' thegeekstuff.txt | sed 'N; s/\n/ /'</span></p>
+
+	<h2>6. awk command examples</h2>
+
+	- Remove duplicate lines using awk
+
+	<p><span id="command" class="pos_left">awk '!($0 in array) { array[$0]; print }' temp</span></p> 
+
+	- Print all lines from /etc/passwd that has the same uid and gid
+
+	<p><span id="command" class="pos_left">awk -F ':' '$3==$4' passwd.txt</span></p>
+
+	- Print only specific field from a file.
+
+	<p><span id="command" class="pos_left">awk '{print $2,$5;}' employee.txt</span></p>
+
+	<h2>7. vim command examples</h2>
+
+	- Go to the 143rd line of file
+
+	<p><span id="command" class="pos_left">vim +143 filename.txt</span></p> 
+
+	- Go to the first match of the specified
+
+	<p><span id="command" class="pos_left">vim +/search-term filename.txt</span></p>
+
+
+	- Open the file in read only mode.
+
+	<p><span id="command" class="pos_left">vim -R /etc/passwd</span></p>
+
+
+
+	<h2>8. diff command examples</h2>
+
+	- Ignore white space while comparing.
+
+	<p><span id="command" class="pos_left">diff -w name_list.txt name_list_new.txt<br />
+	2c2,3<br />
+	&lt; John Doe --- > John M Doe<br />
+	&gt; Jason Bourne</span></p>
+
+	<h2>9. sort command examples</h2>
+
+
+	- Sort a file in ascending order
+
+	<p><span id="command" class="pos_left">sort names.txt</span></p>
+
+	- Sort a file in descending order
+
+	<p><span id="command" class="pos_left">sort -r names.txt</span></p>
+
+	- Sort passwd file by 3rd field.
+
+	<p><span id="command" class="pos_left">sort -t: -k 3n /etc/passwd | more</span></p>
+
+	<h2>10. export command examples</h2>
+
+	- To view oracle related environment variables.
+
+	<p><span id="command" class="pos_left"> export | grep ORACLE</span>
+	Courier>declare -x ORACLE_BASE="/u01/app/oracle"<br />
+	declare -x ORACLE_HOME="/u01/app/oracle/product/10.2.0"<br />
+	declare -x ORACLE_SID="med"<br />
+	declare -x ORACLE_TERM="xterm"</p>
+
+
+	- To export an environment variable:
+
+	<p><span id="command" class="pos_left"> export ORACLE_HOME=/u01/app/oracle/product/10.2.0</span></p>
+
+	<h2>11. xargs command examples</h2>
+
+
+	- Copy all images to external hard-drive
+
+	<p><span id="command" class="pos_left">ls *.jpg | xargs -n1 -i cp {} /external-hard-drive/directory</span></p>
+
+	- Search all jpg images in the system and archive it.
+
+	<p><span id="command" class="pos_left">find / -name *.jpg -type f -print | xargs tar -cvzf images.tar.gz</span></p>
+
+
+	- Download all the URLs mentioned in the url-list.txt file
+
+	<p><span id="command" class="pos_left">cat url-list.txt | xargs wget –c</span></p>
+
+	<h2>12. ls command examples</h2>
+
+
+	- Display filesize in human readable format (e.g. KB, MB etc.,)
+
+	<p><span id="command" class="pos_left">ls -lh<br />
+	-rw-r----- 1 ramesh team-dev 8.9M Jun 12 15:27 arch-linux.txt.gz</span></p>
+
+	- Order Files Based on Last Modified Time (In Reverse Order) Using ls -ltr
+
+	<p><span id="command" class="pos_left">ls -ltr</span></p>
+
+
+	- Visual Classification of Files With Special Characters Using ls -F
+
+	<p><span id="command" class="pos_left">ls -F</span></p>
+
+
+	<h2>13. pwd command</h2>
+
+	- Print working directory.<br /> 
+	<p><span id="command" class="pos_left">pwd </span></p> 
+ 
+	What else can be said about the good old pwd who has been printing the current directory name for ages.
+
+	<h2>14. cd command examples</h2>
+	- to toggle between the last two directories
+	Use <p><span id="command" class="pos_left">cd -</span></p> 
+   
+	- to automatically correct mistyped directory names on cd
+	Use “<p><span id="command" class="pos_left">shopt -s cdspell</span></p> 
+
+	<h2>15. gzip command examples</h2>
+
+	- To create a *.gz compressed file:
+
+	<p><span id="command" class="pos_left">gzip test.txt</span></p>
+
+	- To uncompress a *.gz file:
+
+	<p><span id="command" class="pos_left">gzip -d test.txt.gz</span></p>
+
+
+	- Display compression ratio of the compressed file using gzip -l
+
+	<p><span id="command" class="pos_left">gzip -l *.gz<br />
+        compressed        uncompressed  ratio uncompressed_name<br />
+             23709               97975  75.8% asp-patch-rpms.txt</span></p>
+
+
+	<h2>18. shutdown command examples</h2>
+
+
+- Shutdown the system and turn the power off immediately.
+
+  <p><span id="command" class="pos_left">shutdown -h now</span></p>
+
+
+- Shutdown the system after 10 minutes.
+
+  <p><span id="command" class="pos_left">shutdown -h +10</span></p>
+
+
+- Reboot the system using shutdown command.
+
+  <p><span id="command" class="pos_left">shutdown -r now</span></p>
+
+- Force the filesystem check during reboot.
+
+  <p><span id="command" class="pos_left">shutdown -Fr now</span></p>
+
+<h2>19. ftp command examples</h2>
+
+Both ftp and secure ftp (sftp) has similar commands.<br /> 
+To connect to a remote server and download multiple files, do the following.
+
+  <p><span id="command" class="pos_left">ftp IP/hostname<br />
+  ftp> mget *.html</span></p>
+
+To view the file names located on the remote server before downloading, mls ftp command as shown below.
+
+ <p><span id="command" class="pos_left">ftp> mls *.html -<br />
+      /ftptest/features.html<br />
+      /ftptest/index.html<br />
+      /ftptest/othertools.html<br />
+      /ftptest/samplereport.html<br />
+      /ftptest/usage.html</span></p>
+
+<h2>20. crontab command examples</h2>
+
+- View crontab entry for a specific user
+
+  <p><span id="command" class="pos_left">crontab -u john -l</span></p>
+
+- Schedule a cron job every 10 minutes.
+
+<p><span id="command" class="pos_left">  * /10 * * * * /home/ramesh/check-disk-space</span></p>
+<h2>21. service command examples</h2>
+
+Service command is used to run the system V init scripts.<br /> 
+i.e Instead of calling the scripts located in the /etc/init.d/ directory with their full path, you can use the service command.<br />
+
+- Check the status of a service:
+
+  <p><span id="command" class="pos_left">service ssh status</span></p>
+
+- Check the status of all the services.
+
+  <p><span id="command" class="pos_left">service --status-all</span></p>
+
+- Restart a service.
+
+  <p><span id="command" class="pos_left">service ssh restart</span></p>
+
+<h2>22. ps command examples</h2>
+
+ps command is used to display information about the processes that are running in the system.<br />
+
+While there are lot of arguments that could be passed to a ps command, following are some of the common ones.<br />
+
+- To view current running processes.
+
+   <p><span id="command" class="pos_left">ps -ef | more</span></p> 
+
+- To view current running processes in a tree structure. 
+H option stands for process hierarchy.
+
+   <p><span id="command" class="pos_left">ps -efH | more</span></p>
+
+<h2>23. free command examples</h2>
+
+This command is used to display the free, used, swap memory available in the system.<br />
+
+Typical free command output. The output is displayed in bytes.
+
+  <p><span id="command" class="pos_left">free<br />
+<br />
+         total       used       free     shared    buffers     cached<br />
+  Mem: 	 3566408     1580220    1986188     0     203988      902960-/+ buffers/cache: 473272 3093136<br />
+  Swap: 4000176     0 	4000176</span></p>
+
+
+If you want to quickly check how many GB of RAM your system has use the -g option.<br /> 
+-b option displays in bytes, -k in kilo bytes, -m in mega bytes.
+
+   <p><span id="command" class="pos_left">free -g<br />
+       <br />
+            total       used       free     shared    buffers     cached<br />
+  Mem: 			3 				1 			  1 		  0 			0 				0-/+ buffers/cache: 0 2<br />
+  Swap: 		3 				0 			  3</span></p>
+
+
+If you want to see a total memory ( including the swap), use the -t switch, which will display a total line as shown below.
+
+  <p><span id="command" class="pos_left">free -t<br />
+
+           total     used     free    shared    buffers    cached<br />
+  Mem:	   3566408   1592148   1974260     0     204260     912556-/+ buffers/cache: 475332 3091076<br />
+  Swap:  4000176     0     4000176<br />
+  Total: 7566584   1592148     5974436</span></p>
+
+<h2>24. top command examples</h2>
+
+<p><span id="command" class="pos_left">top </span></p>
+ 
+displays the top processes in the system ( by default sorted by cpu usage ).<br /> 
+To sort top output by any column, Press O (upper-case O) , which will display all the possible columns that you can sort by as shown below.<br />
+
+Current Sort Field: P for window 1:Def Select sort field via field letter, type any other key to return<br />
+<br />
+ a: PID        = Process Id              v: nDRT       = Dirty Pages count<br />
+ d: UID        = User Id                 y: WCHAN      = Sleeping in Function<br />
+ e: USER       = User Name               z: Flags      = Task Flags<br />
+ ........<br />
+
+
+To displays only the processes that belong to a particular user use -u option.<br /> 
+The following will show only the top processes that belongs to oracle user.
+
+   <p><span id="command" class="pos_left">top -u oracle</span></p>
+
+<h2>25. df command examples</h2>
+
+Displays the file system disk space usage.<br /> 
+By default df -k displays output in bytes.
+
+   <p><span id="command" class="pos_left">df -k<br />
+  Filesystem 1K-blocks Used Available Use% Mounted on<br />
+  /dev/sda1 29530400 3233104 24797232 12% /<br />
+  /dev/sda2 120367992 50171596 64082060 44% /home</span></p>
+
+df -h displays output in human readable form. i.e size will be displayed in GB’s.
+
+  <p><span id="command" class="pos_left">df -h<br />
+  Filesystem Size Used Avail Use% Mounted on<br />
+  /dev/sda1 29G 3.1G 24G 12% /<br />
+  /dev/sda2 115G 48G 62G 44% /home</span></p>
+
+
+Use -T option to display what type of file system.
+
+  <p><span id="command" class="pos_left">df -T<br />
+  Filesystem Type 1K-blocks Used Available Use% Mounted on<br />
+  /dev/sda1 ext4 29530400 3233120 24797216 12% /<br />
+  /dev/sda2 ext4 120367992 50171596 64082060 44% /home</span></p>
+
+<h2>26. kill command examples</h2>
+
+Use kill command to terminate a process.<br /> 
+First get the process id using ps -ef command, then use kill -9 to kill the running Linux process as shown below.<br /> 
+You can also use killall, pkill, xkill to terminate a unix process.
+
+   <p><span id="command" class="pos_left">ps -ef | grep vim</span></p>
+
+   
+ramesh 7243 7222 9 22:43 pts/2 00:00:00 vim
+
+   <p><span id="command" class="pos_left">kill -9 7243</span></p>
+
+<h2>27. rm command examples</h2>
+
+Get confirmation before removing the file.
+
+   <p><span id="command" class="pos_left">rm -i filename.txt</span></p>
+
+It is very useful while giving shell metacharacters in the file name argument.<br />
+
+Print the filename and get confirmation before removing the file.
+
+  <p><span id="command" class="pos_left">rm -i file*</span></p>
+
+Following example recursively removes all files and directories under the example directory.<br /> 
+This also removes the example directory itself.
+
+  <p><span id="command" class="pos_left">rm -r example</span></p>
+
+<h2>28. cp command examples</h2>
+
+Copy file1 to file2 preserving the mode, ownership and timestamp.
+
+  <p><span id="command" class="pos_left">cp -p file1 file2</span></p>
+
+Copy file1 to file2. if file2 exists prompt for confirmation before overwritting it.
+
+  <p><span id="command" class="pos_left">cp -i file1 file2</span></p>
+
+<h2>29. mv command examples</h2>
+
+Rename file1 to file2. if file2 exists prompt for confirmation before overwritting it.
+
+  <p><span id="command" class="pos_left">mv -i file1 file2</span></p>
+
+Note: <p><span id="command" class="pos_left">mv -f is just the opposite, which will overwrite file2 without prompting.</span></p>
+
+mv -v will print what is happening during file rename, which is useful while specifying shell metacharacters in the file name argument.
+
+  <p><span id="command" class="pos_left">mv -v file1 file2</span></p>
+
+<h2>30. cat command examples</h2>
+
+You can view multiple files at the same time.<br /> 
+Following example prints the content of file1 followed by file2 to stdout.
+
+  <p><span id="command" class="pos_left">cat file1 file2</span></p>
+
+
+While displaying the file, following cat -n command will prepend the line number to each line of the output.
+
+  <p><span id="command" class="pos_left">cat -n /etc/logrotate.conf<br />
+
+   1	/var/log/btmp {<br />
+   2	    missingok<br />
+   3	    monthly<br />
+   4	    create 0660 root utmp<br />
+   5	    rotate 1<br />
+   6	}</span></p>
+
+<h2>31. mount command examples</h2>
+
+To mount a file system, you should first create a directory and mount it as shown below.
+
+  <p><span id="command" class="pos_left">mkdir /u01</span></p>
+  <p><span id="command" class="pos_left">mount /dev/sdb1 /u01</span></p>
+
+You can also add this to the fstab for automatic mounting.<br /> 
+i.e Anytime system is restarted, the filesystem will be mounted.
+
+/dev/sdb1 /u01 ext2 defaults 0 2
+
+<h2>32. chmod command examples</h2>
+
+chmod command is used to change the permissions for a file or directory.<br />
+
+Give full access to user and group (i.e read, write and execute ) on a specific file.
+
+  <p><span id="command" class="pos_left">chmod ug+rwx file.txt</span></p>
+
+Revoke all access for the group (i.e read, write and execute ) on a specific file.
+
+  <p><span id="command" class="pos_left">chmod g-rwx file.txt</span></p>
+
+Apply the file permissions recursively to all the files in the sub-directories.
+
+  <p><span id="command" class="pos_left">chmod -R ug+rwx file.txt</span></p>
+
+<h2>33. chown command examples</h2>
+
+chown command is used to change the owner and group of a file.<br /> \
+
+To change owner to oracle and group to db on a file.<br /> 
+i.e Change both owner and group at the same time.
+
+  <p><span id="command" class="pos_left">chown oracle:dba dbora.sh</span></p>
+
+
+Use -R to change the ownership recursively.
+
+  <p><span id="command" class="pos_left">chown -R oracle:dba /home/oracle</span></p>
+
+<h2>34. passwd command examples</h2>
+
+Change your password from command line using passwd.<br /> 
+This will prompt for the old password followed by the new password.
+
+  <p><span id="command" class="pos_left">passwd</span></p>
+
+Super user can use passwd command to reset others password.<br /> 
+This will not prompt for current password of the user.
+
+  <p><span id="command" class="pos_left">passwd USERNAME</span></p>
+
+
+Remove password for a specific user.<br /> 
+Root user can disable password for a specific user.<br /> 
+Once the password is disabled, the user can login without entering the password.
+
+  <p><span id="command" class="pos_left">passwd -d USERNAME</span></p>
+
+<h2>35. mkdir command examples</h2>
+
+Following example creates a directory called temp under your home directory.
+
+  <p><span id="command" class="pos_left">mkdir ~/temp</span></p>
+
+
+Create nested directories using one mkdir command.<br /> 
+If any of these directories exist already, it will not display any error. 
+If any of these directories doesn’t exist, it will create them.
+
+  <p><span id="command" class="pos_left">mkdir -p dir1/dir2/dir3/dir4/</span></p>
+
+<h2>36. ifconfig command examples</h2>
+
+Use ifconfig command to view or configure a network interface on the Linux system.<br />
+
+View all the interfaces along with status.
+
+  <p><span id="command" class="pos_left">ifconfig -a</span></p>
+
+
+Start or stop a specific interface using up and down command as shown below.
+
+  <p><span id="command" class="pos_left">ifconfig eth0 up</span></p>
+  <p><span id="command" class="pos_left">ifconfig eth0 down</span></p>
+
+<h2>37. uname command examples</h2>
+
+Uname command displays important information about the system such as — Kernel name, Host name, Kernel release number, Processor type, etc.,
+
+Sample uname output from a Ubuntu laptop is shown below.
+
+  <p><span id="command" class="pos_left">uname -a<br />
+  Linux john-laptop 2.6.32-24-generic #41-Ubuntu SMP Thu Aug 19 01:12:52 UTC 2010 i686 GNU/Linux</span></p>
+
+<h2>38. whereis command examples</h2>
+
+When you want to find out where a specific Unix command exists (for example, where does ls command exists?), you can execute the following command.
+
+  <p><span id="command" class="pos_left">whereis ls<br />
+  ls: /bin/ls /usr/share/man/man1/ls.1.gz /usr/share/man/man1p/ls.1p.gz</span></p>
+
+
+When you want to search an executable from a path other than the whereis default path, you can use -B option and give path as argument to it.<br /> 
+This searches for the executable lsmk in the /tmp directory, and displays it, if it is available.
+
+  <p><span id="command" class="pos_left">whereis -u -B /tmp -f lsmk<br />
+  lsmk: /tmp/lsmk</span></p>
+
+<h2>39. whatis command examples</h2>
+
+Whatis command displays a single line description about a command.
+
+  <p><span id="command" class="pos_left">whatis ls<br />
+  ls (1) - list directory contents</span></p>
+  
+
+  <p><span id="command" class="pos_left">whatis ifconfig<br />
+  ifconfig (8) - configure a network interface</span></p>
+
+<h2>40. locate command examples</h2>
+
+Using locate command you can quickly search for the location of a specific file (or group of files).<br /> 
+Locate command uses the database created by updatedb.<br />
+
+The example below shows all files in the system that contains the word crontab in it.
+
+  <p><span id="command" class="pos_left">locate crontab<br />
+  /etc/anacrontab<br />
+  /etc/crontab<br />
+  /usr/bin/crontab<br />
+  /usr/share/doc/cron/examples/crontab2english.pl.gz<br />
+  /usr/share/man/man1/crontab.1.gz<br />
+  /usr/share/man/man5/anacrontab.5.gz<br />
+  /usr/share/man/man5/crontab.5.gz<br />
+  /usr/share/vim/vim72/syntax/crontab.vim</span></p>
+
+<h2>41. man command examples</h2>
+
+Display the man page of a specific command.
+
+  <p><span id="command" class="pos_left">man crontab</span></p>
+
+
+When a man page for a command is located under more than one section, 
+you can view the man page for that command from a specific section as shown below.
+
+  <p><span id="command" class="pos_left">man SECTION-NUMBER commandname</span></p>
+
+Following 8 sections are available in the man page.<br />
+<br />
+   General commands<br />
+   System calls<br />
+   C library functions<br />
+   Special files (usually devices, those found in /dev) and drivers<br />
+   File formats and conventions<br />
+   Games and screensavers<br />
+   Miscellaneous<br />
+   System administration commands and daemons<br />
+<br />
+For example, when you do whatis crontab, you’ll notice that crontab has two man pages (section 1 and section 5).<br /> 
+To view section 5 of crontab man page, do the following.<br />
+
+  <p><span id="command" class="pos_left">whatis crontab<br />
+  crontab (1) - maintain crontab files for individual users (V3)<br />
+  crontab (5) - tables for driving cron</span></p>
+
+  man 5 crontab
+
+<h2>42. tail command examples</h2>
+
+Print the last 10 lines of a file by default.
+
+  <p><span id="command" class="pos_left">tail filename.txt</span></p>
+  
+
+Print N number of lines from the file named filename.txt
+
+  <p><span id="command" class="pos_left">tail -n N filename.txt</span></p>
+
+
+View the content of the file in real time using tail -f.<br /> 
+This is useful to view the log files, that keeps growing.<br /> 
+The command can be terminated using CTRL-C.
+
+  <p><span id="command" class="pos_left">tail -f log-file</span></p>
+
+<h2>43. less command examples</h2>
+
+less is very efficient while viewing huge log files, as it doesn’t need to load the full file while opening.
+
+  <p><span id="command" class="pos_left">less huge-log-file.log</span></p>
+
+
+One you open a file using less command, following two keys are very helpful.
+
+  <p><span id="command" class="pos_left">CTRL+F – forward one window</span></p>
+  <p><span id="command" class="pos_left">CTRL+B – backward one window</span></p>
+
+<h2>44. su command examples</h2>
+
+Switch to a different user account using su command.<br /> 
+Super user can switch to any other user without entering their password.
+
+  <p><span id="command" class="pos_left">su - USERNAME</span></p>
+
+
+Execute a single command from a different account name.<br /> 
+In the following example, john can execute the ls command as raj username.<br /> 
+Once the command is executed, it will come back to john’s account.
+
+  <p><span id="command" class="pos_left">[john@dev-server]$ su - raj -c 'ls'</span></p>
+
+  <p><span id="command" class="pos_left">[john@dev-server]$</span></p>
+
+
+Login to a specified user account, and execute the specified shell instead of the default shell.
+
+  <p><span id="command" class="pos_left">su -s 'SHELLNAME' USERNAME</span></p>
+
+<h2>45. mysql command examples</h2>
+
+mysql is probably the most widely used open source database on Linux.<br /> 
+Even if you don’t run a mysql database on your server, you might end-up using the mysql command ( client ) to connect to a mysql database running on the remote server.<br />
+
+To connect to a remote mysql database.<br /> 
+This will prompt for a password.
+
+  <p><span id="command" class="pos_left">mysql -u root -p -h 192.168.1.2</span></p>
+
+
+To connect to a local mysql database.
+
+  <p><span id="command" class="pos_left">mysql -u root -p</span></p>
+
+
+If you want to specify the mysql root password in the command line itself, enter it immediately after -p (without any space). 
+
+<h2>46. yum command examples</h2>
+To install apache using yum.
+
+  <p><span id="command" class="pos_left">yum install httpd</span></p>
+
+To upgrade apache using yum.
+
+  <p><span id="command" class="pos_left">yum update httpd</span></p>
+
+
+To uninstall/remove apache using yum.
+
+  <p><span id="command" class="pos_left">yum remove httpd</span></p>
+
+<h2>47. rpm command examples</h2>
+
+To install apache using rpm.
+
+  <p><span id="command" class="pos_left">rpm -ivh httpd-2.2.3-22.0.1.el5.i386.rpm</span></p>
+
+
+To upgrade apache using rpm.
+
+  <p><span id="command" class="pos_left">rpm -uvh httpd-2.2.3-22.0.1.el5.i386.rpm</span></p>
+
+
+To uninstall/remove apache using rpm.
+
+  <p><span id="command" class="pos_left">rpm -ev httpd</span></p>
+
+<h2>48. ping command examples</h2>
+
+Ping a remote host by sending only 5 packets.
+
+  <p><span id="command" class="pos_left">ping -c 5 gmail.com</span></p>
+
+<h2>49. date command examples</h2>
+
+Set the system date:
+
+  <p><span id="command" class="pos_left">date -s "01/31/2010 23:59:53"</span></p>
+
+
+Once you’ve changed the system date, you should syncronize the hardware clock with the system date as shown below.
+
+  <p><span id="command" class="pos_left">hwclock –systohc</span></p>
+
+  style="background-color: lightgray style="font-family: Courier;">hwclock --systohc –utc
+
+<h2>50. wget command examples</h2>
+
+The quick and effective method to download software, music, video from internet is using wget command.
+
+  <p><span id="command" class="pos_left">wget http://prdownloads.sourceforge.net/sourceforge/nagios/nagios-3.2.1.tar.gz</span></p>
+
+
+Download and store it with a different name.
+
+  <p><span id="command" class="pos_left">wget -O taglist.zip http://www.vim.org/scripts/download_script.php?src_id=7701</span></p>
+
+<h2>Alphabetical List of Principal Commands</h2>
+On rpm-based systems, to find out which package owns the command foo (where foo is a standalone executable), use the command rpm -q -f foo.<br />
+ - translation utility from awk to Perl
+ <p><span id="command" class="pos_left">a2p</span></p> 
+- translation utility from ``any'' to Postscript
+ <p><span id="command" class="pos_left">a2ps</span></p> 
+- print statistics concerning user connect time
+ <p><span id="command" class="pos_left">ac</span></p> 
+- determine whether a file can be accessed
+ <p><span id="command" class="pos_left">access</span></p> 
+- Adobe utility for viewing pdf files
+ <p><span id="command" class="pos_left">acroread</span></p> 
+- used by root to add user to system
+ <p><span id="command" class="pos_left">adduser</span></p> 
+     <p><span id="command" class="pos_left">usage: adduser userid</span></p> 
+- utility to copy or restore files to an archive file. This utility is not part of the basic internal and external programs under Red Hat Linux. It is available as an rpm on the rpmfind.net site.
+ <p><span id="command" class="pos_left">afio</span></p>  
+- enables login on terminals. See getty, mgetty, and uugetty.
+  <p><span id="command" class="pos_left">agetty</span></p> 
+- list mail aliases
+ <p><span id="command" class="pos_left">ali</span></p> 
+- assign name to specified command list. This is actually a shell builtin.<br /> 
+On my Red Hat system, I have global alias commands in my /etc/bashrc file and in my  /.bashrc file.<br /> 
+On my Slackware box, I have made the rm command a little bit safer with<br />
+ <p><span id="command" class="pos_left">alias</span></p> 
+so that you can't recursively delete your /dev directory without telling the system you're sure you want to do it.
+     <p><span id="command" class="pos_left">alias rm='rm -i' </span></p>
+
+- utility to convert to and from different Linux package formats. <br />
+Can handle Debian (deb), Stampede (stp), Red Hat (rpm) and Slackware (tgz) packages.
+ <p><span id="command" class="pos_left">alien</span></p> 
+- display command names based on keyword search
+ <p><span id="command" class="pos_left">apropos</span></p> 
+
+     <p><span id="command" class="pos_left">usage: apropos keyword </span></p>
+- printer filter called by lpd to deal with printing different types of files. <br /> 
+is a fairly sophisticated print filter. It is not set up by default in Slackware.<br /> 
+It used to be available on the second cd of a Slackware distribution. <br />
+Since 4.0, it is available as one of the main packages in the ap set. <br />
+Read the mail that the installation program sends to the root user. I believe that Red Hat uses its own printer filters.
+ <p><span id="command" class="pos_left">apsfilter</span></p> 
+ - create, modify and extract from archives
+ <p><span id="command" class="pos_left">ar</span></p>
+- print machine architecture type
+<p><span id="command" class="pos_left">arch </span></p>
+- the portable GNU assembler
+<p><span id="command" class="pos_left">as </span></p>
+- AfterStep laptop advanced power management utility
+<p><span id="command" class="pos_left">asapm </span></p>
+- a shell, a very simple shell program sometimes used on boot diskettes since it takes up much less space than bash, tcsh, zsh, etc.
+<p><span id="command" class="pos_left">ash </span></p>
+- AfterStep cpu load monitor
+<p><span id="command" class="pos_left">asload </span></p>
+- AfterStep mail checking utility
+<p><span id="command" class="pos_left">asmail </span></p>
+- AfterStep utility to monitor modem status
+<p><span id="command" class="pos_left">asmodem </span></p>
+- a spell checking program along the lines of ispell
+<p><span id="command" class="pos_left">aspell </span></p>
+- X Window postit note utility
+<p><span id="command" class="pos_left">aspostit  </span></p>
+- executes a shell script at specified time. Use atq to show pending jobs, and atrm to remove jobs from the queue.
+ <p><span id="command" class="pos_left">at </span></p>
+    usage: 
+    <p><span id="command" class="pos_left">at time</span></p>
+    or: 
+    <p><span id="command" class="pos_left">at -f file time</span></p> 
+- shows pending jobs queued by at. If run by root, shows everybody's pending jobs.
+<p><span id="command" class="pos_left">atq </span></p>
+- removes pending jobs queued by at. Use atq to determine the identities of various jobs.
+<p><span id="command" class="pos_left">atrm </span></p>
+
+    usage: <p><span id="command" class="pos_left">atrm job</span></p> 
+- searches for and process patterns in a file
+<p><span id="command" class="pos_left">awk </span></p>
+- print banner to standard output. Syntax is
+<p><span id="command" class="pos_left">banner </span></p>
+
+    <p><span id="command" class="pos_left">banner [option] [characters]</span></p> 
+- Bourne again shell. This is the default shell in the Red Hat installation.
+<p><span id="command" class="pos_left">bash </span></p>
+- queue, examine, or delete jobs for later execution. See at.
+<p><span id="command" class="pos_left">batch </span></p>
+- a language (compiler) similar to C, with unlimited precision arithmetic
+<p><span id="command" class="pos_left">bc </span></p>
+- send process with pid ``PID'' to the background. This is the same as executing [Ctrl]z while interacting with the running process. This is a shell builtin.
+<p><span id="command" class="pos_left">bg PID </span></p>
+- puts a job in the background. This is a shell builtin.
+<p><span id="command" class="pos_left">bh </span></p>
+- mail notification utility. Notifies user of mail arrival and sender's name.
+<p><span id="command" class="pos_left">biff  </span></p>
+- displays or redefines key bindings. This is a shell builtin.
+<p><span id="command" class="pos_left"> bind </span></p>
+- parser generator similar to yacc
+<p><span id="command" class="pos_left">bison </span></p>
+- a powerful backup utility program. Commercial. Demonstration versions are often included with Linux distributions such as Red Hat.
+<p><span id="command" class="pos_left">bru </span></p>
+- equivalent to ash
+<p><span id="command" class="pos_left">bsh </span></p>
+- used to uncompress files compressed with bzip2
+<p><span id="command" class="pos_left">bunzip2 </span></p>
+- parser generator
+<p><span id="command" class="pos_left">byacc </span></p>
+- compresses with algorithm different from gzip
+<p><span id="command" class="pos_left">bzip2 </span></p>
+- view bzipped files
+<p><span id="command" class="pos_left">bzless </span></p>
+- invokes GNU C and C++ compiler
+<p><span id="command" class="pos_left">c++ </span></p>
+- displays a 12-month calendar for the given year or a one-month calendar of the given month
+<p><span id="command" class="pos_left">cal </span></p>
+
+<p><span id="command" class="pos_left">    usage: cal month year</span></p> 
+- combine, copy standard input to standard output. Used to join or display files.
+<p><span id="command" class="pos_left">cat </span></p>
+- change working directory. This is a shell builtin in bash, tcsh and zsh.
+<p><span id="command" class="pos_left">cd </span></p>
+- command line utility for playing audio cds
+<p><span id="command" class="pos_left">cdplay </span></p>
+- similar to fdisk, but menu-driven
+<p><span id="command" class="pos_left">cfdisk </span></p>
+- used to interact with a modem via a chat script
+<p><span id="command" class="pos_left">chat </span></p>
+- changes group associated with file. Can be used to change the group associated with subdirectories and files of a directory.
+<p><span id="command" class="pos_left">chgrp </span></p>
+
+    usage: <p><span id="command" class="pos_left">chgrp group files</span></p>
+    or: <p><span id="command" class="pos_left">chgrp -R group files </span></p>
+- Query or update system services/daemons for different runlevels. Manipulates the various symbolic links in /etc/rc.d. <br />
+This utility is included with many rpm-based distributions such as RedHat and Mandrake. It is designed to work with System V initialization scripts.<br /> 
+Graphical tools for configuring system services include ntsysv, tksysv and ksysv (the latter is a KDE utility).<br />
+<p><span id="command" class="pos_left">chkconfig </span></p>
+- set permissions (modes) of files or directories. A value of 4 is used for read permission. A value of 2 is used for write permission.<br /> 
+A value of 1 is used for execute permission. See umask for default file permissions upon file creation. <br />
+Chmod can also be used to change the suid bit on files. The syntax for the symbolic version is<br />
+<p><span id="command" class="pos_left">chmod </span></p>
+
+    <p><span id="command" class="pos_left">chmod [options] who operation permission file-list</span></p> 
+
+The syntax for the absolute version is
+
+    <p><span id="command" class="pos_left">chmod [options] mode file-list</span></p> 
+
+To set the uid to the owner's permissions, use
+
+    <p><span id="command" class="pos_left">chmod u +s file-name</span></p> 
+
+To set the uid to the group's permissions, use
+
+    <p><span id="command" class="pos_left">chmod g +s file-name </span></p>
+
+There are lots of security issues related to allowing a program to have root's permissions when run by an ordinary user. <br />
+I don't pretend to understand all of these issues. <br />
+- changes ownership of a file. Can be used recursively.
+<p><span id="command" class="pos_left">chown </span></p>
+
+    usage: <p><span id="command" class="pos_left">chown userid files</span></p>
+    or: <p><span id="command" class="pos_left">chown -R userid files </span></p>
+- change default shell
+<p><span id="command" class="pos_left">chsh </span></p>
+- creates or records changes in an RCS file
+<p><span id="command" class="pos_left">ci </span></p>
+- clear screen command
+<p><span id="command" class="pos_left">clear </span></p>
+- compares two files for differences
+<p><span id="command" class="pos_left">cmp </span></p>
+
+    usage: <p><span id="command" class="pos_left">cmp file1 file2</span></p> 
+- retrieves an unencoded version of an RCS file
+<p><span id="command" class="pos_left">co </span></p>
+- compares sorted files
+<p><span id="command" class="pos_left">comm </span></p>
+- automatically configures software source code
+<p><span id="command" class="pos_left">configure </span></p>
+- color xterm program. Under Red Hat, this is just a link to xterm-color.
+<p><span id="command" class="pos_left">color-xterm </span></p>
+- graphical system configuration tool under Red Hat.
+<p><span id="command" class="pos_left">control-panel </span></p>
+- copies on or more files. Recursive copying is one simple way of archiving part of a directory structure. Use the command as follows:
+<p><span id="command" class="pos_left">cp </span></p>
+
+    <p><span id="command" class="pos_left">cp -r /sourcedirectory /targetdirectory</span></p> 
+- direct copy of files to an output device. Allows creation of archive file spanning multiple diskettes. <br />
+Allows one directory structure to be mirrored elsewhere on the partition or on another partition. <br />
+In order to back up an entire directory structure on diskettes, cd to the directory and use the following command:<br />
+cpio 
+
+<p><span id="command" class="pos_left">    find . -depth -print | cpio -ov > /dev/fd0</span></p> 
+
+To restore from diskettes, use:
+
+    <p><span id="command" class="pos_left">cpio -iv < /dev/fd0 </span></p>
+
+The cpio command will prompt the user to insert more diskettes as they are needed.<br /> 
+The command for mirroring a directory structure is the following:<br />
+
+    <p><span id="command" class="pos_left">find . -depth -print | cpio -pv /destinationdirectory</span></p> 
+
+ This copies the working directory and its contents, including subdirectories, into /destinationdirectory. <br />
+ In order to copy an individual file which is larger than a floppy, use:
+
+    <p><span id="command" class="pos_left">find . -name nameoffile -print | cpio -iv > /dev/fd0 </span></p>
+- Slackware tool to install, uninstall and query packages. Front end to installpkg, removepkg, makepkg. <br />
+This is the graphical version that uses ncurses.
+<p><span id="command" class="pos_left">cpkgtool </span></p>
+- GNU C-compatible compiler preprocessor
+<p><span id="command" class="pos_left">cpp </span></p>
+- schedules command to run at regularly specified time
+<p><span id="command" class="pos_left">crontab </span></p>
+- run C shell
+<p><span id="command" class="pos_left">csh </span></p>
+- separate files into sections. See also split.
+<p><span id="command" class="pos_left">csplit </span></p>
+- manages concurrent acces to files in a hierarchy. Stands for concurrent version system. <br />
+Is built on RCS. It stores successive revisions of files efficiently and ensures that access to files by multiple developers is done in a controlled manner.<br /> 
+Useful when many developers are working on the same project.
+<p><span id="command" class="pos_left">cvs</span></p> 
+- selects characters or TAB-separated fields from lines of input and writes them to standard output
+<p><span id="command" class="pos_left">cut </span></p>
+- displays or sets date and time
+<p><span id="command" class="pos_left">date </span></p>
+
+    usage: <p><span id="command" class="pos_left">date</span></p>
+    or: <p><span id="command" class="pos_left">date date </span></p>
+- direct copy of file from one device to another. Can be used to make copies of boot or root diskettes for installing Linux. <br />
+It can be used, for example, to make and exact copy of a floppy disk, as follows. First, place the diskette to be copied in the floppy drive. Then,
+<p><span id="command" class="pos_left">dd </span></p>
+
+    <p><span id="command" class="pos_left">dd if=/dev/fd0 ibs=512 > floppy.copy</span></p>
+    Replace the diskette with a fresh diskette.</span></p>
+    <p><span id="command" class="pos_left">dd if=floppy.copy bs=512 of=/dev/fd0</span></p> 
+
+The ibs and bs options specify the block sizes for input and for both input and output. <br />
+A boot disk image can be directly copied to a floppy using the second of the two dd commands above.<br />
+- declares attributes for a variable (same as typeset). This is a shell builtin.
+<p><span id="command" class="pos_left">declare </span></p>
+- displays capacity and free capacity on different physical devices such as hard drive partitions and floppy drives that are mounted on the file system.<br /> 
+Gives free space in blocks. With the (undocumented) option -h, the program gives free space in Mb or Gb. <br />
+This is useful for those accustomed to thinking of the capacity of a high-density 3.5 inch diskette as 1440k.
+<p><span id="command" class="pos_left">df </span></p>
+- displays differences between two files
+<p><span id="command" class="pos_left">diff </span></p>
+
+    usage: <p><span id="command" class="pos_left">diff file1 file2</span></p> 
+- compares three files and reports on differences
+<p><span id="command" class="pos_left">diff3 </span></p>
+- used to set up a SLIP or PPP connection. It can be used to set up an outgoing SLIP connection or an incoming connection.
+<p><span id="command" class="pos_left">dip </span></p>
+- used for setting up incoming dip connections. See the man page for dip.
+<p><span id="command" class="pos_left">diplogin </span></p>
+- a variation of the GNU ls command that defaults to printing file names in columns
+<p><span id="command" class="pos_left">dir </span></p>
+- set colors for GNU ls command. In Slackware, this command is run by the /etc/profile script. <br />
+Then, whenever xterm is run with the -ls (login shell) option, ls displays different colors for different types of files.<br /> 
+Typical usage is eval `dircolors -b`. In Red Hat and Mandrake, I get color directories by aliasing the ls command (see below).
+<p><span id="command" class="pos_left">dircolors</span></p> 
+- set display for output of programms under X Windows.<br /> 
+Can be used to run a program on a remote machine while displaying the output on a local machine.<br /> 
+The remote machine must have permission to send output to the local machine. This is actually an environment variable.<br /> 
+See the more detailed discussion in connection with the xhost command below.
+<p><span id="command" class="pos_left">display </span></p>
+- displays messages from /var/log relative to the most recent boot
+<p><span id="command" class="pos_left">dmesg </span></p>
+- invoke the DOSEMU DOS emulator
+<p><span id="command" class="pos_left">dos </span></p>
+- displays information on disk usage. The command
+<p><span id="command" class="pos_left">du </span></p>
+
+<p><span id="command" class="pos_left">    du / -bh | less</span></p> 
+
+will display detailed disk usage for each subdirectory starting at root, giving files sizes in bytes.
+- print information about the keyboard driver's translation tables to standard output
+<p><span id="command" class="pos_left">dumpkeys </span></p>
+- send a dvi file to a Laserjet printer. There are specialized versions for individual models of Laserjet printer.
+<p><span id="command" class="pos_left">dvilj </span></p>
+- specialized version of dvilj for the IIp series of printers. See above
+<p><span id="command" class="pos_left">dvilj2p </span></p>
+- send a dvi file to a Postscript printer, to a Postscript capable Laserjet printer, or to a file (with the -o option). <br />
+There is a switch to print only a subset of the pages, and another switch to print in landscape mode. <br />
+Use -t landscape, which is one of the arguments to the paper type switch. If you have one page of a document that is a wide table, <br />
+and you wish to print this in landscape mode, use
+<p><span id="command" class="pos_left">dvips </span></p>
+
+<p><span id="command" class="pos_left">    dvips filename -pp pagenumber -t landscape</span></p> 
+- check an ext2 filesystem. The syntax is
+<p><span id="command" class="pos_left">e2fsck </span></p>
+
+    <p><span id="command" class="pos_left">e2fsck /dev/devicename</span></p> 
+
+where the filesystem is on /dev/devicename. The device should not be mounted, and this program must be run as root.
+- write arguments to standard output. One use is to print out information about environment variables, as in
+<p><span id="command" class="pos_left">echo </span></p>
+
+    <p><span id="command" class="pos_left">echo $PATH - list paths to search</span></p>
+    <p><span id="command" class="pos_left">echo $HOME or echo ~ - list name of home directory</span></p> 
+
+This is a shell builtin.
+- a dynamic resource editor for X Toolkit applications. Allows the user to change X resources for individual applications.
+<p><span id="command" class="pos_left">editres </span></p>
+- fax program
+<p><span id="command" class="pos_left">efax </span></p>
+- convert between fax, text, bit-map and gray-scale formats
+<p><span id="command" class="pos_left">efix </span></p>
+- search files for lines that match regular expressions. Runs faster than grep and fgrep.
+<p><span id="command" class="pos_left">egrep </span></p>
+- an interactive mail system
+<p><span id="command" class="pos_left">elm </span></p>
+- a version of the vi text editor
+<p><span id="command" class="pos_left">elvis </span></p>
+- screen oriented text editor
+<p><span id="command" class="pos_left">emacs </span></p>
+- desplay the current environment or set a variable equal to a new value
+<p><span id="command" class="pos_left">env </span></p>
+- scans and evaluates the command line. See dircolors command. This is a shell builtin.
+<p><span id="command" class="pos_left">eval </span></p>
+- interactive command-based editor. The man page lists it as being the same as vim, an improved version of vi.
+<p><span id="command" class="pos_left"> ex </span></p>
+- system call which creates a subshell to execute a binary or a script. This is a shell builtin.
+<p><span id="command" class="pos_left">exec </span></p>
+- a variation of the exec command.
+<p><span id="command" class="pos_left">execve </span></p>
+- exit a shell. This is a shell builtin.
+<p><span id="command" class="pos_left">exit </span></p>
+- convert tabs in files to spaces and write to standard output
+<p><span id="command" class="pos_left">expand </span></p>
+- a program that ``talks'' to other interactive programs according to a script. Following the script, <br />
+Expect knows what can be expected from a program and what the correct response should be. <br />
+An interpreted language provides branching and high-level control structures to direct the dialogue.<br /> 
+In addition, the user can take control and interact directly when desired, afterward returning control to the script.
+<p><span id="command" class="pos_left">expect </span></p>
+- place the value of a variable in the calling environment (makes it global). This is a shell builtin.
+<p><span id="command" class="pos_left">export </span></p>
+- utility evaluates an expression and displays the result
+<p><span id="command" class="pos_left">expr </span></p>
+- FORTRAN to C translator
+<p><span id="command" class="pos_left">f2c </span></p>
+- FORTRAN 77 compiler
+<p><span id="command" class="pos_left">f77 </span></p>
+- null command that returns an unsuccessful exit status
+<p><span id="command" class="pos_left">false </span></p>
+- simple user interface to efax and efix programs
+<p><span id="command" class="pos_left">fax </span></p>
+- views, edits, and executes commands for the history list. This is a shell builtin.
+<p><span id="command" class="pos_left">fc </span></p>
+- low level format of a floppy device
+<p><span id="command" class="pos_left">fdformat</span></p> 
+- retrieve mail from a remote mail server and pass it to local SMTP agents on the local machine
+<p><span id="command" class="pos_left">fetchmail </span></p>
+- used to partition hard drives
+<p><span id="command" class="pos_left">fdisk </span></p>
+
+    usage: <p><span id="command" class="pos_left">fdisk device</span></p> 
+- bring a background or stopped process with pid ``PID'' to the foreground. <br />
+This is a shell builtin. If only one process is running in background mode, fg with no argument is sufficient to bring it to the foreground
+<p><span id="command" class="pos_left">fg PID </span></p>
+- search for patterns in files
+<p><span id="command" class="pos_left">fgrep </span></p>
+- displays classification of a file or files according to the type of data they contain
+<p><span id="command" class="pos_left">file </span></p>
+- find files according to a large variety of search criteria. The find command that I use the most is
+<p><span id="command" class="pos_left">find </span></p>
+
+<p><span id="command" class="pos_left">    find . -name filename -print</span></p> 
+
+in order to find files matching a particular name on the working directory and all subdirectories. Find can be incredibly powerful, but it is incredibly obscure.
+- display information about a specified userid or userids
+<p><span id="command" class="pos_left">finger </span></p>
+- simple text formatting utility. Tries to make all nonblank lines nearly the same length.
+<p><span id="command" class="pos_left">fmt </span></p>
+- break lines of specified files so they are no wider than a specified lengths
+<p><span id="command" class="pos_left">fold </span></p>
+- available in the bsdgames package in Slackware and other distributions.<br /> 
+Put a call to fortune in /etc/profile and get something inspirational or amusing every time you fire up an xterm as a login shell.
+<p><span id="command" class="pos_left">fortune </span></p>
+- gives used and free memory on system along with other useful information
+<p><span id="command" class="pos_left">free </span></p>
+- takes a DOS text file from stdin and sends a UNIX file to stdout.
+<p><span id="command" class="pos_left">fromdos </span></p>
+- file system check and repair
+<p><span id="command" class="pos_left">fsck </span></p>
+- file transfer over network
+<p><span id="command" class="pos_left">ftp </span></p>
+- C++ compiler
+<p><span id="command" class="pos_left">g++ </span></p>
+- GNU Fortran 77 compiler
+<p><span id="command" class="pos_left">g77 </span></p>
+- GNU awk, mostly for processing delimited text files
+<p><span id="command" class="pos_left">gawk </span></p>
+- invoke C, C++ compiler
+<p><span id="command" class="pos_left">gcc </span></p>
+- parses arguments to a shell script. This is a shell builtin.
+<p><span id="command" class="pos_left">getipts </span></p>
+- print kernel's scancode-to-keycode mapping table
+<p><span id="command" class="pos_left">getkeycodes </span></p>
+- set of printing utilities. It seems to be obligatory to have this if a TEX installation such as teTEX is installed.<br /> 
+How they communicate with one another is somewhat obscure.
+<p><span id="command" class="pos_left">ghostscript </span></p>
+- Aladdin ghostscript interpreter/previewer
+<p><span id="command" class="pos_left">ghostview </span></p>
+- image manipulation and paint program
+<p><span id="command" class="pos_left">gimp </span></p>
+- Red Hat graphical front end for the rpm package installer and manager.
+<p><span id="command" class="pos_left">glint </span></p>
+- used to find a string within a file. The -i option returns matches without regard to case.<br /> 
+The -n option means that each line of output is preceded by file name and line number. The -v option causes non-matched lines to be printed.
+<p><span id="command" class="pos_left">grep </span></p>
+
+    usage: <p><span id="command" class="pos_left">grep pattern files</span></p>
+    or: <p><span id="command" class="pos_left">grep -i pattern files</span></p>
+    or: <p><span id="command" class="pos_left">grep -n pattern files</span></p>
+    or: <p><span id="command" class="pos_left">grep -v pattern files </span></p>
+- create a new group on the system
+<p><span id="command" class="pos_left">groupadd </span></p>
+- shows which groups you are in
+<p><span id="command" class="pos_left">groups</span></p>
+  - Gnu grand unified bootloader. Can be used instead of lilo to boot multiple operating systems. <br />
+  I encountered a couple of snafus trying to install grub on my home machine after installing Mandrake 8.0 and choosing the lilo bootloader during the initial install.<br /> 
+  The Mandrake installation program set up /boot/vmlinuz as a symlink to the actual kernel, vmlinuz-2.4.3-20mdk. <br />
+  It took me a while to figure out that grub doesn't understand symbolic links. The documentation suggests installing grub on a diskette using the ``dd'' command.<br /> 
+  This refused to work, but
+<p><span id="command" class="pos_left"> grub </span></p>
+
+<p><span id="command" class="pos_left">    grub-install '(fd0)'</span></p> 
+
+did work. The single quotes are necessary. The files necessary to run grub are normally located in /boot/grub. <br />
+Once the file menu.lst has been edited and appropriated entries added to boot the different operating systems on one's hard disk(s),<br /> 
+the following sequence of commands can be used to install grub in the master boot record (MBR) sector of the hard disk:
+
+<p><span id="command" class="pos_left">    root (hd0,x)</span></p>
+<p><span id="command" class="pos_left">    setup (hd0) </span></p>
+
+Here, the x should be replaced by the partition where the /boot/grub directory is located, which is probably the root partition of the Linux system. <br />
+Note that grub has its own conventions for naming devices and numbering partitions, so that for example a partition which is called hda6 under Linux will be called (hd0,5) by grub.<br /><br />
+- command to install grub on the hard drive (or floppy drive).
+<p><span id="command" class="pos_left">grub-install </span></p>
+- used to uncompress files compressed with gzip
+<p><span id="command" class="pos_left">gunzip </span></p>
+- PostScript and PDF previewer, based on ghostview
+<p><span id="command" class="pos_left">gv </span></p>
+- see vi
+<p><span id="command" class="pos_left">gvim </span></p>
+- compresses executables
+<p><span id="command" class="pos_left">gzexe </span></p>
+- used to compress or decompress files
+<p><span id="command" class="pos_left">gzip </span></p>
+- shut down system as root, without reboot, immediately
+<p><span id="command" class="pos_left">halt </span></p>
+- remembers the location of commands in the search path. This is a shell builtin.
+<p><span id="command" class="pos_left">hash </span></p>
+ - displays first part of a file
+<p><span id="command" class="pos_left">head</span></p>
+- command for viewing and manipulating the shell command history list
+<p><span id="command" class="pos_left">history </span></p>
+- look up host names using domain server
+<p><span id="command" class="pos_left">host </span></p>
+- used to get or set hostname. Typically, the host name is stored in the file /etc/HOSTNAME.
+<p><span id="command" class="pos_left">hostname </span></p>
+- used to query and set the hardware clock
+<p><span id="command" class="pos_left">hwclock </span></p>
+- commercial fax program
+<p><span id="command" class="pos_left">hylafax </span></p>
+- display userid and groupid
+<p><span id="command" class="pos_left">id </span></p>
+- daemon which starts up other daemons on demand. Configured in /etc/inetd.conf.
+<p><span id="command" class="pos_left">inetd </span></p>
+- display (as root) information on network interfaces that are currently active.<br /> 
+First ethernet interface should be listed as eth0, second as eth1, etc. <br />
+First modem ppp connection should be listed as ppp0, etc. The ``lo'' connection is ``loopback'' only.<br />
+<p><span id="command" class="pos_left">ifconfig </span></p>
+- shut down the network interface
+<p><span id="command" class="pos_left">ifdown </span></p>
+- start up the interface
+<p><span id="command" class="pos_left">ifup [interface_name]</span></p> 
+- display system information. This is the GNU hypertext reader.
+<p><span id="command" class="pos_left">info </span></p>
+- the mother of all processes, run at bootup, executes commands in /etc/inittab. Can be used (with root privileges) to change the system run level.
+<p><span id="command" class="pos_left">init </span></p>
+
+    usage: <p><span id="command" class="pos_left">init run_level</span></p> 
+- used (by root) to install modular device drivers
+<p><span id="command" class="pos_left">insmod </span></p>
+- Slackware command to install one of the packages from the program sets
+<p><span id="command" class="pos_left">installpkg </span></p>
+- interrupt key, usually [Ctrl-C]
+<p><span id="command" class="pos_left">intr </span></p>
+- checks files for spelling errors
+<p><span id="command" class="pos_left">ispell </span></p>
+
+    usage: <p><span id="command" class="pos_left">ispell files</span></p> 
+- programmer's file editor. Behaves like emacs. Has modes for TEX, FORTRAN, C, etc.
+<p><span id="command" class="pos_left">jed </span></p>
+- displays list of current jobs in the background. This is a shell builtin.
+<p><span id="command" class="pos_left">jobs </span></p>
+- simple WordStar-like text editor. It can be invoked in emacs emulation mode with jemacs and in WordStar emulation mode with jstar.
+<p><span id="command" class="pos_left">joe </span></p>
+- Joseph's Own Version of Emacs. A simple emacs clone.
+<p><span id="command" class="pos_left">jove </span></p>
+- print current keyboard mode
+<p><span id="command" class="pos_left">kbd_mode </span></p>
+- GUI to add/remove kernel modules (as root in X terminal).
+<p><span id="command" class="pos_left">kernelcfg </span></p>
+- kernel daemon, a process that stays in memory and does all sorts of useful stuff, like automatic loading of device driver modules
+<p><span id="command" class="pos_left">kerneld </span></p>
+- a utility program that comes with KDE that allows users to switch on the fly among different international keyboards. It can be used under different window managers than kfm.
+<p><span id="command" class="pos_left">kikbd </span></p>
+- sends a signal to (especially to terminate) a job or process. This is a shell builtin in bash, tcsh and zsh.
+<p><span id="command" class="pos_left">kill </span></p>
+- kill processes by name. Kill all processes which are instances of the speciffied program. Also used to send signals to processes or restart them.
+<p><span id="command" class="pos_left">killall </span></p>
+- kill all processes except the ones on which it depends
+<p><span id="command" class="pos_left">killall5 </span></p>
+- generate a listing of user logins
+<p><span id="command" class="pos_left">last </span></p>
+- prints the last login times of all users
+<p><span id="command" class="pos_left">lastlog </span></p>
+- compile a LATEX file
+<p><span id="command" class="pos_left">latex </span></p>
+- creates the necessary links and cache (for use by the run-time linker, ld.so) to the most recent shared libraries found in the directories specified on the command line, <br />
+in the file /etc/ld.so.conf, and in the trusted directories (/usr/lib and /lib). <br />
+Ldconfig checks the header and file names of the libraries it encounters when determining which versions should have their links updated.<br /> 
+Ldconfig ignores symbolic links when scanning for libraries.
+<p><span id="command" class="pos_left">ldconfig </span></p>
+- list the shared libraries on which a given executable depends, and where they are located
+<p><span id="command" class="pos_left"> ldd </span></p>
+- display reminder at specified time
+<p><span id="command" class="pos_left">leave </span></p>
+- Linux alternative to ``more'' command. Displays text files, one screenful at a time. When less pauses, there is a large number of available commands to tell it what to do next.<br />
+ One can scroll both forwards and backwards.
+<p><span id="command" class="pos_left">less </span></p>
+- evaluates a numeric expression. This is a shell builtin.
+<p><span id="command" class="pos_left">let </span></p>
+- installs boot loader on the boot sector of a hard drive, of a diskette, or in another location. My 486 has a hard drive that is too large for the machine's BIOS,<br /> 
+so I have to boot from a floppy. To create a boot diskette, I do the following (as root):
+<p><span id="command" class="pos_left">lilo </span></p>
+
+<p><span id="command" class="pos_left">    /sbin/fdformat /dev/fd0H1440</span></p>
+<p><span id="command" class="pos_left">    /sbin/mkfs.ext2 /dev/fd0</span></p>
+<p><span id="command" class="pos_left">    mount -t ext2 /dev/fd0 /mnt/floppy</span></p>
+<p><span id="command" class="pos_left">    cp -dp /boot/* /mnt/floppy</span></p>
+<p><span id="command" class="pos_left">    /sbin/lilo -C /etc/lilo.flop </span></p>
+
+The -C option to lilo has lilo use the lilo.flop file instead of the default lilo.conf.
+- interactive tool for configuring Linux system. Uses X if loaded. This is a Gnome tool. It comes with my Red Hat distribution, and is not included with Slackware. <br />
+It would seem to be the easiest way to configure Linux under Slackware. Version 1.15 is available for Slackware. <br />
+There is a pretty good introduction to the use of linuxconf in the Red Hat 5.2 installation manual, which is available online at their web site.<br />
+<p><span id="command" class="pos_left">linuxconf </span></p>
+- creates a link to a file. Used to create hard links and, with the -s option, symbolic links which can link files on different disk partitions. The syntax is
+<p><span id="command" class="pos_left">ln </span></p>
+
+<p><span id="command" class="pos_left">    ln [options] source [dest]</span></p> 
+- find the file name which contains the string ``filename''. The syntax is easier than the find command.
+<p><span id="command" class="pos_left">locate filename </span></p>
+- temporarily lock terminal
+<p><span id="command" class="pos_left">lock </span></p>
+- create semaphore file(s), used to limit access to a file
+<p><span id="command" class="pos_left">lockfile </span></p>
+
+- log in to system
+- consult /etc/utmp for user's login name
+<p><span id="command" class="pos_left">logname </span></p>
+- execute logout as individual user and bring up login: prompt
+<p><span id="command" class="pos_left">logout </span></p>
+- look for strings in files
+<p><span id="command" class="pos_left">look </span></p>
+- show print jobs that are waiting
+<p><span id="command" class="pos_left">lpq </span></p>
+- send file to be printed
+<p><span id="command" class="pos_left">lpr </span></p>
+- cancel a job from print queue
+<p><span id="command" class="pos_left">lprm </span></p>
+- list directory contents. To get colored directory listings under Red Hat, Mandrake, etc., use
+<p><span id="command" class="pos_left">ls </span></p>
+
+<p><span id="command" class="pos_left">    ls -color</span></p> 
+
+To get this all the time, add
+
+<p><span id="command" class="pos_left">    alias ls='ls -color=auto'</span></p> 
+
+to .bashrc. The following command
+
+<p><span id="command" class="pos_left">    alias ls='ls -Fskb -color=auto'</span></p> 
+
+will give directory listings in color, with file sizes in kilobytes, and append a character to the file to indicate its type.
+- list attributes of files in ext2 file system
+<p><span id="command" class="pos_left">lsattr </span></p>
+- used (by root) to show kernel modules currently loaded
+<p><span id="command" class="pos_left">lsmod </span></p>
+- utility to display information on pci buses and hardware devices attached to them. Part of the pciutils package that comes with many Linux distributions.
+<p><span id="command" class="pos_left">lspci </span></p>
+- utility to display information about pnp devices. Part of the pcmcia or kernel-pcmcia package, depending on the distribution.
+<p><span id="command" class="pos_left">lspnp </span></p>
+- an implementation of the traditional UNIX macro processor.<br /> 
+It can be used with the sendmail configuration package in Red Hat (and Slackware) to generate a sendmail.conf<br />  
+configuration file without having to edit the configuration file directly.
+<p><span id="command" class="pos_left">m4 </span></p>
+- general purpose printer filter. See apsfilter above. apsfilter is the printer filter that comes with the Red Hat and Slackware distributions.
+<p><span id="command" class="pos_left">magicfilter</span></p> 
+- sends or reads electronic mail
+<p><span id="command" class="pos_left">mail </span></p>
+- keeps a set of programs current. This is a utility that helps when developing a set of programs. <br />
+It works by executing a script called makefile, Makefile or GNUmakefile in the working directory. <br />
+It is very often used in combination with configure when compiling and installing noncompiled software packages.
+<p><span id="command" class="pos_left">make </span></p>
+- command in Slackware to do just what the name says
+<p><span id="command" class="pos_left">makebootdisk</span></p> 
+- executable script to make device files on /dev
+<p><span id="command" class="pos_left">MAKEDEV </span></p>
+
+<p><span id="command" class="pos_left">makeswap </span></p>
+- displays information from online Unix reference manual
+<p><span id="command" class="pos_left">man </span></p>
+- attempt to determine path to manual pages
+<p><span id="command" class="pos_left">manpath </span></p>
+- Midnight Commander file manager and visual shell
+<p><span id="command" class="pos_left">mc </span></p>
+- enables/disables reception of messages
+<p><span id="command" class="pos_left"> mesg </span></p>
+- terminal program
+<p><span id="command" class="pos_left">minicom </span></p>
+- create a directory
+<p><span id="command" class="pos_left">mkdir </span></p>
+- create a file system (format) on a device or partition. Should be invoked after lowlevel formatting of the disk using fdformat.<br /> 
+It has several versions which are all links to the basic program, such as mkfs.ext2 and mkfs.msdos.
+<p><span id="command" class="pos_left">mkfs </span></p>
+- creates a Linux swap space on the specified hard disk parition (root privileges neede)
+<p><span id="command" class="pos_left">mkswap </span></p>
+
+    usage:<p><span id="command" class="pos_left"> mkswap device</span></p> 
+- list file contents, stopping after each full screen
+<p><span id="command" class="pos_left">more </span></p>
+- mount device using filesystem of type [fstype] with device name [device] at the location [mountpoint] in the filesystem directory tree
+<p><span id="command" class="pos_left">mount -t [fstype] [device] [mountpoint]</span></p> 
+- mount all filesystems according to the specifications in /etc/fstab
+<p><span id="command" class="pos_left">mount -a </span></p>
+- mouse configuration utility under Red Hat. Located in /usr/sbin.
+<p><span id="command" class="pos_left">mouseconfig </span></p>
+- print multiple pages per sheet on a Postscript printer. Can also be used to print a page in landscape mode.
+<p><span id="command" class="pos_left">mpage </span></p>
+- package of MS-DOS utilities. Includes the following commands.
+<p><span id="command" class="pos_left">Mtools </span></p>
+
+<p><span id="command" class="pos_left">    mcd - changes working directory on DOS disk</span></p>
+<p><span id="command" class="pos_left">    mcopy - copies DOS files from one directory to another</span></p>
+<p><span id="command" class="pos_left">    mdel - deletes DOS files</span></p>
+<p><span id="command" class="pos_left">    mdir - lists contents of DOS directories</span></p>
+<p><span id="command" class="pos_left">    mformat - adds DOS formatting information to a disk</span></p>
+<p><span id="command" class="pos_left">    mtype - displays contents of a DOS file </span></p>
+
+The default device for execution of these commands is /dev/fd0 and can be referred to as ``a:''.
+- moves (renames) files
+<p><span id="command" class="pos_left">mv </span></p>
+- used (as root) to set up network
+<p><span id="command" class="pos_left">netconf </span></p>
+- rebuilds the /etc/aliases database used by sendmail. Must be rerun every time /etc/aliases is modified for the changes to take effect.
+<p><span id="command" class="pos_left">newaliases </span></p>
+- similar to login. Changes user's identification
+<p><span id="command" class="pos_left">newgrp </span></p>
+- sets the priority of the program ``program_name''.
+<p><span id="command" class="pos_left">nice program_name</span></p> 
+- lists the symbols from object files objfile. If no object files are given as arguments, nm assumes `a.out'.
+<p><span id="command" class="pos_left">nm </span></p>
+- runs a command that keeps running after logout. The command is in principle immune to hangups, and must have output to a non tty. <br />
+According to Linux in a Nutshell, this is necessary only in the Bourne shell, since modern shells preserve background processes by default.
+<p><span id="command" class="pos_left">nohup </span></p>
+- run level editor under Red Hat. This is the equivalent of tksysv, but does not require a graphical interface.
+<p><span id="command" class="pos_left">ntsysv </span></p>
+- color xterm program. The man page for nxterm under Red Hat brings up the same page as xterm.
+<p><span id="command" class="pos_left">nxterm </span></p>
+- dumps contents of a file
+<p><span id="command" class="pos_left">od </span></p>
+- change login password
+<p><span id="command" class="pos_left">passwd </span></p>
+- joins corresponding lines from files
+<p><span id="command" class="pos_left">paste </span></p>
+- updates source code. Attempts to update a file from a file of change information, or pathces, created by diff.
+<p><span id="command" class="pos_left">patch </span></p>
+- determine validity and portability of filenames
+<p><span id="command" class="pos_left">pathchk </span></p>
+- part of the pdftex program suite. Produces pdf output from a LATEX file.
+<p><span id="command" class="pos_left">pdflatex </span></p>
+- produces pdf output from a TeX file. See also pdflatex.<br /> 
+This program is part of the tetex 0.9 distribution that is included with Red Hat 5.2 and above, and with Slackware 4.0 and above. It is also available as a separate program.
+<p><span id="command" class="pos_left">pdftex </span></p>
+- practical extraction and report language
+<p><span id="command" class="pos_left">perl </span></p>
+- display data one screenful at a time
+<p><span id="command" class="pos_left">pg </span></p>
+- simple screen oriented text editor. It is included as part of the Pine program.
+<p><span id="command" class="pos_left">pico </span></p>
+- check if Internet computer is responding. Can also measure the time it takes the queried computer to respond.
+<p><span id="command" class="pos_left">ping </span></p>
+- Slackware tool to install, uninstall and query packages. Front end to installpkg, removepkg, makepkg. The cpkgtool is the ncurses graphical version of this program.
+<p><span id="command" class="pos_left">pkgtool </span></p>
+- retrieve mail via the Post Office Protocol. Supports POP2 and POP3.
+<p><span id="command" class="pos_left">popclient </span></p>
+- pops the top directory of the directory stack and uses cd to change to that directory. This is a shell builtin.
+<p><span id="command" class="pos_left">popd </span></p>
+- paginates files for printing
+<p><span id="command" class="pos_left">pr </span></p>
+- display list of environment variables
+<p><span id="command" class="pos_left">printenv</span></p> 
+- run (as root) in an X terminal to configure your printer(s)
+<p><span id="command" class="pos_left">printtool </span></p>
+- displays status of processes. Use the -a option for processes for all users. Use the -x option to include processes not attached to a terminal.
+<p><span id="command" class="pos_left">ps </span></p>
+- display processes in the form of a tree structure. Killing a parent process will also kill all the children and their descendants.
+<p><span id="command" class="pos_left">pstree </span></p>
+- pushes the argument onto the top of the directory stack and uses cd to change to that directory. This is a shell builtin.
+<p><span id="command" class="pos_left">pushd </span></p>
+- print absolute path of working directory. This is a shell builtin.
+<p><span id="command" class="pos_left">pwd </span></p>
+- checks the integrity of password and shadow files
+<p><span id="command" class="pos_left">pwchk  </span></p>
+- converts passwords to the shadow password format
+<p><span id="command" class="pos_left">pwconv </span></p>
+- unconverts passwords from the shadow password format. Generates a standard Unix password file.
+<p><span id="command" class="pos_left">pwunconv </span></p>
+- interpreted, interactive, object-oriented programming language
+<p><span id="command" class="pos_left">python </span></p>
+- copy one or more files to or from remote computer. The syntax is poorly explained in the documentation that I have, including the man pages. Usage is:
+<p><span id="command" class="pos_left">rcp </span></p>
+
+<p><span id="command" class="pos_left">    rcp filename username@remotehost:path</span></p> 
+
+The user's home directory on the remote system must contain the file .rhosts with a list of users (preceded by the full domain name or exact IP address of their machine) with access privileges.
+
+<p><span id="command" class="pos_left">    localhostname username </span></p>
+- creates or changes the attributes of an RCS file. Stands for Revision Control System.
+<p><span id="command" class="pos_left">rcs </span></p>
+- query/set image root device, swap device, RAM disk size, or video mode in kernel
+<p><span id="command" class="pos_left">rdev </span></p>
+- reads line from standard input. This is a shell builtin.
+<p><span id="command" class="pos_left">read </span></p>
+- declares a variable to be read only. This is a shell builtin.
+<p><span id="command" class="pos_left">readonly </span></p>
+- in Slackware, reboots the system. Seems to be equivalent to shutdown -r now in generic Linux.
+<p><span id="command" class="pos_left">reboot </span></p>
+- resets the priority of process ``program_name''.
+<p><span id="command" class="pos_left">renice program_name</span></p> 
+- used to reset the screen characteristics. This is useful if the screen gets messed up from, for example, trying to display a binary file in an xterm.
+<p><span id="command" class="pos_left">reset </span></p>
+- exits from a function. This is a shell builtin.
+<p><span id="command" class="pos_left">return </span></p>
+- prints a summary of the history of an RCS file
+<p><span id="command" class="pos_left">rlog </span></p>
+- log in to remote computer. The general syntax is as follows, using the UQAM Nobel machine as an example:
+<p><span id="command" class="pos_left">rlogin </span></p>
+
+<p><span id="command" class="pos_left">    rlogin -l userid nobel.si.uqam.ca</span></p> 
+
+The remote computer must recognize the local user and the local machine. See the rcp command for how to set up the .rhosts file on the remote machine.
+- remove files or directories. With the -r (recursive) option (very dangerous!), can be used to remove the contents of a specified directory including all subdirectories.
+<p><span id="command" class="pos_left">rm </span></p>
+- interpret and handle remote mail received via uucp
+<p><span id="command" class="pos_left">rmail </span></p>
+- remove empty directories
+<p><span id="command" class="pos_left">rmdir </span></p>
+- used to remove modular device drivers
+<p><span id="command" class="pos_left">rmmod </span></p>
+- show routing table. The n option returns numerical addresses rather than names.
+<p><span id="command" class="pos_left">route -n </span></p>
+- invokes the Red Hat package manager in command line mode.<br /> 
+I often use this command in query mode to query packages about what files they contain and to find out which package owns a particular file. Examples are
+<p><span id="command" class="pos_left">rpm </span></p>
+
+<p><span id="command" class="pos_left">    rpm -qil foo. Gives package information and a file list for the package foo.</span></p>
+<p><span id="command" class="pos_left">    rpm -qfil foo. Gives package information and a file list for the package that owns the file foo. Foo must be in the working directory, or the full path to foo must be specified.</span></p> 
+
+We need to find out about installing the rpm package on a Slackware box. It's probably better to use a package converter such as alien.
+- an extremely useful utility on Slackware systems that converts rpm packages to tgz format. They can then be installed using the installpkg command (or pkgtool).
+<p><span id="command" class="pos_left">rpm2tgz </span></p>
+- execute shell command on a remote computer. See rcp and rlogin.
+<p><span id="command" class="pos_left">rsh </span></p>
+- summarize host's status: uptime, load averages, and current time
+<p><span id="command" class="pos_left">rstat </span></p>
+- show host status of local machines
+<p><span id="command" class="pos_left">ruptime </span></p>
+- list who is logged on local machines
+<p><span id="command" class="pos_left">rusers </span></p>
+- write to all users over a network
+<p><span id="command" class="pos_left">rwall </span></p>
+- show who is logged in on a LAN. The rwho service must be enabled for this command to run.<br /> 
+If it isn't, run ``setup'' as root. I don't understand this last remark, which comes from ``Linux Newbie Administrator Guide''.
+<p><span id="command" class="pos_left">rwho </span></p>
+- a terminal program similar to xterm, but which has less features and uses less memory
+<p><span id="command" class="pos_left">rxvt </span></p>
+- edits a file (not interactively). Also a tool for processing text files.
+<p><span id="command" class="pos_left">sed </span></p>
+- set or display value of shell variables. This is a shell builtin. The command
+<p><span id="command" class="pos_left">set </span></p>
+
+<p><span id="command" class="pos_left">    set | less</span></p> 
+
+prints the current user environment, giving the values of currently defined variables.
+- set or display value of environment variables
+<p><span id="command" class="pos_left">setenv </span></p>
+- used by root to configure a serial port
+<p><span id="command" class="pos_left">setserial </span></p>
+- set terminal attributes for a virtual console
+<p><span id="command" class="pos_left">setterm </span></p>
+- set the id of a program when it is run. Used, for example, to give root privileges to a program run by an ordinary user.<br /> 
+This is actually done by running the chmod program as root. See the chmod command for the syntax.
+<p><span id="command" class="pos_left">setuid </span></p>
+- Slackware program to set up program sets and configure system. Setup devices and file systems, mount root file system
+<p><span id="command" class="pos_left">setup </span></p>
+- standard UNIX shell. On Linux, just another name for bash.
+<p><span id="command" class="pos_left">sh </span></p>
+- promotes each command-line argument. This is a shell builtin.
+<p><span id="command" class="pos_left">shift </span></p>
+- show information about an nfs server
+<p><span id="command" class="pos_left">showmount </span></p>
+- reboot or shut down system as root, after specified amount of time. With the -r option, reboot. With the -h option, halt the system.
+<p><span id="command" class="pos_left">shutdown </span></p>
+
+<p><span id="command" class="pos_left">    usage: shutdown -r minutes</span></p> 
+- creates process that sleeps for specified interval
+<p><span id="command" class="pos_left"> sleep </span></p>
+- attaches a SLIP interface to standard input. Used to allow dialin SLIP connections.
+<p><span id="command" class="pos_left">sliplogin </span></p>
+- sorts and/or merge files
+<p><span id="command" class="pos_left">sort </span></p>
+- split file into specified number of segments
+<p><span id="command" class="pos_left">split </span></p>
+- secure shell. Apparently has many of the same functionalities as rlogin, telnet, ftp, rsh, etc., with better security and encryption features.<br /> 
+We may want to learn how to set this up and use it.
+<p><span id="command" class="pos_left">ssh </span></p>
+- front end to xinit in Linux. This is a script which starts up X clients and shuts down the X server on exit from the window manager.
+<p><span id="command" class="pos_left">startx </span></p>
+- start the next X window session on the display 1 (the default is opened on display 0).<br /> 
+One can switch between different graphical displays using [Ctrl][Alt][F7], [Ctrl][Alt][F8], etc.
+<p><span id="command" class="pos_left">startx -- :1 </span></p>
+- sets or displays operating options for terminal
+<p><span id="command" class="pos_left">stty </span></p>
+- log in as another user, including root
+<p><span id="command" class="pos_left">su </span></p>
+- allows individual users to have root permission to perform specified tasks
+<p><span id="command" class="pos_left">sudo </span></p>
+- disables swap disk
+<p><span id="command" class="pos_left">swapoff </span></p>
+- enables swap disk
+<p><span id="command" class="pos_left">swapon </span></p>
+- provide list of and information about symbolic links
+<p><span id="command" class="pos_left">symlinks </span></p>
+- writes memory buffers to physical devices
+<p><span id="command" class="pos_left">sync </span></p>
+- query host for system information
+<p><span id="command" class="pos_left">systat </span></p>
+- print file in reverse
+<p><span id="command" class="pos_left">tac </span></p>
+- displays the last part of a file
+<p><span id="command" class="pos_left">tail </span></p>
+- visual communication program that copies lines from one terminal to that of another user
+<p><span id="command" class="pos_left">talk </span></p>
+- file compression and archiving utility. I find the syntax of this command to be frustratingly opaque. <br />
+The following works for me. To use this command to unzip gzipped tarballs in verbose mode, use
+<p><span id="command" class="pos_left">tar </span></p>
+
+<p><span id="command" class="pos_left">    tar -xvzf filename.tgz</span></p> 
+
+To create a tarball from files in a given directory and its subdirectories, use
+
+<p><span id="command" class="pos_left">    tar -cvzf filename.tgz sourcename</span></p> 
+
+Sourcename can be the name of a single file, a wildcard such as *, or the name of a subdirectory. There seem to be two different conventions concerning gzipped tarballs. One often encounters .tar.gz. The other popular choice is .tgz. Slackware packages use the latter convention. The command can also be used to archive a file, a group of files, or a directory (with its subdirectories) on tape or onto floppies. If the material to be archived exceeds the capacity of the backup medium, the program will prompt the user to insert a new tape or diskette. Use the following command to back up to floppies:
+
+<p><span id="command" class="pos_left">    tar -cvf /dev/fd0 filename(s) or directoryname(s)</span></p> 
+
+The backup can be restored with
+
+<p><span id="command" class="pos_left">    tar -xvf /dev/fd0 </span></p>
+
+Tar can be used for other things. To mirror all the files and subdirectories in from-stuff to to-stuff, use the commands
+
+<p><span id="command" class="pos_left">    cd from-stuff</span></p>
+<p><span id="command" class="pos_left">    tar cf - . | (cd ../to-stuff; tar xvf -)</span></p> 
+
+No tar file is ever written to disk. The data is sent by pipe from one tar process to another. This example is taken from Running Linux, p.177. To list the table of contents of a tar archive, use
+
+<p><span id="command" class="pos_left">    tar tvf tarfile </span></p>
+
+To extract individual files from a tar archive, use
+
+<p><span id="command" class="pos_left">    tar xvf tarfile files</span></p> 
+
+where files is the list of files to extract. When extracting files, tar creates missing subdirectories underneath the current directory in which the cammand is invoked.
+- scripting language
+<p><span id="command" class="pos_left">tcl </span></p>
+- extended version of the C shell
+<p><span id="command" class="pos_left">tcsh </span></p>
+- copy standard input to standard output and one or more files
+<p><span id="command" class="pos_left">tee </span></p>
+- used to change run level. Exact run level that corresponds to single-user, multi-user, and X levels depends on distribution.
+<p><span id="command" class="pos_left">telinit </span></p>
+- remote login over network
+<p><span id="command" class="pos_left">telnet </span></p>
+- evaluates an expression or compares arguments. This is a shell builtin in bash, tcsh and zsh.
+<p><span id="command" class="pos_left">test  </span></p>
+
+- user interface to TFTP protocol
+<p><span id="command" class="pos_left">tftp </span></p>
+- displays times for the current shell and its children. This is a shell builtin. Strange, because there is also a /usr/bin/time program on my Red Hat system.
+<p><span id="command" class="pos_left">time </span></p>
+- Netnews reader
+<p><span id="command" class="pos_left">tin </span></p>
+- graphical desktop file manager for X
+<p><span id="command" class="pos_left">tkdesk </span></p>
+- graphical runlevel editor under Red Hat. Allows root to configure the services that are started at each run level.
+<p><span id="command" class="pos_left">tksysv </span></p>
+- display system load average in graph format
+<p><span id="command" class="pos_left">tload </span></p>
+- dynamically displays process status
+<p><span id="command" class="pos_left">top </span></p>
+- update access and modification times of a file. If the file does not exist on disk, an empty file is created.
+<p><span id="command" class="pos_left">touch </span></p>
+- translation utility that can be used, for example, to replace specified characters in a text file
+<p><span id="command" class="pos_left">tr </span></p>
+- traps a signal. This is a shell builtin.
+<p><span id="command" class="pos_left">trap </span></p>
+- null command that returns a successful exit status
+<p><span id="command" class="pos_left">true </span></p>
+- initializes terminal
+<p><span id="command" class="pos_left">tset </span></p>
+- shows special file that represents your terminal. Displays the terminal pathname.
+<p><span id="command" class="pos_left">tty </span></p>
+- displays how each argument would be interpreted as a command. This is a shell builtin.
+<p><span id="command" class="pos_left">type </span></p>
+- declares attributes for a variaable (same as declare). This is a shell builtin.
+<p><span id="command" class="pos_left">typeset </span></p>
+- translate underscores to underlining
+<p><span id="command" class="pos_left">ul </span></p>
+- establishes the file-creation permissions mask. Usage is
+<p><span id="command" class="pos_left">umask </span></p>
+
+<p><span id="command" class="pos_left">    umask xyz</span></p> 
+
+The system subtracts x, y and z from the owner, group and other file permissions that it would otherwise assign to new files. This is a shell builtin.
+- finish writing to the device and remove it from the active filesystem. The command umount -a will (re)mount all file systems listed in /etc/fstab.
+<p><span id="command" class="pos_left">umount [device] </span></p>
+- remove name previously defined by alias. This is a shell builtin.
+<p><span id="command" class="pos_left">unalias </span></p>
+- displays information about the system. With no arguments, it displays the name of the operating system.<br /> 
+With the -a option, it displays information about the operating system, the host name, and hardware.
+<p><span id="command" class="pos_left">uname </span></p>
+- displays lines of a file that are unique
+<p><span id="command" class="pos_left">uniq </span></p>
+- removes a variable or function. This is a shell builtin.
+<p><span id="command" class="pos_left">unset </span></p>
+- uncompress files compressed with the zip utility, compatible with DOS PKzip
+<p><span id="command" class="pos_left">unzip </span></p>
+- update file database used by locate command
+<p><span id="command" class="pos_left">updatedb </span></p>
+- shows the time, how long the system has been up, the number of users, and average load.
+<p><span id="command" class="pos_left">uptime </span></p>
+- same as adduser
+<p><span id="command" class="pos_left">useradd </span></p>
+- remove an account (as root). The user's home directory and undelivered mail must be dealt with separately.
+<p><span id="command" class="pos_left">userdel </span></p>
+- prints list of users on the system
+<p><span id="command" class="pos_left">users </span></p>
+- variant of the GNU version of the ls command. Defaults to printing out the long version of directory entries.
+<p><span id="command" class="pos_left">vdir </span></p>
+- standard screen oriented Unix editor
+<p><span id="command" class="pos_left">vi </span></p>
+- vi in read-only mode
+<p><span id="command" class="pos_left">view </span></p>
+- improved vi editor
+<p><span id="command" class="pos_left">vim </span></p>
+- query remote host to verify the accuracy of an email address
+<p><span id="command" class="pos_left">vrfy </span></p>
+- display info about userids and active processes
+<p><span id="command" class="pos_left">w </span></p>
+- waits for a background process to terminate. This is a shell builtin.
+<p><span id="command" class="pos_left">wait </span></p>
+- displays number of lines, characters and words in a file
+<p><span id="command" class="pos_left">wc </span></p>
+- the AfterStep application dock module
+<p><span id="command" class="pos_left">Wharf </span></p>
+- display one-line summary of specified command
+<p><span id="command" class="pos_left">whatis </span></p>
+- use to find utilities in standard locations
+<p><span id="command" class="pos_left">whereis </span></p>
+- used to find utilities in search path. Will return the absolute directory path of the named utility program.
+<p><span id="command" class="pos_left">which </span></p>
+- display information about currently logged in userids
+<p><span id="command" class="pos_left">who </span></p>
+- display information about userid that is currently logged in
+<p><span id="command" class="pos_left">whoami </span></p>
+- front end to tk, an X window extension of tcl
+<p><span id="command" class="pos_left">wish </span></p>
+- console based cd player
+<p><span id="command" class="pos_left">workbone </span></p>
+- graphical cd player program
+<p><span id="command" class="pos_left">workman </span></p>
+- send messages to another local user
+<p><span id="command" class="pos_left">write </span></p>
+- starts up the X server. Can be invoked with
+<p><span id="command" class="pos_left">X  </span></p>
+
+
+<p><span id="command" class="pos_left">    X -quiet -query remotemachineaddress</span></p> 
+
+in order to get a graphical login screen on the remote machine. See the discussion in connection with xdm below.
+- display advanced power management BIOS information
+<p><span id="command" class="pos_left">xadm </span></p>
+- converts standard output of one command into arguments for another. This is one of those powerful but obscure commands.<br /> 
+Xargs reads arguments from the standard input, delimited by blanks (which can be protected with double or single quotes or a backslash) or newlines,<br /> 
+and executes the command (default is /bin/echo) one or more times with any initial-arguments followed by arguments read from standard input. <br />
+Blank lines on the standard input are ignored.
+<p><span id="command" class="pos_left">xargs </span></p>
+- graphical mail delivery notification utility
+<p><span id="command" class="pos_left">xbiff </span></p>
+- simple calculator program
+<p><span id="command" class="pos_left">xcalc </span></p>
+- name says it all
+<p><span id="command" class="pos_left">xclipboard </span></p>
+- Red Hat utility for configuring settings for X
+<p><span id="command" class="pos_left">Xconfigurator </span></p>
+- used to start an X login session. This can be used to start a login session on a remote system. See the discussion on the following site:
+<p><span id="command" class="pos_left">xdm </span></p>
+
+<p><span id="command" class="pos_left">    http://www.menet.umn.edu/~kaszeta/unix/xterminal/index.html</span></p> 
+
+See the man pages for X, xdm, and Xserver. As usual, the man pages are pretty obscure. The best single source seems to be the Xserver man pages. After X is configured, X needs to be started at bootup with the command (in /etc/rc.d/init.d/xterm):
+
+<p><span id="command" class="pos_left">    X -quiet -query remotemachineaddress</span></p> 
+
+If the address of a nameserver is not configured, then the numeric address of the remote machine rather than its name should be entered. If the machines are connected through ethernet cards and the net, then obviously basic networking has to be set up. Gnome and KDE come with their own versions of X display/login managers, called respectively gdm and kdm.
+- view a dvi file compiled under LATEX
+<p><span id="command" class="pos_left">xdvi </span></p>
+- a simple text editor for X
+<p><span id="command" class="pos_left">xedit </span></p>
+- graphical configuration tool for X
+<p><span id="command" class="pos_left">xf86config </span></p>
+- graphical configuration tool for X
+<p><span id="command" class="pos_left">XF86Setup</span></p> 
+- display an available font in X. Creates a grid in an x-term with one character per rectangle.
+<p><span id="command" class="pos_left">xfd </span></p>
+- utility for interactive generation of figures
+<p><span id="command" class="pos_left">xfig </span></p>
+- graphical file manager for X
+<p><span id="command" class="pos_left">xfm </span></p>
+- tell X server that remote computer has access to your machine and that you will use the remote computer. This can be used to set up remote X sessions.<br /> 
+To set up a remote X session on the UQAM Nobel machine, run the following command on the local machine (one doesn't have to be root to do this)
+<p><span id="command" class="pos_left">xhost </span></p>
+
+<p><span id="command" class="pos_left">    xhost +nobel.si.uqam.ca </span></p>
+
+Then, log onto the remote machine using rlogin (see above) or telnet.<br /> 
+Once logged in, use the following command to get the remote X server to open an X terminal on the local machine:
+
+<p><span id="command" class="pos_left">    setenv DISPLAY localhostname:0 ; xterm &</span></p> 
+
+This is valid for csh, which is the default login shell on Nobel. For ksh, (and I think bash) replace with
+
+    <p><span id="command" class="pos_left">DISPLAY=localhostname:0</span></p>
+    <p><span id="command" class="pos_left">export DISPLAY ; xterm </span></p>
+
+Other X-based programs such as Netscape or Gauss (graphical version) can also be run on a remote machine with display on the local machine with little trouble.<br /> 
+The local X server is the program that has all of the information concerning the properties of the graphics card and terminal,<br /> 
+so it must be necessary to have X running on the local machine. The following should also work.<br /> 
+After using xhost to give permission to the remote machine to display on the local machine, use
+
+    <p><span id="command" class="pos_left">netscape -display localhostname:0.0</span></p> 
+
+Question: can one start the X session on the local machine and then run a remote copy of a window manager?
+- start X Window. The command startx is a front end to xinit in Linux, including Slackware.
+<p><span id="command" class="pos_left">xinit </span></p>
+- displays a graphic of the system load
+<p><span id="command" class="pos_left">xload </span></p>
+- graphical interface to print manager. This is included on one of the XFCE menus, but does not seem to be a part of the base Red Hat distribution.
+<p><span id="command" class="pos_left">xlpq </span></p>
+- list fonts available under the X Window system.
+<p><span id="command" class="pos_left">xlsfonts </span></p>
+- browsable command reference. Displays manual pages under X.
+<p><span id="command" class="pos_left">xman </span></p>
+- graphical front end under X to the nmh mail handling system. This program is part of the XFree86 package in Red Hat.
+<p><span id="command" class="pos_left">xmh </span></p>
+- utility for modifying keymaps and pointer button mappings in X. Can be used to install a French Canadian keyboard. Download the Xmodmap.cf file from www.linux-quebec.org, and insert the command
+<p><span id="command" class="pos_left">xmodmap </span></p>
+
+<p><span id="command" class="pos_left">    xmodmap /etc/X11/Xmodmap.cf &</span></p> 
+
+into the .xession (with xdm) or the .xinitrc (with startx) file.
+- displays bar graphs of system load, load average, memory usage, and swap usage
+<p><span id="command" class="pos_left">xosview </span></p>
+- simple paint program for X
+<p><span id="command" class="pos_left">xpaint </span></p>
+- GPL'd utility for previewing dvi files. Doesn't seem to work too well on texts with a lot of math.
+<p><span id="command" class="pos_left">xpdf </span></p>
+- X Window audio cd player utility
+<p><span id="command" class="pos_left">xplaycd </span></p>
+- utility to configure root window of an X terminal
+<p><span id="command" class="pos_left">xsetroot </span></p>
+- graphical display of load and memory usage
+<p><span id="command" class="pos_left">xsysinfo </span></p>
+- start an X Window terminal session
+<p><span id="command" class="pos_left">xterm  </span></p>
+
+<p><span id="command" class="pos_left">term-color - color version of xterm</span></p>
+- utility for viewing and manipulating many types of image files. This is a shareware program.
+<p><span id="command" class="pos_left">xv </span></p>
+- utility for fine tuning of monitor settings under X
+<p><span id="command" class="pos_left">xvidtune </span></p>
+- parser generator
+<p><span id="command" class="pos_left">yacc </span></p>
+- multi-user program similar to talk
+<p><span id="command" class="pos_left">ytalk </span></p>
+- read one or more files that have been compressed with gzip or compress and write to standard output
+<p><span id="command" class="pos_left">zcat </span></p>
+- read compressed files and pass them to cmp
+<p><span id="command" class="pos_left">zcmp </span></p>
+- read compressed files and pass them to diff
+<p><span id="command" class="pos_left">zdiff </span></p>
+- read compressed files and pass them to grep
+<p><span id="command" class="pos_left">zgrep </span></p>
+- AfterStep button panel module
+<p><span id="command" class="pos_left">Zharf </span></p>
+- zip utility compatible with DOS PKzip
+<p><span id="command" class="pos_left">zip </span></p>
+- view zipped files
+<p><span id="command" class="pos_left">zless </span></p>
+- print contents of compressed files one screen at a time
+<p><span id="command" class="pos_left">zmore </span></p>
+- uncompress Z files and recompress in .gz format
+<p><span id="command" class="pos_left">znew</span></p>  
+
+</div>
+
+<footer>
+	&copy; Copyright  by jacco
+</footer>
+			
+<!-- script tbv  de search box -->
+<script language="JavaScript">
+	<!--
+	var TRange=null;
+
+	function findString (str) {
+		if (parseInt(navigator.appVersion)<4) return;
+			var strFound;
+	if (window.find) {
+
+		// CODE FOR BROWSERS THAT SUPPORT window.find
+
+		strFound=self.find(str);
+ 		if (!strFound) {
+ 			strFound=self.find(str,0,1);
+			while (self.find(str,0,1)) continue;
+  			}
+ 		}
+ 	else if (navigator.appName.indexOf("Microsoft")!=-1) {
+
+  		// EXPLORER-SPECIFIC CODE
+
+  		if (TRange!=null) {
+   			TRange.collapse(false);
+   			strFound=TRange.findText(str);
+   			if (strFound) TRange.select();
+  		}
+  		if (TRange==null || strFound==0) {
+   			TRange=self.document.body.createTextRange();
+   			strFound=TRange.findText(str);
+   			if (strFound) TRange.select();
+  		}
+ 	}
+ 	else if (navigator.appName=="Opera") {
+  		alert ("Opera browsers not supported, sorry...")
+  	return;
+ 	}
+ 	if (!strFound) alert ("String '"+str+"' not found!")
+ 		return;
+	}
+	//-->
+</script>
+
+	</body>
+</html>

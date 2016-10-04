@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+	Remove this if you use the .htaccess -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<title>HTML</title>
+	<meta name="description" content="">
+	<meta name="author" content="jacco" >
+	<!-- persistent stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link rel="stylesheet" type="text/css" href="css/sober.css">
+	<link rel="stylesheet" type="text/css" href="css/sober.css" title="Default">
+	<link rel="alternate stylesheet" type="text/css" href="css/pinned_menu.css" title="pinned">
+
+	<link rel="alternate stylesheet" type="text/css" href="css/git.css" title="git">
+	<!-- <link rel="alternate stylesheet" type="text/css" href="css/python.css" title="python">
+		<link rel="alternate stylesheet" type="text/css" href="css/com_back.css" title="grey">
+	<link rel="alternate stylesheet" type="text/css" href="css/tcpdump.css" title="tcpdump"> -->
+	<link rel="alternate stylesheet" type="text/css" href="css/nmap.css" title="nmap">
+
+	<!-- <script src="scripts/nomouse.js"></script> -->
+	<script type="text/javascript" src="scripts/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src="scripts/col-test.js"></script>
+
+	<script src="scripts/swapstyle.js"></script>
+	<script type="text/javascript">
+	if( self != top ) { document.write('<style type="text/css">\n#backlinks { display: none; }\n<\/style>'); }
+	</script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+
+<body>
+
+<header>
+	<nav>
+		<ul>
+			<li><img id="in_out" onclick="changeStyle('pinned')" src="images/Pin.png" width="30" height="30"></a>
+			<li><a href="index.html">Home</a>
+				<ul>
+					<li><a href="styles.html">Styles</a>
+						<ul>
+							<!-- <li><a href="#" onClick="changeStyle('stars');">stars</a></li> -->
+							<li><a href="#" onClick="changeStyle('grey');">cmd-line</a></li>
+							<li><a href="#" onClick="changeStyle('git');">git</a></li>
+							<!-- <li><a href="#" onClick="changeStyle('python');">python</a></li>
+							<li><a href="#" onClick="changeStyle('tcpdump');">tcpdump</a></li>
+							<li><a href="#" onClick="changeStyle('nmap');">nmap</a></li> -->
+							<li><a href="#" onClick="changeStyle('Default');">Reset to default</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		<li><a href="index.html">Naslag_OS <span class="caret"></span></a>
+			<ul>
+				<li><a href="linux_commands.html">Commands</a></li>
+				<li><a href="tcpdump.html">Tcpdump</a></li>
+				<li><a href="nmap.html">Nmap</a></li>
+				<li><a href="vim.html">Vim</a></li>
+			</ul>
+		</li>
+		<li><a href="index.html">Naslag<span class="caret"></span></a>
+			<ul>
+				<li><a href="cat_api.html">Elasticsearch</a></li>
+				<li><a href="docker.html">Docker</a></li>
+				<li><a href="Escape_code.html">Escape characters</a></li>
+				<li><a href="git.html#table">Git</a></li>
+				<li><a href="python.html">Python</a>
+					<ul>
+						<li><a href="python_examples.html">Examples</a></li>
+					</ul>
+				</li>
+				<li><a href="puppet.html">Puppet</a>
+					<ul>
+						<li><a href="puppet_training.html">Puppet_Training</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="url_naar.html">Off Site</a>
+
+			<ul>
+				<li><a href="http://www.apache.org/" target="_blank">apache</a>
+					<ul>
+						<li><a href="http://httpd.apache.org/docs/2.0/misc/rewriteguide.html" target="_blank">rewrite</a></li>
+						<li><a href="https://www.addedbytes.com/articles/for-beginners/url-rewriting-for-beginners/" target="_blank">rewrite_dummies </a></li>
+					</ul>
+				</li>
+				<li><a href="http://www.ibm.com">IBM</a>
+					<ul>
+						<li><a href="http://www.ibm.com/developerworks" target="_blank">developers</a></li>
+					</ul>
+				</li>
+				<li><a href="http://nl.wikipedia.org/wiki/HyperText_Markup_Language">HTML</a>
+						<ul>
+							<li><a href="http://www.w3.org/TR/html5/" target="_blank">W3C</a></li>
+							<li><a href="http://www.w3schools.com/html/html5_intro.asp" target="_blank">W3C_School</a></li>
+							<li><a href="http://validator.w3.org/" target="_blank">Validator</a></li>
+						</ul>
+					</li>
+				<li><a href="http://nl.wikipedia.org/wiki/CSS">CSS</a>
+						<ul>
+							<li><a href="http://www.w3.org/standards/techs/css" target="_blank">Current_Status</a></li>
+							<li><a href="http://www.w3schools.com/css/css3_intro.asp" target="_blank">W3C_School</a></li>
+							<li><a href="https://jigsaw.w3.org/css-validator/" target="_blank">Validator</a></li>
+						</ul>
+					</li>
+			</ul>
+		</li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="help.html">Help</a></li>
+	</ul>
+</nav>
+	</div>
+<br /> 
+<br />
+	<div class="header">
+		<iframe src="srchform.htm" width="400px" height="34px" border="0" frameborder="0" scrolling="no"></iframe>
+	</div>
+	
+	<div class="sub-header">
+		<input type="button" id="more_cols" value="More columns" />
+    	<input type="button" id="less_cols" value="Less columns" />
+    	<input type="button" id="more_gap" value="More gap" />
+    	<input type="button" id="less_gap" value="Less gap" />
+	</div>
+
+</header>
+
+<!-- <div class="container" id="container"> -->
+<div class="container" id="container">
+		
+<h1 class="">FAQ's</h1>
+				
+<ul class="vraag">What is the difference between Git and GitHub?</ul>
+<ul class="antw">Git is a version control system; think of it as a series of snapshots (commits) of your code. You see a path of these snapshots, in which order they where created. You can make branches to experiment and come back to snapshots you took.
+GitHub, is a web-page on which you can publish your Git repositories and collaborate with other people.</ul>
+<ul class="vraag">Is Git saving every repository locally (in the user's machine) and in GitHub?</ul>
+<ul class="antw">No, it's only local. You can decide to push (publish) some branches on GitHub.</ul>
+<ul class="vraag">Can you use Git without GitHub? If yes, what would be the benefit for using GitHub?</ul>
+<ul class="antw">Yes, Git runs local if you don't use GitHub. An alternative to using GitHub could be running Git on files hosted on Dropbox, but GitHub is a more streamlined service as it was made especially for Git.</ul>
+<ul class="vraag">How does Git compare to a backup system such as Time Machine?</ul>
+<ul class="antw">It's a different thing, Git lets you track changes and your development process. If you use Git with GitHub, it becomes effectively a backup. However usually you would not push all the time to GitHub, at which point you do not have a full backup if things go wrong. I use git in a folder that is synchronized with Dropbox.</ul>
+<ul class="vraag">Is this a manual process, in other words if you don't commit you won't have a new version of the changes made?</ul>
+<ul class="antw">Yes, committing and pushing are both manual.</ul>
+<ul class="vraag">If are not collaborating and you are already using a backup system why would you use Git?</ul>
+<ul class="antw">If you encounter an error between commits you can use the command git diff to see the differences between the current code and the last working commit, helping you to locate your error.</ul>
+<ul class="antw">You can also just go back to the last working commit. If you want to try a change, but are not sure that it will work. You create a branch to test you code change. If it works fine, you merge it to the main branch. If it does not you just throw the branch away and go back to the main branch.</ul>
+<ul>At the heart of GitHub is an open source version control system (VCS) called Git. Git is responsible for everything GitHub-related that happens locally on your computer.</ul>
+<ul>If you're not comfortable using the command line right now, GitHub lets you complete many Git-related actions without using the command line (including: Creating a repository, Forking a repository and being social).
+</ul>
+
+<br /><h1>Setting up Git</h1>
+<ul>
+1. <a href="http://git-scm.com/downloads" target="_blank">Download and install the latest version of Git.</a>
+</ul>
+<ul>
+2. On your computer, open your command line application.
+</ul>
+<ul>
+3. Tell Git your name so your commits will be properly labeled. Type everything after the <em class="output">$</em> here:<br />
+
+<em class="command"><em class="output">$</em> git config --global user.name "<em class="input">YOUR NAME</em>"</em>
+</ul>
+<ul>
+4. Tell Git the email address that will be associated with your Git commits. The email you specify should be the same one found in your email settings. To keep your email address hidden, see "Keeping your email address private".<br />
+
+<em class="command"><em class="output">$</em> git config --global user.email "<em class="input">YOUR EMAIL ADDRESS</em>"</em>
+</ul>
+
+<ul>
+5. check your directory and type:<br /> <em class="command"><em class="output">$</em>git init</em><br />
+<em class="command"><em class="output">$</em>git clone https://github.com/puppetlabs/puppet.git</em> will clone the puppet repository to your local drive.
+</ul>
+
+
+<br /><h1>Git basics</h1>
+<br /><h2> de status van je bestanden </h2>
+<ul>
+De belangrijkste tool om te bepalen in welke staat de bestanden zijn is git status commando.
+Als je dit commando uitvoert direct na een clone, het er ongeveer zo uit moeten zien:
+</ul>
+<ul class="command">
+<em class="output">$</em> <span class="strong">git status</span><br />
+On branch master<br />
+nothing to commit, working directory clean<br />
+</ul>
+<ul>
+Dit betekend dat je een schone werk directory hebt, met andere woorden, er zijn nog geen bestanden die worden bijgehouden of gewijzigd. Git ziet ook geen ongevolgde bestanden, anders zouden ze hier worden getoond. Ten slotte verteld het commando ons op welke branche we zitten en informeert dat het niet is afgeweken van dezelfde branch op de server. Voorlopig is deze branch altijd de master, welke de default is.
+</ul>
+<ul>
+Laten we zeggen dat we een README bestand hebben toegevoegd aan ons project. Als dit bestand nog niet bestond en we draaien git status zou het nog niet gevolgde bestand er als volgt uitzien:
+</ul>
+<ul class="command">
+<em class="output">$</em> echo 'My Project' > README<br />
+<em class="output">$</em> <span class="strong">git status</span><br />
+On branch master<br />
+Untracked files:<br />
+  <span id="indent">(use "git add <file>..." to include in what will be committed)</span><br />
+<br />
+    <span id="indent">README</span><br />
+<br />
+nothing added to commit but untracked files present (use "git add" to track)<br />
+</ul>
+<ul>
+Het is te zien dat het nieuwe README bestand nog niet wordt bijgehouden omdat het wordt weergegeven onder de titel untracked files, in het status overzicht. Niet bijgehouden betekend dat git een bestand ziet dat er in het vorige snapshot (commit) nog niet was. Git zal het bestand pas opnemen in je gecommitte snapshot wanneer je hier een specifieke opdracht voor geeft. Dit gebeurt zodat je niet per ongeluk gegenereerde binairy bestanden of andere bestanden opneemt. README willen we opnemen dus laten we het bijhouden.
+
+<br /><h2>Nieuwe bestanden bijhouden</h2>
+<ul>
+Dit doen we met het git add commando. Om te beginnen met het volgen van README draaien we het volgende commando:
+<ul class="command">
+<em class="output">$</em> <span class="strong">git add</span> README
+</ul>
+<ul>
+Als we het status commando opnieuw draaien zien we dat het README bestand wordt bijgehouden en klaar staat om te worden opgenomen. 
+</ul>
+<ul class="command">
+<em class="output">$</em> <span class="strong">git status</span><br />
+On branch master<br />
+Changes to be committed:<br />
+  <span id="indent">(use "git reset HEAD <file>..." to unstage)</span><br />
+<br />
+    <span id="indent">new file:   README</span><br />
+</ul>
+<ul>
+you can tell that it’s staged because it’s under the “Changes to be committed” heading. If you commit at this point, the version of the file at the time you ran git add is what will be in the historical snapshot. You may recall that when you ran git init earlier, you then ran git add (files) – that was to begin tracking files in your directory. The git add command takes a path name for either a file or a directory; if it’s a directory, the command adds all the files in that directory recursively.
+</ul>
+<br /><h2>Staging Modified Files</h2>
+<ul>
+Let’s change a file that was already tracked. If you change a previously tracked file called “CONTRIBUTING.md” and then run your git status command again, you get something that looks like this:
+</ul>
+<ul class="command">
+<em class="output">$</em> <span class="strong">git status</span><br />
+On branch master<br />
+Changes to be committed:<br />
+ <span id="indent"> (use "git reset HEAD <file>..." to unstage)</span><br />
+<br />
+ <span id="indent">   new file:   README</span><br />
+<br />
+Changes not staged for commit:<br />
+  <span id="indent">(use "git add <file>..." to update what will be committed)</span><br />
+  <span id="indent">(use "git checkout -- <file>..." to discard changes in working directory)</span><br />
+<br />
+    <span id="indent">modified:   CONTRIBUTING.md</span><br />
+</ul>
+<ul>
+The “CONTRIBUTING.md” file appears under a section named “Changed but not staged for commit” – which means that a file that is tracked has been modified in the working directory but not yet staged. To stage it, you run the git add command. git add is a multipurpose command – you use it to begin tracking new files, to stage files, and to do other things like marking merge-conflicted files as resolved. It may be helpful to think of it more as “add this content to the next commit” rather than “add this file to the project”. Let’s run git add now to stage the “CONTRIBUTING.md” file, and then run git status again:
+</ul>
+<ul class="command">
+<em class="output">$</em> <span class="strong">git add </span>.md<br />
+<em class="output">$</em> <span class="strong">git status</span><br />
+On branch master<br />
+Changes to be committed:<br />
+  <span id="indent">(use "git reset HEAD <file>..." to unstage)</span><br />
+<br />
+    <span id="indent">new file:   README</span><br />
+    <span id="indent">modified:   CONTRIBUTING.md</span><br />
+</ul>
+<ul>
+Both files are staged and will go into your next commit. At this point, suppose you remember one little change that you want to make in CONTRIBUTING.md before you commit it. You open it again and make that change, and you’re ready to commit. However, let’s run git status one more time:
+</ul>
+<ul class="command">
+<em class="output">$</em> vim CONTRIBUTING.md<br />
+<em class="output">$</em> git status<br />
+On branch master<br />
+Changes to be committed:<br />
+  <span id="indent">(use "git reset HEAD <file>..." to unstage)</span><br />
+<br />
+    <span id="indent">new file:   README</span><br />
+    <span id="indent">modified:   CONTRIBUTING.md</span><br />
+<br />
+Changes not staged for commit:<br />
+  <span id="indent">(use "git add <file>..." to update what will be committed)</span><br />
+  <span id="indent">(use "git checkout -- <file>..." to discard changes in working directory)</span><br />
+<br />
+    <span id="indent">modified:   CONTRIBUTING.md</span><br />
+</ul>
+<ul>
+What the heck? Now CONTRIBUTING.md is listed as both staged and unstaged. How is that possible? It turns out that Git stages a file exactly as it is when you run the git add command. If you commit now, the version of CONTRIBUTING.md as it was when you last ran the git add command is how it will go into the commit, not the version of the file as it looks in your working directory when you run git commit. If you modify a file after you run git add, you have to run git add again to stage the latest version of the file:
+</ul>
+<ul class="command">
+<em class="output">$</em> <span class="strong">git add </span>.md<br />
+<em class="output">$</em> git status<br />
+On branch master<br />
+Changes to be committed:<br />
+  <span id="indent">(use "git reset HEAD <file>..." to unstage)</span><br />
+<br />
+    <span id="indent">new file:   README</span><br />
+    <span id="indent">modified:   CONTRIBUTING.md</span><br />
+</ul>
+
+<br /><h2>Short Status</h2>
+<ul>
+While the git status output is pretty comprehensive, it’s also quite wordy. Git also has a short status flag so you can see your changes in a more compact way. If you run git status -s or git status --short you get a far more simplified output from the command.
+</ul>
+<ul class="command">
+<em class="output">$</em> git status -s<br />
+ M README<br />
+MM Rakefile<br />
+A  lib/git.rb<br />
+M  lib/simplegit.rb<br />
+?? LICENSE.txt<br />
+</ul>
+<ul>
+New files that aren’t tracked have a ?? next to them, new files that have been added to the staging area have an A, modified files have an M and so on. There are two columns to the output - the left hand column indicates that the file is staged and the right hand column indicates that it’s modified. So for example in that output, the README file is modified in the working directory but not yet staged, while the lib/simplegit.rb file is modified and staged. The Rakefile was modified, staged and then modified again, so there are changes to it that are both staged and unstaged.
+</ul>
+<br />
+<h2>Ignoring Files</h2>
+
+<ul>
+Often, you’ll have a class of files that you don’t want Git to automatically add or even show you as being untracked. These are generally automatically generated files such as log files or files produced by your build system. In such cases, you can create a file listing patterns to match them named .gitignore. Here is an example .gitignore file:
+</ul>
+<ul class="command">
+<em class="output">$</em> cat .gitignore<br />
+*.[oa]<br />
+*~<br />
+</ul>
+<ul>
+The first line tells Git to ignore any files ending in “.o” or “.a” – object and archive files that may be the product of building your code. The second line tells Git to ignore all files that end with a tilde (~), which is used by many text editors such as Emacs to mark temporary files. You may also include a log, tmp, or pid directory; automatically generated documentation; and so on. Setting up a .gitignore file before you get going is generally a good idea so you don’t accidentally commit files that you really don’t want in your Git repository.
+</ul>
+<ul>
+The rules for the patterns you can put in the .gitignore file are as follows:
+<ul class="indent">
+	<li>Blank lines or lines starting with # are ignored.</li>
+	<li>Standard glob patterns work.</li>
+	<li>You can end patterns with a forward slash (/) to specify a directory.</li>
+	<li>You can negate a pattern by starting it with an exclamation point (!).</li>
+</ul>
+</ul>
+<ul>
+Glob patterns are like simplified regular expressions that shells use. An asterisk (*) matches zero or more characters; [abc] matches any character inside the brackets (in this case a, b, or c); a question mark (?) matches a single character; and brackets enclosing characters separated by a hyphen([0-9]) matches any character between them (in this case 0 through 9). You can also use two asterisks to match nested directories; a/**/z would match a/z, a/b/z, a/b/c/z, and so on.
+</ul>
+<ul>
+Here is another example .gitignore file:
+</ul>
+<ul class="command">
+# no .a files<br />
+*.a<br />
+<br />
+# but do track lib.a, even though you're ignoring .a files above<br />
+!lib.a<br />
+<br />
+# only ignore the root TODO file, not subdir/TODO<br />
+/TODO<br />
+<br />
+# ignore all files in the build/ directory<br />
+build/<br />
+<br />
+# ignore doc/notes.txt, but not doc/server/arch.txt<br />
+doc/*.txt<br />
+<br />
+# ignore all .txt files in the doc/ directory<br />
+doc/**/*.txt<br />
+</ul>
+<ul>
+GitHub maintains a fairly comprehensive list of good .gitignore file examples for dozens of projects and languages at https://github.com/github/gitignore if you want a starting point for your project.
+</ul>
+<br /><h2>Viewing Your Staged and Unstaged Changes</h2>
+
+<ul>
+If the git status command is too vague for you – you want to know exactly what you changed, not just which files were changed – you can use the git diff command. We’ll cover git diff in more detail later, but you’ll probably use it most often to answer these two questions: What have you changed but not yet staged? And what have you staged that you are about to commit? Although git status answers those questions very generally by listing the file names, git diff shows you the exact lines added and removed – the patch, as it were.
+</ul>
+<ul>
+Let’s say you edit and stage the README file again and then edit the CONTRIBUTING.md file without staging it. If you run your git status command, you once again see something like this:
+</ul>
+<ul class="command">
+<em class="output">$</em> git status<br />
+On branch master<br />
+Changes to be committed:<br />
+  <span id="indent">(use "git reset HEAD <file>..." to unstage)</span><br />
+<br />
+    <span id="indent">new file:   README</span><br />
+<br />
+Changes not staged for commit:<br />
+  <span id="indent">(use "git add <file>..." to update what will be committed)</span><br />
+  <span id="indent">(use "git checkout -- <file>..." to discard changes in working directory)</span><br />
+<br />
+    <span id="indent">modified:   CONTRIBUTING.md</span><br />
+</ul>
+<ul>
+To see what you’ve changed but not yet staged, type git diff with no other arguments:
+</ul>
+<ul class="command">
+<em class="output">$</em> <span class="strong">git diff</span><br />
+diff --git a/CONTRIBUTING.md b/CONTRIBUTING.md<br />
+index 8ebb991..643e24f 100644<br />
+--- a/CONTRIBUTING.md<br />
++++ b/CONTRIBUTING.md<br />
+@@ -65,7 +65,8 @@ branch directly, things can get messy.<br />
+ Please include a nice description of your changes when you submit your PR;<br />
+ if we have to read the whole diff to figure out why you're contributing<br />
+ in the first place, you're less likely to get feedback and have your change<br />
+-merged in.<br />
++merged in. Also, split your changes into comprehensive chunks if you patch is<br />
++longer than a dozen lines.<br />
+ If you are starting to work on a particular area, feel free to submit a PR<br />
+ that highlights your work in progress (and note in the PR title that it's
+</ul>
+<ul>
+That command compares what is in your working directory with what is in your staging area. The result tells you the changes you’ve made that you haven’t yet staged.
+</ul>
+<ul>
+If you want to see what you’ve staged that will go into your next commit, you can use git diff --staged. This command compares your staged changes to your last commit:
+</ul>
+<ul class="command">
+<em class="output">$</em> <span class="strong">git diff --staged</span><br />
+diff --git a/README b/README<br />
+new file mode 100644<br />
+index 0000000..03902a1<br />
+--- /dev/null<br />
++++ b/README<br />
+@@ -0,0 +1 @@<br />
++My Project<br />
+</ul>
+<ul>
+It’s important to note that git diff by itself doesn’t show all changes made since your last commit – only changes that are still unstaged. This can be confusing, because if you’ve staged all of your changes, git diff will give you no output.
+</ul>
+<ul>
+For another example, if you stage the CONTRIBUTING.md file and then edit it, you can use git diff to see the changes in the file that are staged and the changes that are unstaged. If our environment looks like this:
+</ul>
+<ul class="command">
+<em class="output">$</em> git add CONTRIBUTING.md<br />
+<em class="output">$</em> echo 'test line' >> CONTRIBUTING.md<br />
+<em class="output">$</em> git status<br />
+On branch master<br />
+Changes to be committed:<br />
+  <span id="indent">(use "git reset HEAD <file>..." to unstage)</span><br />
+<br />
+    <span id="indent">modified:   CONTRIBUTING.md</span><br />
+<br />
+Changes not staged for commit:<br />
+  <span id="indent">(use "git add <file>..." to update what will be committed)</span><br />
+  <span id="indent">(use "git checkout -- <file>..." to discard changes in working directory)</span><br />
+<br />
+    <span id="indent">modified:   CONTRIBUTING.md</span><br />
+</ul>
+<ul>
+Now you can use git diff to see what is still unstaged
+</ul>
+<ul class="command">
+<em class="output">$</em> git diff<br />
+diff --git a/CONTRIBUTING.md b/CONTRIBUTING.md<br />
+index 643e24f..87f08c8 100644<br />
+--- a/CONTRIBUTING.md<br />
++++ b/CONTRIBUTING.md<br />
+@@ -119,3 +119,4 @@ at the<br />
+ ## Starter Projects<br />
+<br />
+ See our [projects list](https://github.com/libgit2/libgit2/blob/development/PROJECTS.md).<br />
++# test line<br />
+<br />
+and git diff --cached to see what you’ve staged so far (--staged and --cached are synonyms):<br />
+</ul>
+<ul class="command">
+<em class="output">$</em> <span class="strong">git diff --cached</span><br />
+diff --git a/CONTRIBUTING.md b/CONTRIBUTING.md<br />
+index 8ebb991..643e24f 100644<br />
+--- a/CONTRIBUTING.md<br />
++++ b/CONTRIBUTING.md<br />
+@@ -65,7 +65,8 @@ branch directly, things can get messy.<br />
+ Please include a nice description of your changes when you submit your PR;<br />
+ if we have to read the whole diff to figure out why you're contributing<br />
+ in the first place, you're less likely to get feedback and have your change<br />
+-merged in.<br />
++merged in. Also, split your changes into comprehensive chunks if you patch is<br />
++longer than a dozen lines.<br />
+</ul>
+<ul>
+ If you are starting to work on a particular area, feel free to submit a PR
+ that highlights your work in progress (and note in the PR title that it's
+</ul>
+</ul>
+Git Diff in an External Tool
+</ul>
+<ul>
+We will continue to use the git diff command in various ways throughout the rest of the book. There is another way to look at these diffs if you prefer a graphical or external diff viewing program instead. If you run git difftool instead of git diff, you can view any of these diffs in software like Araxis, emerge, vimdiff and more. Run git difftool --tool-help to see what is available on your system.
+Committing Your Changes
+</ul>
+<ul>
+Now that your staging area is set up the way you want it, you can commit your changes. Remember that anything that is still unstaged – any files you have created or modified that you haven’t run git add on since you edited them – won’t go into this commit. They will stay as modified files on your disk. In this case, let’s say that the last time you ran git status, you saw that everything was staged, so you’re ready to commit your changes. The simplest way to commit is to type git commit:
+</ul>
+<ul class="command">
+<em class="output">$</em> <span class="strong">git commit</span><br />
+</ul>
+<ul>
+Doing so launches your editor of choice. (This is set by your shell’s <em class="output">$</em>EDITOR environment variable – usually vim or emacs, although you can configure it with whatever you want using the git config --global core.editor command as you saw in Chapter 1).
+</ul>
+<ul>
+The editor displays the following text (this example is a Vim screen):
+</ul>
+<ul class="command">
+# Please enter the commit message for your changes. Lines starting<br />
+# with '#' will be ignored, and an empty message aborts the commit.<br />
+# On branch master<br />
+# Changes to be committed:<br />
+#	new file:   README<br />
+#	modified:   CONTRIBUTING.md<br />
+#<br />
+~<br />
+~<br />
+~<br />
+".git/COMMIT_EDITMSG" 9L, 283C<br />
+</ul>
+<ul>
+You can see that the default commit message contains the latest output of the git status command commented out and one empty line on top. You can remove these comments and type your commit message, or you can leave them there to help you remember what you’re committing. (For an even more explicit reminder of what you’ve modified, you can pass the -v option to git commit. Doing so also puts the diff of your change in the editor so you can see exactly what changes you’re committing.) When you exit the editor, Git creates your commit with that commit message (with the comments and diff stripped out).
+<ul>
+Alternatively, you can type your commit message inline with the commit command by specifying it after a -m flag, like this:
+</ul>
+<ul class="command">
+<em class="output">$</em> <span class="strong">git commit -m "Story 182: Fix benchmarks for speed"</span><br />
+[master 463dc4f] Story 182: Fix benchmarks for speed<br />
+ 2 files changed, 2 insertions(+)<br />
+ create mode 100644 README<br />
+ </ul>
+<ul>
+Now you’ve created your first commit! You can see that the commit has given you some output about itself: which branch you committed to (master), what SHA-1 checksum the commit has (463dc4f), how many files were changed, and statistics about lines added and removed in the commit.
+</ul>
+<ul>
+Remember that the commit records the snapshot you set up in your staging area. Anything you didn’t stage is still sitting there modified; you can do another commit to add it to your history. Every time you perform a commit, you’re recording a snapshot of your project that you can revert to or compare to later.
+Skipping the Staging Area
+</ul>
+<ul>
+Although it can be amazingly useful for crafting commits exactly how you want them, the staging area is sometimes a bit more complex than you need in your workflow. If you want to skip the staging area, Git provides a simple shortcut. Adding the -a option to the git commit command makes Git automatically stage every file that is already tracked before doing the commit, letting you skip the git add part:
+</ul>
+<ul class="command">
+<em class="output">$</em> git status<br />
+On branch master<br />
+Changes not staged for commit:<br />
+  <span id="indent">(use "git add <file>..." to update what will be committed)</span><br />
+  <span id="indent">(use "git checkout -- <file>..." to discard changes in working directory)</span><br />
+<br />
+    <span id="indent">modified:   CONTRIBUTING.md</span><br />
+</ul>
+<ul class="command">
+no changes added to commit (use "git add" and/or "git commit -a")<br />
+<em class="output">$</em> <span class="strong">git commit -a -m 'added new benchmarks'</span><br />
+[master 83e38c7] added new benchmarks<br />
+ 1 file changed, 5 insertions(+), 0 deletions(-)
+ </ul>
+<ul>
+Notice how you don’t have to run git add on the “CONTRIBUTING.md” file in this case before you commit.
+</ul>
+<br /><h2>Removing Files</h2>
+<ul>
+To remove a file from Git, you have to remove it from your tracked files (more accurately, remove it from your staging area) and then commit. The git rm command does that, and also removes the file from your working directory so you don’t see it as an untracked file the next time around.
+</ul>
+<ul>
+If you simply remove the file from your working directory, it shows up under the “Changed but not updated” (that is, unstaged) area of your git status output:
+</ul>
+<ul class="command">
+<em class="output">$</em> rm PROJECTS.md<br />
+<em class="output">$</em> git status<br />
+On branch master<br />
+Your branch is up-to-date with 'origin/master'.<br />
+Changes not staged for commit:<br />
+  <span id="indent">(use "git add/rm <file>..." to update what will be committed)</span><br />
+  <span id="indent">(use "git checkout -- <file>..." to discard changes in working directory)</span><br />
+<br />
+        <span id="indent">deleted:    PROJECTS.md<br />
+</ul>
+no changes added to commit (use "git add" and/or "git commit -a")<br />
+</ul>
+<ul>
+Then, if you run git rm, it stages the file’s removal:
+</ul>
+<ul class="command">
+<em class="output">$</em> <span class="strong">git rm </span>.md<br />
+rm 'PROJECTS.md'<br />
+<em class="output">$</em> git status<br />
+On branch master<br />
+Changes to be committed:<br />
+  <span id="indent">(use "git reset HEAD <file>..." to unstage)</span><br />
+<br />
+    <span id="indent">deleted:    PROJECTS.md</span><br />
+    </ul>
+<ul>
+The next time you commit, the file will be gone and no longer tracked. If you modified the file and added it to the index already, you must force the removal with the -f option. This is a safety feature to prevent accidental removal of data that hasn’t yet been recorded in a snapshot and that can’t be recovered from Git.
+</ul>
+<ul>
+Another useful thing you may want to do is to keep the file in your working tree but remove it from your staging area. In other words, you may want to keep the file on your hard drive but not have Git track it anymore. This is particularly useful if you forgot to add something to your .gitignore file and accidentally staged it, like a large log file or a bunch of .a compiled files. To do this, use the --cached option:
+</ul>
+<ul class="command">
+<em class="output">$</em> <span class="strong">git rm --cached</span> README\
+</ul>
+</ul>
+You can pass files, directories, and file-glob patterns to the git rm command. That means you can do things such as
+</ul>
+<ul class="command">
+<em class="output">$</em> <span class="strong">git rm </span>/\*.log
+</ul>
+<ul>
+Note the backslash (\) in front of the *. This is necessary because Git does its own filename expansion in addition to your shell’s filename expansion. This command removes all files that have the .log extension in the log/ directory. Or, you can do something like this:
+</ul>
+<ul class="command">
+<em class="output">$</em> <span class="strong">git rm \*~</span>
+</ul>
+<ul>
+This command removes all files that end with ~.
+</ul>
+<br /><h2> Files</h2>
+<ul>
+Unlike many other VCS systems, Git doesn’t explicitly track file movement. If you rename a file in Git, no metadata is stored in Git that tells it you renamed the file. However, Git is pretty smart about figuring that out after the fact – we’ll deal with detecting file movement a bit later.
+</ul>
+<ul>
+Thus it’s a bit confusing that Git has a mv command. If you want to rename a file in Git, you can run something like
+</ul>
+<ul class="command">
+<em class="output">$</em> <span class="strong">git mv file_from file_to</span>
+</ul>
+<ul>
+and it works fine. In fact, if you run something like this and look at the status, you’ll see that Git considers it a renamed file:
+</ul>
+<ul class="command">
+<em class="output">$</em> <span class="strong">git mv README.md README</span><br />
+<em class="output">$</em> git status<br />
+On branch master<br />
+Changes to be committed:<br />
+  <span id="indent">(use "git reset HEAD <file>..." to unstage)</span><br />
+<br />
+    <span id="indent">renamed:    README.md -> README</span><br />
+</ul>
+<ul>
+However, this is equivalent to running something like this:
+</ul>
+<ul class="command">
+<em class="output">$</em> mv README.md README<br />
+<em class="output">$</em> <span class="strong">git rm README.md</span><br />
+<em class="output">$</em> <span class="strong">git add README</span><br />
+</ul>
+<ul>
+Git figures out that it’s a rename implicitly, so it doesn’t matter if you rename a file that way or with the mv command. The only real difference is that mv is one command instead of three – it’s a convenience function. More important, you can use any tool you like to rename a file, and address the add/rm later, before you commit.
+</ul>
+
+<br /><h1>Visualizing Git Concepts</h1>
+<table>
+	<col width="200">
+  	<!-- <col width="330">
+  	<col width="330"> -->
+	<tr>
+		<!-- <td colspan="2"> --> <td><h2>Commands</h2></td>
+		<td>By default, all pushes must cause a fast-forward merge on the remote repository. If there is any divergence between your local branch and the remote branch, your push will be rejected. In this scenario, you need to pull first and then you will be able to push again.</td>
+	</tr>
+	<tr>
+		<td>git commit</td>
+		<td> We are going to skip instructing you on how to add your files for commit in this explanation. Let's assume you already know how to do that. If you don't, go read some other tutorials. Pretend that you already have your files staged for commit and enter git commit as many times as you like in the terminal box.</td>
+		<td><div class="ienlarger">
+			<a href="http://members.home.nl/jaccokip/">
+				<img src="http://members.home.nl/jaccokip/images/git-commit.png"  alt="thumb" class="resize_thumb" />
+				<span>
+					<img src="http://members.home.nl/jaccokip/images/git-commit.png"   alt="large" /><br />
+					Some text can go here.
+				</span>
+			</a>
+			</div>
+		</td>
+	</tr>
+	<tr>		
+		<td>branch</td> 
+		<td>git branch name will create a new branch named "name". Creating branches just creates a new tag pointing to the currently checked out commit.<br />
+		Branches can be deleted using the command git branch -d name.  Type git commit and git branch commands to your hearts desire until you understand this concept. </td>
+		<td><div class="ienlarger">
+			<a href="http://members.home.nl/jaccokip/">
+				<img src="http://members.home.nl/jaccokip/images/git-branch.png"  alt="thumb" class="resize_thumb" />
+				<span>
+					<img src="http://members.home.nl/jaccokip/images/git-branch.png"   alt="large" /><br />
+					Some text can go here.
+				</span>
+			</a>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>git checkout</td>
+		<td>git checkout has many uses, but the main one is to switch between branches.<br />
+			For example, to switch from master branch to dev branch, I would type git checkout dev.<br /> 
+			After that, if I do a git commit, notice where it goes. Try it.<br />
+		<br />
+			In addition to checking out branches, you can also checkout individual commits. Try it.<br />
+			Make a new commit and then type git checkout bb92e0e and see what happens.<br />
+		<br />
+			Type git commit, git branch, and git checkout commands to your hearts desire until you understand this concept. </td>
+		<td><div class="ienlarger">
+			<a href="http://members.home.nl/jaccokip/">
+				<img src="http://members.home.nl/jaccokip/images/git-checkout.png" alt="thumb" class="resize_thumb" />
+				<span>
+					<img src="http://members.home.nl/jaccokip/images/git-checkout.png"   alt="large" /><br />
+					Some text can go here.
+				</span>
+			</a>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>git checkout -b</td>
+		<td>You can combine git branch and git checkout into a single command by typing git checkout -b branchname.<br /> 
+			This will create the branch if it does not already exist and immediately check it out. </td>
+		<td><div class="ienlarger">
+			<a href="http://members.home.nl/jaccokip/">
+				<img src="http://members.home.nl/jaccokip/images/git-checkout-b.png" alt="thumb" class="resize_thumb" />
+				<span>
+					<img src="http://members.home.nl/jaccokip/images/git-checkout-b.png"  alt="large" /><br />
+					Some text can go here.
+				</span>
+			</a>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2"><h2>Undo Commits</h2></td>
+	</tr>
+	<tr>
+		<td>git reset</td>
+		<td>git reset will move HEAD and the current branch back to wherever you specify, abandoning any commits that may be left behind. 
+			This is useful to undo a commit that you no longer need.
+			This command is normally used with one of three flags: "--soft", "--mixed", and "--hard". 
+			The soft and mixed flags deal with what to do with the work that was inside the commit after you reset, and you can read about it here. 
+			Since this visualization cannot graphically display that work, only the "--hard" flag will work on this site.<br />
+
+			The ref "HEAD^" is usually used together with this command. "HEAD^" means "the commit right before HEAD. 
+			"HEAD^^" means "two commits before HEAD", and so on.<br />
+
+			Note that you must never use git reset to abandon commits that have already been pushed and merged into the origin. This can cause your local repository to become out of sync with the origin. Don't do it unless you really know what you're doing. </td>
+		<td><div class="ienlarger">
+			<a href="http://members.home.nl/jaccokip/">
+				<img src="http://members.home.nl/jaccokip/images/git-reset.png" alt="git-reset" alt="thumb" class="resize_thumb" />
+				<span>
+    				<img src="http://members.home.nl/jaccokip/images/git-reset.png" alt="large" /><br />
+    				Some text can go here.
+    			</span>
+    		</a>
+    		</div>
+    	</td>
+	</tr>
+	<tr>
+		<td>git revert</td>
+		<td>To undo commits that have already been pushed and shared with the team, we cannot use the git reset command. Instead, we have to use git revert.
+			git revert will create a new commit that will undo all of the work that was done in the commit you want to revert. </td>
+		<td><div class="ienlarger">
+			<a href="http://members.home.nl/jaccokip/">
+				<img src="http://members.home.nl/jaccokip/images/git-revert.png" alt="thumb" class="resize_thumb" />
+				<span>
+					<img src="http://members.home.nl/jaccokip/images/git-revert.png" alt="large" /><br />
+					Some text can go here.
+				</span>
+			</a>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2"><h2>Combine Branches</h2></td>
+	</tr>
+	<tr>
+		<td>git merge</td>
+		<td>git merge will create a new commit with two parents. The resulting commit snapshot will have the all of the work that has been done in both branches.
+			If there was no divergence between the two commits, git will do a "fast-forward" method merge.
+			To see this happen, checkout the 'ff' branch and then type git merge dev. </td>
+		<td><div class="ienlarger">
+			<a href="http://members.home.nl/jaccokip/">
+				<img src="http://members.home.nl/jaccokip/images/git-merge.png" alt="thumb" class="resize_thumb" />
+				<span>
+					<img src="http://members.home.nl/jaccokip/images/git-merge.png"  alt="large" /><br />
+					Some text can go here.
+				</span>
+			</a>
+		</div>
+	</td>
+	</tr>
+	<tr>
+		<td>git rebase</td>
+		<td>git rebase will take the commits on this branch and "move" them so that their new "base" is at the point you specify.
+			You should pay close attention to the commit IDs of the circles as they move when you do this exercise.
+			The reason I put "move" in quotations because this process actually generates brand new commits with completely different IDs than the old commits, and leaves the old commits where they were. For this reason, you never want to rebase commits that have already been shared with the team you are working with.  A git push will find the commits you have on your local branch that the corresponding branch on the origin server does not have, and send them to the remote repository.
+ </td>
+		<td><div class="ienlarger">
+			<a href="http://members.home.nl/jaccokip/">
+				<img src="http://members.home.nl/jaccokip/images/git-rebase.png"   alt="thumb" class="resize_thumb" />
+				<span>
+					<img src="http://members.home.nl/jaccokip/images/git-rebase.png"  alt="large" /><br />
+					Some text can go here.
+				</span>
+			</a>
+		</div>
+	</td>
+	</tr>
+	<tr>
+		<td colspan="2"><h2>Remote Server</h2></td>
+	</tr>
+	<tr>
+		<td>git fetch</td>
+		<td>git fetch will update all of the "remote tracking branches" in your local repository. Remote tracking branches are tagged in grey. </td>
+		<td><div class="ienlarger">
+			<a href="http://members.home.nl/jaccokip/">
+				<img src="http://members.home.nl/jaccokip/images/git-fetch.png"   alt="thumb" class="resize_thumb" />
+				<span>
+					<img src="http://members.home.nl/jaccokip/images/git-fetch.png"  alt="large" /><br />
+					Some text can go here.
+				</span>
+			</a>
+		</div>
+	</td>
+	<tr>
+		<td>git pull</td>
+		<td>A git pull is a two step process that first does a git fetch, and then does a git merge of the remote tracking branch associated with your current branch. If you have no current branch, the process will stop after fetching.
+		If the argument "--rebase" was given by typing git pull --rebase, the second step of pull process will be a rebase instead of a merge. This can be set to the default behavior by configuration by typing: git config branch.BRANCHNAME.rebase true. </td>
+		<td><div class="ienlarger">
+			<a href="http://members.home.nl/jaccokip/">
+				<img src="http://members.home.nl/jaccokip/images/git-pull.png"  alt="thumb" class="resize_thumb" />
+				<span>
+					<img src="http://members.home.nl/jaccokip/images/git-pull.png" alt="large" /><br />
+					Some text can go here.
+				</span>
+			</a>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>git push</td>
+		<td>A git push will find the commits you have on your local branch that the corresponding branch on the origin server does not have, and send them to the remote repository.
+			By default, all pushes must cause a fast-forward merge on the remote repository. 
+			If there is any divergence between your local branch and the remote branch, your push will be rejected. In this scenario, you need to pull first and then you will be able to push again. </td>
+		<td><div class="ienlarger">
+			<a href="http://members.home.nl/jaccokip/">
+			<img src="http://members.home.nl/jaccokip/images/git-branch.png"   alt="thumb" class="resize_thumb" />
+			<span>
+				<img src="http://members.home.nl/jaccokip/images/git-branch.png" alt="large" /><br />
+				Some text can go here.
+			</span>
+			</a>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>git tag</td>
+		<td>git tag name will create a new tag named "name". Creating tags just creates a new tag pointing to the currently checked out commit.
+		Tags can be deleted using the command git tag -d name (coming soon).
+		Type git commit and git tag commands to your hearts desire until you understand this concept. </td>
+		<td><div class="ienlarger">
+			<a href="http://members.home.nl/jaccokip/">
+			<img src="http://members.home.nl/jaccokip/images/git-branch.png"  alt="thumb" class="resize_thumb" />
+			<span>
+				<img src="http://members.home.nl/jaccokip/images/git-branch.png"  alt="large" /><br />
+				Some text can go here.
+			</span>
+			</a>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2"><h2>Specific Examples</h2></td>
+		<td>Below I have created some specific real-world scenarios that I feel are quite common and useful.</td>
+		
+	</tr>
+	
+	<tr>
+		<td colspan="2">Restore Local Branch to State on Origin Server</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>git reset origin/master</td>
+		<td> One simple example of the use of git reset is to completely restore your local repository state to that of the origin. You can do so by typing git reset origin/master.
+			Note that this won't delete untracked files, you will have to delete those separately with the command git clean -df. </td>
+		<td>
+			<div class="ienlarger">
+			<a href="http://members.home.nl/jaccokip/">
+			<img src="http://members.home.nl/jaccokip/images/git-delete-local-branch.png" alt="thumb" class="resize_thumb" />
+			<span>
+				<img src="http://members.home.nl/jaccokip/images/git-delete-local-branch.png" alt="large" /><br />
+				Some text can go here.
+			</span>
+			</a>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">Update Private Local Branch with Latest from Origin</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>git fetch<br />
+			git rebase origin/master</td>
+		<td>Here is a situation in which you are working in a local branch that is all your own. 
+			You want to receive the latest code from the origin server's master branch. 
+			To update your local branch, you can do it without having to switch branches!
+			First do a git fetch, then type git rebase origin/master! </td>
+		<td><div class="ienlarger">
+			<a href="http://members.home.nl/jaccokip/">
+			<img src="http://members.home.nl/jaccokip/images/images/git-update-localfromorigin.png"  alt="thumb" class="resize_thumb" />
+			<span>
+				<img src="http://members.home.nl/jaccokip/images/git-update-localfromorigin.png" alt="large" /><br />
+				Some text can go here.
+			</span>
+			</a>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">Deleting Local Branches</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>git branch -d<br />
+			git rebase origin/master</td>
+		<td>git branch -d is used to delete branches. I have pre-created a bunch of branches for you to delete in the playground below. Have at it. </td>
+		<td><div class="ienlarger">
+			<a href="http://members.home.nl/jaccokip/">
+			<img src="http://members.home.nl/jaccokip/images/git-delete-local-branch.png"  alt="thumb" class="resize_thumb" />
+			<span>
+				<img src="http://members.home.nl/jaccokip/images/git-delete-local-branch.png" alt="large" /><br />
+				Some text can go here.
+			</span>
+			</a>
+			</div>
+		</td>
+	</tr>
+</table>
+	
+
+
+<br /><h1>Git commands</h1>
+<ul>
+	<li class="antw"><span class="dropt" title="">Basic Usage<span style="width:400px;"><img src="images/basic-usage.svg.png" alt="basic usage" style="width:300px;height:325px"></span></span>
+		<ul>
+			<li style="margin-left:80px">The four commands above copy files between the working directory, the stage (also called the index), and the history (in the form of commits).</li>
+			<li style="margin-left:80px">git add files copies files (at their current state) to the stage.</li>
+			<li style="margin-left:80px">git commit saves a snapshot of the stage as a commit.</li>
+			<li style="margin-left:80px">git reset -- files unstages files; that is, it copies files from the latest commit to the stage. Use this command to "undo" a git add files. </li>
+			<li style="margin-left:80px">You can also git reset to unstage everything.</li>
+			<li style="margin-left:80px">git checkout -- files copies files from the stage to the working directory. Use this to throw away local changes.</li>
+			<li style="margin-left:80px">You can use git reset -p, git checkout -p, or git add -p instead of (or in addition to) specifying particular files to interactively choose which hunks copy.</li>
+		</ul>
+	</li>
+	<li class="antw"><span class="dropt" title="">Basic Usage continued<span style="width:500px;"> <img src="images/basic-usage-2.svg.png" alt="git diff" style="width:500px;height:342px"></span></span>
+		<ul>
+			<li style="margin-left:80px">It is also possible to jump over the stage and check out files directly from the history or commit files without staging first.</li>
+			<li style="margin-left:80px">git commit -a is equivalent to running git add on all filenames that existed in the latest commit, and then running git commit.</li>
+			<li style="margin-left:80px">git commit files creates a new commit containing the contents of the latest commit, plus a snapshot of files taken from the working directory. Additionally, files are copied to the stage.</li>
+			<li style="margin-left:80px">git checkout HEAD -- files copies files from the latest commit to both the stage and the working directory.</li>
+		</ul>	
+	</li>
+	<li class="antw"><span class="dropt" title="">conventions<span style="width:500px;"> <img src="images/conventions.png" alt="git diff" style="width:500px;height:342px"></span></span>
+		<ul>
+			<li style="margin-left:80px">In the rest of this document, we will use graphs of the following form.</li>
+			<li style="margin-left:80px">Commits are shown in green as 5-character IDs, and they point to their parents. Branches are shown in orange, and they point to particular commits. The current branch is identified by the special reference HEAD, which is "attached" to that branch. In this image, the five latest commits are shown, with ed489 being the most recent. master (the current branch) points to this commit, while maint (another branch) points to an ancestor of master's commit.</li>
+		</ul>
+	</li>	
+	<li class="antw"><span class="dropt" title="">git diff<span style="width:500px;"> <img src="images/diff.png" alt="git diff" style="width:500px;height:342px"></span></span>
+		<ul>
+			<li style="margin-left:80px">There are various ways to look at differences between commits. Below are some common examples. Any of these commands can optionally take extra filename arguments that limit the differences to the named files.</li>
+		</ul>	
+	</li>
+	<li class="antw"><span class="dropt" title="">git commit<span style="width:500px;"> <img src="images/commit-master.png" alt="git diff" style="width:500px;height:342px"></span></span>
+		<ul>
+			<li style="margin-left:80px">When you commit, git creates a new commit object using the files from the stage and sets the parent to the current commit. It then points the current branch to this new commit. In the image below, the current branch is master. Before the command was run, master pointed to ed489. Afterward, a new commit, f0cec, was created, with parent ed489, and then master was moved to the new commit.</li>
+		</ul>	
+	</li>
+	<li class="antw"><span class="dropt" title="">git commit continued<span style="width:500px;"> <img src="images/commit-maint.png" alt="git diff" style="width:500px;height:342px"></span></span>
+		<ul>
+			<li style="margin-left:80px">This same process happens even when the current branch is an ancestor of another. Below, a commit occurs on branch maint, which was an ancestor of master, resulting in 1800b. Afterward, maint is no longer an ancestor of master. To join the two histories, a merge (or rebase) will be necessary.</li>
+		</ul>	
+	</li>
+	<li class="antw"><span class="dropt" title="">git commit-amend<span style="width:500px;"> <img src="images/commit-amend.png" alt="git diff" style="width:500px;height:342px"></span></span>
+		<ul>
+			<li style="margin-left:80px">Sometimes a mistake is made in a commit, but this is easy to correct with git commit --amend. When you use this command, git creates a new commit with the same parent as the current commit. (The old commit will be discarded if nothing else references it.)</li>
+		</ul>
+	</li>
+	<li class="antw"><span class="dropt" title="">git checkout<span style="width:500px;"> <img src="images/checkout-files.png" alt="git diff" style="width:500px;height:342px"></span></span>
+		<ul>
+			<li style="margin-left:80px">The checkout command is used to copy files from the history (or stage) to the working directory, and to optionally switch branches. <br />
+				When a filename (and/or -p) is given, git copies those files from the given commit to the stage and the working directory. For example, git checkout HEAD~ foo.c copies the file foo.c from the commit called HEAD~ (the parent of the current commit) to the working directory, and also stages it. (If no commit name is given, files are copied from the stage.) Note that the current branch is not changed.</li>
+		</ul>
+	</li>	
+	<li class="antw"><span class="dropt" title="">git checkout-branch<span style="width:500px;"> <img src="images/checkout-branch.png" alt="git diff" style="width:500px;height:342px"></span></span>
+		<ul>
+			<li style="margin-left:80px">When a filename is not given but the reference is a (local) branch, HEAD is moved to that branch (that is, we "switch to" that branch), and then the stage and working directory are set to match the contents of that commit. Any file that exists in the new commit (a47c3 below) is copied; any file that exists in the old commit (ed489) but not in the new one is deleted; and any file that exists in neither is ignored.</li>
+		</ul>			
+	</li>						
+	<li class="antw"><span class="dropt" title="">checkout-detached<span style="width:500px;"> <img src="images/checkout-detached.png" alt="git diff" style="width:500px;height:342px"></span></span>
+		<ul>
+			<li style="margin-left:80px">When a filename is not given and the reference is not a (local) branch — say, it is a tag, a remote branch, a SHA-1 ID, or something like master~3 — we get an anonymous branch, called a detached HEAD. This is useful for jumping around the history. Say you want to compile version 1.6.6.1 of git. You can git checkout v1.6.6.1 (which is a tag, not a branch), compile, install, and then switch back to another branch, say git checkout master. However, committing works slightly differently with a detached HEAD; this is covered below.</li>
+		</ul>
+	</li>
+	<li class="antw"><span class="dropt" title="">git commit-detached<span style="width:500px;"> <img src="images/commit-detached.png" alt="git diff" style="width:500px;height:342px"></span></span>
+		<ul>
+			<li style="margin-left:80px">When HEAD is detached, commits work like normal, except no named branch gets updated. (You can think of this as an anonymous branch.)</li>
+		</ul>
+	</li>						
+	<li class="antw"><span class="dropt" title="">git checkout-master<span style="width:500px;"> <img src="images/checkout-after-detached.png" alt="git diff" style="width:500px;height:342px"></span></span>
+		<ul>
+			<li style="margin-left:80px">Once you check out something else, say master, the commit is (presumably) no longer referenced by anything else, and gets lost. Note that after the command, there is nothing referencing 2eecb.</li>
+		</ul>
+	</li>
+	<li class="antw"><span class="dropt" title="">git checkout -b new<span style="width:500px;"> <img src="images/checkout-b-detached.png" alt="git diff" style="width:500px;height:342px"></span></span>
+		<ul>
+			<li style="margin-left:80px">If, on the other hand, you want to save this state, you can create a new named branch using git checkout -b name.</li>
+		</ul>
+	</li>
+	<li class="antw"><span class="dropt" title="">git reset HEAD~3<span style="width:500px;"> <img src="images/reset-commit.png" alt="git diff" style="width:500px;height:342px"></span></span>
+		<ul>
+			<li style="margin-left:80px">The reset command moves the current branch to another position, and optionally updates the stage and the working directory. It also is used to copy files from the history to the stage without touching the working directory.<br />
+			<br />
+			If a commit is given with no filenames, the current branch is moved to that commit, and then the stage is updated to match this commit. If --hard is given, the working directory is also updated. If --soft is given, neither is updated.</li>
+		</ul>
+	</li>
+	<li class="antw"><span class="dropt" title="">git reset<span style="width:500px;"> <img src="images/reset.png" alt="git diff" style="width:500px;height:342px"></span></span>
+		<ul>
+			<li style="margin-left:80px">If a commit is not given, it defaults to HEAD. In this case, the branch is not moved, but the stage (and optionally the working directory, if --hard is given) are reset to the contents of the last commit.</li>
+		</ul>
+	</li>
+	<li class="antw"><span class="dropt" title="">git reset files<span style="width:500px;"> <img src="images/reset-files.png" alt="git diff" style="width:500px;height:342px"></span></span>
+		<ul>
+			<li style="margin-left:80px">If a filename (and/or -p) is given, then the command works similarly to checkout with a filename, except only the stage (and not the working directory) is updated. (You may also specify the commit from which to take files, rather than HEAD.)</li>
+		</ul>
+	</li>
+	<li class="antw"><span class="dropt" title="">git merge<span style="width:500px;"> <img src="images/merge-ff.png" alt="git diff" style="width:500px;height:342px"></span></span>
+		<ul>
+			<li style="margin-left:80px">A merge creates a new commit that incorporates changes from other commits. Before merging, the stage must match the current commit. The trivial case is if the other commit is an ancestor of the current commit, in which case nothing is done. The next most simple is if the current commit is an ancestor of the other commit. This results in a fast-forward merge. The reference is simply moved, and then the new commit is checked out.</li>
+		</ul>
+	</li>
+	<li class="antw"><span class="dropt" title="">git merge other<span style="width:500px;"> <img src="images/merge.png" alt="git diff" style="width:500px;height:342px"></span></span>
+		<ul>
+			<li style="margin-left:80px">Otherwise, a "real" merge must occur. You can choose other strategies, but the default is to perform a "recursive" merge, which basically takes the current commit (ed489 below), the other commit (33104), and their common ancestor (b325c), and performs a three-way merge. The result is saved to the working directory and the stage, and then a commit occurs, with an extra parent (33104) for the new commit. </li>
+		</ul>
+	</li>
+	<li class="antw"><span class="dropt" title="">git cherry-pick<span style="width:500px;"> <img src="images/cherry-pick.png" alt="git diff" style="width:500px;height:342px"></span></span>
+		<ul>
+			<li style="margin-left:80px">The cherry-pick command "copies" a commit, creating a new commit on the current branch with the same message and patch as another commit.</li>
+		</ul>
+	</li>
+	<li class="antw"><span class="dropt" title="">git rebase master<span style="width:500px;"> <img src="images/rebase.png" alt="git diff" style="width:500px;height:342px"></span></span>
+		<ul>
+			<li style="margin-left:80px">A rebase is an alternative to a merge for combining multiple branches. Whereas a merge creates a single commit with two parents, leaving a non-linear history, a rebase replays the commits from the current branch onto another, leaving a linear history. In essence, this is an automated way of performing several cherry-picks in a row.</li>
+		</ul>
+	</li>
+	<li class="antw"><span class="dropt" title="">git rebase --onto master<span style="width:500px;"> <img src="images/rebase-onto.png" alt="git diff" style="width:500px;height:342px"></span></span>
+		<ul>
+			<li style="margin-left:80px">The above command takes all the commits that exist in topic but not in master (namely 169a6 and 2c33a), replays them onto master, and then moves the branch head to the new tip. Note that the old commits will be garbage collected if they are no longer referenced.</li>
+			<li style="margin-left:80px">To limit how far back to go, use the --onto option. The following command replays onto master the most recent commits on the current branch since 169a6 (exclusive), namely 2c33a.</li>
+			<li style="margin-left:80px">There is also git rebase --interactive, which allows one to do more complicated things than simply replaying commits, namely dropping, reordering, modifying, and squashing commits. There is no obvious picture to draw for this; see git-rebase(1) for more details.</li>
+		</ul>
+	</li>
+</ul>							
+
+<br /><h2>Input</h2>
+
+<ul>
+Code blocks like those on this page are part of a scripting language called Bash. To use Bash scripts, we need to use an application that comes with your OS called the command line.</ul>
+
+<em class="command"><em class="output">$</em> echo 'This is input text'<br />
+# This tooltip tells you what's going on.</em>
+<ul>A line that begins with the dollar sign (<em class="output">$</em>) indicates a line of Bash script you need to type. To enter it, type the text that follows the <em class="output">$</em>, hitting the return key at the end of each line. You can hover your mouse over each line for an explanation of what the script is doing.
+</ul>			
+					
+<br /><h2>Output</h2>
+
+<em class="command" class="output"># This is output text. </em>
+<ul>
+A line that does not begin with a <em class="output">$</em> is output text that is intended to give you information or tell you what to do next. We've colored output text green in these bootcamp tutorials.
+</ul>
+<br /><h2>User Specific Input</h2>
+<ul>
+<em class="command"><em class="output">$</em> echo '<em class="input">username</em><br>
+# Outputs the text in the quotation marks.</em>
+</ul>
+<ul>
+Areas of yellow text represent your own personal info, repos, etc. If it is part of an input (<em class="output">$</em>) line, you should replace it with your own info when you type it. If it is part of output text, it is just for your reference. It will automatically show your own info in the command line.
+</ul>
+<ul class="opmerking">
+Good to know: There will be times when you type code, hit return, and all you are given is another prompt. Some actions that you execute in the command line don't have any output. Don't worry, if there is ever a problem with your code, the command line will let you know.
+</ul>
+For security reasons, the command line will not display what you type when entering passwords. Just type your password and hit the return key.
+<br /><h1>Next steps: Authenticating with GitHub from Git</h1>
+<ul>
+When you connect to a GitHub repository from Git, you'll need to authenticate with GitHub using either HTTPS or SSH.
+</ul>
+<br /><h2>Connecting over HTTPS (recommended)</h2>
+<ul>
+If you clone with HTTPS, you can cache your GitHub password in Git using a credential helper.
+</ul>
+<br /><h2>Connecting over SSH</h2>
+<ul>
+If you clone with SSH, you must generate SSH keys on each computer you use to push or pull from GitHub.
+</ul>
+<br /><h2>Celebrate</h2>
+<ul>
+Congratulations, you now have Git and GitHub all set up! What do you want to do next?
+</ul>
+
+<br /><h1>remote URL should I use?</h1>
+<ul>
+There are several ways to clone repositories available on GitHub.<br>
+
+When you view a repository while signed in to your account, the sidebar shows a choice of URLs you can use to clone the project onto your computer:
+
+<img src="images/git.png" alt="clone url"> <br /> 
+
+For information on setting or changing your remote URL, see "Changing a remote's URL."
+</ul>
+<br /><h1>Cloning with HTTPS (recommended)</h1>
+
+<ul>
+The <em class="command">https:// </em>clone URLs are available on all repositories, public and private. They are smart, so they will provide you with either read-only or read/writeaccess, depending on your permissions to the repository.
+</ul>
+<ul>
+These URLs work everywhere--even if you are behind a firewall or proxy. In certain cases, if you'd rather use SSH, you might be able to use SSH over the HTTPS port.
+</ul>
+<ul>
+When you <em class="command">git fetch</em> <em class="command">git pull</em> or <em class="command">git push</em> to the remote repository using HTTPS, you'll be asked for your GitHub username and password.
+</ul>
+<ul>
+If you have two-factor authentication enabled, you must create a personal access token to use instead of your GitHub password.
+You can use a credential helper so Git will remember your GitHub username and password every time it talks to GitHub.
+</ul>
+<ul>=============================================================================================</ul>
+aantek uit [visual-git-guide <a href="http://marklodato.github.io/visual-git-guide/index-en.html" target="_blank">http://marklodato.github.io/visual-git-guide/index-en.html</a>
+<ul>
+git add files copies files (at their current state) to the stage. git add -p instead of (or in addition to) specifying particular files to interactively choose which hunks copy.
+</ul>
+<ul>
+git commit saves a snapshot of the stage as a commit. git commit -a is equivalent to running git add on all filenames that existed in the latest commit, and then running git commit. git commit files creates a new commit containing the contents of the latest commit, plus a snapshot of files taken from the working directory. Additionally, files are copied to the stage. git commit --amend Sometimes a mistake is made in a commit, but this is easy to correct with git commit --amend. When you use this command, git creates a new commit with the same parent as the current commit. (The old commit will be discarded if nothing else references it.)
+</ul>
+<ul>
+git reset -- files unstages files; that is, it copies files from the latest commit to the stage. Use this command to "undo" a git add files. You can also git reset to unstage everything. git reset -p
+</ul>
+<ul>
+git checkout -- files copies files from the stage to the working directory. Use this to throw away local changes. git checkout -p git checkout HEAD -- files copies files from the latest commit to both the stage and the working directory.
+</ul>
+<ul>
+git diff git diff da985 b325c git diff --cached git diff HEAD git diff maint
+</ul>
+</div>
+
+<footer>
+	<ul>
+	&copy; Copyright  by unknown
+	</ul>
+</footer>
+<!-- script tbv  de search box -->
+
+<script language="JavaScript">
+	<!--
+	var TRange=null;
+
+	function findString (str) {
+		if (parseInt(navigator.appVersion)<4) return;
+			var strFound;
+	if (window.find) {
+
+		// CODE FOR BROWSERS THAT SUPPORT window.find
+
+		strFound=self.find(str);
+ 		if (!strFound) {
+ 			strFound=self.find(str,0,1);
+			while (self.find(str,0,1)) continue;
+  			}
+ 		}
+ 	else if (navigator.appName.indexOf("Microsoft")!=-1) {
+
+  		// EXPLORER-SPECIFIC CODE
+
+  		if (TRange!=null) {
+   			TRange.collapse(false);
+   			strFound=TRange.findText(str);
+   			if (strFound) TRange.select();
+  		}
+  		if (TRange==null || strFound==0) {
+   			TRange=self.document.body.createTextRange();
+   			strFound=TRange.findText(str);
+   			if (strFound) TRange.select();
+  		}
+ 	}
+ 	else if (navigator.appName=="Opera") {
+  		alert ("Opera browsers not supported, sorry...")
+  	return;
+ 	}
+ 	if (!strFound) alert ("String '"+str+"' not found!")
+ 		return;
+	}
+	//-->
+</script>
+
+
+</body>
+</html>

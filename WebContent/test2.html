@@ -1,0 +1,29 @@
+<html>
+	<head>
+
+<link rel="stylesheet" type="text/css" href="all.css">
+<link rel="stylesheet" type="text/css" href="default.css" title="Default">
+<link rel="alternate stylesheet" type="text/css" href="extraPretty.css" title="Pretty">
+<link rel="alternate stylesheet" type="text/css" href="bigFont.css" title="Big Font">
+<link rel="alternate stylesheet" type="text/css" href="contrast.css" title="High Contrast">
+
+<title>Test stylesheet switching page</title>
+<script type="text/javascript" src="scripts/swapstyle.js"></script>
+<script type="text/javascript">
+if( self != top ) { document.write('<style type="text/css">\n#backlinks { display: none; }\n<\/style>'); }
+</script>
+</head><body onload="useStyleAgain('styleTestStore');" onunload="rememberStyle('styleTestStore');">
+<h1>This is a test heading</h1>
+<p>This is a test paragraph. Click the buttons to change the stylesheet(s). Note that this will attempt to set a cookie as part of the demonstration. By using the demonstration, you accept the cookie.</p>
+<form method="get" action="" onsubmit="return false;">
+	<p>
+		<input type="button" value="Use Default" onclick="changeStyle('Default')"><br>
+		<input type="button" value="Use Pretty" onclick="changeStyle('Pretty')"><br>
+		<input type="button" value="Use Big Font" onclick="changeStyle('Big Font')"><br>
+		<input type="button" value="Use High Contrast" onclick="changeStyle('High Contrast')"><br>
+		<input type="button" value="Use Pretty and Big Font" onclick="changeStyle('Pretty','Big Font')"><br>
+		<input type="button" value="Use Big Font and High Contrast" onclick="changeStyle('Big Font','High Contrast')">
+	</p>
+</form>
+<p id="backlinks"><a href="./">Go back to the demo details page</a>.</p>
+</body></html>

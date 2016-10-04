@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+	Remove this if you use the .htaccess -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<title>HTML</title>
+	<meta name="description" content="">
+	<meta name="author" content="jacco" >
+	<!-- persistent stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link rel="stylesheet" type="text/css" href="css/sober.css">
+	<link rel="stylesheet" type="text/css" href="css/sober.css" title="Default">
+	<link rel="alternate stylesheet" type="text/css" href="css/pinned_menu.css" title="pinned">
+	
+	<link rel="alternate stylesheet" type="text/css" href="css/command.css" title="stars">
+	<link rel="alternate stylesheet" type="text/css" href="css/com_back.css" title="grey">
+	<!-- <link rel="alternate stylesheet" type="text/css" href="css/python.css" title="python">
+	<link rel="alternate stylesheet" type="text/css" href="css/tcpdump.css" title="tcpdump"> -->
+	<link rel="alternate stylesheet" type="text/css" href="css/nmap.css" title="nmap">
+
+<!--	<script src="scripts/nomouse.js"></script> -->
+	<script type="text/javascript" src="scripts/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src="scripts/col-test.js"></script>
+
+	<script src="scripts/swapstyle.js"></script>
+	<script type="text/javascript">
+	if( self != top ) { document.write('<style type="text/css">\n#backlinks { display: none; }\n<\/style>'); }
+	</script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+
+<body onload="useStyleAgain('styleTestStore');" onunload="rememberStyle('styleTestStore');">
+	
+<div>
+	<header>
+</div>
+<div style = "position:fixed;">
+	<nav>
+	<ul>
+		<li><a href="index.html">Home</a>
+			<ul>
+				<li><a href="index.html">Styles</a>
+					<ul>
+								<li><a href="#" onClick="changeStyle('grey');">cmd-line</a></li>
+								<li><a href="#" onClick="changeStyle('stars');">stars</a></li>
+								<!-- <li><a href="#" onClick="changeStyle('python');">python</a></li>
+								<li><a href="#" onClick="changeStyle('tcpdump');">tcpdump</a></li>
+								<li><a href="#" onClick="changeStyle('nmap');">nmap</a></li> -->
+								<li><a href="#" onClick="changeStyle('Default');">Reset to default</a></li>
+							</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="index.html">Naslag_OS <span class="caret"></span></a>
+			<ul>
+				<li><a href="linux_commands.html">Commands</a></li>
+				<li><a href="tcpdump.html">Tcpdump</a></li>
+				<li><a href="nmap.html">Nmap</a></li>
+				<li><a href="vi.html">Vi</a>
+					<ul>
+							<li><a href="vi_settings.html">vi_settings</a></li>
+							<li><a href="tekst_manipulaties.html">tekst_manipulatie</a></li>
+							<li><a href="motion.html">beweging</a></li>
+							<li><a href="regexp_shell_functions.html">RegExp&Shell_funct</a></li>
+							<li><a href="others.html">Other</a></li>
+							<li><a href="vim.html">Vim</a></li>
+						</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="index.html">Naslag<span class="caret"></span></a>
+			<ul>
+				<li><a href="cat_api.html">Elasticsearch</a></li>
+				<li><a href="docker.html">Docker</a></li>
+				<li><a href="Escape_code.html">Escape characters</a></li>
+				<li><a href="git.html#table">Git</a></li>
+				<li><a href="python.html">Python</a>
+					<ul>
+						<li><a href="python_examples.html">Examples</a></li>
+					</ul>
+				</li>
+				<li><a href="puppet.html">Puppet</a>
+					<ul>
+						<li><a href="puppet_training.html">Puppet_Training</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="url_naar.html">Off Site</a>
+
+			<ul>
+				<li><a href="http://www.apache.org/" target="_blank">apache</a>
+					<ul>
+						<li><a href="http://httpd.apache.org/docs/2.0/misc/rewriteguide.html" target="_blank">rewrite</a></li>
+						<li><a href="https://www.addedbytes.com/articles/for-beginners/url-rewriting-for-beginners/" target="_blank">rewrite_dummies </a></li>
+					</ul>
+				</li>
+				<li><a href="http://www.ibm.com">IBM</a>
+					<ul>
+						<li><a href="http://www.ibm.com/developerworks" target="_blank">developers</a></li>
+					</ul>
+				</li>
+				<li><a href="http://nl.wikipedia.org/wiki/HyperText_Markup_Language">HTML</a>
+						<ul>
+							<li><a href="http://www.w3.org/TR/html5/" target="_blank">W3C</a></li>
+							<li><a href="http://www.w3schools.com/html/html5_intro.asp" target="_blank">W3C_School</a></li>
+							<li><a href="http://validator.w3.org/" target="_blank">Validator</a></li>
+						</ul>
+					</li>
+				<li><a href="http://nl.wikipedia.org/wiki/CSS">CSS</a>
+						<ul>
+							<li><a href="http://www.w3.org/standards/techs/css" target="_blank">Current_Status</a></li>
+							<li><a href="http://www.w3schools.com/css/css3_intro.asp" target="_blank">W3C_School</a></li>
+							<li><a href="https://jigsaw.w3.org/css-validator/" target="_blank">Validator</a></li>
+						</ul>
+					</li>
+			</ul>
+		</li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="help.html">Help</a></li>
+	</ul>
+</nav>
+		</div>
+<br /> 
+<br />
+
+	</header>
+	
+<h2>Status</h2>
+<table>
+	<tr><td>:.=</td>	<td>Shows current line number</td></tr>
+	<tr><td>:=</td>	<td>Shows number of lines in file</td></tr>
+	<tr><td>Control-G</td>	<td>Shows filename, current line number, total lines in file, and % of file location</td></tr>
+	<tr><td>l</td>	<td>Displays tab (^l) backslash (\) backspace (^H) newline ($) bell (^G) formfeed (^L^) of current line</td></tr>	
+</table>
+
+<h2>Key Mapping</h2>
+NOTE: Map allows you to define strings of VI commands. If you create a file called ".exrc" in your home directory, any map or set command you place inside this file will be executed every time you run VI. To imbed control characters like ESC in the macro, you need to precede them with CTRL-v. If you need to include quotes ("), precede them with a \ (backslash). Unused keys in vi are: K V g q v * = and the function keys.
+Example (The actual VI commands are in blue): :map v /I CTRL-v ESC dwiYou CTRL-v ESC ESC
+Description: When v is pressed, search for "I" (/I ESC), delete word (dw), and insert "You" (iYou ESC). CTRL-v allows ESC to be inserted :map key cmd_seq	Defines key to run cmd_seq when pressed
+<table>
+	<tr><td>:map</td>	<td>Displays all created macros on status line</td></tr>
+	<tr><td>:unmap key</td>	<td>Removes macro definition for key</td></tr>
+	<tr><td>:ab str</td> <td>string	When str is input, replaces it with string</td></tr>
+	<tr><td>:ab</td>	<td>Displays all abbreviations</td></tr>
+	<tr><td>:una str</td>	<td>Unabbreviates str</td></tr>
+</table>
+
+<h2>Other</h2>
+<table>
+	<tr><td>~</td>	<td>Toggle upper and lower case</td></tr>
+	<tr><td>J</td>	<td>Join lines</td></tr>
+	<tr><td>nJ</td>	<td>Joins the next n lines together; omitting n joins the beginning of the next line to the end of the current line</td></tr>
+	<tr><td>.</td>	<td>Repeat last text-changing command</td></tr>
+	<tr><td>u</td>	<td>Undo last change (Note: u in combination with . can allow multiple levels of undo in some versions)</td></tr>
+	<tr><td>U</td>	<td>Undo all changes to line</td></tr>
+	<tr><td>;</td>	<td>Repeats last f F t or T search command</td></tr>
+	<tr><td>:N or :E</td>	<td>You can open up a new split-screen window in (n)vi and then use ^w to switch between the two.</td></tr>
+</table>
+
+
+
+
+<div>
+      <footer class="onder">
+         <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://members.home.nl/jaccokip/" target="_blank">
+         <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
+         <p>
+           <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fmembers.home.nl%2Fjaccokip%2F" target="blank">HTML Validator</a>
+         </p>
+	 <p>
+		&copy; NoCopyright  by me
+	</p>
+      </footer>
+</div>
+
+</body>
+</html>

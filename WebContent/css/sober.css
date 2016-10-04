@@ -1,0 +1,340 @@
+body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form, fieldset, input, textarea, blockquote {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	/* font-weight: 100; */
+	font-size: 15px;
+	color: black;
+	margin-top: 3px;
+	/* margin-bottom: 100px; */
+	margin-right: 50px;
+	margin-left: 60px;
+}
+
+h1 {
+	color: #990000;
+	background-color: #FFFFFF;
+	margin-top: 10px;
+	font-size: 22px;
+}
+
+h2 {
+	color: #990000;
+	background-color: #FFFFFF;
+	margin-top: 10px;
+	font-size: 16px;
+}
+
+h3 {
+	color: #990000;
+	background-color: #FFFFFF;
+	margin-top: 10px;
+	font-size: 14px;
+}
+
+table {
+	border-spacing: 10px;
+	/* width: 50%; */
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 50px;
+}
+
+.header {
+	position: absolute;
+	left: 650px;
+	top: 15px;
+	z-index: 1; /* menu's op de voorgrond */
+}
+
+.sub-header {
+	position: absolute;
+	left: 650px;
+	top: 40px;
+	z-index: 1; /* menu's op de voorgrond */
+}
+
+.start {
+	margin-top: 3cm;
+}
+
+@font-face {
+	font-family: 'whateverittakes';
+	src: url('../fonts/whatever_it_takes_bold.ttf');
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: 'GoodDog';
+	src: url('../fonts/GoodDog.otf');
+}
+
+.doggy {
+	font-family: 'GoodDog';
+	font-size: 28px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: 0px;
+	text-align: left;
+}
+
+.post-it {
+	background: #fefabc;
+	padding: 15px;
+	font-family: 'whateverittakes';
+	font-size: 24px;
+	color: #000;
+	width: 200px;
+	float: left;
+	text-align: center;
+	-moz-transform: rotate(7deg);
+	-webkit-transform: rotate(7deg);
+	-o-transform: rotate(7deg);
+	-ms-transform: rotate(7deg);
+	transform: rotate(7deg);
+	box-shadow: 0px 4px 6px #333;
+	-moz-box-shadow: 0px 4px 6px #333;
+	-webkit-box-shadow: 0px 4px 6px #333;
+}
+
+.post-it-twee {
+	margin-top: 4cm;
+	background: #fefabc;
+	padding: 15px;
+	font-family: 'whateverittakes';
+	font-size: 24px;
+	color: #000;
+	width: 200px;
+	float: left;
+	text-align: center;
+	-moz-transform: rotate(-7deg);
+	-webkit-transform: rotate(-7deg);
+	-o-transform: rotate(-7deg);
+	-ms-transform: rotate(-7deg);
+	transform: rotate(-7deg);
+	box-shadow: 0px 4px 6px #333;
+	-moz-box-shadow: 0px 4px 6px #333;
+	-webkit-box-shadow: 0px 4px 6px #333;
+}
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+}
+
+.onder {
+	position: static;
+	float: right;
+	margin-top: -60px;
+	bottom: 1px;
+}
+
+.pos_left {
+	position: relative;
+	left: 1.5cm;
+	z-index: -1
+}
+.command {
+	font-family: courier;
+	font-weight: bold;
+	font-size: 90%;
+	/* border: 2px solid #a1a1a1; */
+	/* border: 2px solid #4b545f; */
+	/*  border-radius: 25px; */
+	padding: 10px 40px;
+	/*  box-shadow: 10px 10px 5px #0d0d0d; */
+	/* background: rgba(230, 230, 230, 0.9);
+	 /* width: 85%; */
+	z-index: -1; /* menu's op de voorgrond */
+}
+
+.command-inline {
+	font-family: courier;
+	font-weight: bold;
+	font-size: 90%;
+	/* border: 2px solid #a1a1a1; */
+	/* border: 2px solid #4b545f; */
+	/*  border-radius: 25px; */
+	/* padding: 10px 40px; */
+	/*  box-shadow: 10px 10px 5px #0d0d0d; */
+	/* background: rgba(230, 230, 230, 0.9);
+	 /* width: 85%; */
+	z-index: -1; /* menu's op de voorgrond */
+}
+
+.ref {
+	position: absolute;
+	right: 0px;
+	width: 350px;
+	top: 10px;
+	font-style: italic;
+	font-size: 12px;
+}
+
+.cursief {
+	font-style: italic;
+}
+
+.vraag {
+	font-weight: bold;
+}
+
+.antw {
+	margin-left: 50px;
+	/* text-indent: 50px; */
+}
+
+.output {
+	color: red;
+}
+
+.indent {
+	margin-left: 50px;
+}
+
+.ienlarger {
+	float: left;
+	clear: none; /* set to left or right if needed */
+	padding-bottom: 5px; /* space between thumbs. Don't change this to margin */
+	padding-right: 5px; /* space between thumbs and wrapping text when there is any text around it */
+}
+
+.ienlarger a {
+	display: block;
+	text-decoration: none;
+	/* add cursor:default; to this rule to disable the hand cursor */
+}
+
+.ienlarger a:hover {/* don't move this positioning to normal state */
+	position: relative;
+}
+
+.ienlarger span img {
+	border: 1px solid #FFFFFF; /* adds a border around the image */
+	margin-bottom: 8px; /* pushes the text down from the image */
+}
+
+.ienlarger a span {/* this is for the large image and the caption */
+	position: absolute;
+	display: none;
+	color: #FFCC00; /* caption text colour */
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px; /* caption text size */
+	background-color: #000000;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 13px;
+	padding-left: 10px;
+}
+
+.ienlarger img {/* leave or IE puts a border around links */
+	border-width: 0;
+}
+
+.ienlarger a:hover span {
+	display: block;
+	top: -250px; /* means the pop-up's top is 50px away from thumb's top */
+	left: -490px; /* means the pop-up's left is 90px far from the thumb's left */
+	z-index: 100;
+	/* If you want the pop-up open to the left of thumb, remove the left: 90px; and add
+	 right: 90px; This would mean the right side of the pop-up is 90px far from the right side of thumb */
+
+	/* If you want the pop-up open above the thumb, remove the top: 50px; and add
+	 bottom: 50px; This would mean the bottom of the pop-up is 50px far from the bottom of thumb */
+
+	/* add cursor:default; to this rule to disable the hand cursor only for the large image */
+}
+
+.resize_thumb {
+	width: 150px; /* enter desired thumb width here */
+	height: auto;
+}
+
+/* smart image enlarger ends here */
+
+span.dropt {
+	border-bottom: thin dotted;
+	/* background: #ffeedd;
+	 background: #000000; */
+}
+
+span.dropt:hover {
+	text-decoration: none;
+	/* background: #ffffff;  */
+	background: #4b545f;
+	z-index: 6;
+}
+
+span.dropt span {
+	position: absolute;
+	left: -9999px;
+	/* margin: 20px 0 0 0px;
+	 padding: 3px 3px 3px 3px;
+	 border-style:solid;
+	 /* border-color:black; */
+	border-width: 1px;
+	z-index: 6;
+}
+
+span.dropt:hover span {
+	left: 15%;
+	background: #ffffff;
+}
+
+/* span.dropt2:hover span {
+ left: 65%;
+ color: black;
+ background: #ffffff;
+ } */
+
+span.dropt span {
+	position: absolute;
+	/* left: -9999px;
+	 margin: 4px 0 0 0px;
+	 padding: 3px 3px 3px 3px;
+	 border-style:solid;
+	 border-color:black; */
+	border-width: 10px;
+}
+
+span.dropt:hover span {
+	/* 	margin: 20px 0 0 170px;
+	 margin: 20px 0 0 10px;
+	 background: #000000; */
+	z-index: 6;font-weight="bold"
+}
+
+.tab {
+	margin-left: 0.8cm;
+}
+
+.tab2 {
+	margin-left: 1.6cm;
+}
+
+.tab3 {
+	margin-left: 2.4cm;
+}
+
+.tab4 {
+	margin-left: 3.2cm;
+}
+
+.marge_left {
+	margin-left: 50px;
+}
+
+#colorswitch {
+	float: right;
+	width: 12em;
+	border: 1px #000066 solid;
+	padding: 0 1em 1em 1em;
+	margin: 0;
+}

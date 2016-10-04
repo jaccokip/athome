@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+	Remove this if you use the .htaccess -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>vim</title>
+	<meta name="description" content="">
+	<meta name="author" content="jacco" >
+	<!-- persistent stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link rel="stylesheet" type="text/css" href="css/sober.css">
+	<link rel="stylesheet" type="text/css" href="css/sober.css" title="Default">
+	<link rel="alternate stylesheet" type="text/css" href="css/pinned_menu.css" title="pinned">
+
+
+	<link rel="alternate stylesheet" type="text/css" href="css/vim.css" title="vim">
+	<link rel="alternate stylesheet" type="text/css" href="css/com_back.css" title="grey">
+	<!-- <link rel="alternate stylesheet" type="text/css" href="css/python.css" title="python">
+		<link rel="alternate stylesheet" type="text/css" href="css/com_back.css" title="grey">
+	<link rel="alternate stylesheet" type="text/css" href="css/tcpdump.css" title="tcpdump"> -->
+	<link rel="alternate stylesheet" type="text/css" href="css/nmap.css" title="nmap">
+
+	<script src="scripts/nomouse.js"></script>
+	<script type="text/javascript" src="scripts/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src="scripts/col-test.js"></script>
+
+	<script src="scripts/swapstyle.js"></script>
+	<script type="text/javascript">
+	if( self != top ) { document.write('<style type="text/css">\n#backlinks { display: none; }\n<\/style>'); }
+	</script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><img id="in_out" onclick="changeStyle('pinned')" src="images/Pin.png" width="30" height="30"></a></li>
+				<li><a href="index.html">Home</a>
+								<ul>
+					<li><a href="styles.html">Styles</a>
+						<ul>
+							<li><a href="#" onClick="changeStyle('grey');">cmd-line</a></li>
+							<li><a href="#" onClick="changeStyle('stars');">stars</a></li>
+							<!-- <li><a href="#" onClick="changeStyle('python');">python</a></li>
+							<li><a href="#" onClick="changeStyle('tcpdump');">tcpdump</a></li>
+							<li><a href="#" onClick="changeStyle('nmap');">nmap</a></li> -->
+							<li><a href="#" onClick="changeStyle('Default');">Reset to default</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+
+			<li><a href="index.html">Naslag_OS <span class="caret"></span></a>
+			<ul>
+				<li><a href="linux_commands.html">Commands</a></li>
+				<li><a href="tcpdump.html">Tcpdump</a></li>
+				<li><a href="nmap.html">Nmap</a></li>
+				<li><a href="vi.html">Vi</a>
+					<ul>
+							<li><a href="vi_settings.html">vi_settings</a></li>
+							<li><a href="tekst_manipulaties.html">tekst_manipulatie</a></li>
+							<li><a href="motion.html">beweging</a></li>
+							<li><a href="regexp_shell_functions.html">RegExp&Shell_funct</a></li>
+							<li><a href="others.html">Other</a></li>
+							<li><a href="vim.html">Vim</a></li>
+						</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="index.html">Naslag<span class="caret"></span></a>
+			<ul>
+				<li><a href="cat_api.html">Elasticsearch</a></li>
+				<li><a href="Escape_code.html">Escape characters</a></li>
+				<li><a href="git.html#table">Git</a></li>
+				<li><a href="python.html">Python</a>
+					<ul>
+						<li><a href="python_examples.html">Examples</a></li>
+					</ul>
+				</li>
+				<li><a href="puppet.html">Puppet</a>
+					<ul>
+						<li><a href="puppet_training.html">Puppet_Training</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="url_naar.html">Off Site</a>
+
+			<ul>
+				<li><a href="http://www.apache.org/" target="_blank">apache</a>
+					<ul>
+						<li><a href="http://httpd.apache.org/docs/2.0/misc/rewriteguide.html" target="_blank">rewrite</a></li>
+						<li><a href="https://www.addedbytes.com/articles/for-beginners/url-rewriting-for-beginners/" target="_blank">rewrite_dummies </a></li>
+					</ul>
+				</li>
+				<li><a href="http://www.ibm.com">IBM</a>
+					<ul>
+						<li><a href="http://www.ibm.com/developerworks" target="_blank">developers</a></li>
+					</ul>
+				</li>
+				<li><a href="http://nl.wikipedia.org/wiki/HyperText_Markup_Language">HTML</a>
+						<ul>
+							<li><a href="http://www.w3.org/TR/html5/" target="_blank">W3C</a></li>
+							<li><a href="http://www.w3schools.com/html/html5_intro.asp" target="_blank">W3C_School</a></li>
+							<li><a href="http://validator.w3.org/" target="_blank">Validator</a></li>
+						</ul>
+					</li>
+				<li><a href="http://nl.wikipedia.org/wiki/CSS">CSS</a>
+						<ul>
+							<li><a href="http://www.w3.org/standards/techs/css" target="_blank">Current_Status</a></li>
+							<li><a href="http://www.w3schools.com/css/css3_intro.asp" target="_blank">W3C_School</a></li>
+							<li><a href="https://jigsaw.w3.org/css-validator/" target="_blank">Validator</a></li>
+						</ul>
+					</li>
+			</ul>
+		</li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="help.html">Help</a></li>
+	</ul>
+</nav>
+		</div>
+		<br /> 
+		<br />
+
+		<div class="header">
+		<iframe src="srchform.htm" width="400px" height="34px" border="0" frameborder="0" scrolling="no"></iframe>
+	</div>
+		
+		<div class="sub-header">
+		<input type="button" id="more_cols" value="More columns" />
+		<input type="button" id="less_cols" value="Less columns" />
+		<input type="button" id="more_gap" value="More gap" />
+		<input type="button" id="less_gap" value="Less gap" />
+	</div>
+
+	</header>
+
+	<div class="container" id="container">
+
+		<h2>Silly stuff</h2>
+
+		<p class="cursief">Just try them! :)</p>
+
+		<table>
+			<tr>
+				<td>:set </td><td>rightleft</td>
+			</tr>
+			<tr>
+ 				<td>:help</td><td>uganda</td>
+ 			</tr>
+ 			<tr>
+ 				<td>:help!</td></tr>
+ 			<tr>
+ 				<td>:help</td><td>42</td>
+ 			</tr>
+			<tr>
+ 				<td>:help</td><td>quotes</td>
+ 			</tr>
+ 			<tr>
+ 				<td>:help</td><td> holy-grail</td>
+ 			</tr>
+ 		</table>
+
+		<h2>registers</h2>
+
+		<p class="cursief">When you copy and cut stuff, it gets saved to registers. You can pull stuff from those registers at a later time.</p>
+
+		<table>
+			<tr>
+				<td>:reg</td><td>- show named registers and what's in them</td>
+			</tr>
+			<tr>
+ 				<td>"5p</td><td>- paste what's in register "5</td>
+			</tr>
+		</table>
+
+		<p class="cursief">You can also record a whole series of edits to a register, and then apply them over and over.</p>
+
+		<table>
+			<tr>
+				<td>qk</td><td>- records edits into register k</td>
+ 			</tr>
+ 			<tr>
+				<td></td><td>&nbsp;&nbsp;&nbsp;(q again to stop recording)</td>
+ 			</tr>
+ 			<tr>
+				<td>@k</td><td>- execute recorded edits (macro)</td>
+ 			</tr>
+ 			<tr>
+ 				<td>@@ </td><td>- repeat last one</td>
+ 			</tr>
+ 			<tr>
+ 				<td>5@@ </td><td>- repeat 5 times</td>
+ 			</tr>
+ 		</table>
+
+		<table>
+			<tr>
+ 				<td>"kp </td><td>- print macro k</td>
+			</tr>
+		 	<tr> 
+ 				<td></td><td>&nbsp;&nbsp;&nbsp;(e.g., to edit or add to .vimrc)</td>
+ 			</tr>
+		 	<tr>
+		 		<td>"kd</td><td>- replace register k with what cursor is on</td>
+			</tr>
+ 		</table>
+
+		<h2>editing in a stream</h2>
+
+		<p class="cursief">You can take the output of any command and send it into a vim session. From there you could format it, change stuff, and then save it to a file.</p>
+
+		<table>
+			<tr>
+				<td>find . | vim -</td>
+			</tr>
+		</table>
+
+		<h2>folding</h2>
+
+		<p class="cursief">Use folds to collapse selected blocks. Useful if you've finished a subroutine and want to save window space, or maybe want to fold all blocks of comments.</p>
+
+		<table>
+			<tr>
+				 <td> select block, then :fold</td>
+		 	</tr>
+		 	<tr>
+				<td>zo - open</td>
+			</tr>
+		 	<tr>
+		 		<td>zc - close</td>
+		 	</tr>
+		</table>
+		See :help foldmethod for options, and use :mkview and :loadview to save and restore the current window. </p>
+
+		<h2>markers</h2>
+		<p class="cursief">Use markers to set places you want to quickly get back to, or to specify a block of text you want to copy or cut.</p>
+
+		<table>
+			<tr>
+				 <td>mk</td><td>- mark current position (can use a-z)</td>
+			</tr>
+		 	<tr>
+		 		<td>'k</td><td>- move to mark k</td>
+		 	</tr>
+		 	<tr>
+		 		<td>d'k </td><td> - delete from current position to mark k</td>
+		 	</tr>
+		 	<tr>
+		 		<td>'a-z </td><td> - same file</td>
+		 	</tr>
+		 	<tr>
+		 		<td>'A-Z </td><td> - beteween files</td>
+			</tr>
+		</table>
+
+
+		<h2>text selection</h2>
+
+		<p class="cursief">If you want to do the same thing to a collection of lines, like cut, copy, sort, or format, you first need to select the text. Get out of insert mode, hit one of the options below, and then move up or down a few lines. You should see the selected text highlighted.</p>
+
+		<table>
+			<tr>
+				<td>V </td><td>- selects entire lines</td>
+			</tr>
+			<tr> 
+				<td>v </td><td>- selects range of text</td>
+			</tr>
+			<tr>
+				<td>ctrl-v </td><td>- selects columns</td>
+			</tr>
+			<tr>
+				<td>gv </td><td>- reselect block</td>
+			</tr>
+		</table>
+		After selecting the text, try d to delete, or y to copy, or :s/match/replace/, or :center, or !sort, or... </p>
+	
+		<h2>searching</h2>
+
+		<p class="cursief">For basic searching:</p>
+
+		<table>
+			<tr>
+				<td>/pattern </td><td>- search forward for pattern</td>
+			</tr>
+			<tr>
+				<td>?pattern </td><td>- search backward</td>
+			</tr>
+			<tr>
+				<td>n </td><td>- repeat forward search</td>
+			</tr>
+			<tr>
+				<td>N </td><td>- repeat backward</td>
+			</tr>
+		</table>
+		Some variables you might want to set:
+
+		<table>
+			<tr>
+				<td>:set ignorecase </td><td>- case insensitive</td>
+			</tr>
+			<tr>
+				<td>:set smartcase </td><td>- use case if any caps used</td>
+			</tr>
+			<tr> 
+				<td>:set incsearch </td><td>- show match as search proceeds</td>
+			</tr>
+			<tr>
+				<td>:set hlsearch </td><td>- search highlighting</td>
+			</tr>
+		</table>
+
+		<p class="cursief">More cool searching tricks:</p>
+
+		<table>
+			<tr>
+				<td>*</td><td> - search for word currently under cursor</td>
+			</tr>
+			<tr>
+				<td>g* </td><td> - search for partial word under cursor</td>
+			</tr>
+			<tr> 
+				 <td></td><td>&nbsp;&nbsp;&nbsp;(repeat with n)</td>
+			</tr>
+			<tr>
+				<td>ctrl-o, ctrl-i </td><td>- go through jump locations</td>
+			</tr>
+			<tr>
+				<td>[I </td><td>- show lines with matching word under cursor</td>
+			</tr>
+		</table>
+
+		<h2>word & line completion</h2>
+
+		<p class="cursief">Typing is a pain! In insert mode, try:</p>
+
+		<table>
+			<tr>
+				<td>ctrl-n, ctrl-p </td><td>- next/previous word completion</td>
+			</tr>
+			<tr> 
+				<td></td><td>&nbsp;&nbsp;&nbsp;(similar word in current file)</td>
+			</tr>
+			<tr>
+				<td>ctrl-x ctrl-l <br />(ctrl-n/p) </td><td>- line completion</td>
+			</tr>
+			<tr><br /></tr>
+			<tr>
+				<td>:set </td><td>&nbsp;&nbsp;dictionary=/usr/share/dict/words</td>
+			</tr>
+			<tr>
+				<td>ctrl-x ctrl-k </td><td>- dictionary completion</td>
+			</tr>
+		</table>
+		also
+		<table>
+			<tr>
+				<td>ctrl-w </td><td>- erases word (insert mode...</td>
+			</tr>
+			<tr>
+				<td>ctrl-u </td><td>- erases line ...or on command line)</td>
+			</tr>
+		</table>
+
+		<h2>modelines</h2>
+
+		<p class="cursief">modelines allow you to set variables specific to a file. By default, the first and last five lines are read by vim for variable settings. For example, if you put the following in the last line of a C program, you would get a textwidth of 60 chars when editing that file:</p>
+		<br />
+		/* vim: tw=60 ts=2: */<br />
+		<br />
+		<p> modelines variable sets the number of lines (at the beginning and of each file) vim checks for initializations. </p>
+
+		<h2>variables</h2>
+
+		<p class="cursief">Here's how to show, set, and reset vim's variables:</p>
+
+		<table>
+			<tr>
+				<td>:set </td><td>- shows vars different from defaults</td>
+			</tr>
+			<tr>
+				<td>:set all </td><td>- shows all values</td>
+			</tr>
+			<tr>
+				<td>:set foo? </td><td>- shows the value of foo</td>
+			</tr>
+			<tr>
+				<td>:set foo+=opt </td><td>- add opt to the value w/o changing others</td>
+			</tr>
+			<tr>
+				<td>:set foo-=opt </td><td>- remove opt from value</td>
+			</tr>
+			<tr>
+				<td>:set foo& </td><td>- reset foo to default value</td>
+			</tr>
+			<tr>
+				<td>:setlocal foo </td><td>- only the current buffer</td>
+			</tr>
+			<tr>
+				<td>:verbose set foo? </td><td>- tells you where it was last set!</td>
+			</tr>
+		</table>
+
+		<h2>indenting</h2>
+
+		<p class="cursief">Some variables you might want to set:</p>
+	
+		<table>
+			<tr>
+	 			<td>:set tabstop 8 </td><td>- tabs are at proper location</td>
+			<tr>
+				<td>:set expandtab </td><td>- don't use actual tab character (ctrl-v)</td>
+			</tr>
+			 <tr>
+				<td>:set shiftwidth=4 </td><td>- indenting is 4 spaces</td>
+			</tr>
+			<tr>
+				<td>:set autoindent </td><td>- turns it on</td>
+			</tr>
+			<tr>
+				<td>:set smartindent </td><td>- does the right thing (mostly) in programs</td>
+			</tr>
+			<tr>
+				<td>:set cindent </td><td>- stricter rules for C programs</td>
+			</tr>
+		</table>
+		<p>I like having auto on, but smart does funny things based on keywords.</p>
+
+		<p>To indent the current line, or a visual block:</p>
+
+		<table>
+			<tr>
+				<td>ctrl-t, ctrl-d </td><td>- indent current line forward, backwards</td>
+			</tr>
+			<tr> 
+				<td>(insert mode)</td>
+			</tr>
+			<tr>
+				<td>visual > or < </td><td>- indent block by sw (repeat with . )</td>
+			</tr>
+		</table>
+
+		<p>To stop indenting when pasting with the mouse, add this to your .vimrc:</p>
+
+		<table>
+			<tr>
+				<td>:set pastetoggle=<f5></td>
+			</tr>
+		</table>
+
+		<p>then try hitting the F5 key while in insert mode (or just :set paste).</p>
+
+		<h2>reformatting</h2>
+
+		<p class="cursief">These are useful to reformat text paragraphs or chunks of code:</p>
+
+		<table>
+			<tr>
+				<td>V=</td><td>- select text, then reformat with =</td>
+			</tr>
+			<tr>
+				<td>= </td><td>&nbsp;&nbsp;&nbsp;will correct alignment of code</td>
+			</tr>
+			<tr>
+			 	<td>== </td><td>- one line;</td>
+			</tr>
+	 		<tr> 
+			 	<td>gq </td><td>- reformat paragraph</td>
+	 		</tr>
+		</table>
+
+		<br />
+		<p>Options to change how automatic formatting is done:</p>
+
+		<table>
+			<tr>
+				<td>:set formatoptions (default "tcq")</td>
+			<tr>
+	 			<td>t </td><td>- textwidth</td>
+	 		</tr>
+			<tr>
+	 			<td>c </td><td>- comments (plus leader -- see :help comments)</td>
+			</tr>
+			<tr>
+	 			<td>q </td><td>- allogw 'gq' to work</td>
+			</tr>
+			<tr>
+			 	<td>n </td><td>- numbered lists</td>
+			</tr>
+			<tr>
+	 			<td>2 </td><td>- keep second line indent</td>
+			</tr>
+			<tr>
+	 			<td>1 </td><td>- single letter words on next line</td>
+			</tr>
+			<tr>
+	 			<td>r </td><td>- (in mail) comment leader after</td>
+			</tr> 
+		</table>
+
+		<p>Other related options:</p>
+
+		<table>
+			<tr>
+				<td>:set </td><td>wrapmargin</td>
+			</tr>
+			<tr>
+ 				<td>:set </td><td>textwidth</td>
+			</tr>
+		</table>
+
+		<h2>multiple windows</h2>
+		<p class="cursief">
+		If you want, you can probably do everything from one vim session! :) Here are some commands to turn one vim session (inside one xterm) into multiple windows.</p>
+
+		<table>
+			<tr>
+				<td>:e filename</td><td>- edit another file</td>
+			</tr>
+			<tr>
+		 		<td>:split filename</td><td> - split window and load another file</td>
+			</tr>
+			<tr>
+		 		<td>ctrl-w up arrow</td> <td>- move cursor up a window</td>
+			</tr>
+			<tr>
+		 		<td>ctrl-w ctrl-w</td><td>- move cursor to another window (cycle)</td>
+			</tr>
+			<tr>
+		 		<td>ctrl-w_</td><td>- maximize current window</td>
+			</tr>
+			<tr>
+		 		<td>ctrl-w=</td><td>- make all equal size</td>
+			</tr>
+			<tr>
+		 		<td>10 ctrl-w+</td><td>- increase window size by 10 lines</td>
+			</tr>
+			<tr>
+		 		<td>:vsplit file</td><td>- vertical split</td>
+			</tr>
+			<tr>
+		 		<td>:sview file</td><td>- same as split, but readonly</td>
+			</tr>
+			<tr>
+		 		<td>:hide</td><td>- close current window</td>
+			</tr>
+			<tr>
+		 		<td>:only</td><td>- keep only this window open</td>
+			</tr>
+			<tr>
+		 		<td>:ls</td><td>- show current buffers</td>
+			</tr>
+			<tr>
+		 		<td>:b 2</td><td>- open buffer #2 in this window</td>
+			</tr>
+		</table>
+
+	</div>
+
+	<footer>
+		<p>
+			&copy; NoCopyright by me
+		</p>
+	</footer>
+	
+</body>
+</html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+	Remove this if you use the .htaccess -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>vim</title>
+	<meta name="description" content="">
+	<meta name="author" content="jacco" >
+	<!-- persistent stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link rel="stylesheet" type="text/css" href="css/sober.css">
+	<link rel="stylesheet" type="text/css" href="css/sober.css" title="Default">
+	<link rel="alternate stylesheet" type="text/css" href="css/pinned_menu.css" title="pinned">
+
+
+	<link rel="alternate stylesheet" type="text/css" href="css/vim.css" title="vim">
+	<link rel="alternate stylesheet" type="text/css" href="css/com_back.css" title="grey">
+	<!-- <link rel="alternate stylesheet" type="text/css" href="css/python.css" title="python">
+		<link rel="alternate stylesheet" type="text/css" href="css/com_back.css" title="grey">
+	<link rel="alternate stylesheet" type="text/css" href="css/tcpdump.css" title="tcpdump"> -->
+	<link rel="alternate stylesheet" type="text/css" href="css/nmap.css" title="nmap">
+
+	<script src="scripts/nomouse.js"></script>
+	<script type="text/javascript" src="scripts/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src="scripts/col-test.js"></script>
+
+	<script src="scripts/swapstyle.js"></script>
+	<script type="text/javascript">
+	if( self != top ) { document.write('<style type="text/css">\n#backlinks { display: none; }\n<\/style>'); }
+	</script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><img id="in_out" onclick="changeStyle('pinned')" src="images/Pin.png" width="30" height="30"></a></li>
+				<li><a href="index.html">Home</a>
+								<ul>
+					<li><a href="styles.html">Styles</a>
+						<ul>
+							<li><a href="#" onClick="changeStyle('grey');">cmd-line</a></li>
+							<li><a href="#" onClick="changeStyle('stars');">stars</a></li>
+							<!-- <li><a href="#" onClick="changeStyle('python');">python</a></li>
+							<li><a href="#" onClick="changeStyle('tcpdump');">tcpdump</a></li>
+							<li><a href="#" onClick="changeStyle('nmap');">nmap</a></li> -->
+							<li><a href="#" onClick="changeStyle('Default');">Reset to default</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+
+			<li><a href="index.html">Naslag_OS <span class="caret"></span></a>
+			<ul>
+				<li><a href="linux_commands.html">Commands</a></li>
+				<li><a href="tcpdump.html">Tcpdump</a></li>
+				<li><a href="nmap.html">Nmap</a></li>
+				<li><a href="vi.html">Vi</a>
+					<ul>
+							<li><a href="vi_settings.html">vi_settings</a></li>
+							<li><a href="tekst_manipulaties.html">tekst_manipulatie</a></li>
+							<li><a href="motion.html">beweging</a></li>
+							<li><a href="regexp_shell_functions.html">RegExp&Shell_funct</a></li>
+							<li><a href="others.html">Other</a></li>
+							<li><a href="vim.html">Vim</a></li>
+						</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="index.html">Naslag<span class="caret"></span></a>
+			<ul>
+				<li><a href="cat_api.html">Elasticsearch</a></li>
+				<li><a href="docker.html">Docker</a></li>
+				<li><a href="Escape_code.html">Escape characters</a></li>
+				<li><a href="git.html#table">Git</a></li>
+				<li><a href="python.html">Python</a>
+					<ul>
+						<li><a href="python_examples.html">Examples</a></li>
+					</ul>
+				</li>
+				<li><a href="puppet.html">Puppet</a>
+					<ul>
+						<li><a href="puppet_training.html">Puppet_Training</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="url_naar.html">Off Site</a>
+
+			<ul>
+				<li><a href="http://www.apache.org/" target="_blank">apache</a>
+					<ul>
+						<li><a href="http://httpd.apache.org/docs/2.0/misc/rewriteguide.html" target="_blank">rewrite</a></li>
+						<li><a href="https://www.addedbytes.com/articles/for-beginners/url-rewriting-for-beginners/" target="_blank">rewrite_dummies </a></li>
+					</ul>
+				</li>
+				<li><a href="http://www.ibm.com">IBM</a>
+					<ul>
+						<li><a href="http://www.ibm.com/developerworks" target="_blank">developers</a></li>
+					</ul>
+				</li>
+				<li><a href="http://nl.wikipedia.org/wiki/HyperText_Markup_Language">HTML</a>
+						<ul>
+							<li><a href="http://www.w3.org/TR/html5/" target="_blank">W3C</a></li>
+							<li><a href="http://www.w3schools.com/html/html5_intro.asp" target="_blank">W3C_School</a></li>
+							<li><a href="http://validator.w3.org/" target="_blank">Validator</a></li>
+						</ul>
+					</li>
+				<li><a href="http://nl.wikipedia.org/wiki/CSS">CSS</a>
+						<ul>
+							<li><a href="http://www.w3.org/standards/techs/css" target="_blank">Current_Status</a></li>
+							<li><a href="http://www.w3schools.com/css/css3_intro.asp" target="_blank">W3C_School</a></li>
+							<li><a href="https://jigsaw.w3.org/css-validator/" target="_blank">Validator</a></li>
+						</ul>
+					</li>
+			</ul>
+		</li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="help.html">Help</a></li>
+	</ul>
+</nav>
+		</div>
+		<br /> 
+		<br />
+
+		<div class="header">
+		<iframe src="srchform.htm" width="400px" height="34px" border="0" frameborder="0" scrolling="no"></iframe>
+	</div>
+		
+		<div class="sub-header">
+		<input type="button" id="more_cols" value="More columns" />
+		<input type="button" id="less_cols" value="Less columns" />
+		<input type="button" id="more_gap" value="More gap" />
+		<input type="button" id="less_gap" value="Less gap" />
+	</div>
+
+	</header>
+
+	<div class="container" id="container">
+
+<h2>Samenvatting Puppet Training</h2>
+<p><h3>Puppet master</h3> runs on the central server.
+It is responsable for:</p>
+<table>
+<tr><td><li>authenticating agent connections</li></td></tr>
+<tr><td><li>signing certificates</li></td></tr>
+<tr><td><li>serving a compiled catalog to the agent</li></td></tr>
+<tr><td><li>serving files</li></td></tr>
+<tr><td><li>processing posted reports</li></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td><li>Draait niet op AIX, OS X, Solaris of Windows</li></td></tr>
+<tr><td><li>Draait op een jvm voor verbeterde prestatie door uitschaling</li></td></tr>
+</table>
+<p>
+Voor de installatie van puppet enterprise staat hier de documentatie:
+http://docs.puppetlabs.com/pe/latest/install_basic.html
+</p>
+<p>
+<h3>puppet agent</h3> draait op alle gemanaged nodes.
+puppet agent is verantwoordelijke voor:</p>
+<table>
+<tr><td><li>het opzetten van een veilige en geauthenticeerde verbinding met de puppet master</li></td></tr>
+<tr><td><li>versturen van informatie over de huidige status</li></td></tr>
+<tr><td><li>handhaven en ontvangen van configuratie status (catalog)</li></td></tr>
+<tr><td><li>ontvangen van elk benodigd bestand</li></td></tr>
+</table>
+
+De agent ondersteund
+<table>
+<tr><td><li>Linux (Rhel, Debian en verschillende andere distributies)</li></td></tr>
+<tr><td><li>Windows</li></td></tr>
+<tr><td><li>Solaris</li></td></tr>
+<tr><td><li>Mac OS X</li></td></tr>
+<tr><td><li>AIX</li></td></tr>
+</table>
+
+
+<h3>Handige command line argumenten</h3>
+<table>
+<tr><td>--test</td></tr>
+<tr><td>--no-daemonize</td></tr>
+<tr><td>--verbose</td></tr>
+<tr><td>--onetime</td></tr>
+<tr><td>--ignorecache</td></tr>
+<tr><td>--no-usecacheonfailure</td></tr>
+<tr><td>--detailed-exitcodes</td></tr>
+<tr><td>--show_diff</td></tr>
+<tr><td>--no-splay</td></tr>
+<tr><td>--noop</td></tr>
+<tr><td>--debug</td></tr>
+<tr><td>--environment <env></td></tr>
+<tr><td>--configprint <config option></td></tr>
+</table>
+	
+andere mogelijke interessante mogelijkheden
+<table>
+<tr><td>--tags <tags></td><td>   Conditionally apply parts of the catalog based on tags</td></tr>
+<tr><td>--genconfig  </td><td>  Generate a starting config file. Mostly useful for Open Source users setting up their infrastructure for the first time</td></tr>
+<tr><td>--trace  </td><td>  Generate full stack traces on errors which can be useful for debugging</td></tr>
+<tr><td>--waitforcert </td><td>  How long the agent should wait for its certificate to be signed before giving up. Useful during Agent provisioning.</td></tr>
+</table>
+
+<h3>Voorbeeld Configuratie</h3>
+<p class="command">
+[main]<br />
+	<span class="tab">certname &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= master.puppetlabs.vm</span><br />
+	<span class="tab">vardir &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= /var/opt/lib/pe-puppet</span><br />
+	<span class="tab">logdir &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= /var/log/pe-puppet</span><br />
+	<span class="tab">rundir &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= /var/run/pe-puppet</span><br />
+	<span class="tab">basemodulepath &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= /etc/puppetlabs/puppet/modules:/opt/puppet/share/puppet/modules</span><br />
+	<span class="tab">environmentpath &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= /etc/puppetlabs/puppet/environments</span><br />
+	<span class="tab">server &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= master.puppetlabs.vm</span><br />
+	<span class="tab">user &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= pe-puppet</span><br />
+	<span class="tab">group &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= pe-puppet</span><br />
+	<span class="tab">archive_files &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= true</span><br />
+	<span class="tab">archive_files_server = master.puppetlabs.vm</span><br />
+	<span class="tab">module_groups &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= base+pe_only</span><br />
+	<span class="tab">dns_alt_names &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= puppet</span><br />
+	<span class="tab">environment_timeout &nbsp;= 0</span><br />
+<br />
+[agent]<br />
+	<span class="tab">report &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= true</span><br />
+	<span class="tab">classfile &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= $vardir/classes.txt</span><br />
+	<span class="tab">localconfig &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= $vardir/localconfig</span><br />
+	<span class="tab">graph &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= true</span><br />
+	<span class="tab">pluginsync &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= true</span><br />
+	<span class="tab">environment &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= production</span><br />
+<br />
+[master]<br />
+	<span class="tab">node_terminus &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= classifier</span><br />
+	<span class="tab">ca_server &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= master.puppetlabs.vm</span><br />
+	<span class="tab">reports &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= console,puppetdb</span><br />
+	<span class="tab">storeconfigs &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= true</span><br />
+	<span class="tab">storeconfigs_backend = puppetdb</span><br />
+	<span class="tab">certname &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= master.puppetlabs.vm</span><br />
+	<span class="tab">server &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= master.puppetlabs.vm</span><br />
+	<span class="tab">always_casch_featers = true</span><br />
+</p>
+<p>De secties corresponderen met de run mode, de main sectie is van toepassing in alle run modi, maar master, agent en user zijn op de gelijknamige modi van toepassing. Overeenkomstig zal een node waar een agent draait geen master sectie hebben.</p><br />
+<p>Iedere configuratie setting in puppet.conf heeft een overeenkomstig commandline commando. Volgorde van oplossen:</p>
+<p>command line > run mode > main > puppet defaults.</p> 
+<p>Dit betekend at een setting in [agent] een setting in [main] zal overschrijven wanneer puppet agent -t wordt gedraait, maar dat een optie die wordt meegegeven op de command line beide overschrijft.</p><br />
+<p>Puppet gebruikt factor om informatie over de host te verzamelen. Het uitvoeren van het factor commando leverd een lijst met sleutel waarden paren op.</p><br />
+
+
+<h3>Puppet Resource</h3>
+<p>Een commandline tool om puppet resources op het systeem te inspecteren, heeft een directe interactie met de Resource Abstraction Layer (RAL) en retouneert de puppet code representatie van de huidige status van de resource</p>
+<br />
+<p>Het Puppet resource commando accepteerd twee argumenten, 1. <resource type>, 2. <resource title></p>
+vb.:<p class="command">puppet resource user elvis<br />
+<br />
+...<br />
+user { 'elvis':<br />
+  <span class="tab">ensure => absent,</span><br />
+}<br />
+</p>
+<p>het uitvoeren van het resource commando met alleen het resource type leverd de huidige status van alle resources van een bepaald type</p>
+
+vb.:<p class="command"> puppet resource user<br />
+<br />
+....<br />
+user { 'vcsa':<br />
+  <span class="tab">ensure  => present,</span><br />
+  <span class="tab">uid     => '69',</span><br />
+  <span class="tab">gid     => '69',</span><br />
+  <span class="tab">shell   => '/sbin/nologin',</span><br />
+  <span class="tab">comment => 'virtual console memory owner',</span><br />
+  <span class="tab">home    => '/dev',</span><br />
+}<br />
+user { 'willywonka':<br />
+  <span class="tab">ensure  => present,</span><br />
+  <span class="tab">uid     => '1006',</span><br />
+  <span class="tab">gid     => '1008',</span><br />
+  <span class="tab">shell   => '/bin/bash',</span><br />
+  <span class="tab">home    => '/home/willywonka',</span><br />
+}<br />
+</p>
+
+<h3>GIT mini turorail</h3>
+<p>
+<table><tr><td>git status </td><td>- geeft de status van de werk directory</td></tr> 
+<tr><td>git add </td><td>- voegd de gewijzigde code toe aan een commit</td></tr>
+<tr><td>git commit </td><td>- voegd een set wijzigingen toe aan de (eigen) repository</td></tr>
+<tr><td>git push </td><td>- voegd de wijzigingen toe aan de remote repository</td></tr>
+</table>
+</p>
+
+<table>
+<tr><td>Git Development Workflow</td></tr>
+<tr><td>git pull origin master</td></tr>
+<tr><td>edit validate test</td></tr>
+<tr><td>git add <code.pp></td></tr>
+<tr><td>git commit</td></tr>
+<tr><td>git push origin master</td></tr>
+<tr><td>test on development infrastructure</td></tr>
+</table>
+<table>
+<tr><td>andere te gebruiken git commando's</td></tr>
+<tr><td>git diff</td></tr>
+<tr><td>git log</td></tr>
+<tr><td>git show</td></tr>
+<tr><td>git blame <file></td></tr>
+<tr><td>git branch & git checkout</td></tr>
+</table>
+<p>
+resources<br /> 
+  <span class="tab">http://git-scm.com/book</span><br /> 
+  <span class="tab">http://try.github.com/</span><br /> 
+</p>
+<br /> 
+<h3>Puppet Way</h3>
+vb:<p class="command">
+class sysadmin {<br />
+<br />
+<span class="tab">user { 'elmo':</span><br />
+    <span class="tab2">ensure     => present,</span><br />
+    <span class="tab2">groups     => ['sysadmin','web','dbadmin'],</span><br />
+    <span class="tab2">managehome => true,</span><br />
+<span class="tab2">} </span><br />
+<br />
+<span class="tab">group { 'sysadmin':<br />
+  <span class="tab2">ensure => present,</span><br />
+  <span class="tab2">}</span><br />
+<span class="tab">}</span><br />
+</p>
+
+Resources are managed in terms of attributes
+Instruct puppet to manage a package:<p class="command">
+package { 'openssh':<br />
+  <span class="tab">ensure => present,</span><br />
+<span class="tab">}</span><br />
+</p>
+<table align="center">
+	<tr><td></td><td></td><td>Resource abstraction layer</td><td></td></tr>
+	<tr><td>Type</td><td>File</td><td>Package</td><td>Service</td><td>User</td></tr>
+	<tr><td>Provider</td><td>Posix</td><td>Apt</td><td>Redhat</td><td>Useradd</td></tr>
+	<tr><td></td><td>Windows</td><td>Yum</td><td>Launched</td><td>ldap</td></tr>
+	<tr><td></td><td></td><td>Gems</td><td>SMF</td><td>Netinfo</td></tr>
+	<tr><td></td><td></td><td>Apt-get</td><td>Debian</td><td></td></tr>
+	<tr><td></td><td></td><td>RPM</td><td>Windows</td><td></td></tr>
+	<tr><td></td><td></td><td>Msi</td><td></td><td></td></tr>
+	<tr><td></td><td></td><td>Windows</td><td></td><td></td></tr>
+</table>
+
+
+<h3> Providers for the package type:</h3>
+ls /opt/puppet/lib/ruby/[...]/puppet/providers/package
+<table class="command">
+<tr><td>aix.rb</td><td>fink.rb</td><td>opkg.rb</td><td>ports.rb</td><td>windows</td></tr>
+<tr><td>appdmg.rb</td><td>freebsd.rb</td><td>pacman.rb</td><td>portupgrade.rb</td><td>windows.rb</td></tr>
+<tr><td>apple.rb</td><td>gem.rb</td><td>pip.rb</td><td>rpm.rb</td><td>yumhelper.py</td></tr>
+<tr><td>aptitude.rb</td><td>hpux.rb</td><td>pkgdmg.rb</td><td>rug.rb</td><td>yumhelper.pyc</td></tr>
+<tr><td>apt.rb</td><td>macports.rb</td><td>pkgin.rb</td><td>sunfreeware.rb</td><td>yumhelper.pyo</td></tr>
+<tr><td>aptrpm.rb</td><td>msi.rb</td><td>pkg.rb</td><td>sun.rb</td><td>yum.rb</td></tr>
+<tr><td>blastwave.rb</td><td>nim.rb</td><td>pkgutil.rb</td><td>up2date.rb</td><td>aypper.rb</td></tr>
+<tr><td>dpkg.rb</td><td>openbsd.rb</td><td>portage.rb</td><td>urpmi.rb</td><td></td></tr>
+</table>
+<br />
+<p>
+Notes<br />
+Some packages types can retrieve their own package files, while others cannot. For those package formats that cannot retrieve their own package files, you can use the source parameter to point to the correct file or URI.
+</p>
+<p class="command">
+# Using the Windows provider<br />
+package { 'mysql':<br />
+<span class="tab">ensure => present,</span><br />
+<span class="tab">source =>  '//corpserver/installers/mysql-5.5.16-winx64.msi',</span><br />
+<span class="tab">provider => windows, </span><br />
+<span class="tab">}</span><br />
+<br />
+# Using the RPM provider<br />
+package { 'mysql':<br />
+<span class="tab">ensure => present,</span><br />
+<span class="tab">source =>  'http://internal.mycorp.net/packages/redhat/6/mysql-5.5.16x86_64.rpm',</span><br />
+<span class="tab">provider => rpm,</span><br />
+<span class="tab">}</span><br />
+</p>
+<p>http://docs.puppetlabs.com/references/latest/type.html#package</p>
+
+
+<h3>Puppet Classes</h3> 
+<p>
+Classes definieeren een verzameling van resources die als 1 enkele eenheid worden gemanaged.<br />
+Classe definities worden bewaart in een manifest, het init.pp file hieronder is een voorbeeld van zo'n betand, geschreven in de puppet dsl.<br />
+Hieronder zijn de package, file en service individuele puppet resources, samengevoegd om 1 enkele classe te vormen.</p>
+
+v.b.<p class="command">
+# /etc/puppetlabs/puppet/environments/production/modules/ssh/manifest/init.pp<br />
+<br />
+class ssh {<br />
+<br />
+<span class="tab">	package { 'openssh':</span><br />
+<span class="tab2">	  ensure => present,</span><br />
+<span class="tab2">	}</span><br />
+
+<span class="tab">	file { '/etc/ssh/sshd_config':</span><br />
+<span class="tab2">	  ensure  => file,</span><br />
+<span class="tab2">	  owner   => 'root',</span><br />
+<span class="tab2">	  group   => 'root',</span><br />
+<span class="tab2">	  mode    => '0644',</span><br />
+<span class="tab2">	  require => Package['openssh'],</span><br />
+<span class="tab2">	  source  => 'puppet:///modules/ssh/sshd_config',</span><br />
+<span class="tab2">	}</span><br />
+<br />
+<span class="tab2">	service { 'sshd':</span><br />
+<span class="tab2">	  ensure  => running,</span><br />
+<span class="tab2">	  enable  => true</span><br />
+<span class="tab2">	  require => File['/etc/ssh/sshd_config'],</span><br />
+<span class="tab2">	}</span><br />
+<span class="tab">}</span><br />
+</p>
+
+<h3>Modules</h3>
+<p>Modules zijn directories die de configuratie bevatten. Ze zijn ontworpen om alle gerelateerde componenten die bij een enkele configuratie beheren te bevatten.</p>
+<br />
+
+Het is een van te voren gedefinieerde structuur waardoor de volgende zaken mogelijk worden
+<ul>
+	<li class="tab">auto loading van classes</li>
+	<li class="tab">bestanden serveren voor templates en bestanden</li>
+	<li class="tab">automatisch afleveren van speciale puppet extensies</li>
+	<li class="tab">makkelijk delen met anderen</li>
+</ul>
+<h2>Defining vs Declaring</h2>
+
+<h3>define:</h3>
+<p>to specify the contents and behavior of a class. Defining a class doesn't automatically include it in a configuration; it simply makes is available to be declared.</p>
+
+<h3>declare:</h3>
+<p>To direct Puppet to include or instantiate a given class. To declare classes, use the include function. This tells Puppet to evaluate the class and manage all the resources declared within it.</p>
+
+</p>Als je een class bouwd zoals hierboven de ssh class, definieer je hem <br />
+Om hem te kunnen gebruiken kan hij als volgd worden gedeclareert</p>
+vb:<p class="command">
+include ssh
+</p>
+<p>
+Het declareren van een puppet class instrueert puppet de classe af te dwingen.
+Declaration Testing, kan door een include statement op te nemen in het init.pp bestand.</p>
+v.b.<p class="command"> 
+# /etc/puppetlabs/puppet/environments/production/modules/ssh/examples/init.pp<br />
+<br />
+include ssh<br />
+</p>
+
+<h3>The puppet apply Executable</h3>
+
+<p>Compiles puppet manifest into a resource catalog<br />
+Uses the Resource Abstraction Layer to simulate or enforce the catalog locally</p>
+<p>
+In agent/master puppet arrangements, agent nodes send  their facts to the master and toe master compliles the catalog using theis facts.<br /> 
+When using puppet apply, local facts are used to build the catalog.<br />
+When using puppet apply, remember to apply against files in the tests directory, not in de manifest directory.<br />
+Files in the manifest directory contain the resource definitions, but to implement, defined resources need to be declared and the files in the tests directory contain the declaration, which will actually initiate action.<br />
+There is no harm in running puppet apply against files in the manifest direcotry, but this wil op apply any changes.<br />
+Running puppet apply against files in the test directory can be used as an ad hoc verification or proof of concept to see how the module will manage the system once implemented.</p>
+
+<h3>Applying a Smoke test</h3>
+	One-off manifest enforcement<br />
+Validate your code<br />
+Enforce a class locally one time only<br />
+Temporary changes that may be overridden on the next agent run.<br />
+puppet apply compiles a manifest file en enforces it immediatly.<br />
+
+vb.<p class="command">
+puppet apply examples/init.pp<br />
+<br />
+--noop mode simulates without enforcing<br />
+</p>
+vb.<p class="command">
+<br />
+puppet apply --noop examples/init.pp<br />
+</p>
+individual resources may also be placed in noop mode
+vb.<p class="command">
+<br />
+package { 'kernel':<br />
+<span class="tab">ensure  => latest,<br />
+<span class="tab">noop	=> true,<br />
+<span class="tab">}<br />
+</p>
+
+Puppet Describe
+geeft een omschrijving van alle te gebruieken resources en welke atributen er per resource beschikbaar zijn en wat ze bekekenen. 
+
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+
+	<footer>
+		<p>
+			&copy; NoCopyright by me
+		</p>
+	</footer>
+	
+</body>
+</html>
+

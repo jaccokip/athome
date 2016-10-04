@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+	Remove this if you use the .htaccess -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<title>HTML</title>
+	<meta name="description" content="">
+	<meta name="author" content="jacco" >
+	<!-- persistent stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link rel="stylesheet" type="text/css" href="css/es.css">
+	<link rel="stylesheet" type="text/css" href="css/es.css" title="Default">
+	<link rel="alternate stylesheet" type="text/css" href="css/pinned_menu.css" title="pinned">
+	
+	<link rel="alternate stylesheet" type="text/css" href="css/command.css" title="stars">
+	<link rel="alternate stylesheet" type="text/css" href="css/com_back.css" title="grey">
+	<!-- <link rel="alternate stylesheet" type="text/css" href="css/python.css" title="python">
+	<link rel="alternate stylesheet" type="text/css" href="css/tcpdump.css" title="tcpdump"> -->
+	<link rel="alternate stylesheet" type="text/css" href="css/nmap.css" title="nmap">
+
+<!--	<script src="scripts/nomouse.js"></script> -->
+	<script type="text/javascript" src="scripts/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src="scripts/col-test.js"></script>
+
+	<script src="scripts/swapstyle.js"></script>
+	<script type="text/javascript">
+	if( self != top ) { document.write('<style type="text/css">\n#backlinks { display: none; }\n<\/style>'); }
+	</script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+
+<body>
+
+<header>
+	<div>
+		<nav>
+			<ul>
+				<li><img id="in_out" onclick="changeStyle('pinned')" src="images/Pin.png" width="30" height="30"></a></li>
+				<li><a href="index.html">Home</a>
+					<ul>
+						<li><a href="styles.html">Styles</a>
+							<ul>
+								<li><a href="#" onClick="changeStyle('grey');">cmd-line</a></li>
+								<li><a href="#" onClick="changeStyle('stars');">stars</a></li>
+								<!-- <li><a href="#" onClick="changeStyle('python');">python</a></li>
+								<li><a href="#" onClick="changeStyle('tcpdump');">tcpdump</a></li>
+								<li><a href="#" onClick="changeStyle('nmap');">nmap</a></li> -->
+								<li><a href="#" onClick="changeStyle('Default');">Reset to default</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			<li><a href="index.html">Naslag_OS <span class="caret"></span></a>
+				<ul>
+					<li><a href="linux_commands.html">Commands</a></li>
+					<li><a href="tcpdump.html">Tcpdump</a></li>
+					<li><a href="nmap.html">Nmap</a></li>
+					<li><a href="vim.html">Vim</a></li>
+				</ul>
+			</li>
+			<li><a href="index.html">Naslag<span class="caret"></span></a>
+				<ul>
+					<li><a href="cat_api.html">Elasticsearch</a></li>
+					<li><a href="docker.html">Docker</a></li>
+					<li><a href="Escape_code.html">Escape characters</a></li>
+					<li><a href="git.html#table">Git</a></li>
+					<li><a href="puppet.html">Puppet</a>
+						<ul>
+						<li><a href="puppet_training.html">Puppet_Training</a></li>
+					</ul>
+					</li>
+					<li><a href="python.html">Python</a>
+						<ul>
+							<li><a href="python_examples.html">Examples</a></li>
+						</ul>
+					</li>
+
+				</ul>
+			</li>
+			<li><a href="url_naar.html">Off Site</a>
+				<ul>
+					<li><a href="http://www.apache.org/" target="_blank">apache</a>
+						<ul>
+							<li><a href="http://httpd.apache.org/docs/2.0/misc/rewriteguide.html" target="_blank">rewrite</a></li>
+							<li><a href="https://www.addedbytes.com/articles/for-beginners/url-rewriting-for-beginners/" target="_blank">rewrite_dummies </a></li>
+						</ul>
+					</li>
+					<li><a href="http://www.ibm.com">IBM</a>
+						<ul>
+						<li><a href="http://www.ibm.com/developerworks" target="_blank">developers</a></li>
+					</ul>
+				</li>
+				<li><a href="http://nl.wikipedia.org/wiki/HyperText_Markup_Language">HTML</a>
+						<ul>
+							<li><a href="http://www.w3.org/TR/html5/" target="_blank">W3C</a></li>
+							<li><a href="http://www.w3schools.com/html/html5_intro.asp" target="_blank">W3C_School</a></li>
+							<li><a href="http://validator.w3.org/" target="_blank">Validator</a></li>
+						</ul>
+					</li>
+				<li><a href="http://nl.wikipedia.org/wiki/CSS">CSS</a>
+						<ul>
+							<li><a href="http://www.w3.org/standards/techs/css" target="_blank">Current_Status</a></li>
+							<li><a href="http://www.w3schools.com/css/css3_intro.asp" target="_blank">W3C_School</a></li>
+							<li><a href="https://jigsaw.w3.org/css-validator/" target="_blank">Validator</a></li>
+						</ul>
+					</li>
+			</ul>
+		</li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="help.html">Help</a></li>
+	</ul>
+</nav>
+	</div>
+	<br /> 
+	<br /> 	
+	<div class="header">
+		<iframe src="srchform.htm" width="400px" height="34px" border="0" frameborder="0" scrolling="no"></iframe>
+	</div>
+	
+	<div class="sub-header">
+		<input type="button" id="more_cols" value="More columns" />
+    	<input type="button" id="less_cols" value="Less columns" />
+    	<input type="button" id="more_gap" value="More gap" />
+    	<input type="button" id="less_gap" value="Less gap" />
+	</div>
+
+</header>
+
+<!-- <div class="container" id="container"> -->
+<div class="container" id="container">
+
+<p>
+<h2>Running Elasticsearch</h2>
+You can start it up in the foreground with this: <span class="command">./bin/elasticsearch</span>, add <span class="command">-d </span> if you want to run it in the background as a daemon.<br />
+Test it out by opening another terminal window and running the following: <span class="command">curl 'http://localhost:9200/?pretty' </span>
+</p>
+
+<p>
+<h3>Changing the cluster.name</h3> 
+You can do this by editing the <span class="command">elasticsearch.yml</span> file in the <span class="command">config/</span> directory and then restarting Elasticsearch.<br />
+
+When Elasticsearch is running in the foreground, you can stop it by pressing <span class="command">Ctrl-C;</span> otherwise, you can shut it down with the shutdown API:<br />
+<span class="command">curl -XPOST 'http://localhost:9200/_shutdown'</span><br />
+</p>
+
+<p>
+<h3>Marvel management and monitoring tool</h3>
+If you installed the Marvel management and monitoring tool, you can view it in a web browser by visiting http://localhost:9200/_plugin/marvel/.<br />
+
+You can reach the Sense developer console either by clicking the “Marvel dashboards” drop-down in Marvel, or by visiting:<br />
+<span class="command">http://localhost:9200/_plugin/marvel/sense/</span><br />
+</p>
+<p>
+<h3>RESTFull api</h3>
+A request to Elasticsearch consists of the same parts as any HTTP request:
+<span class="command">curl -X<VERB> '<PROTOCOL>://<HOST>/<PATH>?<QUERY_STRING>' -d '<BODY>'</span><br />
+<br />
+The parts marked with < > above are:<br />
+<span class="command">VERB</span><br />
+	<br />
+The appropriate HTTP method or verb: GET, POST, PUT, HEAD, or DELETE.</span><br />
+<span class="command">PROTOCOL</span><br />
+	<br />
+Either http or https (if you have an https proxy in front of Elasticsearch.)<br />
+<span class="command">HOST</span><br />
+	<br />
+The hostname of any node in your Elasticsearch cluster, or localhost for a node on your local machine.<br />
+<span class="command">PORT</span><br />
+	<br />
+The port running the Elasticsearch HTTP service, which defaults to 9200.<br />
+<span class="command">QUERY_STRING</span><br />
+	<br />
+Any optional query-string parameters (for example ?pretty will pretty-print the JSON response to make it easier to read.)<br />
+<span class="command">BODY</span><br />
+	<br />
+A JSON-encoded request body (if the request needs one.)<br />
+<br />
+For instance, to count the number of documents in the cluster, we could use this:<br />
+
+<span class="command">curl -XGET 'http://localhost:9200/_count?pretty' -d '</span><br />
+{<br />
+<span class="command tab">    "query": {</span><br />
+<span class="command tab2">        "match_all": {}</span><br />
+<span class="command tab">    }</span><br />
+}<br />
+'<br />
+Elasticsearch returns an HTTP status code like 200 OK and (except for HEAD requests) a JSON-encoded response body. The preceding curl request would respond with a JSON body like the following:<br />
+
+{<br />
+<span class="command tab">    "count" : 0,</span><br />
+<span class="command tab">    "_shards" : {</span><br />
+<span class="command tab2">        "total" : 5,</span><br />
+<span class="command tab2">        "successful" : 5,</span><br />
+<span class="command tab2">        "failed" : 0</span><br />
+<span class="command tab">    }</span><br />
+<span class="command">}</span>
+<br />
+We don’t see the HTTP headers in the response because we didn’t ask curl to display them. To see the headers, use the curl command with the -i switch:<br />
+<span class="command">curl -i -XGET 'localhost:9200/'</span><br />
+
+For the rest of the book, we will show these curl examples using a shorthand format that leaves out all the bits that are the same in every request, like the hostname and port, and the curl command itself.<br /> 
+Instead of showing a full request like<br />
+
+<span class="command">curl -XGET 'localhost:9200/_count?pretty' -d '<br />
+{</span><br />
+<span class="command tab">    "query": {</span><br />
+<span class="command tab2">        "match_all": {}</span><br />
+<span class="command tab">    }</span><br />
+<span class="command">}'</span><br />
+<br />
+we will show it in this shorthand format:<br />
+<br />
+<span class="command"> GET /_count</span><br />
+<span class="command"> {</span><br />
+<span class="command tab">     "query": {</span><br />
+<span class="command tab2">         "match_all": {}</span><br />
+<span class="command tab">     }</span><br />
+<span class="command"> }</span><br />
+<br />
+<span class="command"> curl -XPUT localhost:9200/vehicles/tv/one -d'</span><br />
+<span class="command"> {</span><br />
+<span class="command tab">     "color": "green",</span><br /> 
+<span class="command tab">     "driver": {</span><br />
+<span class="command tab2">         "born":"1959-09-02",</span><br />
+<span class="command tab2">         "name": "Walter White"</span><br />
+<span class="command tab">     },</span><br />
+<span class="command tab">     "make": "Pontiac",</span><br />
+<span class="command tab">     "model": "Aztek",</span><br />
+<span class="command tab">     "value_usd": 5000.0,</span><br />
+<span class="command tab">     "year": 2003</span><br />
+<span class="command"> }'</span><br />
+<br />
+<span class="command"> {"_index":"vehicles","_type":"tv","_id":"one","_version":1,"created":true}jacco@MS-PA:~$</span><br />
+<br />
+<span class="command"> curl localhost:9200/vehicles/_mapping</span><br />
+<br />
+<span class="command"> Index	(Database)</span><br />
+<span class="command"> Type	(Table)</span><br />
+<span class="command"> Document(Row)</span><br />
+<span class="command"> Field	(column)</span><br />
+<br />
+<span class="command"> http://en.wikipedia.org/wiki/Inverted_index</span><br />
+<br />
+<span class="command"> curl localhost:9200/vehicles/tv/one</span><br />
+<span class="command"> curl -XGET localhost:9200/vehicles/tv/one</span><br />
+<br />
+<span class="command"> curl 'localhost:9200/vehicles/tv/_search?q=_id:one'</span><br />
+<br />
+<span class="command"> curl -XPUT localhost:9200/vehicles/tv/two -d'</span><br />
+<span class="command"> {</span><br />
+<span class="command tab">     "color": "black",</span><br /> 
+<span class="command tab">     "driver": {</span><br />
+<span class="command tab2">         "born":"1949-01-09",</span><br />
+<span class="command tab2">         "name": "Michael Knight"</span><br />
+<span class="command tab">     },</span><br />
+<span class="command tab">     "make": "Pontiac",</span><br />
+<span class="command tab">     "model": "Trans Am",</span><br />
+<span class="command tab">     "value_usd": 99999999.00,</span><br />
+<span class="command tab">     "year": 1982</span><br />
+<span class="command"> }'</span><br />
+<br />
+<span class="command"> curl 'localhost:9200/vehicles/_search?q=pontiac'</span><br />
+<br />
+</p>
+</div>
+ </body>
+</html>

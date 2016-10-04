@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+	Remove this if you use the .htaccess -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<title>HTML</title>
+	<meta name="description" content="">
+	<meta name="author" content="jacco" >
+	<!-- persistent stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link rel="stylesheet" type="text/css" href="css/sober.css">
+	<link rel="stylesheet" type="text/css" href="css/sober.css" title="Default">
+	<link rel="alternate stylesheet" type="text/css" href="css/pinned_menu.css" title="pinned">
+	
+	<link rel="alternate stylesheet" type="text/css" href="css/puppet.css" title="puppet">
+	<link rel="alternate stylesheet" type="text/css" href="css/com_back.css" title="grey">
+	<!-- <link rel="alternate stylesheet" type="text/css" href="css/python.css" title="python">
+		<link rel="alternate stylesheet" type="text/css" href="css/com_back.css" title="grey">
+	<link rel="alternate stylesheet" type="text/css" href="css/tcpdump.css" title="tcpdump"> -->
+	<link rel="alternate stylesheet" type="text/css" href="css/nmap.css" title="nmap">
+
+	<script src="scripts/nomouse.js"></script>
+	<script type="text/javascript" src="scripts/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src="scripts/col-test.js"></script>
+
+	<script src="scripts/swapstyle.js"></script>
+	<script type="text/javascript">
+	if( self != top ) { document.write('<style type="text/css">\n#backlinks { display: none; }\n<\/style>'); }
+	</script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+
+<body>
+<p class="ref">
+			<a href="https://help.github.com/articles/set-up-git/" target="_blank">https://help.github.com/articles/set-up-git/</a><br />
+			<a href="http://git-scm.com/downloads" target="_blank">http://git-scm.com/downloads</a><br />
+			<a href="http://marklodato.github.io/visual-git-guide/index-en.html" target="_blank">http://marklodato.github.io/visual-git-guide/index-en.html</a><br />
+			<a href="http://onlywei.github.io/explain-git-with-d3/#" target="_blank">http://onlywei.github.io/explain-git-with-d3/#</a><br />
+			<a href="github-git-cheat-sheet.pdf" target="_blank"><em id="strong" style="color: #CCFF33">cheat-sheet.pdf</em></a><br />
+</p>
+ 
+ <header>
+ 	<nav>
+		<ul>
+			<li><img id="in_out" onclick="changeStyle('pinned')" src="images/Pin.png" width="30" height="30"></a></li>
+			<li><a href="index.html">Home</a>
+							<ul>
+					<li><a href="styles.html">Styles</a>
+						<ul>
+							<li><a href="#" onClick="changeStyle('grey');">cmd-line</a></li>
+							<li><a href="#" onClick="changeStyle('stars');">stars</a></li>
+							<!-- <li><a href="#" onClick="changeStyle('python');">python</a></li>
+							<li><a href="#" onClick="changeStyle('tcpdump');">tcpdump</a></li>
+							<li><a href="#" onClick="changeStyle('nmap');">nmap</a></li> -->
+							<li><a href="#" onClick="changeStyle('Default');">Reset to default</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+
+		<li><a href="index.html">Naslag_OS <span class="caret"></span></a>
+			<ul>
+				<li><a href="linux_commands.html">Commands</a></li>
+				<li><a href="tcpdump.html">Tcpdump</a></li>
+				<li><a href="nmap.html">Nmap</a></li>
+				<li><a href="vim.html">Vim</a></li>
+			</ul>
+		</li>
+		<li><a href="index.html">Naslag<span class="caret"></span></a>
+			<ul>
+				<li><a href="cat_api.html">Elasticsearch</a></li>
+				<li><a href="docker.html">Docker</a></li>
+				<li><a href="Escape_code.html">Escape characters</a></li>
+				<li><a href="git.html#table">Git</a></li>
+				<li><a href="python.html">Python</a>
+					<ul>
+						<li><a href="python_examples.html">Examples</a></li>
+					</ul>
+				</li>
+				<li><a href="puppet.html">Puppet</a>
+					<ul>
+						<li><a href="puppet_training.html">Puppet_Training</a>
+							<ul>
+						<li><a href="puppet_training.html">Puppet_Training</a></li>
+					</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="url_naar.html">Off Site</a>
+
+			<ul>
+				<li><a href="http://www.apache.org/" target="_blank">apache</a>
+					<ul>
+						<li><a href="http://httpd.apache.org/docs/2.0/misc/rewriteguide.html" target="_blank">rewrite</a></li>
+						<li><a href="https://www.addedbytes.com/articles/for-beginners/url-rewriting-for-beginners/" target="_blank">rewrite_dummies </a></li>
+					</ul>
+				</li>
+				<li><a href="http://www.ibm.com">IBM</a>
+					<ul>
+						<li><a href="http://www.ibm.com/developerworks" target="_blank">developers</a></li>
+					</ul>
+				</li>
+				<li><a href="http://nl.wikipedia.org/wiki/HyperText_Markup_Language">HTML</a>
+						<ul>
+							<li><a href="http://www.w3.org/TR/html5/" target="_blank">W3C</a></li>
+							<li><a href="http://www.w3schools.com/html/html5_intro.asp" target="_blank">W3C_School</a></li>
+							<li><a href="http://validator.w3.org/" target="_blank">Validator</a></li>
+						</ul>
+					</li>
+				<li><a href="http://nl.wikipedia.org/wiki/CSS">CSS</a>
+						<ul>
+							<li><a href="http://www.w3.org/standards/techs/css" target="_blank">Current_Status</a></li>
+							<li><a href="http://www.w3schools.com/css/css3_intro.asp" target="_blank">W3C_School</a></li>
+							<li><a href="https://jigsaw.w3.org/css-validator/" target="_blank">Validator</a></li>
+						</ul>
+					</li>
+			</ul>
+		</li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="help.html">Help</a></li>
+	</ul>
+</nav>
+	</div>
+<br /> 
+<br />
+	<div class="header">
+		<iframe src="srchform.htm" width="400px" height="34px" border="0" frameborder="0" scrolling="no"></iframe>
+	</div>			
+
+	<div class="sub-header">
+		<input type="button" id="more_cols" value="More columns" />
+    	<input type="button" id="less_cols" value="Less columns" />
+    	<input type="button" id="more_gap" value="More gap" />
+    	<input type="button" id="less_gap" value="Less gap" />
+	</div>
+</header>
+            
+<!-- <div class="container" id="container"> -->
+<div class="container" id="container">
+					
+<br /><h1> Van Puppetlabs Learning Puppet vm </h1>
+<p>A module is a bundle of Puppet code packaged along with the other files and data you need manage some aspect of a system.<br /> 
+    Need to set up NTP? There's a module for that. <br />
+    Manage system users? That too.<br> 
+    But likely you'll want to do both of these things and more. <br /> 
+    Modules let you mix and match reusable bits of Puppet code to make achieving your desired configuration as painless as possible.<br>  
+    Modules are designed to be, well, modular.</p><br />
+
+<p>Puppet Forge is a public repository of modules contributed by members of the Puppet community, including many written and maintained by Puppet Labs employees and partners.</p>
+<p>
+A class is simply a named block of Puppet code organized in a way that defines a set of associated system resources. <br> 
+A class might install a package, customize an associated configuration file for that package, and start a service provided by that package. <br> 
+These are related and interdependent processes, so it makes sense to organize them into a single configurable unit: a class.<br> 
+
+Classification tells Puppet which classes to apply to which machines in your infrastructure.</p>
+<p>
+Node groups allow you to segment all the nodes in your infrastructure into separately configurable groups based on information collected by the facter tool.</p>
+<p> 
+The block of code that describes a resource is called a resource declaration.<br>  
+These resource declarations are written in Puppet code, a Domain Specific Language (DSL) built on Ruby.<br> 
+If you are curious to learn about all of the different built-in resources types available for you to manage,<br>  
+see the Type Reference Document http://docs.puppetlabs.com/references/latest/type.html <br> 
+Core resource types you'll likely encounter most often: 
+<ul class="pos_left">
+	<li> user A user</li> 
+	<li> group A user group</li> 
+	<li> file A specific file </li>
+	<li> package A software package</li> 
+	<li> service A running service </li>
+	<li> cron A scheduled cron job </li>
+	<li> exec An external command </li>
+	<li> host A host entry</li>
+</ul></p>
+<p>
+The modulepath All modules accessible by your Puppet Master are located in the directories specified by the modulepath variable in Puppet's configuration file. <br>
+On the Learning VM, this configuration file is /etc/puppetlabs/puppet/puppet.conf<br>
+
+You will work in the /etc/puppetlabs/puppet/environments/production/modules directory.<br> 
+This is where you keep modules for your production environment. 
+(Site specific modules you need to be available for all environments are kept in /etc/puppetlabs/puppet/modules , and modules required by Puppet Enterprise itself are kept in the /opt/puppet/share/puppet/modules directory.
+
+A module consists of a pre-defined structure of directories that help Puppet reliably locate the module's contents.
+</p>
+
+=======================================================================<br />
+<h2> Tools</h2>
+<ul class="pos_left">  
+	<li>Enterprise tool</li> 
+	<li>facter tool</li>
+	<li>quest tool </li>
+	<li>puppet agent tool</li> 
+	<li>resource tool </li>
+	<li>describe tool</li>
+	<li>apply tool</li>
+	<li>parser tool</li>
+	<li>module tool </li>
+	<li>validate tool </li>
+	<li>Hiera tool</li>
+</ul>
+=======================================================================
+
+<p>command for installing apache if there is internet connection 
+	<ul class="command"> puppet module install puppetlabs-apache</ul>
+</p>
+
+<p>command for installing apache without internet connection 
+	<ul class="command">puppet module install /usr/src/forge/puppetlabs-apache-*.tar.gz --ignore-dependencies</ul>
+</p>
+
+<p>command to display ipaddress 
+	<ul class="command"> facter ipaddress</ul>
+</p>
+
+<p>command to trigger puppet run 
+	<ul class="command">puppet agent --test</ul>
+</p>
+
+<p><ul class="command"> puppet describe user | less</ul>
+</p>
+
+<p><ul class="command"> puppet apply -e "user { 'galatea': ensure => 'present', }"</ul>
+</p>
+
+<p><ul class="command"> puppet resource -e user galatea</ul>
+</p>
+
+<p><ul class="command"> puppet agent --configprint modulepath</ul>
+</p>
+=======================
+
+    Command's
+
+<ul class="command">
+	<li>facter ipaddress</li> 
+	<li>exit</li> 
+	<li>ssh root@<ip-address></li> 
+	<li>quest --start </li>
+	<li>welcome </li>
+	<li>puppet -V # That's a capital 'V'</li> 
+	<li>quest --help </li>
+	<li>quest --progress # Displays details of tasks completed</li> 
+	<li>quest --completed # Displays completed quests </li>
+	<li>quest --list # Shows all available quests </li>
+	<li>quest --start <name> # Provide the name of a quest to start tracking progress</li> 
+	<li>quest --progress </li>
+	<li>quest --start </li>
+	<li>power puppet </li>
+	<li>module install puppetlabs-apache</li> 
+	<li>puppet module install /usr/src/forge/puppetlabs-apache-*.tar.gz --ignore-dependencies</li> 
+	<li>facter ipaddress </li>
+	<li>service network restart</li> 
+	<li>facter ipaddress </li>
+	<li>cd /etc/puppetlabs/puppet/environments/production/modules</li> 
+	<li>vim lvmguide/manifests/init.pp</li>
+</ul>
+<p class="command">
+class lvmguide (<br />
+    <span class="tab">$document_root = '/var/www/html/lvmguide',</span><br />
+    <span class="tab">$port&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= '80',</span><br />
+<span class="tab2">) {</span><br />
+    <span class="tab2"># Manage apache, the files for the website will be</span><br />
+    <span class="tab2"># managed by the quest tool</span><br />
+    <span class="tab2">class { 'apache':</span><br />
+    <span class="tab3">    default_vhost => false,</span><br />
+    <span class="tab2">}</pan><br />
+    <span class="tab2">apache::vhost { 'learning.puppetlabs.vm':</span><br />
+    <span class="tab3">    port&nbsp;&nbsp;&nbsp;&nbsp;=> $port,</span><br />
+    <span class="tab3">    docroot => $document_root,</span><br />
+    <span class="tab2">}</span><br />
+<pan>}</pan><br />
+</p>
+<p class="command">quest update<br />
+<br />
+quest --start resources puppet resource user root<br />
+<br />
+user { 'root':<br />
+<br />
+ <span class="tab">ensure&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> 'present',</span><br />
+ <span class="tab">comment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> 'root',</span><br />
+ <span class="tab">gid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> '0',</span><br />
+ <span class="tab">home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> '/root',</span><br />
+ <span class="tab">password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> '$1$jrm5tnjw$h8JJ9mCZLmJvIxvDLjw1M/',</span><br />
+ <span class="tab">password_max_age&nbsp;=> '99999',</span><br />
+ <span class="tab">password_min_age&nbsp;=> '0',</span><br />
+ <span class="tab">shell&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> '/bin/bash',</span><br />
+ <span class="tab">uid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> '0',</span><br />
+<br />
+}<br />
+</p>
+puppet describe user 
+
+puppet apply -e "user { 'galatea': ensure => 'present', }" 
+
+puppet resource user galatea 
+
+puppet resource -e user galatea comment => 'Galatea of Cyprus',
+
+quest --start manifests_classes 
+cd /etc/puppetlabs/puppet/environments/production/modules 
+vim cowsayings/manifests/cowsay.pp class cowsayings::cowsay {
+
+ package { 'cowsay':
+   ensure => 'present',
+ }
+} 
+
+puppet apply --noop cowsayings/tests/cowsay.pp 
+puppet parser validate cowsayings/manifests/cowsay.pp 
+vim cowsayings/tests/cowsay.pp 
+include cowsayings::cowsay 
+puppet apply --noop cowsayings/tests/cowsay.pp 
+puppet apply cowsayings/tests/cowsay.pp
+
+cowsay Puppet is awesome!
+
+vim cowsayings/manifests/fortune.pp
+
+class cowsayings::fortune {
+
+ package { 'fortune-mod':
+   ensure => 'present',
+ }
+
+}
+
+puppet parser validate cowsayings/manifests/fortune.pp vim cowsayings/tests/fortune.pp include cowsayings::fortune puppet apply --noop cowsayings/tests/fortune.pp puppet apply cowsayings/tests/fortune.pp
+
+vim cowsayings/manifests/init.pp
+
+class cowsayings {
+
+ include cowsayings::cowsay
+ include cowsayings::fortune
+
+}
+
+puppet parser validate cowsayings/manifests/init.pp
+
+vim cowsayings/tests/init.pp include cowsayings
+
+puppet apply -e "package { 'fortune-mod': ensure => 'absent', } \ package {'cowsay': ensure => 'absent', }"
+
+puppet apply --noop cowsayings/tests/init.pp puppet apply cowsayings/tests/init.pp
+
+
+puppet agent --configprint modulepath ls /etc/puppetlabs/puppet/environments/production/modules tree -L 2 -d /etc/puppetlabs/puppet/environments/production/modules/
+
+
+cd /etc/puppetlabs/puppet/environments/production/modules mkdir vimrc mkdir vimrc/{manifests,tests,files} cp ~/.vimrc vimrc/files/vimrc
+
+set number
+
+Create the init.pp manifest in your module's manifests directory. vim vimrc/manifests/init.pp class vimrc { file { '/root/.vimrc':
+
+ ensure => 'present',
+ source => 'puppet:///modules/vimrc/vimrc',
+ }
+
+}
+
+puppet parser validate vimrc/manifests/init.pp
+
+To test the vimrc class, create a manifest called init.pp in the vimrc/tests directory. vim vimrc/tests/init.pp
+
+All you'll do here is declare the vimrc class with the include directive. include vimrc
+
+Apply the new manifest with the --noop flag. If everything looks good, drop the -- noop and apply it for real. puppet apply --noop vimrc/tests/init.pp puppet apply vimrc/tests/init.pp
+
+
+NTP First, check the state of the NTP package: puppet resource package ntp check the NTP configuration file: puppet resource file /etc/ntp.conf finally, see if the Network Time Protocol Daemon (NTPD) service is running: puppet resource service ntpd
+
+Use the puppet module tool to install the Puppet Labs ntp module. puppet module install puppetlabs-ntp
+
+
+hier waren we en vergeten hierboven bij te werken Database, User, Grant:  Task 5 : These custom resource types make creating a new d 
+
+			</div>
+
+			<footer>
+				<p>
+					&copy; Copyright  by jacco
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>

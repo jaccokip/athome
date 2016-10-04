@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+	Remove this if you use the .htaccess -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>HTML</title>
+	<meta name="description" content="">
+	<meta name="author" content="jacco">
+	
+	<link href="main.css" rel="stylesheet" type="text/css" />
+  	<link id="currentCSS" href="defaultColors.css" rel="stylesheet" type="text/css" />
+	
+	<script type="text/javascript" src="scripts/jquery-1.11.2.js"></script>
+	<script src="scripts/colorswitcher.js"></script>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0">
+</head>
+
+<body>
+	
+
+ <div id="colorswitch">
+<p>Change colors:</p>
+  <ul class="inline">
+    <li><a href="#" onClick="javascript:changeColors('altColors1.css');return false;" id="altColors1">dark blue on white</a></li>
+    <li><a href="#" onClick="javascript:changeColors('altColors2.css');return false;" id="altColors2">yellow on black</a></li>
+    <li><a href="#" onClick="javascript:changeColors('altColors3.css');return false;" id="altColors3">black on pale yellow</a></li>
+    <li><a href="#" onClick="javascript:changeColors('altColors4.css');return false;" id="altColors4">black on white</a></li>
+    <li><a href="#" onClick="javascript:changeColors('defaultColors.css');return false;" id="default">Reset to default</a></li>
+  </ul>
+</div>
+<div id="mainbody">
+  <h1>Conference report</h1>
+  <p>Last week's conference presented an impressive line-up of speakers...</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+	Remove this if you use the .htaccess -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<title>HTML</title>
+	<meta name="description" content="">
+	<meta name="author" content="jacco" >
+	<!-- persistent stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link rel="stylesheet" type="text/css" href="css/sober.css">
+	<link rel="stylesheet" type="text/css" href="css/sober.css" title="Default">
+	<link rel="alternate stylesheet" type="text/css" href="css/pinned_menu.css" title="pinned">
+	
+	<link rel="alternate stylesheet" type="text/css" href="css/command.css" title="stars">
+	<link rel="alternate stylesheet" type="text/css" href="css/com_back.css" title="grey">
+	<!-- <link rel="alternate stylesheet" type="text/css" href="css/python.css" title="python">
+	<link rel="alternate stylesheet" type="text/css" href="css/tcpdump.css" title="tcpdump"> -->
+	<link rel="alternate stylesheet" type="text/css" href="css/nmap.css" title="nmap">
+
+<!--	<script src="scripts/nomouse.js"></script> -->
+	<script type="text/javascript" src="scripts/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src="scripts/col-test.js"></script>
+
+	<script src="scripts/swapstyle.js"></script>
+	<script type="text/javascript">
+	if( self != top ) { document.write('<style type="text/css">\n#backlinks { display: none; }\n<\/style>'); }
+	</script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+
+<body onload="useStyleAgain('styleTestStore');" onunload="rememberStyle('styleTestStore');">
+	
+<div>
+	<header>
+</div>
+<div style = "position:fixed;">
+	<nav>
+	<ul>
+		<li><a href="index.html">Home</a>
+			<ul>
+				<li><a href="index.html">Styles</a>
+					<ul>
+								<li><a href="#" onClick="changeStyle('grey');">cmd-line</a></li>
+								<li><a href="#" onClick="changeStyle('stars');">stars</a></li>
+								<!-- <li><a href="#" onClick="changeStyle('python');">python</a></li>
+								<li><a href="#" onClick="changeStyle('tcpdump');">tcpdump</a></li>
+								<li><a href="#" onClick="changeStyle('nmap');">nmap</a></li> -->
+								<li><a href="#" onClick="changeStyle('Default');">Reset to default</a></li>
+							</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="index.html">Naslag_OS <span class="caret"></span></a>
+			<ul>
+				<li><a href="linux_commands.html">Commands</a></li>
+				<li><a href="tcpdump.html">Tcpdump</a></li>
+				<li><a href="nmap.html">Nmap</a></li>
+				<li><a href="vi.html">Vi</a>
+					<ul>
+							<li><a href="vi_settings.html">vi_settings</a></li>
+							<li><a href="tekst_manipulaties.html">tekst_manipulatie</a></li>
+							<li><a href="motion.html">beweging</a></li>
+							<li><a href="regexp_shell_functions.html">RegExp&Shell_funct</a></li>
+							<li><a href="others.html">Other</a></li>
+							<li><a href="vim.html">Vim</a></li>
+						</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="index.html">Naslag<span class="caret"></span></a>
+			<ul>
+				<li><a href="cat_api.html">Elasticsearch</a></li>
+				<li><a href="docker.html">Docker</a></li>
+				<li><a href="Escape_code.html">Escape characters</a></li>
+				<li><a href="git.html#table">Git</a></li>
+				<li><a href="python.html">Python</a>
+					<ul>
+						<li><a href="python_examples.html">Examples</a></li>
+					</ul>
+				</li>
+				<li><a href="puppet.html">Puppet</a>
+					<ul>
+						<li><a href="puppet_training.html">Puppet_Training</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="url_naar.html">Off Site</a>
+
+			<ul>
+				<li><a href="http://www.apache.org/" target="_blank">apache</a>
+					<ul>
+						<li><a href="http://httpd.apache.org/docs/2.0/misc/rewriteguide.html" target="_blank">rewrite</a></li>
+						<li><a href="https://www.addedbytes.com/articles/for-beginners/url-rewriting-for-beginners/" target="_blank">rewrite_dummies </a></li>
+					</ul>
+				</li>
+				<li><a href="http://www.ibm.com">IBM</a>
+					<ul>
+						<li><a href="http://www.ibm.com/developerworks" target="_blank">developers</a></li>
+					</ul>
+				</li>
+				<li><a href="http://nl.wikipedia.org/wiki/HyperText_Markup_Language">HTML</a>
+						<ul>
+							<li><a href="http://www.w3.org/TR/html5/" target="_blank">W3C</a></li>
+							<li><a href="http://www.w3schools.com/html/html5_intro.asp" target="_blank">W3C_School</a></li>
+							<li><a href="http://validator.w3.org/" target="_blank">Validator</a></li>
+						</ul>
+					</li>
+				<li><a href="http://nl.wikipedia.org/wiki/CSS">CSS</a>
+						<ul>
+							<li><a href="http://www.w3.org/standards/techs/css" target="_blank">Current_Status</a></li>
+							<li><a href="http://www.w3schools.com/css/css3_intro.asp" target="_blank">W3C_School</a></li>
+							<li><a href="https://jigsaw.w3.org/css-validator/" target="_blank">Validator</a></li>
+						</ul>
+					</li>
+			</ul>
+		</li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="help.html">Help</a></li>
+	</ul>
+</nav>
+		</div>
+<br /> 
+<br />
+
+</header>
+
+<h2>Tekst manipulaties</h2>
+
+<h3>Text</h3>
+
+<h3>Changing text (Input mode)</h3>
+<p>
+The change command is a deletion command that leaves the editor in insert mode. 
+It is performed by typing c followed by a motion. For wxample cw changes a word. 
+A few other change commands are:
+</p>
+<table>
+<tr><td class="command">i</td>	<td>Insert before cursor</td></tr>
+<tr><td class="command">I</td>	<td>Insert before line</td></tr>
+<tr><td class="command">a</td>	<td>Append after cursor</td></tr>
+<tr><td class="command">A</td>	<td>Append after line</td></tr>
+<tr><td class="command">C</td>	<td>Change to the end of the line</td></tr>
+<tr><td class="command">cc</td>	<td>Change the whole line</td></tr>
+<tr><td class="command">cw</td>	<td>Change word (Esc)</td></tr>
+<tr><td class="command">cc</td>	<td>Change line (Esc) - blanks line</td></tr>
+<tr><td class="command">c$</td>	<td>Change to end of line</td></tr>
+<tr><td class="command">o</td>	<td>Open a new line after current line</td></tr>
+<tr><td class="command">O</td>	<td>Open a new line before current line</td></tr>
+<tr><td class="command">:r file	</td>	<td>Insert file after current line
+<tr><td class="command">rc</td>	<td>Replace character with c</td></tr>
+<tr><td class="command">R</td>	<td>Replace (Esc) - typeover</td></tr>
+<tr><td class="command">s</td>	<td>Substitute (Esc) - 1 char with string</td></tr>
+<tr><td class="command">S</td>	<td>Substitute (Esc) - Rest of line with text</td></tr>
+<tr><td class="command">.</td>	<td>Repeat last change</td></tr>
+</table>
+
+<h3>Changes during insert mode</h3>
+<table>
+<tr><td class="command"><ctrl>h</td>	<td>Back one character</td></tr>
+<tr><td class="command"><ctrl>w</td>	<td>Back one word</td></tr>
+<tr><td class="command"><ctrl>u</td>	<td>Back to beginning of insert</td></tr>
+</table>
+	
+<h3>Deleting Text</h3>
+<p>Almost all deletion commands are performed by typing d followed by a motion. For example, dw deletes a word. A few other deletes are:</p>
+<table>
+<tr><td class="command">x</td>	<td>Delete character to the right of cursor</td></tr>
+<tr><td class="command">X</td>	<td>Delete character to the left of cursor</td></tr>
+<tr><td class="command">D</td>	<td>Delete to the end of the line</td></tr>
+<tr><td class="command">dd</td>	<td>Delete current line</td></tr>
+<tr><td class="command">:d</td>	<td>Delete current line</td></tr>
+<tr><td class="command">dw</td>	<td>Delete word to general buffer</td></tr>
+<tr><td class="command">dnw</td>	<td>Delete n words</td></tr>
+<tr><td class="command">db</td>	<td>Delete previous word</td></tr>
+</table>
+
+<h3>Recovering deletions</h3>
+<table>
+<tr><td class="command">p</td>	<td>Put general buffer after cursor</td></tr>
+<tr><td class="command">P</td>	<td>Put general buffer before cursor</td></tr>
+</table>
+
+
+<h3>Search for strings</h3>
+<table>
+<tr><td class="command">/string	</td><td>Search forward for string</td></tr>
+<tr><td class="command">?string	</td><td>Search back for string</td></tr>
+<tr><td class="command">n	</td><td>Search for next instance of string</td></tr>
+<tr><td class="command">N	</td><td>Search for previous instance of string</td></tr>
+</table>
+
+<h3>Replace</h3>
+<p>The search and replace function is accomplished with the :s command. It is commonly used in combination with ranges or the :g command (below).</p>
+<table>
+<tr><td class="command">
+<tr><td class="command">:s/pattern/string/flags	</td><td>Replace pattern with string according to flags.</td></tr>
+<tr><td class="command">g	Flag - </td><td>Replace all occurences of pattern</td></tr>
+<tr><td class="command">c	Flag - </td><td>Confirm replaces.</td></tr>
+<tr><td class="command">&	Repeat last :s </td><td>command</td></tr>
+</table>
+
+<h3>Yanking Text</h3>
+<p>Like deletion, almost all yank commands are performed by typing y followed by a motion. For example, y$ yanks to the end of the line. Two other yank commands are:</p>
+<table>
+<tr><td class="command">yy	</td><td>Yank the current line</td></tr>
+<tr><td class="command">:y	</td><td>Yank the current line</td></tr>
+</table>
+
+<h3>Counts</h3>
+<p>Nearly every command may be preceded by a number that specifies how many times it is to be performed. 
+For example, 5dw will delete 5 words and 3fe will move the cursor forward to the 3rd occurence of the letter e. 
+Even insertions may be repeated conveniently with thismethod, say to insert the same line 100 times.
+</p>
+
+<h3>Ranges</h3>
+<p>Ranges may precede most "colon" commands and cause them to be executed on a line or lines.</p> 
+<p>For example :3,7d would delete lines 3-7.</p> 
+<p>Ranges are commonly combined with the :s command to perform a replacement on several lines, as with</p>
+<table>
+<tr><td class="command"> :.,$s/pattern/string/g </td><td>to make a replacement from the current line to the end of the file.</td></tr>
+<tr><td class="command">:n,m	</td><td>Range - Lines n-m</td></tr>
+<tr><td class="command">:.	</td><td>Range - Current line</td></tr>
+<tr><td class="command">:$	</td><td>Range - Last line</td></tr>
+<tr><td class="command">:'c	</td><td>Range - Marker c</td></tr>
+<tr><td class="command">:%	</td><td>Range - All lines in file</td></tr>
+<tr><td class="command">:g/pattern/	</td><td>Range - All lines that contain pattern</td></tr>
+</table>
+
+<div>
+      <footer class="onder">
+         <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://members.home.nl/jaccokip/" target="_blank">
+         <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
+         <p>
+           <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fmembers.home.nl%2Fjaccokip%2F" target="blank">HTML Validator</a>
+         </p>
+	 <p>
+		&copy; NoCopyright  by me
+	</p>
+      </footer>
+</div>
+
+</body>
+</html>

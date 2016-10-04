@@ -1,0 +1,71 @@
+body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form, fieldset, input, textarea, blockquote {
+	margin: 0; padding: 0; border: 0;
+}
+
+body {
+	background-image: url("../images/earthlights02_dmsp_big.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 15px;
+	color: white;
+	/* margin-top: 3px;
+    margin-bottom: 50px;
+    margin-right: 50px; */
+    margin-left: 50px; 
+    z-index: -1; /* menu's op de voorgrond */
+   				/* font-weight: 100; */
+}
+
+h1 {
+	font-size: 22px;
+	/* margin-top: 200px; */
+	color: #fff;
+	z-index: -1;  /* menu's op de voorgrond */
+}
+
+h2 {
+	font-size: 14px;
+	color: #fff;
+	z-index: -1;  /* menu's op de voorgrond */
+}
+
+.header {
+    position: absolute;
+    left: 460px;
+    top: 20px;
+    z-index: 1;  /* menu's op de voorgrond */ 
+  }
+  
+ .sub-header {
+    position: absolute;
+    left: 420px;
+    z-index: 1;  /* menu's op de voorgrond */ 
+  }
+
+.pos_left {
+	position: relative;	
+	left: 20px;
+	z-index: -1
+}
+
+.command {
+	font-family: courier;
+	font-size: 90%;
+	line-height: 120%;
+	border: 2px solid #a1a1a1;
+	/* border: 2px solid #4b545f; */
+	border-radius: 25px;
+	padding: 10px 40px;
+	box-shadow: 10px 10px 5px #0d0d0d;
+	/* background: rgba(0, 9, 44, 0.9); */
+    width: 85%;
+    z-index: -1;  /* menu's op de voorgrond */
+}
+
+#titel {
+	/* font-weight: bold */
+	z-index: -1;  /* menu's op de voorgrond */
+}
+
+

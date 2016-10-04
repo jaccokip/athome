@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+	Remove this if you use the .htaccess -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>vim</title>
+	<meta name="description" content="">
+	<meta name="author" content="jacco" >
+	<!-- persistent stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link rel="stylesheet" type="text/css" href="css/sober.css">
+	<link rel="stylesheet" type="text/css" href="css/sober.css" title="Default">
+	<link rel="alternate stylesheet" type="text/css" href="css/pinned_menu.css" title="pinned">
+
+	<link rel="alternate stylesheet" type="text/css" href="css/python.css" title="python">
+	<link rel="alternate stylesheet" type="text/css" href="css/com_back.css" title="grey">
+	<!-- <link rel="alternate stylesheet" type="text/css" href="css/com_back.css" title="grey">
+		<link rel="alternate stylesheet" type="text/css" href="css/command.css" title="stars">
+	<link rel="alternate stylesheet" type="text/css" href="css/tcpdump.css" title="tcpdump"> -->
+	<link rel="alternate stylesheet" type="text/css" href="css/nmap.css" title="nmap">
+
+	<script src="scripts/nomouse.js"></script>
+	<script type="text/javascript" src="scripts/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src="scripts/col-test.js"></script>
+
+	<script src="scripts/swapstyle.js"></script>
+	<script type="text/javascript">
+	if( self != top ) { document.write('<style type="text/css">\n#backlinks { display: none; }\n<\/style>'); }
+	</script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+
+<body>
+
+<header>
+	<nav>
+		<ul>
+			<li><img id="in_out" onclick="changeStyle('pinned')" src="images/Pin.png" width="30" height="30"></a></li>
+			<li><a href="index.html">Home</a>
+							<ul>
+					<li><a href="styles.html">Styles</a>
+						<ul>
+							<li><a href="#" onClick="changeStyle('grey');">cmd-line</a></li>
+							<li><a href="#" onClick="changeStyle('stars');">stars</a></li>
+							<!-- <li><a href="#" onClick="changeStyle('python');">python</a></li>
+							<li><a href="#" onClick="changeStyle('tcpdump');">tcpdump</a></li>
+							<li><a href="#" onClick="changeStyle('nmap');">nmap</a></li> -->
+							<li><a href="#" onClick="changeStyle('Default');">Reset to default</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+
+			<li><a href="index.html">Naslag_OS <span class="caret"></span></a>
+				<ul>
+					<li><a href="linux_commands.html">Commands</a></li>
+					<li><a href="tcpdump.html">Tcpdump</a></li>
+					<li><a href="nmap.html">Nmap</a></li>
+					<li><a href="vim.html">Vim</a></li>
+				</ul>
+			</li>
+			<li><a href="index.html">Naslag<span class="caret"></span></a>
+				<ul>
+					<li><a href="cat_api.html">Elasticsearch</a></li>
+					<li><a href="docker.html">Docker</a></li>
+					<li><a href="Escape_code.html">Escape characters</a></li>
+					<li><a href="git.html#table">Git</a></li>
+					<li><a href="python.html">Python</a>
+						<ul>
+							<li><a href="python_examples.html">Examples</a></li>
+						</ul>
+					</li>
+					<li><a href="puppet.html">Puppet</a>
+						<ul>
+						<li><a href="puppet_training.html">Puppet_Training</a></li>
+					</ul>
+					</li>
+				</ul>
+		</li>
+		<li><a href="url_naar.html">Off Site</a>
+
+			<ul>
+				<li><a href="http://www.apache.org/" target="_blank">apache</a>
+					<ul>
+						<li><a href="http://httpd.apache.org/docs/2.0/misc/rewriteguide.html" target="_blank">rewrite</a></li>
+						<li><a href="https://www.addedbytes.com/articles/for-beginners/url-rewriting-for-beginners/" target="_blank">rewrite_dummies </a></li>
+					</ul>
+				</li>
+				<li><a href="http://www.ibm.com">IBM</a>
+					<ul>
+						<li><a href="http://www.ibm.com/developerworks" target="_blank">developers</a></li>
+					</ul>
+				</li>
+				<li><a href="http://nl.wikipedia.org/wiki/HyperText_Markup_Language">HTML</a>
+						<ul>
+							<li><a href="http://www.w3.org/TR/html5/" target="_blank">W3C</a></li>
+							<li><a href="http://www.w3schools.com/html/html5_intro.asp" target="_blank">W3C_School</a></li>
+							<li><a href="http://validator.w3.org/" target="_blank">Validator</a></li>
+						</ul>
+					</li>
+				<li><a href="http://nl.wikipedia.org/wiki/CSS">CSS</a>
+						<ul>
+							<li><a href="http://www.w3.org/standards/techs/css" target="_blank">Current_Status</a></li>
+							<li><a href="http://www.w3schools.com/css/css3_intro.asp" target="_blank">W3C_School</a></li>
+							<li><a href="https://jigsaw.w3.org/css-validator/" target="_blank">Validator</a></li>
+						</ul>
+					</li>
+			</ul>
+		</li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="help.html">Help</a></li>
+	</ul>
+</nav>
+	</div>
+<br /> 
+<br />
+	<div class="header">
+		<iframe src="srchform.htm" width="400px" height="34px" border="0" frameborder="0" scrolling="no"></iframe>
+	</div>
+
+	<div class="sub-header">
+		<input type="button" id="more_cols" value="More columns" />
+   		<input type="button" id="less_cols" value="Less columns" />
+   		<input type="button" id="more_gap" value="More gap" />
+   		<input type="button" id="less_gap" value="Less gap" />
+	</div>
+
+</header>
+
+<div class="container" id="container">
+
+
+Here is the list of all the available command line options: 
+<table>
+<tr>
+	<th>Option</th>	
+	<th>Description</th>
+</tr>
+<tr>
+	<td>-d</td>	
+	<td>provide debug output</td>
+</tr>
+<tr>
+	<td>-O</td>
+	<td>generate optimized bytecode (resulting in .pyo files)</td>
+</tr>
+<tr>
+	<td>-S</td>
+	<td>do not run import site to look for Python paths on startup</td>
+</tr>
+<tr>
+	<td>-v</td>
+	<td>verbose output (detailed trace on import statements)</td>
+</tr>
+<tr>
+	<td>-X</td>
+	<td>disable class-based built-in exceptions (just use strings); obsolete starting with version 1.6</td>
+</tr>
+<tr>
+	<td>-c cmd</td>	
+	<td>run Python script sent in as cmd string</td>
+</tr>
+<tr>
+	<td>file</td>
+	<td>run Python script from given file</td>
+</tr>
+</table>
+<br />
+
+<h2> for the User</h2>
+
+The following line of the program displays the prompt, the statement saying “Press the enter key to exit”, and waits for the user to take action −
+
+<p id="command">#!/usr/bin/python<br />
+raw_input("\n\nPress the enter key to exit.")</p>
+
+Here, "\n\n" is used to create two new lines before displaying the actual line. Once the user presses the key, the program ends. This is a nice trick to keep a console window open until the user is done with an application.
+<br /><br />
+<p><h2>Multiple Statements on a Single Line</h2>
+
+The semicolon ( ; ) allows multiple statements on the single line given that neither statement starts a new code block. Here is a sample snip using the semicolon −
+</p>
+<p id="command">
+import sys; x = 'foo'; sys.stdout.write(x + '\n')</p>
+<br />
+<h2> Data Types</h2>
+<p>
+Python has five standard data types −
+<ul>
+	<li class="marge_left">Numbers</li>
+	<li class="marge_left">String</li>
+	<li class="marge_left">List</li>
+	<li class="marge_left">Tuple</li>
+	<li class="marge_left">Dictionary</li>
+</ul>
+</p>
+<br />
+<h2>Python Numbers</h2>
+<p>Number data types store numeric values. Number objects are created when you assign a value to them. For example −</p>
+
+<p id="command">var1 = 1<br />
+var2 = 10</p>
+
+<p>You can also delete the reference to a number object by using the del statement. The syntax of the del statement is −</p>
+
+<p id="command">del var1[,var2[,var3[....,varN]]]]</p>
+
+<p>You can delete a single object or multiple objects by using the del statement. For example −</p>
+<p id="command">
+del var
+del var_a, var_b</p>
+<br />
+
+<p>Python supports four different numerical types −</p>
+<ul>
+	<li class="marge_left">int (signed integers)</li>
+
+    <li class="marge_left">long (long integers, they can also be represented in octal and hexadecimal)</li>
+
+    <li class="marge_left">float (floating point real values)</li>
+
+    <li class="marge_left">complex (complex numbers)</li>
+</ul>
+<br />
+<h2>Examples</h2>
+Here are some examples of numbers −
+<table>
+	<tr>
+		<th>int</th>	<th>long</th>	<th>float</th>	<th>complex</th>
+	</tr>
+	<tr>
+		<td>10</td>	<td>51924361L</td>	<td>0.0</td>	<td>3.14j</td>
+	</tr>
+	<tr>
+		<td>100</td>	<td>-0x19323L</td>	<td>15.20</td>	<td>45.j</td>
+	</tr>
+	<tr>
+		<td>-786</td>	<td>0122L</td>	<td>-21.9</td>	<td>9.322e-36j</td>
+	</tr>
+	<tr>
+		<td>080</td>	<td>0xDEFABCECBDAECBFBAEl</td>	<td>32.3+e18</td>	<td>.876j</td>
+	</tr>
+	<tr>
+		<td>-0490</td>	<td>535633629843L</td>	<td>-90.</td>	<td>-.6545+0J</td>
+	</tr>
+	<tr>
+		<td>-0x260</td>	<td>-052318172735L</td>	<td>-32.54e100</td>	<td>3e+26J</td>
+	</tr>
+	<tr>
+		<td>0x69</td>	<td>-4721885298529L</td>	<td>70.2-E12</td>	<td>4.53e-7j</td>
+	</tr>
+</table>
+<br />
+<ul>
+	<li class="marge_left">Python allows you to use a lowercase L with long, but it is recommended that you use only an uppercase L to avoid confusion with the number 1. Python displays long integers with an uppercase L.</li>
+
+    <li class="marge_left">A complex number consists of an ordered pair of real floating-point numbers denoted by x + yj, where x is the real part and b is the imaginary part of the complex number.</li>
+</ul>
+<h2> Strings</h2>
+
+<p>Strings in Python are identified as a contiguous set of characters represented in the quotation marks. Python allows for either pairs of single or double quotes. Subsets of strings can be taken using the slice operator ([ ] and [:] ) with indexes starting at 0 in the beginning of the string and working their way from -1 at the end.</p>
+
+<p>The plus (+) sign is the string concatenation operator and the asterisk (*) is the repetition operator. For example −</p>
+<br />
+<p id="command">#!/usr/bin/python<br />
+<br />
+str = 'Hello World!'<br />
+<br />
+print str          # Prints complete string<br />
+print str[0]       # Prints first character of the string<br />
+print str[2:5]     # Prints characters starting from 3rd to 5th<br />
+print str[2:]      # Prints string starting from 3rd character<br />
+print str * 2      # Prints string two times<br />
+print str + "TEST" # Prints concatenated string</p>
+<br />
+This will produce the following result −<br />
+<br />
+<p id="command">
+Hello World!<br />
+H<br />
+llo<br />
+llo World!<br />
+Hello World!Hello World!<br />
+Hello World!TEST<br />
+</p>
+<br /> 	
+<h2>Python Lists</h2>
+<p>
+Lists are the most versatile of Python's compound data types. A list contains items separated by commas and enclosed within square brackets ([]). To some extent, lists are similar to arrays in C. One difference between them is that all the items belonging to a list can be of different data type.
+</p>
+<br />
+<p>
+The values stored in a list can be accessed using the slice operator ([ ] and [:]) with indexes starting at 0 in the beginning of the list and working their way to end -1. The plus (+) sign is the list concatenation operator, and the asterisk (*) is the repetition operator. For example −
+</p>
+<br />
+<p id="command">
+#!/usr/bin/python<br />
+<br />
+list = [ 'abcd', 786 , 2.23, 'john', 70.2 ]<br />
+tinylist = [123, 'john']<br />
+<br />
+print list          # Prints complete list<br />
+print list[0]       # Prints first element of the list<br />
+print list[1:3]     # Prints elements starting from 2nd till 3rd<br /> 
+print list[2:]      # Prints elements starting from 3rd element<br />
+print tinylist * 2  # Prints list two times<br />
+print list + tinylist # Prints concatenated lists<br />
+</p>
+<br />
+This produce the following result −
+<p id="command">
+['abcd', 786, 2.23, 'john', 70.200000000000003]<br />
+abcd<br />
+[786, 2.23]<br />
+[2.23, 'john', 70.200000000000003]<br />
+[123, 'john', 123, 'john']<br />
+['abcd', 786, 2.23, 'john', 70.200000000000003, 123, 'john']<br />
+</p>
+<br />
+<h2>Python Tuples</h2>
+<p>
+A tuple is another sequence data type that is similar to the list. A tuple consists of a number of values separated by commas. Unlike lists, however, tuples are enclosed within parentheses.
+</p>
+</>
+The main differences between lists and tuples are: Lists are enclosed in brackets ( [ ] ) and their elements and size can be changed, while tuples are enclosed in parentheses ( ( ) ) and cannot be updated. Tuples can be thought of as read-only lists. For example −
+</p><br />
+<p id="command">#!/usr/bin/python<br />
+<br />
+tuple = ( 'abcd', 786 , 2.23, 'john', 70.2  )<br />
+tinytuple = (123, 'john')<br />
+<br />
+print tuple           # Prints complete list<br />
+print tuple[0]        # Prints first element of the list<br />
+print tuple[1:3]      # Prints elements starting from 2nd till 3rd<br /> 
+print tuple[2:]       # Prints elements starting from 3rd element<br />
+print tinytuple * 2   # Prints list two times<br />
+print tuple + tinytuple # Prints concatenated lists<br />
+</p>
+<br />
+This produce the following result −
+<p id="command">
+('abcd', 786, 2.23, 'john', 70.200000000000003)<br />
+abcd<br />
+(786, 2.23)<br />
+(2.23, 'john', 70.200000000000003)<br />
+(123, 'john', 123, 'john')<br />
+('abcd', 786, 2.23, 'john', 70.200000000000003, 123, 'john')<br />
+<br />
+</p>
+The following code is invalid with tuple, because we attempted to update a tuple, which is not allowed. Similar case is possible with lists −
+<p id="command">
+#!/usr/bin/python<br />
+<br />
+tuple = ( 'abcd', 786 , 2.23, 'john', 70.2  )<br />
+list = [ 'abcd', 786 , 2.23, 'john', 70.2  ]<br />
+tuple[2] = 1000    # Invalid syntax with tuple<br />
+list[2] = 1000     # Valid syntax with list<br />
+<br />
+</p>
+<br />
+<h2>Python Dictionary</h2>
+<p>
+Python's dictionaries are kind of hash table type. They work like associative arrays or hashes found in Perl and consist of key-value pairs. A dictionary key can be almost any Python type, but are usually numbers or strings. Values, on the other hand, can be any arbitrary Python object.
+</p>
+<p>
+Dictionaries are enclosed by curly braces ({ }) and values can be assigned and accessed using square braces ([]). For example −
+</p>
+<p id="command">
+#!/usr/bin/python<br />
+<br />
+dict = {}<br />
+dict['one'] = "This is one"<br />
+dict[2]     = "This is two"<br />
+<br />
+tinydict = {'name': 'john','code':6734, 'dept': 'sales'}<br />
+<br />
+<br />
+print dict['one']       # Prints value for 'one' key<br />
+print dict[2]           # Prints value for 2 key<br />
+print tinydict          # Prints complete dictionary<br />
+print tinydict.keys()   # Prints all the keys<br />
+print tinydict.values() # Prints all the values<br />
+</p>
+<br />
+<p>
+This produce the following result −
+</p>
+<p id="command">
+This is one<br />
+This is two<br />
+{'dept': 'sales', 'code': 6734, 'name': 'john'}<br />
+['dept', 'code', 'name']<br />
+['sales', 6734, 'john']<br />
+</p>
+<br />
+<p>
+Dictionaries have no concept of order among elements. It is incorrect to say that the elements are "out of order"; they are simply unordered.
+</p>
+<br />
+<h2>Data Type Conversion</h2>
+<p>
+Sometimes, you may need to perform conversions between the built-in types. To convert between types, you simply use the type name as a function.
+</p>
+<br />
+<p>
+There are several built-in functions to perform conversion from one data type to another. These functions return a new object representing the converted value.
+</p>
+<br />
+<table>
+	<tr>
+		<th>Function</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>int(x [,base])</td>
+		<td>Converts x to an integer. base specifies the base if x is a string.</td>
+	</tr>
+	<tr>
+		<td>long(x [,base] )</td>
+		<td>Converts x to a long integer. base specifies the base if x is a string.</td>
+	</tr>
+	<tr>
+		<td>float(x)</td>
+		<td>Converts x to a floating-point number.</td>
+	</tr>
+	<tr>
+		<td>complex(real [,imag])</td>
+		<td>Creates a complex number.</td>
+	</tr>
+	<tr>
+		<td>str(x)</td>
+		<td>Converts object x to a string representation.</td>
+	</tr>
+	<tr>
+		<td>repr(x)</td>
+		<td>converts object x to an expression string.</td>
+	</tr>
+	<tr>
+		<td>eval(str)</td>
+		<td>Evaluates a string and returns an object.</td>
+	</tr>
+	<tr>
+		<td>tuple(s)</td>
+		<td>Converts s to a tuple.</td>
+	</tr>
+	<tr>
+		<td>list(s)</td>
+		<td>Converts s to a list.</td>
+	</tr>
+	<tr>
+		<td>set(s)</td>
+		<td>Converts s to a set.</td>
+	</tr>
+	<tr>
+		<td>dict(d)</td>
+		<td>Creates a dictionary. d must be a sequence of (key,value) tuples.</td>
+	</tr>
+	<tr>
+		<td>frozenset(s)</td>
+		<td>Converts s to a frozen set.</td>
+	</tr>
+	<tr>
+		<td>chr(x)</td>
+		<td>Converts an integer to a character.</td>
+	</tr>
+	<tr>
+		<td>unichr(x)</td>
+		<td>Converts an integer to a Unicode character.</td>
+	</tr>
+	<tr>
+		<td>ord(x)</td>
+		<td>Converts a single character to its integer value.</td>
+	</tr>
+	<tr>
+		<td>hex(x)</td>
+		<td>Converts an integer to a hexadecimal string.</td>
+	</tr>
+	<tr>
+		<td>oct(x)</td>
+		<td>Converts an integer to an octal string.</td>
+	</tr>
+	</table>
+<br />
+
+<h1>CBT Nuggets</h1>
+
+
+<h2>Python Program Flow .py</h2>
+<ul>
+	<li class="marge_left">Programs --> module(s) std library imports</li> 
+    <li class="marge_left">modules --> statements</li>
+    <li class="marge_left"> statements --> expressions </li>
+    <li class="marge_left">expressions --> objects</li>
+</ul> 
+<br />
+<h2>Objects + types</h2>
+<p> 
+object: everything in python data entity/attr methods entity passed to fx/assigned to var <br /> 
+Python is: dynamically typed strongly typed data type: data classification characteristics</p>
+<br />
+<h2>operators:</h2>
++, -, *, /, //, %, **, <, >, ==,!=, AND, OR, NOT <br />
+ <br /> <br /> 
+ 
+ Volgorde van operatie (PEMDAS) <br />
+   <br />
+ type() # geeft het type variable terug, int char, float etc <br />
+   
+ isinstance() # test for datatype( Bool) int(); <br />
+   
+ float() # type conversion <br />
+ 
+ <br />
+<h2>Phyton core data types</h2>
+ 
+- number immutable - string - typle <br />
+
+- list mutable - dictionary - files <br />
+  <br />
+</div>
+
+<footer>
+	&copy; Copyright  by jacco
+</footer>
+
+
+	</body>
+</html>
