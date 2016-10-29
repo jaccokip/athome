@@ -37,11 +37,16 @@ h3 {
 }
 
 table {
-	border-spacing: 10px;
-	/* width: 50%; */
-	margin-top: 10px;
-	margin-bottom: 10px;
-	margin-left: 50px;
+	border: 1px solid #dddddd;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    text-align: left;
+    padding: 8px;
+	width:200px;
 }
 
 .header {
@@ -337,4 +342,16 @@ span.dropt:hover span {
 	border: 1px #000066 solid;
 	padding: 0 1em 1em 1em;
 	margin: 0;
+}
+
+#right {
+	padding-right:100px;
+}
+
+#left {
+	padding-left:200px;
+}
+
+#balk {
+    background-color: #dddddd;
 }

@@ -138,6 +138,121 @@
 <div class="container" id="container">
 
 
+
+<table>
+    <tr><td>Uitvoer met print functie:</td></tr>
+    <tr id="balk"><td>uitvoer met regelovergang:</td>           <td id="left" class="command">print(¨Hello world!")</td></tr>
+    <tr><td>uitvoer zonder regelovergang:</td>        <td id="left" class="command">print("Hello world!", end="")</td></tr>
+    <tr id="balk"><td>scheider , is spatie in uitvoer:</td>     <td id="left" class="command">print("2 x 2 is", 2*2)</td></tr>
+    <tr><td>geen scheider:</td>			      <td id="left" class="command">print("2 x 2 is ", 2*2, sep="")</td></tr>
+    <tr id="balk"><td>extra regelovergang:</td>		      <td id="left" class="command">print("regel 1\nregel 2")</td></tr>
+    <tr><td>lege regel:	</td>			      <td id="left" class="command">print()</td></tr>
+</table>	
+	
+<table>
+    <tr><td>Strings (tekst)</td></tr>
+    <tr id="balk"><td>genoteerd tussen quotes:</td>	      <td id="left" class="command">"hallo", 'hallo'</td></tr>
+    <tr><td>vrije keuze, dus kies handig:</td>	      <td id="left" class="command">"kom 's morgens!"</td></tr>
+    <tr><td></td>				      <td id="left" class="command">'met " dubbele quote'</td></tr>
+    <tr id="balk"><td>met escape codes:</td>		      <td id="left" class="command">"string met \\, \t, \n en \""</td></tr>
+    <tr id="balk"><td></td>				      <td id="left" class="command">'C:\\temp\\newfile.txt'</td></tr>
+    <tr><td>raw string maakt \ letterlijk:</td>	      <td id="left" class="command">r'drie \\\  backslashes'</td></tr>
+    <tr><td></td>				      <td id="left" class="command">r"C:\temp]\newfile.txt"</td></tr>
+    <tr id="balk"><td>drievoudig quotes bij regelovergang:</td> <td id="left" class="command">"""een string over</td></tr>
+    <tr id="balk"><td></td>				      <td id="left" class="command">meerdere regels"""</td></tr>
+    <tr id="balk"><td></td>				      <td id="left" class="command">'''en nog eentje maar </td></tr>
+    <tr id="balk"><td></td>				      <td id="left" class="command">dan enkele quotes'''</td></tr>
+</table>
+
+<table>
+<tr><td>Strings maken</td> <td class="command">a = 'parkeer'<td></td><td></td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>             </td> <td class="command">b = 'bon'</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>             </td> <td class="command">c = """complexe</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>             </td> <td class="command">string"""</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr id="balk"><td>Strings en operatoren</td><td class="command">boete = a + b</td><td># boete wordt 'parkeerbon'</td><td></td><td></td></tr>
+<tr><td>            </td> <td class="command">lekker = b * 2</td><td># lekker wordt 'bonbon'</td><td></td><td></td></tr>
+</table>
+
+<table>
+    <tr><td></td><td></td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr>
+    <tr id="balk"><td>boete<td><td>p</td><td> a</td><td>r</td><td>k</td><td>e</td><td>e</td><td>r</td><td>b</td><td>o</td><td>n</td></tr>
+    <tr><td></td><td></td><td>-10</td><td>-9</td><td>-8</td><td>-7</td><td>-6</td><td>-5</td><td>-4</td><td>-3</td><td>-2</td><td>-1</td></tr>
+</table>
+
+<table>
+    <tr><td>Indexeren en slice nemen</td>
+    <tr id="balk"><td>derde =  boete[2]</td><td># derde wordt 'r'</td>
+    <tr><td>recht = boete[-1]</td><td># rechts wordt 'n'</td>
+    <tr id="balk"><td>maal =  boete[3:7]</td><td># maal wordt 'keer' -> slice</td>
+    <tr><td>voor = boete[0:5:2]</td><td># van 0 - 5 elk 2e element: 'pre'</td>
+    <tr id="balk"><td>invers = boete[::-1]</td><td># invers wordt 'nobreekrap'</td>
+    <tr><td>String lengte</td><td></tr>
+    <tr id="balk"><td>lengte = len(boete)</td><td># lengte wordt 1</td></tr>
+    <tr><td>lengte = len(c)</td><td># lengte wordt 15</td></tr>
+
+</table>	
+<table>	
+    <tr id="balk"><td>Strings test</td><td></td></tr>
+    <tr><td>if "on" in lekker:</td><td># lekker  bevat 'bonbon', dus True</td></tr>
+    <tr style="text-indent:50px;"><td>print('on')</td><td></td></tr>
+    <tr id="balk"><td>if "en" in lekker</td><td>#  lekker  bevat 'bonbon', dus False</td></tr>
+    <tr style="text-indent:50px;" id="balk"><td>print('en')</td><td></td></tr>
+    <tr><td>if "mies" < "wim":</td><td># True (lexicografisch, qua sortering)</td></tr>
+    <tr style="text-indent:50px;"><td>print('mies is kleiner')</td></tr>	
+    <tr id="balk"><td>String is geen getal</td><td></td></tr>
+    <tr><td>a = "123"</td><td></td></tr>
+    <tr id="balk"><td>x = a * 3</td><td># x wordt '123123123'</td></tr>
+    <tr><td>x = a + 3</td><td># Exception! Geen + voor string en int</td></tr>
+    <tr id="balk"><td>b = 123</td><td></td></tr>
+    <tr><td>x = b * 3</td><td># x wordt 369</td></tr>
+    <tr id="balk"><td>Conversie</td><td></td></tr>
+    <tr><td>a = "123"</td></tr>
+    <tr id="balk"><td>b = int(a) + 3</td><td># b wordt 126</td></tr>
+    <tr><td>c = str(b) * 3</td><td># c wordt '126126126'</td></tr>
+</table>
+<table>
+    <tr id="balk"><td>str(42) </td><td># "42"</td></tr>
+    <tr><td>int("42")</td><td># 42</td></tr>
+    <tr id="balk"><td>int("42", 8)</td><td># 34</td></tr>
+    <tr><td>int("42", 16)</td><td># 66</td></tr>
+    <tr id="balk"><td>float("1.52")</td><td># 1.52</td></tr>
+    <tr><td>chr(65)	</td><td># 'A'</td></tr>
+    <tr id="balk"><td>ord('A')</td><td># 65</td></tr>
+    <tr><td>list('bon')</td><td># ['b', 'o', 'n']</td></tr>
+    <tr id="balk"><td>tuple('bon')</td><td># ('b', 'o', 'n')</td></tr>
+    <tr><td>dict([('bon', 3), ('hoi', 7)])	</td><td># {'bon':3, 'hoi':7}</td></tr>
+</table>
+
+
+
+
+
+<table>				 
+    <tr><td>Lijst met mogelijke escape sequences:
+    <tr id="balk"><td>Escape</td><td>Betekenis</td></tr>
+    <tr><td>\\	</td><td>Backslash (\)</td></tr>
+    <tr id="balk"><td>\'	</td><td>Single quote (')</td></tr>
+    <tr><td>\"	</td><td>Double quote (")</td></tr>
+    <tr id="balk"><td>\a	</td><td>ASCII Bell (BEL)</td></tr>
+    <tr><td>\b	</td><td>ASCII Backspace (BS)</td></tr>
+    <tr id="balk"><td>\f	</td><td>ASCII Formfeed (FF)</td></tr>
+    <tr><td>\n	</td><td>ASCII Linefeed (LF)</td></tr>
+    <tr id="balk"><td>\r	</td><td>ASCII Carriage Return (CR)</td></tr>
+    <tr><td>\t	</td><td>ASCII Horizontal Tab (TAB)</td></tr>
+    <tr id="balk"><td>\v	</td><td>ASCII Vertical Tab (TAB)</td></tr>
+    <tr><td>\ooo</td><td>Teken met octale waarde ooo</td></tr>
+    <tr id="balk"><td>\xhh</td><td>Teken met hexadecimale waarde hh</td></tr>
+</table>	
+	
+
+
+
+
+
+
+
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 Here is the list of all the available command line options: 
 <table>
 <tr>
