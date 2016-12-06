@@ -55,7 +55,11 @@ th {
 	text-align: left;
 }
 
-
+img {
+    	position:fixed;
+    	left:25px;
+    	top: 0px;
+}
 
 .header {
 	position: fixed;

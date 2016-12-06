@@ -13,23 +13,13 @@
 	<link rel="stylesheet" type="text/css" href="css/menu.css">
 	<link rel="stylesheet" type="text/css" href="css/sober.css">
 	<link rel="stylesheet" type="text/css" href="css/sober.css" title="Default">
-	<link rel="alternate stylesheet" type="text/css" href="css/pinned_menu.css" title="pinned">
 	
-	<link rel="alternate stylesheet" type="text/css" href="css/command.css" title="stars">
-	<link rel="alternate stylesheet" type="text/css" href="css/com_back.css" title="grey">
-	<!-- <link rel="alternate stylesheet" type="text/css" href="css/python.css" title="python">
-	<link rel="alternate stylesheet" type="text/css" href="css/tcpdump.css" title="tcpdump"> -->
-	<link rel="alternate stylesheet" type="text/css" href="css/nmap.css" title="nmap">
-
-<!--	<script src="scripts/nomouse.js"></script> -->
+	<link rel="alternate stylesheet" type="text/css" href="css/git.css" title="git">
+		<!-- <script src="scripts/nomouse.js"></script> -->
 	<script type="text/javascript" src="scripts/jquery-1.11.2.js"></script>
 	<script type="text/javascript" src="scripts/col-test.js"></script>
 
-	<script src="scripts/swapstyle.js"></script>
-	<script type="text/javascript">
-	if( self != top ) { document.write('<style type="text/css">\n#backlinks { display: none; }\n<\/style>'); }
-	</script>
-	
+	<script type="text/javascript" src="scripts/visibility.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
@@ -37,15 +27,13 @@
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 
-<body onload="useStyleAgain('styleTestStore');" onunload="rememberStyle('styleTestStore');">
-	
-<div>
-	<header>
-</div>		
-<div style = "position:fixed;">
+<body>
+<header>
+<img onclick="toggle_visibility('foo');" src="images/Pin.png" width="30" height="30"></a>
+<div id="foo" style = "position:fixed;">
 	<nav>
 		<ul>
-			<li><img id="in_out" onclick="changeStyle('pinned')" src="images/Pin.png" width="30" height="30"></a>
+			<li>
 			<li><a href="index.html">Home</a>
 				<ul>
 					<li><a href="styles.html">Styles</a>
@@ -61,74 +49,86 @@
 					</li>
 				</ul>
 			</li>
-		<li><a href="index.html">Naslag_OS <span class="caret"></span></a>
-			<ul>
-				<li><a href="linux_commands.html">Commands</a></li>
-				<li><a href="tcpdump.html">Tcpdump</a></li>
-				<li><a href="nmap.html">Nmap</a></li>
-				<li><a href="vim.html">Vim</a></li>
-				<li><a href="postgresql.html">Postgresql</a></li>
-			</ul>
-		</li>
-		<li><a href="index.html">Naslag<span class="caret"></span></a>
-			<ul>
-				<li><a href="cat_api.html">Elasticsearch</a></li>
-				<li><a href="docker.html">Docker</a></li>
-				<li><a href="Escape_code.html">Escape characters</a></li>
-				<li><a href="git.html#table">Git</a></li>
-				<li><a href="python.html">Python</a>
-					<ul>
-						<li><a href="python_examples.html">Examples</a></li>
-					</ul>
-				</li>
-				<li><a href="puppet.html">Puppet</a>
-					<ul>
-						<li><a href="puppet_training.html">Puppet_Training</a></li>
-					</ul>
-				</li>
-			</ul>
-		</li>
-		<li><a href="url_naar.html">Off Site</a>
+			<li><a href="index.html">Naslag_OS <span class="caret"></span></a>
+				<ul>
+					<li><a href="linux_commands.html">Commands</a></li>
+					<li><a href="tcpdump.html">Tcpdump</a></li>
+					<li><a href="nmap.html">Nmap</a></li>
+					<li><a href="vim.html">Vim</a></li>
+					<li><a href="postgresql.html">Postgresql</a></li>
+				</ul>
+			</li>
+			<li><a href="index.html">Naslag<span class="caret"></span></a>
+				<ul>
+					<li><a href="cat_api.html">Elasticsearch</a></li>
+					<li><a href="docker.html">Docker</a></li>
+					<li><a href="Escape_code.html">Escape characters</a></li>
+					<li><a href="git.html#table">Git</a></li>
+					<li><a href="python.html">Python</a>
+						<ul>
+							<li><a href="python_examples.html">Examples</a></li>
+						</ul>
+					</li>
+					<li><a href="puppet.html">Puppet</a>
+						<ul>
+							<li><a href="puppet_training.html">Puppet_Training</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li><a href="url_naar.html">Off Site</a>
 
-			<ul>
-				<li><a href="http://www.apache.org/" target="_blank">apache</a>
-					<ul>
-						<li><a href="http://httpd.apache.org/docs/2.0/misc/rewriteguide.html" target="_blank">rewrite</a></li>
-						<li><a href="https://www.addedbytes.com/articles/for-beginners/url-rewriting-for-beginners/" target="_blank">rewrite_dummies </a></li>
-					</ul>
-				</li>
-				<li><a href="http://www.ibm.com">IBM</a>
-					<ul>
-						<li><a href="http://www.ibm.com/developerworks" target="_blank">developers</a></li>
-					</ul>
-				</li>
-				<li><a href="http://nl.wikipedia.org/wiki/HyperText_Markup_Language">HTML</a>
+				<ul>
+					<li><a href="http://www.apache.org/" target="_blank">apache</a>
+						<ul>
+							<li><a href="http://httpd.apache.org/docs/2.0/misc/rewriteguide.html" target="_blank">rewrite</a></li>
+							<li><a href="https://www.addedbytes.com/articles/for-beginners/url-rewriting-for-beginners/" target="_blank">rewrite_dummies </a></li>
+						</ul>
+					</li>
+					<li><a href="http://www.ibm.com">IBM</a>
+						<ul>
+							<li><a href="http://www.ibm.com/developerworks" target="_blank">developers</a></li>
+						</ul>
+					</li>
+					<li><a href="http://nl.wikipedia.org/wiki/HyperText_Markup_Language">HTML</a>
 						<ul>
 							<li><a href="http://www.w3.org/TR/html5/" target="_blank">W3C</a></li>
 							<li><a href="http://www.w3schools.com/html/html5_intro.asp" target="_blank">W3C_School</a></li>
 							<li><a href="http://validator.w3.org/" target="_blank">Validator</a></li>
 						</ul>
 					</li>
-				<li><a href="http://nl.wikipedia.org/wiki/CSS">CSS</a>
+					<li><a href="http://nl.wikipedia.org/wiki/CSS">CSS</a>
 						<ul>
 							<li><a href="http://www.w3.org/standards/techs/css" target="_blank">Current_Status</a></li>
 							<li><a href="http://www.w3schools.com/css/css3_intro.asp" target="_blank">W3C_School</a></li>
 							<li><a href="https://jigsaw.w3.org/css-validator/" target="_blank">Validator</a></li>
 						</ul>
 					</li>
-			</ul>
-		</li>
-		<li><a href="about.html">About</a></li>
-		<li><a href="help.html">Help</a></li>
-	</ul>
-</nav>
+				</ul>
+			</li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="help.html">Help</a></li>
+		</ul>
+	</nav>
+</div>
 
-		</div>
 <br /> 
 <br />
+<div class="header">
+	<iframe src="srchform.htm" width="400px" height="34px" border="0" frameborder="0" scrolling="no"></iframe>
+</div>
+	
+<div class="sub-header">
+	<input type="button" id="more_cols" value="More columns" />
+   	<input type="button" id="less_cols" value="Less columns" />
+   	<input type="button" id="more_gap" value="More gap" />
+   	<input type="button" id="less_gap" value="Less gap" />
+</div>
 
-	</header>
+</header>
 
+<!-- <div class="container" id="container"> -->
+<div class="container" id="container">
 <h2>Shell Functions</h2>
 <table>
 	<tr><td>:! cmd	</td><td>Executes shell command cmd; you can add these special characters to indicate:% name of current file# name of last file edited</td></tr>
