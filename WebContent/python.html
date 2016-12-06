@@ -12,17 +12,18 @@
 	<!-- persistent stylesheet -->
 	<link rel="stylesheet" type="text/css" href="css/menu.css">
 	<link rel="stylesheet" type="text/css" href="css/sober.css">
-	<link rel="stylesheet" type="text/css" href="css/sober.css" title="Default">
+    <link rel="stylesheet" type="text/css" href="css/sober.css" title="Default">
 	<link rel="alternate stylesheet" type="text/css" href="css/pinned_menu.css" title="pinned">
 
 	<link rel="alternate stylesheet" type="text/css" href="css/python.css" title="python">
 	<link rel="alternate stylesheet" type="text/css" href="css/com_back.css" title="grey">
+	
 	<!-- <link rel="alternate stylesheet" type="text/css" href="css/com_back.css" title="grey">
-		<link rel="alternate stylesheet" type="text/css" href="css/command.css" title="stars">
-	<link rel="alternate stylesheet" type="text/css" href="css/tcpdump.css" title="tcpdump"> -->
+		<link rel="alternate stylesheet" type="text/css" href="css/command.css" title="stars"> -->
+	<link rel="alternate stylesheet" type="text/css" href="css/tcpdump.css" title="tcpdump">
 	<link rel="alternate stylesheet" type="text/css" href="css/nmap.css" title="nmap">
 
-	<script src="scripts/nomouse.js"></script>
+<!-- 	<script src="scripts/nomouse.js"></script> -->
 	<script type="text/javascript" src="scripts/jquery-1.11.2.js"></script>
 	<script type="text/javascript" src="scripts/col-test.js"></script>
 
@@ -40,16 +41,20 @@
 
 <body>
 
-<header>
+<div>
+    <header>
+
+	<div style = "position:fixed;">
 	<nav>
 		<ul>
-			<li><img id="in_out" onclick="changeStyle('pinned')" src="images/Pin.png" width="30" height="30"></a></li>
+			<li><img id="in_out" onclick="changeStyle('pinned')" src="images/Pin.png" width="30" height="30"></a>
 			<li><a href="index.html">Home</a>
-							<ul>
+				<ul>
 					<li><a href="styles.html">Styles</a>
 						<ul>
+							<!-- <li><a href="#" onClick="changeStyle('stars');">stars</a></li> -->
 							<li><a href="#" onClick="changeStyle('grey');">cmd-line</a></li>
-							<li><a href="#" onClick="changeStyle('stars');">stars</a></li>
+							<li><a href="#" onClick="changeStyle('git');">git</a></li>
 							<!-- <li><a href="#" onClick="changeStyle('python');">python</a></li>
 							<li><a href="#" onClick="changeStyle('tcpdump');">tcpdump</a></li>
 							<li><a href="#" onClick="changeStyle('nmap');">nmap</a></li> -->
@@ -58,32 +63,32 @@
 					</li>
 				</ul>
 			</li>
-
-			<li><a href="index.html">Naslag_OS <span class="caret"></span></a>
-				<ul>
-					<li><a href="linux_commands.html">Commands</a></li>
-					<li><a href="tcpdump.html">Tcpdump</a></li>
-					<li><a href="nmap.html">Nmap</a></li>
-					<li><a href="vim.html">Vim</a></li>
-				</ul>
-			</li>
-			<li><a href="index.html">Naslag<span class="caret"></span></a>
-				<ul>
-					<li><a href="cat_api.html">Elasticsearch</a></li>
-					<li><a href="docker.html">Docker</a></li>
-					<li><a href="Escape_code.html">Escape characters</a></li>
-					<li><a href="git.html#table">Git</a></li>
-					<li><a href="python.html">Python</a>
-						<ul>
-							<li><a href="python_examples.html">Examples</a></li>
-						</ul>
-					</li>
-					<li><a href="puppet.html">Puppet</a>
-						<ul>
+		<li><a href="index.html">Naslag_OS <span class="caret"></span></a>
+			<ul>
+				<li><a href="linux_commands.html">Commands</a></li>
+				<li><a href="tcpdump.html">Tcpdump</a></li>
+				<li><a href="nmap.html">Nmap</a></li>
+				<li><a href="vim.html">Vim</a></li>
+				<li><a href="postgresql.html">Postgresql</a></li>
+			</ul>
+		</li>
+		<li><a href="index.html">Naslag<span class="caret"></span></a>
+			<ul>
+				<li><a href="cat_api.html">Elasticsearch</a></li>
+				<li><a href="docker.html">Docker</a></li>
+				<li><a href="Escape_code.html">Escape characters</a></li>
+				<li><a href="git.html#table">Git</a></li>
+				<li><a href="python.html">Python</a>
+					<ul>
+						<li><a href="python_examples.html">Examples</a></li>
+					</ul>
+				</li>
+				<li><a href="puppet.html">Puppet</a>
+					<ul>
 						<li><a href="puppet_training.html">Puppet_Training</a></li>
 					</ul>
-					</li>
-				</ul>
+				</li>
+			</ul>
 		</li>
 		<li><a href="url_naar.html">Off Site</a>
 
@@ -119,11 +124,12 @@
 		<li><a href="help.html">Help</a></li>
 	</ul>
 </nav>
-	</div>
-<br /> 
-<br />
-	<div class="header">
-		<iframe src="srchform.htm" width="400px" height="34px" border="0" frameborder="0" scrolling="no"></iframe>
+
+</div>
+	<br /> 
+	<br />
+	<div class="header" style = "position:fixed;">
+ 	<iframe class="iframe" src="srchform.htm" width="400px" height="34px" scrolling="no"></iframe>
 	</div>
 
 	<div class="sub-header">
@@ -133,117 +139,918 @@
    		<input type="button" id="less_gap" value="Less gap" />
 	</div>
 
-</header>
-
+	</header>
+</div>
 <div class="container" id="container">
 
 
+<p>
+<h1>Strings</h1>
+    <table>
+        <tr><th>Uitvoer met print functie:</th><th>resultaat</th></tr>
+        <tr id="balk"><td>uitvoer met regelovergang:</td><td class="command">print(¨Hello world!")</td></tr>
+        <tr><td>uitvoer zonder regelovergang:</td><td class="command">print("Hello world!", end="")</td></tr>
+        <tr id="balk"><td>scheider , is spatie in uitvoer:</td><td class="command">print("2 x 2 is", 2*2)</td></tr>
+        <tr><td>geen scheider:</td><td class="command">print("2 x 2 is ", 2*2, sep="")</td></tr>
+        <tr id="balk"><td>extra regelovergang:</td><td class="command">print("regel 1\nregel 2")</td></tr>
+        <tr><td>lege regel:	</td><td class="command">print()</td></tr>
+    </table>	
+</p>
 
+<p>
+    <table>
+        <tr><th>Strings (tekst)</th><th>resultaat</th></tr>
+        <tr id="balk"><td>genoteerd tussen quotes:</td><td class="command">"hallo", 'hallo'</td></tr>
+        <tr><td>vrije keuze, dus kies handig:</td><td class="command">"kom 's morgens!"</td></tr>
+        <tr><td></td><td class="command">'met " dubbele quote'</td></tr>
+        <tr id="balk"><td>met escape codes:</td><td class="command">"string met \\, \t, \n en \""</td></tr>
+        <tr id="balk"><td></td><td class="command">'C:\\temp\\newfile.txt'</td></tr>
+        <tr><td>raw string maakt \ letterlijk:</td><td class="command">r'drie \\\  backslashes'</td></tr>
+        <tr><td></td><td class="command">r"C:\temp]\newfile.txt"</td></tr>
+        <tr id="balk"><td>drievoudig quotes bij regelovergang:</td> <td class="command">"""een string over</td></tr>
+        <tr id="balk"><td></td><td class="command">meerdere regels"""</td></tr>
+        <tr id="balk"><td></td><td class="command">'''en nog eentje maar </td></tr>
+        <tr id="balk"><td></td><td class="command">dan enkele quotes'''</td></tr>
+    </table>
+</p>
+
+
+<p>
 <table>
-    <tr><td>Uitvoer met print functie:</td></tr>
-    <tr id="balk"><td>uitvoer met regelovergang:</td>           <td id="left" class="command">print(¨Hello world!")</td></tr>
-    <tr><td>uitvoer zonder regelovergang:</td>        <td id="left" class="command">print("Hello world!", end="")</td></tr>
-    <tr id="balk"><td>scheider , is spatie in uitvoer:</td>     <td id="left" class="command">print("2 x 2 is", 2*2)</td></tr>
-    <tr><td>geen scheider:</td>			      <td id="left" class="command">print("2 x 2 is ", 2*2, sep="")</td></tr>
-    <tr id="balk"><td>extra regelovergang:</td>		      <td id="left" class="command">print("regel 1\nregel 2")</td></tr>
-    <tr><td>lege regel:	</td>			      <td id="left" class="command">print()</td></tr>
-</table>	
-	
-<table>
-    <tr><td>Strings (tekst)</td></tr>
-    <tr id="balk"><td>genoteerd tussen quotes:</td>	      <td id="left" class="command">"hallo", 'hallo'</td></tr>
-    <tr><td>vrije keuze, dus kies handig:</td>	      <td id="left" class="command">"kom 's morgens!"</td></tr>
-    <tr><td></td>				      <td id="left" class="command">'met " dubbele quote'</td></tr>
-    <tr id="balk"><td>met escape codes:</td>		      <td id="left" class="command">"string met \\, \t, \n en \""</td></tr>
-    <tr id="balk"><td></td>				      <td id="left" class="command">'C:\\temp\\newfile.txt'</td></tr>
-    <tr><td>raw string maakt \ letterlijk:</td>	      <td id="left" class="command">r'drie \\\  backslashes'</td></tr>
-    <tr><td></td>				      <td id="left" class="command">r"C:\temp]\newfile.txt"</td></tr>
-    <tr id="balk"><td>drievoudig quotes bij regelovergang:</td> <td id="left" class="command">"""een string over</td></tr>
-    <tr id="balk"><td></td>				      <td id="left" class="command">meerdere regels"""</td></tr>
-    <tr id="balk"><td></td>				      <td id="left" class="command">'''en nog eentje maar </td></tr>
-    <tr id="balk"><td></td>				      <td id="left" class="command">dan enkele quotes'''</td></tr>
+<tr><th>Strings maken</th></tr>
+<tr><td></td> <td class="command">a = 'parkeer'</td></tr>
+<tr><td></td> <td class="command">b = 'bon'</td></tr>
+<tr><td></td> <td class="command">c = """complexe</td></tr>
+<tr><td></td> <td class="command">string"""</td></tr>
 </table>
+</p>
 
+<p>
 <table>
-<tr><td>Strings maken</td> <td class="command">a = 'parkeer'<td></td><td></td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>             </td> <td class="command">b = 'bon'</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>             </td> <td class="command">c = """complexe</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>             </td> <td class="command">string"""</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr id="balk"><td>Strings en operatoren</td><td class="command">boete = a + b</td><td># boete wordt 'parkeerbon'</td><td></td><td></td></tr>
-<tr><td>            </td> <td class="command">lekker = b * 2</td><td># lekker wordt 'bonbon'</td><td></td><td></td></tr>
+<tr><th>Strings en operatoren</th></tr>
+<tr><td  id="balk" class="command">boete = a + b</td><td># parkeerbon</td></tr>
+<tr><td class="command">lekker = b * 2</td><td># lekker wordt 'bonbon'</td></tr>
 </table>
+</p>
 
-<table>
+<p>
+<table>	
     <tr><td></td><td></td><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr>
     <tr id="balk"><td>boete<td><td>p</td><td> a</td><td>r</td><td>k</td><td>e</td><td>e</td><td>r</td><td>b</td><td>o</td><td>n</td></tr>
     <tr><td></td><td></td><td>-10</td><td>-9</td><td>-8</td><td>-7</td><td>-6</td><td>-5</td><td>-4</td><td>-3</td><td>-2</td><td>-1</td></tr>
 </table>
+</p>
 
+<p>
+<p>
 <table>
     <tr><td>Indexeren en slice nemen</td>
-    <tr id="balk"><td>derde =  boete[2]</td><td># derde wordt 'r'</td>
-    <tr><td>recht = boete[-1]</td><td># rechts wordt 'n'</td>
-    <tr id="balk"><td>maal =  boete[3:7]</td><td># maal wordt 'keer' -> slice</td>
-    <tr><td>voor = boete[0:5:2]</td><td># van 0 - 5 elk 2e element: 'pre'</td>
-    <tr id="balk"><td>invers = boete[::-1]</td><td># invers wordt 'nobreekrap'</td>
-    <tr><td>String lengte</td><td></tr>
-    <tr id="balk"><td>lengte = len(boete)</td><td># lengte wordt 1</td></tr>
-    <tr><td>lengte = len(c)</td><td># lengte wordt 15</td></tr>
+    <tr id="balk"><td class="command">derde =  boete[2]</td><td># derde wordt 'r'</td>
+    <tr><td class="command">recht = boete[-1]</td><td># rechts wordt 'n'</td>
+    <tr id="balk"><td class="command">maal =  boete[3:7]</td><td># maal wordt 'keer' -> slice</td>
+    <tr><td class="command">voor = boete[0:5:2]</td><td># van 0 - 5 elk 2e element: 'pre'</td>
+    <tr id="balk"><td class="command">invers = boete[::-1]</td><td># invers wordt 'nobreekrap'</td>
+    <tr><td class="command">String lengte</td><td></tr>
+    <tr id="balk"><td class="command">lengte = len(boete)</td><td># lengte wordt 1</td></tr>
+    <tr><td class="command">lengte = len(c)</td><td># lengte wordt 15</td></tr>
 
-</table>	
+</table>
+</p>
+<p>	
 <table>	
     <tr id="balk"><td>Strings test</td><td></td></tr>
-    <tr><td>if "on" in lekker:</td><td># lekker  bevat 'bonbon', dus True</td></tr>
-    <tr style="text-indent:50px;"><td>print('on')</td><td></td></tr>
-    <tr id="balk"><td>if "en" in lekker</td><td>#  lekker  bevat 'bonbon', dus False</td></tr>
-    <tr style="text-indent:50px;" id="balk"><td>print('en')</td><td></td></tr>
-    <tr><td>if "mies" < "wim":</td><td># True (lexicografisch, qua sortering)</td></tr>
-    <tr style="text-indent:50px;"><td>print('mies is kleiner')</td></tr>	
-    <tr id="balk"><td>String is geen getal</td><td></td></tr>
-    <tr><td>a = "123"</td><td></td></tr>
-    <tr id="balk"><td>x = a * 3</td><td># x wordt '123123123'</td></tr>
-    <tr><td>x = a + 3</td><td># Exception! Geen + voor string en int</td></tr>
-    <tr id="balk"><td>b = 123</td><td></td></tr>
-    <tr><td>x = b * 3</td><td># x wordt 369</td></tr>
-    <tr id="balk"><td>Conversie</td><td></td></tr>
-    <tr><td>a = "123"</td></tr>
-    <tr id="balk"><td>b = int(a) + 3</td><td># b wordt 126</td></tr>
-    <tr><td>c = str(b) * 3</td><td># c wordt '126126126'</td></tr>
+    <tr><td class="command">if "on" in lekker:</td><td># lekker  bevat 'bonbon', dus True</td></tr>
+    <tr style="text-indent:50px;"><td class="command">print('on')</td><td></td></tr>
+    <tr id="balk"><td class="command">if "en" in lekker</td><td>#  lekker  bevat 'bonbon', dus False</td></tr>
+    <tr style="text-indent:50px;" id="balk"><td class="command">print('en')</td><td></td></tr>
+    <tr><td class="command">if "mies" < "wim":</td><td># True (lexicografisch, qua sortering)</td></tr>
+    <tr style="text-indent:50px;"><td class="command">print('mies is kleiner')</td></tr>	
+</table>
+</p>
+<p>
+<table>
+    <tr id="balk"><th>String is geen getal</th><th></th></tr>
+    <tr><td class="command">a = "123"</td><td></td></tr>
+    <tr id="balk"><td class="command">x = a * 3</td><td># x wordt '123123123'</td></tr>
+    <tr><td class="command">x = a + 3</td><td># Exception! Geen + voor string en int</td></tr>
+    <tr id="balk"><td class="command">b = 123</td><td></td></tr>
+    <tr><td class="command">x = b * 3</td><td># x wordt 369</td></tr>
+    <tr id="balk"><td class="command">Conversie</td><td></td></tr>
+    <tr><td class="command">a = "123"</td></tr>
+    <tr id="balk"><td class="command">b = int(a) + 3</td><td># b wordt 126</td></tr>
+    <tr><td class="command">c = str(b) * 3</td><td># c wordt '126126126'</td></tr>
+</table>
+</p>
+<p>
+<table>
+    <tr id="balk"><td class="command">str(42) </td><td># "42"</td></tr>
+    <tr><td class="command">int("42")</td><td># 42</td></tr>
+    <tr id="balk"><td class="command">int("42", 8)</td><td># 34</td></tr>
+    <tr><td class="command">int("42", 16)</td><td># 66</td></tr>
+    <tr id="balk"><td class="command">float("1.52")</td><td># 1.52</td></tr>
+    <tr><td class="command">chr(65)	</td><td># 'A'</td></tr>
+    <tr id="balk"><td class="command">ord('A')</td><td># 65</td></tr>
+    <tr><td class="command">list('bon')</td><td># ['b', 'o', 'n']</td></tr>
+    <tr id="balk"><td class="command">tuple('bon')</td><td># ('b', 'o', 'n')</td></tr>
+    <tr><td class="command">dict([('bon', 3), ('hoi', 7)])	</td><td># {'bon':3, 'hoi':7}</td></tr>
+</table>
+</p>
+<p>
+<table>				 
+    <tr><th>Lijst met mogelijke escape sequences:</th></tr>
+    <tr id="balk"><td class="command">Escape</td><td>Betekenis</td></tr>
+    <tr><td class="command">\\	</td><td>Backslash (\)</td></tr>
+    <tr id="balk"><td class="command">\'	</td><td>Single quote (')</td></tr>
+    <tr><td class="command">\"	</td><td>Double quote (")</td></tr>
+    <tr id="balk"><td class="command">\a	</td><td>ASCII Bell (BEL)</td></tr>
+    <tr><td class="command">\b	</td><td>ASCII Backspace (BS)</td></tr>
+    <tr id="balk"><td class="command">\f	</td><td>ASCII Formfeed (FF)</td></tr>
+    <tr><td class="command">\n	</td><td>ASCII Linefeed (LF)</td></tr>
+    <tr id="balk"><td class="command">\r	</td><td>ASCII Carriage Return (CR)</td></tr>
+    <tr><td class="command">\t	</td><td>ASCII Horizontal Tab (TAB)</td></tr>
+    <tr id="balk"><td class="command">\v	</td><td>ASCII Vertical Tab (TAB)</td></tr>
+    <tr><td class="command">\ooo</td><td>Teken met octale waarde ooo</td></tr>
+    <tr id="balk"><td class="command">\xhh</td><td>Teken met hexadecimale waarde hh</td></tr>
+</table>	
+</p>
+<p>	
+<h1>Variabelen met meerdere elementen</h1>
+<b>List</b>, [13, 71, 22, 15, 37, 12]<br /> 
+elementen zijn te wijzigen, te verwijderen en toe te voegen<br />
+aanduiding element met volgnummer, beginnen bij 0<br />
+</p>
+<p>
+<table>
+    <tr><td class="command">print(neerslag[1])</td><td># toont 71</td></tr>
+    <tr id='balk'><td class="command">n = len(neerslag)</td><td># n wordt 6</td></tr>
+    <tr><td class="command">neerslag[1] = 57</td><td># wijzig tweede element</td></tr>
+    <tr id='balk'><td class="command">print(neerslag[1])</td><td># toont 57</td></tr>
+    <tr id='balk'><td></td><td></td></tr>
+    <tr><td class="command">tot = sum(neerslag)</td><td># tot wordt 156</td></tr>
+</table>
+</p>
+<p>
+<b>tuple</b>, (13, 71, 22, 15, 37, 12)<br />
+elementen zijn niet te wijzigen en niet te verwijderen en niet toe te voegen<br />
+aanduiding elementen met volgnummer, beginnend bij 0<br />
+</p>
+<p>
+<table>
+    <tr id='balk'><td class="command">print(neerslag[1])</td><td># toont 71</td></tr>
+    <tr><td class="command">n = len(neerslag)</td><td># n wordt 6</td></tr>
+    <tr><td></td><td></td></tr>
+    <tr id='balk'><td class="command">tot = sum(neerslag)</td><td># tot wordt 170</td></tr>
+    <tr id='balk'><td></td><td></td></tr>
+    <tr><td class="command">neerslag[1] = 57</td><td>exception: wijzigen mag niet</td></tr>
+</table><br />
+</p>
+<p> 
+<b>dictionary</b>, {'jan':13, 'feb':71, 'maa':22, 'apr':15, 'mei':37, 'jun':12}<br />
+elementen zijn te wijzigen, te verwijderen en toe te voegen<br />
+aanduiding element met 'sleutel'/key
+</p>
+<p>
+<table>
+    <tr><td class="command">print(neerslag['feb'])</td><td># toont 71</td></tr>
+    <tr id='balk'><td class="command">n = len(neerslag)</td><td># n wordt 6</td></tr>
+    <tr id='balk'><td></td><td></td></tr>
+    <tr><td class="command">neerslag]['feb'] = 57</td><td># wijzig element 'feb'</td></tr>
+    <tr id='balk'><td class="command">print(neerslag['feb'])</td><td># toont 57</td></tr>
+    <tr id='balk'><td></td><td></td></tr>
+    <tr><td class="command">neerslag['jun'] = 66</td><td># voeg element 'jul' toe</td></tr>
+    <tr><td></td><td></td></tr>
+    <tr id='balk'><td class="command">print(neerslag)</td><td># toont gehele dictionary met</td></tr>
+    <tr id='balk'><td></td><td># elementen in willkeurige volgorde:</td></tr>
+</table><br />
+</p>
+
+<h1>Basis data-types</h1>
+<table>
+<tr><td>Soort</td><td>	Voorbeeld</td><td>	Eigenschap</td></tr>
+<tr id='balk'><td class="command">numbers</td><td class="command">3.1415 1234 99999999 3+4j</td><td>immutable</td></tr>
+<tr><td class="command">text(string)</td><td class="command">'Ni' 'Met"quote' "guido's"</td><td>immutable</td></tr>
+<tr id='balk'><td class="command">Data (bytes)</td><td class="command">b'Hallo' b"Hallo"</td><td>immutable</td></tr>
+<tr><td class="command">Lists</td><td class="command">[1, 2, 'Piet', 4]</td><td>mutable</td></tr>
+<tr id='balk'><td class="command">Tuples</td><td class="command">(1, 2, 'ABC', 4 'U')</td><td>immutable</td></tr>
+<tr><td class="command">Dictionaries</td><td class="command">{'jan':42, 'Marie':38}</td><td>mutable</td></tr>
+<tr id='balk'><td class="command">Sets</td><td class="command">set([2, 3, 5, 7]) geen dubbelen</td><td>mutable</td></tr>
+<tr><td class="command">Booleans</td><td class="command">False, True</td><td>immutable</td></tr>
+<tr id='balk'><td class="command">NoneType</td><td>None geeft bewust aan: nu geen waarde</td><td></td></tr>
+</table>
+
+<h1>Blockstructuren in Python</h1>
+<table>
+<tr><td class="command">print('we hebben nu ', end='')</td></tr>
+<tr></tr>
+<tr><td class="command">if temperatuur >= 0:</td></tr>
+<tr style="text-indent:50px;"><td class="command">print('dooi')</td></tr>
+<tr><td class="command">else:</td></tr>
+<tr style="text-indent:50px;"><td class="command">print('vorst')</td></tr>
+<tr></tr>
+<tr><td class="command">print('dus komt naar buiten!')</td></tr>
+</table>
+
+<p>Indentatie is enige aanwijzing <b>(ook voor compiler)</b><br />
+Gebruik 4 spaties voor indentatie (liever geen TABS)<br />
+</p>
+Conditionele uitvoerig
+<table>
+<tr><td class="command">if conditie:</td><td class="command">if conditie:</td><td class="command">if conditie:</td></tr>
+<tr style="text-indent:50px;"><td class="command">statement</td><td style="text-indent:50px;" class="command">statement</td><td style="text-indent:50px" class="command">statement</td></tr>
+<tr><td></td><td class="command">else condition:</td><td class="command">elif condition:</td></tr>
+<tr><td></td><td style="text-indent:50px;" class="command">statement</td><td style="text-indent:50px;" class="command">statement</td></tr>
+<tr><td></td><td></td><td class="command">elif condition:</td></tr>
+<tr><td></td><td></td><td style="text-indent:50px;" class="command">statement</td></tr>
+<tr><td></td><td></td><td class="command">else:</td></tr>
+<tr><td></td><td></td><td style="text-indent:50px;" class="command">statement</td></tr>
+</table>
+
+<p>
+<h2>Conditionele herhaling</h2>
+<ul class="command">while conditie:<br />
+     statement(s)<br />
+</ul>
+bijv.<br />
+<ul class="command">
+minfactor = 1<br />
+maxfactor = 10<br />
+basis = 7<br />
+<br />
+factor = minfactor<br />
+while factor <= maxfaxtor: <br />
+&nbsp;&nbsp;&nbsp;&nbsp; print (factor, 'x', basis, '=', factor*basis)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;   factor += 1
+</ul></p>
+
+<p>
+<h2>Indexering met while</h2>
+<ul class="command">namen = ['jan', 'piet', 'klaas']<br />
+<br />
+i = 0<br />
+<br />
+while i < len(namen): <br />
+&nbsp;&nbsp;&nbsp;&nbsp; print ('hoi', namen[i]<br />
+&nbsp;&nbsp;&nbsp;&nbsp; i += 1<br />
+</ul></p>
+
+<p>
+<h2>Herhaling met het for statement</h2>
+<ul class="command">for eenelem in reeks::<br />
+&nbsp;&nbsp;&nbsp;&nbsp;statement(s)<br />
+</ul>
+bijv.<br />
+<ul class="command">
+a = 'string'<br />
+b = [1, 3, 5 ,7]<br />
+c = (2, 4, 6,8)<br />
+d = {'piet':1961, 'anja':1984}<br />
+<br />
+for val in a:<br />
+&nbsp;&nbsp;&nbsp;&nbsp; print (val, end=' - ')&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; s - t - r - i - n - g -<br />
+<br />
+for val in b:<br />
+&nbsp;&nbsp;&nbsp;&nbsp; print (val, end=' - ')&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 - 3 - 5 - 7 - <br />
+<br />
+for val in c:<br />
+&nbsp;&nbsp;&nbsp;&nbsp; print (val, end=' - ')&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 - 4 - 6 - 8 -<br />
+<br />
+for val in d:<br />
+&nbsp;&nbsp;&nbsp;&nbsp; print (val, end=' - ')&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; piet - anja -<br />
+<br />
+for val in d:<br />
+&nbsp;&nbsp;&nbsp;&nbsp; print (d[val], end=' - ')&nbsp;&nbsp;&nbsp;&nbsp; 1961 - 1984 -<br />
+</ul></p>
+<p>
+<h2>Functie range(): </h2>genereer reeks getallen
+<ul class="command">for n in range(10):<br />
+&nbsp;&nbsp;&nbsp;&nbsp;print(n, end=' - ')&nbsp;&nbsp;&nbsp;&nbsp;0 - 1 - 2 - 3 - 4 - 5 - 6 - 7 - 8 - 9 -<br />
+</ul>
+mogelijke aanroepen<br />
+<table>
+<tr><td>range(10)</td><td>getallen van 0 t/m 9</td></tr>
+<tr id="balk"><td>range(1, 11)</td><td>getallen van 1 t/m 10</td></tr>
+<tr><td>range(3, 20, 5)</td><td>getallen van 3 t/m 19 in stappen van 5 (dus 3 8 13 18)</td></tr>
+<tr id="balk"><td>range(5, 0, -1)</td><td>getallen 5, 4, 3, 2, 1</td></tr>
+</table>
+</p>
+<p>
+<h2>Functie enumerate(): </h2>genereer elementnummers bij iedere waarde
+<ul class="command">name = ['jan', 'piet', 'klaas']<br />
+<br />
+for nummer, persoon in enumerate(namen):<br />
+&nbsp;&nbsp;&nbsp;&nbsp;print(nummer, persoon)<br />
+</ul>
+</p>
+<h2>Exception afvangen</h2>
+<ul class="command">i = 0<br />
+j = 0<br />
+<br />
+<font color="red">try:</font><br />
+&nbsp;&nbsp;&nbsp;&nbsp;print(i/j)<br />
+<font color="red">except</font> Exception:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;print("Oei! dat moht niet"<br />
+<font color="red">else:</font><br />
+&nbsp;&nbsp;&nbsp;&nbsp;print("Het ging goed!")<br />
+<br />
+print("Hier komen we altijd")<br />
+</ul>
+</p>
+<p>
+In eigen code exception forceren <br />
+<ul class="command">if i < 0:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;raise Exception("i is negatief")<br />
+else:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;print("met deze i kunnen we wat ...")</ul>
+</p>
+<ul class="command">try:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;....... # dit gaat mogelijk fout<br />
+exception Exception:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="red">pass</font>&nbsp;&nbsp;&nbsp;&nbsp;# maar zorg dat programma verder loopt<br />
+<br />
+# hier gaan we altijd verder<br />
+</ul>
+<p>
+<h2>break</h2>
+repetities kunnen vroegtijdig worden onderbroken met break
+<h2>continue</h2>
+vroegtijdig continueren kan met continue
+</p>
+<h2>pass</h2>
+op sommige plaatsen is een statement verplicht, terwijl er niets te doen valt....<br />
+dummy statement <b>pass</b><br />
+
+<h2>Variabelen nemen dynamisch type aan</h2>
+<table class="command">
+<tr><td class="command">a = "hallo daar"</td><td># a is nu string</td></tr>
+<tr><td class="command">a = 4</td><td># a is nu integer</td></tr>
+<tr><td class="command">a = [1,2,3]</td><td># a is nu list</td></tr>
+<tr><td class="command">a = {'aap',: 4}</td><td># a is nu dictionary</td></tr>
+<tr><td class="command">a = (4,13,7)</td><td># a is nu tuple</td></tr>
+</table>
+Maar actie moet wel bij dat type passen
+<table class="command">
+<tr><td>a = 6</td><td># a is an integer</td></tr>
+<tr><td>b = [4]</td><td>Traceback (most recent call last): File "<stdin>", line 1, in ? TypeError: unsubsciptable object</td></tr>
 </table>
 <table>
-    <tr id="balk"><td>str(42) </td><td># "42"</td></tr>
-    <tr><td>int("42")</td><td># 42</td></tr>
-    <tr id="balk"><td>int("42", 8)</td><td># 34</td></tr>
-    <tr><td>int("42", 16)</td><td># 66</td></tr>
-    <tr id="balk"><td>float("1.52")</td><td># 1.52</td></tr>
-    <tr><td>chr(65)	</td><td># 'A'</td></tr>
-    <tr id="balk"><td>ord('A')</td><td># 65</td></tr>
-    <tr><td>list('bon')</td><td># ['b', 'o', 'n']</td></tr>
-    <tr id="balk"><td>tuple('bon')</td><td># ('b', 'o', 'n')</td></tr>
-    <tr><td>dict([('bon', 3), ('hoi', 7)])	</td><td># {'bon':3, 'hoi':7}</td></tr>
+<tr><td class="command">a = "hallo daar"</td><td># a is a string</td></tr>
+<tr><td class="command">a = a+7</td><td>Traceback (most recent call last): File "<stdin>", line 1, in ? TypeError: cannot concatenate 'str' and 'int' object</td></tr>
 </table>
 
+<b>type()</b> Om te verifieren of twee variabelen van het zelfde type zijn<br />
+<b>isinstance()</b> Om te checken of een variabele van een gegeven type is<br />
+<table class="command">
+<tr><td>a = 'blurp'</td></tr>
+<tr><td>b = 7</td></tr>
+<tr><td>c = 352</td></tr>
+<tr><td>if type(a) == type(b):</td><td># levert False</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;.....</td></tr>
+<tr><td>if type(b) == type(c):</td><td># levert True</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;.....</td></tr>
+<tr></tr>
+<tr><td>if isinstance(a,str):</td><td># levert True</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;.....</td></tr>
+<tr><td>if isinstance(a,int):</td><td># levert False</td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;.....</td></tr>
+</table>
+<h2>Toekenning bindt naam aan object</h2>
+<ul><li>oude binding ongedaan maken</li></ul>
+<table>
+<tr><td class="command">a = 7</td><td># a gebonden aan int(7)</td></tr>
+<tr><td class="command">a = [1,2,3]</td><td># 7 nu weg</td></tr>
+<tr><td class="command">a = 3</td><td># lijst nu weg</td></tr>
+</table>
+<ul><li>echter binding gaat ver</li></ul>
+<table class="command">
+<tr><td>b = [1,2,3]</td><td># b is lijst</td></tr>
+<tr><td>c = b</td><td># c is dezelfde lijst</td></tr>
+<tr><td>c[1] = 7</td><td># b[1] nu ook 7</td></tr>
+</table>
+<ul><li>nog verder zelfs</li></ul>
+<table class="command">
+<tr><td>d = [1,2,3]</td><td># d is lijst</td></tr>
+<tr><td>e = [9,d,8]</td><td># e nu [9,[1,2,3],8]</td></tr>
+<tr><td>d[1] = 0</td><td># e nu [9,[1,0,3],8]</td></tr>
+</table>
+<ul><li>echte kopie nodig?</li></ul>
+<table class="command">
+<tr><td>f = [1,2,3,]</td><td># f is lijst</td></tr>
+<tr><td>g = [9,f[:],8]</td><td># g nu [9,[1,2,3],8]]</td></tr>
+<tr><td>f[1] = 0</td><td># nu [9,[1,2,3],8]</td></tr>
+</table>
+
+<h2>Method: functie bij specifiek datatype</h2>
+<table class="command">
+<tr><td>a = [7,1,9,2]</td><td># a is a list</td></tr>
+<tr><td>a.sort()</td><td># sort van list a nu [1,2,7,9]</td></tr>
+<tr><td>a.append(23)</td><td># append van list (voeg 1 element toe) a nu [1,2,7,9,23]</td></tr>
+<tr><td>a.extend([6,5])</td><td># extend van list (voegt hele lijst toe) a nu [1,2,7,9,23,6,5]</td></tr>
+<tr><td>n = a.pop()</td><td># pop van list (verwijdert laatste element n wordt nu 5 a nu [1,2,7,9,23,6]</td></tr>
+<tr><td>m = a.pop(3)</td><td># pop van list (verwijdert element 3) m wordt 9 a nu [1,2,7,23,6]</td></tr>
+</table>
+<h2>Lijst van methoden voor bepaalde datatype</h2>
+<ul><li>opvragen met <b>dir(type)</b></li></ul>
+<table class="command">
+<tr><td>>>>> dir(list)</td></tr>
+<tr><td>['append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']</td></tr>
+</table>
+<ul><li>methods genaamd __iets__ zijm interne methoden</b></li></ul>
+<ul><li>type kan zijn: str,list, tuple, dict, int, float, .....</li></ul>
+<h2>Meer info over gebruik van methodes</h2>
+<ul><li>opvragen met <b>help(type)</b> of <b>help(type.method)</b></li></ul>
+
+<table class="command">
+<tr><td>>>>> help(list)</td></tr>
+<tr><td>Help on class list in module __builtin__:</td></tr>
+<tr><td></td></tr>
+	<tr><td>class list(object)</td></tr>
+    <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;list() -> new empty list</td></tr>
+    <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;list(iterable) -> new empty list initialized from iterable's items</td></tr>
+	<tr><td>&nbsp;</td></tr>
+	<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Methods defined here:</td></tr>
+	<tr><td>&nbsp;</td></tr>
+	<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;__add__(...)</td></tr>
+	<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x.__add__(y) <==> x+y</td></tr>
+	<tr><td>&nbsp;</td></tr>
+	<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;append(...)</td></tr>
+	<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L.append(object) -- append object to end</td></tr>
+	<tr><td>&nbsp;</td></tr>
+	<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;count(...)</td></tr>
+	<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L.count(value) -> integer -- return nr of occurrences of value</td></tr>
+	<tr><td>&nbsp;</td></tr>
+	<tr><td>....</td></tr>
+	<tr><td>>>>> <b>help(list.append)</b></td></tr>
+	<tr><td>....</td></tr>
+</table>
+<h1>sequences</h1>
+<p>
+Dataypes string, list en tuple veel gemeen: gezamelijk "sequences"
+</p>
+<table class="command">
+	<tr><td>s = "EYAWTKAPBWATA</td></tr>
+    <tr><td>if "A" in s: ...</td><td># 'A' in s ?</td></tr>
+    <tr><td>print(s[::2])</td><td># 'EATABAA'</td></tr>
+    <tr><td>c = len(s)</td><td># 13</td></tr>
+	<tr><td>a = min(s); b = max(s)</td><td># 'A' resp. 'Y'</td></tr>
+</table>
+<table class="command">
+    <tr><td>l = [17,51,12,3,46,25]</td><td></td></tr>
+	<tr><td>if 46 in 1: ...</td><td># 46 in 1?</td></tr>
+	<tr><td>n = l[1:5:2]</td><td>[51, 3] (1 tot 5!)</td></tr>
+	<tr><td>c = len(1)</td><td>6</td></tr>
+	<tr><td>a = min(1); b = max(1)</td><td>3 resp. 51</td></tr>
+</table>
+<table class="command">
+    <tr><td>t = (23, "hallo", 77)</td><td></td></tr>
+	<tr><td>if 77 in t: ...</td><td># True</td></tr>
+	<tr><td>u = t[:2]</td><td># (23, 'hallo')</td></tr>
+	<tr><td>c = len(t)</td><td>3</td></tr>
+	<tr><td>a = min(t)</td><td>Exception: unorderable types!</td></tr>
+	<tr><td>b = max(t)</td><td>Exception: unorderable types!</td></tr>
+</table>
+
+<p>Veel-gebruikte sequence operators
+<table>
+	<tr><td class="command">x in s</td><td>test of element met waarde x in s zit</td></tr>
+	<tr><td class="command">x not in s</td><td></td></tr>
+	<tr><td class="command">s + t</td><td>s geconcateneerd met t</td></tr>
+	<tr><td class="command">s * n</td><td>n exemplaren van s</td></tr>
+	<tr><td class="command">n * s</td><td></td></tr>
+	<tr><td class="command">s[i]</td><td>element i van s, geteld vanaf 0</td></tr>
+	<tr><td class="command">s[i:j]</td><td>slice van s vanaf i tot j</td></tr>
+	<tr><td class="command">s[i:]</td><td>slice van s vanaf i tot einde</td></tr>
+	<tr><td class="command">s[i:j:k]</td><td>slice van s vanaf i tot einde, stapgrootte k</td></tr>
+	<tr><td class="command">len(s)</td><td>lengte van s (aantal objecten)</td></tr>
+	<tr><td class="command">min(s)</td><td>kleinste element van s</td></tr>
+	<tr><td class="command">max(s)</td><td>grootste element van s</td></tr>
+</table>
+</p>
+<h1>String methods</h1>
+<p>String heeft - naast sequence methods - nog extra methods
+<table>
+	<tr><td class="command">s = "!Jantje zag pruimen hangen!!"</td><td></td></tr>
+	<tr><td class="command">c = s.count('an')</td><td># 2 keer 'an'</td></tr>
+	<tr><td class="command"></td>&nbsp;<td></td></tr>
+	<tr><td class="command">i = s.find('ag')</td><td># 9  s[9...] 'ag...'</td></tr>
+	<tr><td class="command">i = s.find('zzz')</td><td># -1 niet gevonden</td></tr>
+	<tr><td class="command"></td><td>&nbsp;</td></tr>
+	<tr><td class="command">i = s.index('ag')</td><td># 9</td></tr>
+	<tr><td class="command">i = s.index('zzz')</td><td># Exception!</td></tr>
+	<tr><td class="command"></td><td>&nbsp;</td></tr>
+	<tr><td class="command">u = s.super()</td><td># u bevat '!JANTJE ZAG ...'</td></tr>
+	<tr><td class="command">z = s.stip('!')</td><td># z bevat 'Jantje zag pruimen hangen'</td></tr>
+	<tr><td class="command"></td><td>&nbsp;</td></tr>
+	<tr><td class="command">p = s.replace('Jantje', 'Pietje')</td><td># p bevat '!Pietje zag ...'</td></tr>
+	<tr><td class="command"></td><td>&nbsp;</td></tr>
+	<tr><td class="command">t = s.split()</td><td># ['Jantje', 'zag', 'pruimen', 'hangen!!']</td></tr>
+	<tr><td class="command">for woord in t:</td><td></td></tr>
+	<tr><td class="command">&nbsp;&nbsp;&nbsp;&nbsp;print</td><td></td></tr>
+	<tr><td class="command"></td><td>&nbsp;</td></tr>
+	<tr><td class="command">v = "=".join(t)</td><td># '!Jantje=zag=pruimen=hangen!!</td></tr>
+</table>
+<table>
+    <tr><td class="command">s.count(s2[,b[,e]])</td><td>tel aantal keren s2 in s of deel daarvan</td></tr>
+	<tr><td class="command">s.endswitch(s2[,b[,e]])</td><td>start of eindigt s (of substring) met s2?</td></tr>
+	<tr><td class="command">s.startswitch(s2[,b[,e]])</td><td></td></tr>
+	<tr><td class="command">s.find(s2[,b[,e]])</td><td>vind s2 in s vanaf links of vanaf rechts</td></tr>
+	<tr><td class="command">s.rfind(s2[,b[,e]])</td><td>(-1 als niet gevonden)</td></tr>
+	<tr><td class="command">s.index(s2[,b[,e]])</td><td>idem, met exception als niet gevonden</td></tr>
+	<tr><td class="command">s.rindex(s2[,b[,e]])</td><td></td></tr>
+	<tr><td class="command">s.isalnum(), s.isalpha(), s.isdigit(),</td><td>test alle characters in s</td></tr>
+	<tr><td class="command">s.islower(), s.isspace(), s.istitle(),</td><td>true als alle voldoen, fals als niet of leeg</td></tr>
+	<tr><td class="command">s.isupper()</td><td></td></tr>
+	<tr><td class="command">s.lower(), s.upper(), swapcase(),</td><td>maak hele string uppercase, lowercase, ...</td></tr>
+	<tr><td class="command">s.capitalize(), s.title()</td><td></td></tr>
+	<tr><td class="command">s.lstrip([s2]), s.rstrip([s2]),</td><td>verwijder chars in s2 uit s</td></tr>
+	<tr><td class="command">s.strip([s2])</td><td>(default: whitspace)</td></tr>
+</table></p>
+<p> Merk op: string immutable, dus methods geven nieuwe string terug!</p>
+<p> Veel gebruikte string methods:</p>
+<table>
+	<tr><td class="command">s.replace(old, new[,cnt])</td><td>vervang <i>old</i> door <i>new</i> in <i>s</i> (geeft nieuwe string)</td></tr>
+	<tr><td class="command">s.join(seq)</td><td>maak string van <i>seq</i> met scheider <i>s</i></td></tr>
+	<tr><td class="command">s.split([sep[,max]])</td><td>maak lijst van <i>s</i>, met scheider <i>sep</i></td></tr>
+	<tr><td class="command">s.splitlines([keepends])</td><td>maak lijst van regels (default: verwijder newlines)</td></tr>
+</table>
+
+<h2>String formateren - klassiek</h2>
+<table>
+<tr><th>Variabelen ingevuld voor %. in expressie</th></tr>
+	<tr><td class="command">"v1 is %d\n" % v1</td><tr>
+	<tr id="balk"><td class="command">"de drie v's: %d %f %d\n" % (v1, v2, v3)</td><tr>
+</table>
+</p>
+
+<p>
+<table>
+	<tr><td class="command">%d %i</td><td>geheel getal in decimale notatie</td></tr>
+	<tr id="balk"><td class="command">%e %E %f %F %g %G</td><td>floating point formaat met/zonder exponent</td></tr>
+	<tr><td class="command">%c</td><td>character</td></tr>
+	<tr id="balk"><td class="command">%s %r</td><td>als string met str()</td></tr>
+	<tr><td class="command">%%</td><td>letterlijke %</td></tr>
+</table>
+</p>
+
+<p>
+<table class="command">
+	<tr><td>a=5.62</td><td></td></tr>
+	<tr><td>print(">%d<" % a)</td><td># '>5<'</td></tr>
+	<tr id="balk"><td>print(">%f<" % a)</td><td># '>5.620000<'</td></tr>
+	<tr><td></td><td></td></tr>
+	<tr><td>a=1023</td><td></td></tr>
+	<tr id="balk"><td>print(">%d<" % a)</td><td># >1023</td></tr>
+	<tr><td></td><td></td></tr>
+	<tr><td>n='Eric'</td><td></td></tr>
+	<tr id="balk"><td>print(">Hallo % s<" % n)</td><td># >Hallo Eric</td></tr>
+</tabel>
+</p>
+
+<p>
+<table>
+    <tr><th>Formateren gaat verder: toevoegen tussen % en conversiecode</th></tr>
+	<tr><td>getal</td><td>minimale veldbreedte, rechts uitlijnen</td></tr>
+	<tr id="balk"><td><em>-</em>getal</td><td>links i.p.v. rechtsuitlijnen</td></tr>
+	<tr><td><em>0</em>getal</td><td>voorloopnullen i.p.v. spaties</td></tr>
+	<tr id="balk"><td><em>.</em>getal</td><td>precisie-aanduiding</td></tr>
+</table>
+</p>
+
+<p>
+Voorbeelden
+<table class="command">
+	<tr id="balk"><td>a=512</td><td></td></tr>
+	<tr><td>print(">%7d<" % a)</td><td># >&nbsp;&nbsp;&nbsp;&nbsp;512<</td></tr>
+	<tr id="balk"><td>print(">%-6d<" % a)</td><td># >512&nbsp;&nbsp;&nbsp;<</td></tr>
+	<tr><td>print(">%05d<" % a)</td><td># >00512<</td></tr>
+	<tr id="balk"><td>print(">%-05d<" % a)</td><td># >512&nbsp;&nbsp;<</td></tr>
+	<tr><td>"></td><td></td></tr>
+	<tr id="balk"><td>a=5.115</td><td></td></tr>
+	<tr><td>print(">%7.2f<" % a)</td><td># >&nbsp;&nbsp;&nbsp;5.12<</td></tr>
+	<tr id="balk"><td>print(">%.1f<" % a)</td><td># >5.1<</td></tr>
+	<tr><td>print(">%5d< >%7.2f<" % (a, b))</td></tr>
+</table>
+</p>
+
+<p>
+<h2>String formattering methode str.format())</h2>
+<table>
+<tr><th>variablelen insmelten vor {} in string - postitioneel of benoemd</th></tr>
+<tr><td class="command" id="balk">v = 5.3</td></tr>
+<tr><td class="command pos_right">w = 17</td></tr>
+<tr><td class="command" id="balk">print( 'Values:{}, {}, {}'.format(v, "hey", w))</td></tr>
+<tr><td class="command pos_right"> # uitvoer: ""Values: 5.3, hey, 17"</td></tr>
+<tr><td class="command" id="balk">print( 'Values:{}, {}, {}'.format(v, "hey", w))</td></tr>
+<tr><td class="command pos_right"> # uitvoer: ""Values: 5.3, 17, hey, 5.3"</td></tr>
+<tr><td class="command" id="balk">s = "{p1}, {p3}, {p2}, {{0}})".format(p1=v, p2="hey", p3=w)</td></tr>
+<tr><td class="command pos_right"># s bevat: "5.3, 17, hey, (0)"</td></tr>
+</table>
+</p>
+<p>Als je een dictionary gebruikt, mag je zelfs de keys meegeven om te refereren aan bepaalde elementen van de dictionary, zoals aangegeven in dit voorbeeld:</p>
+<p>
+<table>
+<tr><td class="command">d = {'a':1, 'b':2, 'c':3}</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="command">print(d['a'])</td></tr>
+<tr><td class="command">print("{0[c]}, {0[b]}".format(d))</td></tr>
+</table>
+
+<p>
+<table>
+<tr><th>Formateren gaat verder: {veld:specifier}</th></tr>
+<tr></tr>
+<tr><th>specifier: [uitlijnen]</th><th>[breedte]</th><th>[persentatie]</th></tr>
+<tr></tr>
+<tr><td> <em><</em> &nbsp;&nbsp;links (default string)</td><td>optioneel</td><td><em>c</em> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;character</td></tr>
+<tr><td> <em>> </em>&nbsp;&nbsp;rechts (default int)</td><td>uitvullen en</td><td><em>d </em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;decimaal</td></tr>
+<tr><td> <em> ^ </em>&nbsp;&nbsp;centreren</td><td>percisie</td><td><em>e f g</em> exponent, float of keuze</td></tr>&nbsp;&nbsp;&nbsp;
+<tr><td> <em> = </em>&nbsp;&nbsp;padding achter teken</td><td></td><td><em>%</em></td></tr>&nbsp;&nbsp;&nbsp;
+<tr><td> <em> + </em>&nbsp;&nbsp;expliciet teken</td><td></td><td></td></tr>&nbsp;&nbsp;&nbsp;
+</table>
+</p>
+
+<p>voorbeelden:</p>
+<p><table>
+<tr><td class="command">a = 512</td></tr>
+<tr><td class="command">print(">{0:7}<".format(a))</td><td class="command"># >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;512<</td></tr>
+<tr><td class="command">print(">{0:^7}<".format(a))</td><td class="command"># >&nbsp;&nbsp;&nbsp;512&nbsp;&nbsp;&nbsp;<</td></tr>
+<tr><td class="command">print(">{0:7}<".format(-a))</td><td class="command"># >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-512<</td></tr>
+<tr><td class="command">print(">{0:=7}<".format(-a))</td><td class="command"># >-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;512<</td></tr>
+<tr><td class="command">print(">{0:<6}<".format(a))</td><td class="command"># >512&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<</td></tr>
+<tr><td class="command">print(">{0:05}<".format(a))</td><td class="command"># >00512<</td></tr>
+<tr><td class="command">print(">{0:<05}<".format(a))</td><td class="command"># >51200<</td></tr>
+<tr><td></td></tr>
+<tr><td class="command">b = 5.115</td></tr>
+<tr><td class="command">print(">{0}}<".format(b))</td><td class="command"># >5.115<</td></tr>
+<tr><td class="command">print(">{0:7.2f)}<".format(b))</td><td class="command"># >&nbsp;&nbsp;&nbsp;5.12<</td></tr>
+<tr><td class="command">print(">{0:.1f)}<".format(b))</td><td class="command"># >5.1<</td></tr>
+</table>
+</p>
+<p>Als je een enkele waarde wilt formaterem, kun je gebruik maken van de format functie:</p>
+<p><table>
+<tr><td class="command">getal = 7</td></tr>
+<tr><td class="command">bond = format(getal, '>03d')</td><td></td></tr>
+<tr><td class="command">print(bond)</td><td class="command"># >007<</td></tr>
+</table>
+</p>
+<p>
+<h1>List: </h1>
+<table>
+<tr><th>lijst met waarden -- types mogen verschillen</th></tr>
+<tr class="command"><td>u = []</td><td># lege lijst</td></tr>
+<tr class="command"><td>v = [1, 2, 'ho']</td><td># 3 elementen</td></tr>
+<tr class="command"><td>&nbsp;</td><td></td></tr>
+<tr class="command"><td>w = [1, [5, 7], 7]</td><td># 3 elementen: resp. int, list, int</td></tr>
+<tr class="command"><td>&nbsp;</td><td></td></tr>
+<tr class="command"><td>w = [0]</td><td># 1</td></tr>
+<tr class="command"><td>w = [1]</td><td># [5,7]</td></tr>
+<tr class="command"><td>w = [0:2]</td><td># [1,[5,7]]</td></tr>
+<tr class="command"><td>w = [1:]</td><td># [[5,7],7]</td></tr>
+<tr class="command"><td>w = [1][0]</td><td># 5</td></tr>
+<tr class="command"><td>&nbsp;</td><td></td></tr>
+<tr class="command"><td># if 5 in w:</td><td># False</td></tr>
+<tr class="command"><td>&nbsp;&nbsp;&nbsp;&nbsp;....</td><td></td></tr>
+<tr class="command"><td>&nbsp;</td><td></td></tr>
+<tr class="command"><td># if 5 in w[1]:</td><td># True</td></tr>
+<tr class="command"><td>&nbsp;&nbsp;&nbsp;&nbsp;....</td><td></td></tr>
+</table>
+</p>
+
+<p><table>
+<tr><th>Gebruik van operatoren</th></tr>
+<tr class="command"><td>v2 = ["ha"]</td><td># ['ha']</td></tr>
+<tr class="command"><td>v3 = v2 * 3</td><td># ['ha','ha','ha']</td></tr>
+<tr class="command"><td>&nbsp;</td><td></td></tr>
+<tr class="command"><td>v3[1] = 'ho'</td><td># ['ha', 'ho', 'ha']</td></tr>
+<tr class="command"><td>&nbsp;</td><td></td></tr>
+<tr class="command"><td>v4 = v3 + v2</td><td># ['ha','ho','ha','ha']</td></tr>
+</table>
+</p>
+<p>
+<table>
+<tr><th>Valkuil bij gebruik van slices</th></tr>
+<tr class="command"><td>a = [1, [2, 3], 4]</td><td></td></tr>
+<tr class="command"><td>b = a[:]</td><td># b top-level kopie van a</td></tr>
+<tr class="command"><td>&nbsp;</td><td></td></tr>
+<tr class="command"><td>a[0] = 5</td><td> </td></tr>
+<tr class="command"><td>print(b[0])</td><td># waarde blijft 1</td></tr>
+<tr class="command"><td>&nbsp;</td><td></td></tr>
+<tr class="command"><td>a[1][0] = 7</td><td> </td></tr>
+<tr class="command"><td>print(b[1][0])</td><td># waarde 7 !!</td></tr>
+<tr class="command"><td>&nbsp;</td><td></td></tr>
+<tr class="command"><td>import copy</td><td> </td></tr>
+<tr class="command"><td>c = copy.deepcopy(a)</td><td># c volledige kopie</td></tr>
+</table>
+</p>
+<p>
+In plaats van de notatie:
+</p>
+<ul class="command">b = a[:]</ul>
+<p>mag ook:</p>
+<p>
+<ul class="command">b = a.copy()</ul>
+</p>
+<p>
+Maar ook de <code class="command">.copy()</code> methode maakt slechts een top-level kopie!
+</p>
+<p>
+<table>
+<tr><th>List methodes en functies</th></tr>
+<tr class="command"><td>v = [1,2,3]</td><td></td></tr>
+<tr class="command"><td>v.reverse()</td><td># b top-level kopie van a</td></tr>
+<tr class="command"><td>v.append(4)</td><td></td></tr>
+<tr class="command"><td>v.insert(1, 6)</td><td> </td></tr>
+<tr class="command"><td>v.sort()</td><td># waarde blijft 1</td></tr>
+<tr class="command"><td>&nbsp;</td><td></td></tr>
+<tr class="command"><td>i = v.index(2)</td><td> </td></tr>
+<tr class="command"><td>v.extend([0,7])</td><td># waarde 7 !!</td></tr>
+<tr class="command"><td>&nbsp;</td><td></td></tr>
+<tr class="command"><td>del v[4]</td><td> </td></tr>
+<tr class="command"><td>a = v.pop()</td><td># c volledige kopie</td></tr>
+<tr class="command"><td>t = sum(v)</td><td># c volledige kopie</td></tr>
+<tr class="command"><td>z = sorted(v)</td><td># c volledige kopie</td></tr>
+<tr class="command"><td>&nbsp;</td><td># c volledige kopie</td></tr>
+<tr class="command"><td>s = "hoi!"</td><td># c volledige kopie</td></tr>
+<tr class="command"><td>w = list(s)</td><td># c volledige kopie</td></tr>
+<tr class="command"><td>on = list( range(1,1000,2))</td><td># c volledige kopie</td></tr>
+</table>
+<ul>
+<li><i>methods</i><b><code class="command">sort()</code></b> en <b><code class="command">reverse()</code> </b>werken in-place (geven geen waarde terug)</li>
+<li><i>functies</i><b> <code class="command">sorted(list)</code></b>en <b><code class="command">reversed(list)</code></b> geven waarde terug</li>
+</ul>
+</p>
+<p>
+Het tussenvoegen of vervangen van één f meerdere elementen is (ook) mogelijk met de slice-notatie:
+</p>
+<p>
+<ul class="command">>>> v = [3, 2, 1, 4]</ul>
+<br />
+<ul class="command">>>> v[1:1] = 6</ul>
+<ul class="command">>>> v</ul>
+<ul class="command">[3, 6, 2, 1, 4]</ul>
+<br />
+<ul class="command">>>> v[2:3] = [7, 8, 9]</ul>
+<ul class="command"> v</ul>
+<ul class="command">[3, 6, 7, 8, 9, 1, 4]</ul>
+</p>
+<p>
+<h2>List comprehension</h2>
+
+<table>
+<tr><th>List opbouwen</th></tr>
+<tr class="command"><td>l = []</td><td></td></tr>
+<tr class="command"><td>for i in range(100)</td><td></td></tr>
+<tr class="command"><td>&nbsp;&nbsp;&nbsp;&nbsp;l.append(2**i)</td><td># vul list l met tweemachten</td></tr>
+</table>
+<table>
+<tr><th>Kan ook in één keer:</th></tr>
+<tr class="command"><td>l = [ 2**i for i in range(100) ]</td><td> </td></tr>
+</table>
+<table>
+<tr><th>Dit kan ook</th></tr>
+<tr class="command"><td>l = [ 2**i for i in range(100) if i%13 ==0 ]</td><td># waarde blijft 1</td></tr>
+</table>
+<table>
+<tr><th>Zelfs dit kan:</th></tr>
+<tr class="command"><td>a = [1,2,3]</td><td></td></tr>
+<tr class="command"><td>b = [4,5]</td><td> </td></tr>
+<tr class="command"><td>l = [ (i,j) for i in a for j in b ]</td><td></td></tr>
+<tr class="command"><td>print(l)</td><td># [(1,4),(1,5), (2,4), (2,5), (3,4), (3,5)]</td></tr>
+</table>
+</p>
+<p>
+<h2>list comprehension versus element vermenigvuldiging</h2>
+<table>
+<tr><th>Voorbeeld element vermenigvuldiging:</th></tr>
+<tr class="command"><td>>>> a = [ [0]*2 ]*3</td><td>>>> a = []</td></tr>
+<tr class="command"><td>>>> a</td><td>>>> a.append([0, 0])</td></tr>
+<tr class="command"><td>[[0, 0], [0, 0], [0, 0]]</td><td>>>>a.append( a[0] )</td></tr>
+<tr class="command"><td>>>> a[0][1] = 7</td><td>>>> a.append( a[0] )</td></tr>
+<tr class="command"><td>>>> a</td><td>>>> a[0][1] = 7</td></tr>
+<tr class="command"><td>[[0,7],[0,0],[0,0]]</td><td>>>> vergelijk: x = [1,2,3]</td></tr>
+<tr class="command"><td></td><td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;y = x</td></tr>
+</table>
+<table>
+<tr><th>Voorbeeld list comprehension:</th></tr>
+<tr class="command"><td>>>> a = [ [0]*2 for i in range(3) ]</td><td>>>> a = []</td></tr>
+<tr class="command"><td>>>> a [[0,0], [0, 0], [0, 0]]</td><td>>>> a.append([0, 0])</td></tr>
+<tr class="command"><td>>>> a[0][1] = 7</td><td>>>> a.append([0, 0])</td></tr>
+<tr class="command"><td>>>> a [[0, 7], [0, 0], [0, 0]]</td><td>>>> a.append([0, 0])</td></tr>
+<tr class="command"><td></td><td>>>> a[0][1] = 7</td></tr>
+<tr class="command"><td></td><td>vergelijk: x = [1,2,3]</td></tr>
+<tr class="command"><td></td><td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; y = [1,2,3]</td></tr>
+</table>
+</p>
+
+<h1>Little endian versus big endian</h1>
+<p> Bte-volgorde in geheugen - endianess
+<ul>
+<li>afhankelijk van type CPU</li>
+<li>stel: opslag van waarde 0x00301a7c als 4 byte</li>
+twee implementaties:
+<ul>
+<li>little endian: minst-significante byte op beginadress van variabele (bijvoorbeeld x86 CPU)</li>
+<li>big endian: meest-significante byte op beginadres van variabele (mest andere CPU-types)</li>
+</ul>
+<li>consequenties bij inlezen/wegschrijven van integer waarden (byte-swap)</li>
+<ul>
+<li>van/naar binair bestand</li>
+<li>van/naar netwerk</li>
+</ul></ul>
+<h1>Data in bestanden</h1>
+<ul>Twee soorten bestanden
+<li>binaire bestanden</li>
+<ul><li>bytes in bepaald (gestandaardiseerd) formaat</li>
+<li>geen verschil tussen diverse besturingssystemen</li>
+<li>voorbeelden: .jpg .gif .png .pdf</li>
+</ul>
+</ul>
+<ul><li>tekstuele bestanden</li>
+<ul><li>tekst voor weergave op beeldscherm/printer/...</li>
+<li>encoding/decoding</li>
+<li>regeleinde kan verschillen per besturingssysteem</li></ul></ul>
+<p>
+<table>
+<tr><th>Voorbeeld: lezen van .gif file</th></tr>
+<tr class="command"><td>try:</td><td></td></tr>
+<tr class="command"><td>&nbsp;&nbsp;&nbsp;&nbsp;tux = open("tux.gif", "rb")</td><td></td></tr>
+<tr class="command"><td>except Exception:</td><td></td></tr>
+<tr class="command"><td>&nbsp;&nbsp;&nbsp;&nbsp;....</td><td></td></tr>
+<tr class="command"><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td></td></tr>
+<tr class="command"><td>head = tux.read(3)</td><td># 3 bytes headers: 'GIF'</td></tr>
+<tr class="command"><td>vers = tux.read(3)</td><td># 3 bytes versies: '87a' of '89a'</td></tr>
+<tr class="command"><td>wpix = tux.read(3)</td><td># 2 bytes breedte (little endian)</td></tr>
+<tr class="command"><td>hpix = tux.read(3)</td><td># 2 bytes hoogte (little endian)</td></tr>
+<tr class="command"><td>&nbsp;</td><td></td></tr>
+<tr class="command"><td>breed = wpix[1] * 256 + wpix[0]</td><td># converteer naar integer</td></tr>
+<tr class="command"><td>hoog&nbsp; = wpix[1] * 256 + wpix[0]</td><td># converteer naar integer</td></tr>
+<tr class="command"><td>&nbsp;</td><td></td></tr>
+<tr class="command"><td>print("%s: versie %s, %dx%d" % (head, vers, breed, hoog))</td><td></td></tr>
+<tr class="command"><td></td><td># uitvoer: b'GIF': versie b'89a', 595x842</td></tr>
+<tr class="command"><td>&nbsp;</td><td></td></tr>
+<tr class="command"><td>tux.close()</td><td></td></tr>
+</table>
+</p>
+In binary mode: <b>bytes</b> objects (b".....")
+<p>
+<table>
+  <tr><th>Het eerste deel van een gif file bevat de volgende informatie:</th></tr>
+  <tr class="command"><td width="15%">Offset</td><td width="15%">Length</td><td width="70%">Contents</td></tr>
+  <tr class="command"><td width="15%">0</td><td width="15%">3 bytes</td><td width="70%">"GIF"</td></tr>
+  <tr class="command"><td width="15%">3</td><td width="15%">3 bytes</td><td width="70%">"87a" or "89a"</td></tr>
+  <tr class="command"><td width="15%">6</td><td width="15%">2 bytes</td><td width="70%">&#60;Logical Screen Width&#62;</td></tr>
+  <tr class="command"><td width="15%">8</td><td width="15%">2 bytes</td><td width="70%">&#60;Logical Screen Height&#62;</td></tr>
+  <tr class="command"><td width="15%">10</td><td width="15%">1 bytes</td><td width="70%">various markers</td></tr>
+  <tr class="command"><td width="15%">11</td><td width="15%">1 bytes</td><td width="70%">&#60;Background Color Index&#62;</td></tr>
+  <tr class="command"><td width="15%">12</td><td width="15%">1 bytes</td><td width="70%">&#60;Pixel Aspect Ratio&#62;</td></tr>
+  <tr class="command"><td width="15%">...</td><td></td></tr>
+</table>
+</p>
+<p>
+Binaire files - open mode</p>
+<p class="command">
+f = open(filenaam [,mode])</p>
+<p>
+<table>
+<tr><th>Wijze van openen (mode)</th></tr>
+<tr class="command"><td>'rb'</td><td>voor lezen</td><td></td></tr>
+<tr class="command"><td>'r+b'</td><td>voor lezen en schrijven</td><td></td></tr>
+<tr class="command"><td>'wb'</td><td>voor schrijven</td><td>als niet-bestaand dan eerst creeren, anders leegmaken</td></tr>
+<tr class="command"><td>'w+b'</td><td>voor lezen en schrijven</td><td>als niet-bestaand dan eerst creeren, anders leegmaken</td></tr>
+<tr class="command"><td>'xb'</td><td>voor schrijven</td><td>als niet-bestaand dan eerst creeren, anders exception</td></tr>
+<tr class="command"><td>'x+b'</td><td>voor lezen en schrijven</td><td>als niet-bestaand dan eerst creeren, anders exception</td></tr>
+<tr class="command"><td>'ab'</td><td>voor append</td><td>als niet-bestaand dan eerst creeren</td></tr>
+<tr class="command"><td>'a+b'</td><td>voor append en lezen</td><td>als niet-bestaand dan eerst creeren</td></tr>
+<tr class="command"><td>...</td><td></td></tr>
+</table>
+</p>
 
 
 
 
-<table>				 
-    <tr><td>Lijst met mogelijke escape sequences:
-    <tr id="balk"><td>Escape</td><td>Betekenis</td></tr>
-    <tr><td>\\	</td><td>Backslash (\)</td></tr>
-    <tr id="balk"><td>\'	</td><td>Single quote (')</td></tr>
-    <tr><td>\"	</td><td>Double quote (")</td></tr>
-    <tr id="balk"><td>\a	</td><td>ASCII Bell (BEL)</td></tr>
-    <tr><td>\b	</td><td>ASCII Backspace (BS)</td></tr>
-    <tr id="balk"><td>\f	</td><td>ASCII Formfeed (FF)</td></tr>
-    <tr><td>\n	</td><td>ASCII Linefeed (LF)</td></tr>
-    <tr id="balk"><td>\r	</td><td>ASCII Carriage Return (CR)</td></tr>
-    <tr><td>\t	</td><td>ASCII Horizontal Tab (TAB)</td></tr>
-    <tr id="balk"><td>\v	</td><td>ASCII Vertical Tab (TAB)</td></tr>
-    <tr><td>\ooo</td><td>Teken met octale waarde ooo</td></tr>
-    <tr id="balk"><td>\xhh</td><td>Teken met hexadecimale waarde hh</td></tr>
-</table>	
-	
+
+</div>
+
+<br /><br /><br /><br>
+list - types mogen verschillen, methoden en functies, comprehension
+
+typles
+Dictionaries
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -256,36 +1063,36 @@
 Here is the list of all the available command line options: 
 <table>
 <tr>
-	<th>Option</th>	
-	<th>Description</th>
+<th>Option</th>	
+<th>Description</th>
 </tr>
 <tr>
-	<td>-d</td>	
-	<td>provide debug output</td>
+<td>-d</td>	
+<td>provide debug output</td>
 </tr>
 <tr>
-	<td>-O</td>
-	<td>generate optimized bytecode (resulting in .pyo files)</td>
+<td>-O</td>
+<td>generate optimized bytecode (resulting in .pyo files)</td>
 </tr>
 <tr>
-	<td>-S</td>
-	<td>do not run import site to look for Python paths on startup</td>
+<td>-S</td>
+<td>do not run import site to look for Python paths on startup</td>
 </tr>
 <tr>
-	<td>-v</td>
-	<td>verbose output (detailed trace on import statements)</td>
+<td>-v</td>
+<td>verbose output (detailed trace on import statements)</td>
 </tr>
 <tr>
-	<td>-X</td>
-	<td>disable class-based built-in exceptions (just use strings); obsolete starting with version 1.6</td>
+<td>-X</td>
+<td>disable class-based built-in exceptions (just use strings); obsolete starting with version 1.6</td>
 </tr>
 <tr>
-	<td>-c cmd</td>	
-	<td>run Python script sent in as cmd string</td>
+<td>-c cmd</td>	
+<td>run Python script sent in as cmd string</td>
 </tr>
 <tr>
-	<td>file</td>
-	<td>run Python script from given file</td>
+<td>file</td>
+<td>run Python script from given file</td>
 </tr>
 </table>
 <br />
@@ -310,11 +1117,11 @@ import sys; x = 'foo'; sys.stdout.write(x + '\n')</p>
 <p>
 Python has five standard data types −
 <ul>
-	<li class="marge_left">Numbers</li>
-	<li class="marge_left">String</li>
-	<li class="marge_left">List</li>
-	<li class="marge_left">Tuple</li>
-	<li class="marge_left">Dictionary</li>
+<li class="marge_left">Numbers</li>
+<li class="marge_left">String</li>
+<li class="marge_left">List</li>
+<li class="marge_left">Tuple</li>
+<li class="marge_left">Dictionary</li>
 </ul>
 </p>
 <br />
@@ -336,48 +1143,48 @@ del var_a, var_b</p>
 
 <p>Python supports four different numerical types −</p>
 <ul>
-	<li class="marge_left">int (signed integers)</li>
+<li class="marge_left">int (signed integers)</li>
 
-    <li class="marge_left">long (long integers, they can also be represented in octal and hexadecimal)</li>
+<li class="marge_left">long (long integers, they can also be represented in octal and hexadecimal)</li>
 
-    <li class="marge_left">float (floating point real values)</li>
+<li class="marge_left">float (floating point real values)</li>
 
-    <li class="marge_left">complex (complex numbers)</li>
+<li class="marge_left">complex (complex numbers)</li>
 </ul>
 <br />
 <h2>Examples</h2>
 Here are some examples of numbers −
 <table>
-	<tr>
-		<th>int</th>	<th>long</th>	<th>float</th>	<th>complex</th>
-	</tr>
-	<tr>
-		<td>10</td>	<td>51924361L</td>	<td>0.0</td>	<td>3.14j</td>
-	</tr>
-	<tr>
-		<td>100</td>	<td>-0x19323L</td>	<td>15.20</td>	<td>45.j</td>
-	</tr>
-	<tr>
-		<td>-786</td>	<td>0122L</td>	<td>-21.9</td>	<td>9.322e-36j</td>
-	</tr>
-	<tr>
-		<td>080</td>	<td>0xDEFABCECBDAECBFBAEl</td>	<td>32.3+e18</td>	<td>.876j</td>
-	</tr>
-	<tr>
-		<td>-0490</td>	<td>535633629843L</td>	<td>-90.</td>	<td>-.6545+0J</td>
-	</tr>
-	<tr>
-		<td>-0x260</td>	<td>-052318172735L</td>	<td>-32.54e100</td>	<td>3e+26J</td>
-	</tr>
-	<tr>
-		<td>0x69</td>	<td>-4721885298529L</td>	<td>70.2-E12</td>	<td>4.53e-7j</td>
-	</tr>
+<tr>
+	<th>int</th>	<th>long</th>	<th>float</th>	<th>complex</th>
+</tr>
+<tr>
+	<td>10</td>	<td>51924361L</td>	<td>0.0</td>	<td>3.14j</td>
+</tr>
+<tr>
+	<td>100</td>	<td>-0x19323L</td>	<td>15.20</td>	<td>45.j</td>
+</tr>
+<tr>
+	<td>-786</td>	<td>0122L</td>	<td>-21.9</td>	<td>9.322e-36j</td>
+</tr>
+<tr>
+	<td>080</td>	<td>0xDEFABCECBDAECBFBAEl</td>	<td>32.3+e18</td>	<td>.876j</td>
+</tr>
+<tr>
+	<td>-0490</td>	<td>535633629843L</td>	<td>-90.</td>	<td>-.6545+0J</td>
+</tr>
+<tr>
+	<td>-0x260</td>	<td>-052318172735L</td>	<td>-32.54e100</td>	<td>3e+26J</td>
+</tr>
+<tr>
+	<td>0x69</td>	<td>-4721885298529L</td>	<td>70.2-E12</td>	<td>4.53e-7j</td>
+</tr>
 </table>
 <br />
 <ul>
-	<li class="marge_left">Python allows you to use a lowercase L with long, but it is recommended that you use only an uppercase L to avoid confusion with the number 1. Python displays long integers with an uppercase L.</li>
+<li class="marge_left">Python allows you to use a lowercase L with long, but it is recommended that you use only an uppercase L to avoid confusion with the number 1. Python displays long integers with an uppercase L.</li>
 
-    <li class="marge_left">A complex number consists of an ordered pair of real floating-point numbers denoted by x + yj, where x is the real part and b is the imaginary part of the complex number.</li>
+<li class="marge_left">A complex number consists of an ordered pair of real floating-point numbers denoted by x + yj, where x is the real part and b is the imaginary part of the complex number.</li>
 </ul>
 <h2> Strings</h2>
 
@@ -530,79 +1337,79 @@ There are several built-in functions to perform conversion from one data type to
 </p>
 <br />
 <table>
-	<tr>
-		<th>Function</th>
-		<th>Description</th>
-	</tr>
-	<tr>
-		<td>int(x [,base])</td>
-		<td>Converts x to an integer. base specifies the base if x is a string.</td>
-	</tr>
-	<tr>
-		<td>long(x [,base] )</td>
-		<td>Converts x to a long integer. base specifies the base if x is a string.</td>
-	</tr>
-	<tr>
-		<td>float(x)</td>
-		<td>Converts x to a floating-point number.</td>
-	</tr>
-	<tr>
-		<td>complex(real [,imag])</td>
-		<td>Creates a complex number.</td>
-	</tr>
-	<tr>
-		<td>str(x)</td>
-		<td>Converts object x to a string representation.</td>
-	</tr>
-	<tr>
-		<td>repr(x)</td>
-		<td>converts object x to an expression string.</td>
-	</tr>
-	<tr>
-		<td>eval(str)</td>
-		<td>Evaluates a string and returns an object.</td>
-	</tr>
-	<tr>
-		<td>tuple(s)</td>
-		<td>Converts s to a tuple.</td>
-	</tr>
-	<tr>
-		<td>list(s)</td>
-		<td>Converts s to a list.</td>
-	</tr>
-	<tr>
-		<td>set(s)</td>
-		<td>Converts s to a set.</td>
-	</tr>
-	<tr>
-		<td>dict(d)</td>
-		<td>Creates a dictionary. d must be a sequence of (key,value) tuples.</td>
-	</tr>
-	<tr>
-		<td>frozenset(s)</td>
-		<td>Converts s to a frozen set.</td>
-	</tr>
-	<tr>
-		<td>chr(x)</td>
-		<td>Converts an integer to a character.</td>
-	</tr>
-	<tr>
-		<td>unichr(x)</td>
-		<td>Converts an integer to a Unicode character.</td>
-	</tr>
-	<tr>
-		<td>ord(x)</td>
-		<td>Converts a single character to its integer value.</td>
-	</tr>
-	<tr>
-		<td>hex(x)</td>
-		<td>Converts an integer to a hexadecimal string.</td>
-	</tr>
-	<tr>
-		<td>oct(x)</td>
-		<td>Converts an integer to an octal string.</td>
-	</tr>
-	</table>
+<tr>
+	<th>Function</th>
+	<th>Description</th>
+</tr>
+<tr>
+	<td>int(x [,base])</td>
+	<td>Converts x to an integer. base specifies the base if x is a string.</td>
+</tr>
+<tr>
+	<td>long(x [,base] )</td>
+	<td>Converts x to a long integer. base specifies the base if x is a string.</td>
+</tr>
+<tr>
+	<td>float(x)</td>
+	<td>Converts x to a floating-point number.</td>
+</tr>
+<tr>
+	<td>complex(real [,imag])</td>
+	<td>Creates a complex number.</td>
+</tr>
+<tr>
+	<td>str(x)</td>
+	<td>Converts object x to a string representation.</td>
+</tr>
+<tr>
+	<td>repr(x)</td>
+	<td>converts object x to an expression string.</td>
+</tr>
+<tr>
+	<td>eval(str)</td>
+	<td>Evaluates a string and returns an object.</td>
+</tr>
+<tr>
+	<td>tuple(s)</td>
+	<td>Converts s to a tuple.</td>
+</tr>
+<tr>
+	<td>list(s)</td>
+	<td>Converts s to a list.</td>
+</tr>
+<tr>
+	<td>set(s)</td>
+	<td>Converts s to a set.</td>
+</tr>
+<tr>
+	<td>dict(d)</td>
+	<td>Creates a dictionary. d must be a sequence of (key,value) tuples.</td>
+</tr>
+<tr>
+	<td>frozenset(s)</td>
+	<td>Converts s to a frozen set.</td>
+</tr>
+<tr>
+	<td>chr(x)</td>
+	<td>Converts an integer to a character.</td>
+</tr>
+<tr>
+	<td>unichr(x)</td>
+	<td>Converts an integer to a Unicode character.</td>
+</tr>
+<tr>
+	<td>ord(x)</td>
+	<td>Converts a single character to its integer value.</td>
+</tr>
+<tr>
+	<td>hex(x)</td>
+	<td>Converts an integer to a hexadecimal string.</td>
+</tr>
+<tr>
+	<td>oct(x)</td>
+	<td>Converts an integer to an octal string.</td>
+</tr>
+</table>
 <br />
 
 <h1>CBT Nuggets</h1>
@@ -610,8 +1417,8 @@ There are several built-in functions to perform conversion from one data type to
 
 <h2>Python Program Flow .py</h2>
 <ul>
-	<li class="marge_left">Programs --> module(s) std library imports</li> 
-    <li class="marge_left">modules --> statements</li>
+<li class="marge_left">Programs --> module(s) std library imports</li> 
+<li class="marge_left">modules --> statements</li>
     <li class="marge_left"> statements --> expressions </li>
     <li class="marge_left">expressions --> objects</li>
 </ul> 

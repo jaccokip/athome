@@ -1,0 +1,31 @@
+@CHARSET "UTF-8";
+
+#form {
+  display: none;
+  position: relative;
+  top: 45px;
+  background: yellow;
+}
+div#topmenu {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 40px;
+  width: 100%;
+  background: #003399;
+}
+img.menubutton1 {
+  top: 5px;
+  left: 10px;
+}
+ul.topmenu {
+  position: relative;
+  display: inline-block;
+  top: -5px;
+  padding-left: 0;
+}
+li.topmenu {
+  padding: 5px 40px;
+  display: inline;
+  color: white;
+}

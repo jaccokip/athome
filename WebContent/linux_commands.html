@@ -6,12 +6,13 @@
 	Remove this if you use the .htaccess -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-	<title>HTML</title>
+	<title>Linux commands</title>
 	<meta name="description" content="">
 	<meta name="author" content="jacco" >
 	<!-- persistent stylesheet -->
 	<link rel="stylesheet" type="text/css" href="css/menu.css">
 	<link rel="stylesheet" type="text/css" href="css/sober.css">
+
 	<link rel="stylesheet" type="text/css" href="css/sober.css" title="Default">
 	<link rel="alternate stylesheet" type="text/css" href="css/pinned_menu.css" title="pinned">
 	
@@ -38,63 +39,66 @@
 </head>
 
 <body>
-
-<header>
-	<div>
-		<nav>
+<div>
+    <header>
+</div>
+<div style = "position:fixed;">
+	<nav>
+		<ul>
+			<li><img id="in_out" onclick="changeStyle('pinned')" src="images/Pin.png" width="30" height="30"></a>
+			<li><a href="index.html">Home</a>
+				<ul>
+					<li><a href="styles.html">Styles</a>
+						<ul>
+							<!-- <li><a href="#" onClick="changeStyle('stars');">stars</a></li> -->
+							<li><a href="#" onClick="changeStyle('grey');">cmd-line</a></li>
+							<li><a href="#" onClick="changeStyle('git');">git</a></li>
+							<!-- <li><a href="#" onClick="changeStyle('python');">python</a></li>
+							<li><a href="#" onClick="changeStyle('tcpdump');">tcpdump</a></li>
+							<li><a href="#" onClick="changeStyle('nmap');">nmap</a></li> -->
+							<li><a href="#" onClick="changeStyle('Default');">Reset to default</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		<li><a href="index.html">Naslag_OS <span class="caret"></span></a>
 			<ul>
-				<li><img id="in_out" onclick="changeStyle('pinned')" src="images/Pin.png" width="30" height="30"></a></li>
-				<li><a href="index.html">Home</a>
+				<li><a href="linux_commands.html">Commands</a></li>
+				<li><a href="tcpdump.html">Tcpdump</a></li>
+				<li><a href="nmap.html">Nmap</a></li>
+				<li><a href="vim.html">Vim</a></li>
+				<li><a href="postgresql.html">Postgresql</a></li>
+			</ul>
+		</li>
+		<li><a href="index.html">Naslag<span class="caret"></span></a>
+			<ul>
+				<li><a href="cat_api.html">Elasticsearch</a></li>
+				<li><a href="docker.html">Docker</a></li>
+				<li><a href="Escape_code.html">Escape characters</a></li>
+				<li><a href="git.html#table">Git</a></li>
+				<li><a href="python.html">Python</a>
 					<ul>
-						<li><a href="styles.html">Styles</a>
-							<ul>
-								<li><a href="#" onClick="changeStyle('grey');">cmd-line</a></li>
-								<li><a href="#" onClick="changeStyle('stars');">stars</a></li>
-								<!-- <li><a href="#" onClick="changeStyle('python');">python</a></li>
-								<li><a href="#" onClick="changeStyle('tcpdump');">tcpdump</a></li>
-								<li><a href="#" onClick="changeStyle('nmap');">nmap</a></li> -->
-								<li><a href="#" onClick="changeStyle('Default');">Reset to default</a></li>
-							</ul>
-						</li>
+						<li><a href="python_examples.html">Examples</a></li>
 					</ul>
 				</li>
-			<li><a href="index.html">Naslag_OS <span class="caret"></span></a>
-				<ul>
-					<li><a href="linux_commands.html">Commands</a></li>
-					<li><a href="tcpdump.html">Tcpdump</a></li>
-					<li><a href="nmap.html">Nmap</a></li>
-					<li><a href="vim.html">Vim</a></li>
-				</ul>
-			</li>
-			<li><a href="index.html">Naslag<span class="caret"></span></a>
-				<ul>
-					<li><a href="cat_api.html">Elasticsearch</a></li>
-					<li><a href="docker.html">Docker</a></li>
-					<li><a href="Escape_code.html">Escape characters</a></li>
-					<li><a href="git.html#table">Git</a></li>
-					<li><a href="puppet.html">Puppet</a>
-						<ul>
+				<li><a href="puppet.html">Puppet</a>
+					<ul>
 						<li><a href="puppet_training.html">Puppet_Training</a></li>
 					</ul>
-					</li>
-					<li><a href="python.html">Python</a>
-						<ul>
-							<li><a href="python_examples.html">Examples</a></li>
-						</ul>
-					</li>
+				</li>
+			</ul>
+		</li>
+		<li><a href="url_naar.html">Off Site</a>
 
-				</ul>
-			</li>
-			<li><a href="url_naar.html">Off Site</a>
-				<ul>
-					<li><a href="http://www.apache.org/" target="_blank">apache</a>
-						<ul>
-							<li><a href="http://httpd.apache.org/docs/2.0/misc/rewriteguide.html" target="_blank">rewrite</a></li>
-							<li><a href="https://www.addedbytes.com/articles/for-beginners/url-rewriting-for-beginners/" target="_blank">rewrite_dummies </a></li>
-						</ul>
-					</li>
-					<li><a href="http://www.ibm.com">IBM</a>
-						<ul>
+			<ul>
+				<li><a href="http://www.apache.org/" target="_blank">apache</a>
+					<ul>
+						<li><a href="http://httpd.apache.org/docs/2.0/misc/rewriteguide.html" target="_blank">rewrite</a></li>
+						<li><a href="https://www.addedbytes.com/articles/for-beginners/url-rewriting-for-beginners/" target="_blank">rewrite_dummies </a></li>
+					</ul>
+				</li>
+				<li><a href="http://www.ibm.com">IBM</a>
+					<ul>
 						<li><a href="http://www.ibm.com/developerworks" target="_blank">developers</a></li>
 					</ul>
 				</li>
@@ -118,12 +122,12 @@
 		<li><a href="help.html">Help</a></li>
 	</ul>
 </nav>
-	</div>
-	<br /> 
-	<br /> 	
-	<div class="header">
-		<iframe src="srchform.htm" width="400px" height="34px" border="0" frameborder="0" scrolling="no"></iframe>
-	</div>
+</div>
+<br /> 
+<br /> 	
+<div class="header" style = "position:fixed;">
+	<iframe src="srchform.htm" width="400px" height="34px" border="0" frameborder="0" scrolling="no"></iframe>
+</div>
 	
 	<div class="sub-header">
 		<input type="button" id="more_cols" value="More columns" />
@@ -141,7 +145,7 @@
 	<br /> 
 
 
-    <h2>1. Network Manager</h2>
+    <h2>Network Manager</h2>
     -<span id="titel">List hardware.</span> 
 	<ul class="command">lshw</ul>
 	-<span id="titel">List network info.</span> 
@@ -173,7 +177,7 @@
 	nm-tool is utility to report NetworkManager state and devices
 	<ul class="command">nm-tool</ul>
 
-   	<h2>2. handig</h2>
+   	<h2>handig</h2>
    	-<span id="titel">If you needed sudo but foregot</span>
 	<ul class="command">sudo !!</ul>
 	- <span id="titel">The below command generates a simple web page over HTTP for the directory structure tree and can be accessed at port 8000 in browser till interrupt signal is sent.</span>
@@ -230,8 +234,153 @@
 	-<span id="titel">The below command outputs processes and threads of a user. The option “L” (list threads) and “-F” (Full Format Listing).</span>
 	<ul class="command">$ ps -LF -u avi</ul>
 	
+	<h2>How to: Change / Setup bash custom prompt (PS1)</h2>
+		
+	<p>So how do you setup, change and pimp out Linux / UNIX shell prompt?</p>
+
+    <p>Most of us work with a shell prompt. By default most Linux distro displays hostname and current working directory. You can easily customize your prompt to display information important to you. You change look and feel by adding colors. In this small howto I will explain howto setup:
+    <ul>a] Howto customizing a bash shell to get a good looking prompt</ul>
+    <ul>b] Configure the appearance of the terminal.</ul>
+    <ul>c] Apply themes using bashish</ul>
+    <ul>d] Howto pimp out your shell prompt</ul>
+	</p>
+<p>Prompt is control via a special shell variable. You need to set PS1, PS2, PS3 and PS4 variable. If set, the value is executed as a command prior to issuing each primary prompt.
+
+    <ul>PS1 – The value of this parameter is expanded (see PROMPTING below) and used as the primary prompt string. The default value is \s-\v\$ .</ul>
+    <ul>PS2 – The value of this parameter is expanded as with PS1 and used as the secondary prompt string. The default is ></ul>
+    <ul>PS3 – The value of this parameter is used as the prompt for the select command</ul>
+    <ul>PS4 – The value of this parameter is expanded as with PS1 and the value is printed before each command bash displays during an execution trace. The first character of PS4 is replicated multiple times, as necessary, to indicate multiple levels of indirection. The default is +</ul>
+	</p>
+	
+	<h3>How do I display current prompt setting?</h3>
+
+	-<span id="titel">Simply use echo command, enter:</span>
+	<ul class="command">$ echo $PS1</ul>
+
+Output:
+
+	<ul class="command">\\u@\h \\W]\\$</ul>
+
+-<span id="titel">How do I modify or change the prompt?</span>
+
+-<span id="titel">Modifying the prompt is easy task. Just assign a new value to PS1 and hit enter key:</span>
+	<ul class="command">My old prompt –> [vivek@105r2 ~]$</ul>
+	<ul class="command">PS1="touch me : "</ul>
+
+Output: My new prompt
+
+	<ul class="command">touch me : </ul>
+
+So when executing interactively, bash displays the primary prompt PS1 when it is ready to read a command, and the secondary prompt PS2 when it needs more input to complete a command. Bash allows these prompt strings to be customized by inserting a number of backslash-escaped special characters that are decoded as follows:
+<table class="command"><col width="30"><col width="200">
+	<tr><td>    \a :</td><td> an ASCII bell character (07)</td></tr>
+	<tr id="balk"><td>    \d :</td><td> the date in “Weekday Month Date” format (e.g., “Tue May 26”)</td></tr>
+	<tr><td>    \D{format} :</td><td> the format is passed to strftime(3) and the result is inserted into the prompt string; an empty format results in a locale-specific time representation. The braces are required</td></tr>
+	<tr id="balk"><td>    \e :</td><td> an ASCII escape character (033)</td></tr>
+	<tr><td>    \h :</td><td> the hostname up to the first ‘.’</td></tr>
+	<tr id="balk"><td>    \H :</td><td> the hostname</td></tr>
+	<tr><td>    \j :</td><td> the number of jobs currently managed by the shell</td></tr>
+	<tr id="balk"><td>    \l :</td><td> the basename of the shellâ€™s terminal device name</td></tr>
+	<tr><td>    \n :</td><td> newline</td></tr>
+	<tr id="balk"><td>    \r :</td><td> carriage return</td></tr>
+	<tr><td>    \s :</td><td> the name of the shell, the basename of $0 (the portion following the final slash)</td></tr>
+	<tr id="balk"><td>    \t :</td><td> the current time in 24-hour HH:MM:SS format</td></tr>
+	<tr><td>    \T :</td><td> the current time in 12-hour HH:MM:SS format</td></tr>
+	<tr id="balk"><td>    \@ :</td><td> the current time in 12-hour am/pm format</td></tr>
+	<tr><td>    \A :</td><td> the current time in 24-hour HH:MM format</td></tr>
+	<tr id="balk"><td>    \u :</td><td> the username of the current user</td></tr>
+	<tr><td>    \v :</td><td> the version of bash (e.g., 2.00)</td></tr>
+	<tr id="balk"><td>    \V :</td><td> the release of bash, version + patch level (e.g., 2.00.0)</td></tr>
+	<tr><td>    \w :</td><td> the current working directory, with $HOME abbreviated with a tilde</td></tr>
+	<tr id="balk"><td>    \W :</td><td> the basename of the current working directory, with $HOME abbreviated with a tilde</td></tr>
+	<tr><td>    \! :</td><td> the history number of this command</td></tr>
+	<tr id="balk"><td>    \# :</td><td> the command number of this command</td></tr>
+	<tr><td>    \$ :</td><td> if the effective UID is 0, a #, otherwise a $</td></tr>
+	<tr id="balk"><td>    \nnn :</td><td> the character corresponding to the octal number nnn</td></tr>
+	<tr><td>    \\ :</td><td> a backslash</td></tr>
+	<tr id="balk"><td>    \[ :</td><td> begin a sequence of non-printing characters, which could be used to embed a terminal control sequence into the prompt</td></tr>
+	<tr><td>    \] :</td><td> end a sequence of non-printing characters</td></tr>
+</table>
+Let us try to set the prompt so that it can display todayâ€™d date and hostname:
+	<ul class="command">PS1="\d \h $ "</ul>
+
+Output:
+
+	<ul class="command">Sat Jun 02 server $</ul> 
+
+Now setup prompt to display date/time, hostname and current directory:
+	<ul class="command">$ PS1="[\d \t \u@\h:\w ] $ "</ul>
+
+Output:
+
+	<ul class="command">[Sat Jun 02 14:24:12 vivek@server:~ ] $</ul>
+
+How do I add colors to my prompt?
+
+You can change the color of your shell prompt to impress your friend or to make your own life quite easy while working at command prompt.
+Putting it all together
+
+Let us say when you login as root/superuser, you want to get visual confirmation using red color prompt. To distinguish between superuser and normal user you use last character in the prompt, if it changes from $ to #, you have superuser privileges. So let us set your prompt color to RED when you login as root, otherwise display normal prompt.
+
+Open /etc/bashrc (Redhat and friends) / or /etc/bash.bashrc (Debian/Ubuntu) or /etc/bash.bashrc.local (Suse and others) file and append following code:
+	<ul class="command"># vi /etc/bashrc</ul>
+
+or
+	<ul class="command">$ sudo gedit /etc/bashrc</ul>
+
+Append the code as follows
+
+	<ul class="command"># If id command returns zero, you ve root access.</ul>
+	<ul class="command">if [ $(id -u) -eq 0 ];</ul>
+then # you are root, set red colour prompt
+	<ul class="command">  PS1="\\[$(tput setaf 1)\\]\\u@\\h:\\w #\\[$(tput sgr0)\\]"</ul>
+	<ul class="command">else # normal</ul>
+	<ul class="command">  PS1="[\\u@\\h:\\w] $"</ul>
+	<ul class="command">fi</ul>
+
+Close and save the file.
+
+My firepower prompt
+
+Check this out:
+firepower-prompt.jpg
+	
+<h3>Color Bash Prompt on Ubuntu and Debian</h3> 
+
+	Red Prompt for root
+
+-<span id="titel">Edit ”/root/.bashrc” and change ”force_color_prompt=yes” like for your user.</span>
+
+Now change the color to red. Search this line:
+
+	<ul class="command">PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '</ul>
+
+and change it to:
+
+	<ul class="command">PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '</ul>
+
+Note: For this change to take effect, you must log out then log in again.
+<table>
+<tr>	<span id="titel">Other colors</span>
+<tr class="command"><th>Color</th><th>	Code</th>
+<tr class="command" id="balk"><td>Black</td><td>	30</td></tr>
+<tr class="command"><td>Blue</td><td>	34</td></tr>
+<tr class="command" id="balk"><td>Green</td><td>	32</td></tr>
+<tr class="command"><td>Cyan</td><td>	36</td></tr>
+<tr class="command" id="balk"><td>Red</td><td>	31</td></tr>
+<tr class="command"><td>Purple</td><td>	35</td></tr>
+<tr class="command" id="balk"><td>Brown</td><td>	33</td></tr>
+<tr class="command"><td>Blue</td><td>	34</td></tr>
+<tr class="command" id="balk"><td>Green</td><td>	32</td></tr>
+<tr class="command"><td>Cyan</td><td>	36</td></tr>
+<tr class="command" id="balk"><td>Red</td><td>	31</td></tr>
+<tr class="command"><td>Purple</td><td>	35</td></tr>
+<tr class="command" id="balk"><td>Brown</td><td>	33</td></tr>
+	</table>
+
+		
    	
-   	<h2>3. tar command examples</h2>- <span id="titel">Create</span> a new <span id="titel">tar</span> archive.
+   	<h2>tar command examples</h2>- <span id="titel">Create</span> a new <span id="titel">tar</span> archive.
 	<ul class="command">tar cvf archive_name.tar dirname/</ul>
 	<br />- <span id="titel">Extract</span> from an existing <span id="titel">tar</span> archive.
 	<ul class="command">tar xvf archive_name.tar</ul> 
@@ -258,10 +407,10 @@
 	To <span id="titel">extract</span> all members of letters<span id="titel">.zip</span> into the current directory only:
 	<ul class="command">unzip -j letters</ul>
 	
-	<h2>2. grep command examples</h2>
+	<h2>grep command examples</h2>
 	- Search for a given string in a file (case in-sensitive search).
  	<ul class="command">grep -i "the" demo_file</ul>
-	<br /><br />- Print the matched line, along with the 3 lines after it.
+	- Print the matched line, along with the 3 lines after it.
 	<ul class="command">grep -A 3 -i "example" demo_text</ul>
 	
  	
@@ -327,7 +476,7 @@
  
 	
  	
-	<h2>3. find command examples</h2>
+	<h2>find command examples</h2>
 	find <i>where-to-look <font color="red">criteria</font><font color="green"> what-to-do</font></i><br />
 	You can specify as many places to search as you wish:
 	<ul class="command">find /tmp /var/tmp . $HOME <font color="red">-name foo</font></ul>
@@ -348,7 +497,7 @@
 	
 	
 
-	<h2>4. ssh command examples</h2>
+	<h2>ssh command examples</h2>
 
 	- Login to remote host
 
@@ -363,7 +512,7 @@
 	<ul class="command">ssh -V<br />
 	OpenSSH_3.9p1, OpenSSL 0.9.7a Feb 19 2003</ul>
 
-	<h2>5. sed command examples</h2>
+	<h2>sed command examples</h2>
 
 
 	- When you copy a DOS file to Unix, you could find \r\n in the end of each line.<br /> 
@@ -379,7 +528,7 @@
 
 	<ul class="command">sed '/./=' thegeekstuff.txt | sed 'N; s/\n/ /'</ul>
 
-	<h2>6. awk command examples</h2>
+	<h2>awk command examples</h2>
 
 	- Remove duplicate lines using awk
 
@@ -393,7 +542,7 @@
 
 	<ul class="command">awk '{print $2,$5;}' employee.txt</ul>
 
-	<h2>7. vim command examples</h2>
+	<h2>vim command examples</h2>
 
 	- Go to the 143rd line of file
 
@@ -410,7 +559,7 @@
 
 
 
-	<h2>8. diff command examples</h2>
+	<h2>diff command examples</h2>
 
 	- Ignore white space while comparing.
 
@@ -419,7 +568,7 @@
 	&lt; John Doe --- > John M Doe<br />
 	&gt; Jason Bourne</ul>
 
-	<h2>9. sort command examples</h2>
+	<h2>sort command examples</h2>
 
 
 	- Sort a file in ascending order
@@ -434,7 +583,7 @@
 
 	<ul class="command">sort -t: -k 3n /etc/passwd | more</ul>
 
-	<h2>10. export command examples</h2>
+	<h2>export command examples</h2>
 
 	- To view oracle related environment variables.
 
@@ -449,7 +598,7 @@
 
 	<ul class="command"> export ORACLE_HOME=/u01/app/oracle/product/10.2.0</ul>
 
-	<h2>11. xargs command examples</h2>
+	<h2>xargs command examples</h2>
 
 
 	- Copy all images to external hard-drive
@@ -465,7 +614,7 @@
 
 	<ul class="command">cat url-list.txt | xargs wget –c</ul>
 
-	<h2>12. ls command examples</h2>
+	<h2>ls command examples</h2>
 
 
 	- Display filesize in human readable format (e.g. KB, MB etc.,)
@@ -482,7 +631,7 @@
 
 	<ul class="command">ls -F</ul>
 
-	<h2>13. Attributen list and set </h2>
+	<h2>Attributen list and set </h2>
 	
 	<ul class="command">lsattr /etc/elasticsearch/elasticsearch.yml</ul>
 
@@ -490,21 +639,21 @@
 <ul class="command"> chattr +i /etc/elasticsearch/elasticsearch.yml</ul>
 
 
-	<h2>13. pwd command</h2>
+	<h2>pwd command</h2>
 
 	- Print working directory.<br /> 
 	<ul class="command">pwd </ul> 
  
 	What else can be said about the good old pwd who has been printing the current directory name for ages.
 
-	<h2>14. cd command examples</h2>
+	<h2>cd command examples</h2>
 	- to toggle between the last two directories
 	Use <ul class="command">cd -</ul> 
    
 	- to automatically correct mistyped directory names on cd
 	Use “<ul class="command">shopt -s cdspell</ul> 
 
-	<h2>15. gzip command examples</h2>
+	<h2>gzip command examples</h2>
 
 	- To create a *.gz compressed file:
 
@@ -522,7 +671,7 @@
              23709               97975  75.8% asp-patch-rpms.txt</ul>
 
 
-	<h2>18. shutdown command examples</h2>
+	<h2>shutdown command examples</h2>
 
 
 - Shutdown the system and turn the power off immediately.
@@ -543,7 +692,7 @@
 
   <ul class="command">shutdown -Fr now</ul>
 
-<h2>19. ftp command examples</h2>
+<h2>ftp command examples</h2>
 
 Both ftp and secure ftp (sftp) has similar commands.<br /> 
 To connect to a remote server and download multiple files, do the following.
@@ -560,7 +709,7 @@ To view the file names located on the remote server before downloading, mls ftp 
       /ftptest/samplereport.html<br />
       /ftptest/usage.html</ul>
 
-<h2>20. crontab command examples</h2>
+<h2>crontab command examples</h2>
 
 - View crontab entry for a specific user
 
@@ -569,7 +718,7 @@ To view the file names located on the remote server before downloading, mls ftp 
 - Schedule a cron job every 10 minutes.
 
 <ul class="command">  * /10 * * * * /home/ramesh/check-disk-space</ul>
-<h2>21. service command examples</h2>
+<h2>service command examples</h2>
 
 Service command is used to run the system V init scripts.<br /> 
 i.e Instead of calling the scripts located in the /etc/init.d/ directory with their full path, you can use the service command.<br />
@@ -586,7 +735,7 @@ i.e Instead of calling the scripts located in the /etc/init.d/ directory with th
 
   <ul class="command">service ssh restart</ul>
 
-<h2>22. ps command examples</h2>
+<h2>ps command examples</h2>
 
 ps command is used to display information about the processes that are running in the system.<br />
 
@@ -601,7 +750,7 @@ H option stands for process hierarchy.
 
    <ul class="command">ps -efH | more</ul>
 
-<h2>23. free command examples</h2>
+<h2>free command examples</h2>
 
 This command is used to display the free, used, swap memory available in the system.<br />
 
@@ -633,7 +782,7 @@ If you want to see a total memory ( including the swap), use the -t switch, whic
   Swap:  4000176     0     4000176<br />
   Total: 7566584   1592148     5974436</ul>
 
-<h2>24. top command examples</h2>
+<h2>top command examples</h2>
 
 <ul class="command">top </ul>
  
@@ -653,7 +802,7 @@ The following will show only the top processes that belongs to oracle user.
 
    <ul class="command">top -u oracle</ul>
 
-<h2>25. df command examples</h2>
+<h2>df command examples</h2>
 
 Displays the file system disk space usage.<br /> 
 By default df -k displays output in bytes.
@@ -678,7 +827,7 @@ Use -T option to display what type of file system.
   /dev/sda1 ext4 29530400 3233120 24797216 12% /<br />
   /dev/sda2 ext4 120367992 50171596 64082060 44% /home</ul>
 
-<h2>26. kill command examples</h2>
+<h2>kill command examples</h2>
 
 Use kill command to terminate a process.<br /> 
 First get the process id using ps -ef command, then use kill -9 to kill the running Linux process as shown below.<br /> 
@@ -691,7 +840,7 @@ ramesh 7243 7222 9 22:43 pts/2 00:00:00 vim
 
    <ul class="command">kill -9 7243</ul>
 
-<h2>27. rm command examples</h2>
+<h2>rm command examples</h2>
 
 Get confirmation before removing the file.
 
@@ -708,7 +857,7 @@ This also removes the example directory itself.
 
   <ul class="command">rm -r example</ul>
 
-<h2>28. cp command examples</h2>
+<h2>cp command examples</h2>
 
 Copy file1 to file2 preserving the mode, ownership and timestamp.
 
@@ -718,7 +867,7 @@ Copy file1 to file2. if file2 exists prompt for confirmation before overwritting
 
   <ul class="command">cp -i file1 file2</ul>
 
-<h2>29. mv command examples</h2>
+<h2>mv command examples</h2>
 
 Rename file1 to file2. if file2 exists prompt for confirmation before overwritting it.
 
@@ -730,7 +879,7 @@ mv -v will print what is happening during file rename, which is useful while spe
 
   <ul class="command">mv -v file1 file2</ul>
 
-<h2>30. cat command examples</h2>
+<h2>cat command examples</h2>
 
 You can view multiple files at the same time.<br /> 
 Following example prints the content of file1 followed by file2 to stdout.
@@ -749,7 +898,7 @@ While displaying the file, following cat -n command will prepend the line number
    5	    rotate 1<br />
    6	}</ul>
 
-<h2>31. mount command examples</h2>
+<h2>mount command examples</h2>
 
 To mount a file system, you should first create a directory and mount it as shown below.
 
@@ -761,7 +910,7 @@ i.e Anytime system is restarted, the filesystem will be mounted.
 
 /dev/sdb1 /u01 ext2 defaults 0 2
 
-<h2>32. chmod command examples</h2>
+<h2>chmod command examples</h2>
 
 chmod command is used to change the permissions for a file or directory.<br />
 
@@ -777,7 +926,7 @@ Apply the file permissions recursively to all the files in the sub-directories.
 
   <ul class="command">chmod -R ug+rwx file.txt</ul>
 
-<h2>33. chown command examples</h2>
+<h2>chown command examples</h2>
 
 chown command is used to change the owner and group of a file.<br /> \
 
@@ -791,7 +940,7 @@ Use -R to change the ownership recursively.
 
   <ul class="command">chown -R oracle:dba /home/oracle</ul>
 
-<h2>34. passwd command examples</h2>
+<h2>passwd command examples</h2>
 
 Change your password from command line using passwd.<br /> 
 This will prompt for the old password followed by the new password.
@@ -810,7 +959,7 @@ Once the password is disabled, the user can login without entering the password.
 
   <ul class="command">passwd -d USERNAME</ul>
 
-<h2>35. mkdir command examples</h2>
+<h2>mkdir command examples</h2>
 
 Following example creates a directory called temp under your home directory.
 
@@ -823,7 +972,7 @@ If any of these directories doesn’t exist, it will create them.
 
   <ul class="command">mkdir -p dir1/dir2/dir3/dir4/</ul>
 
-<h2>36. ifconfig command examples</h2>
+<h2>ifconfig command examples</h2>
 
 Use ifconfig command to view or configure a network interface on the Linux system.<br />
 
@@ -837,7 +986,7 @@ Start or stop a specific interface using up and down command as shown below.
   <ul class="command">ifconfig eth0 up</ul>
   <ul class="command">ifconfig eth0 down</ul>
 
-<h2>37. uname command examples</h2>
+<h2>uname command examples</h2>
 
 Uname command displays important information about the system such as — Kernel name, Host name, Kernel release number, Processor type, etc.,
 
@@ -846,7 +995,7 @@ Sample uname output from a Ubuntu laptop is shown below.
   <ul class="command">uname -a<br />
   Linux john-laptop 2.6.32-24-generic #41-Ubuntu SMP Thu Aug 19 01:12:52 UTC 2010 i686 GNU/Linux</ul>
 
-<h2>38. whereis command examples</h2>
+<h2>whereis command examples</h2>
 
 When you want to find out where a specific Unix command exists (for example, where does ls command exists?), you can execute the following command.
 
@@ -860,7 +1009,7 @@ This searches for the executable lsmk in the /tmp directory, and displays it, if
   <ul class="command">whereis -u -B /tmp -f lsmk<br />
   lsmk: /tmp/lsmk</ul>
 
-<h2>39. whatis command examples</h2>
+<h2>whatis command examples</h2>
 
 Whatis command displays a single line description about a command.
 
@@ -871,7 +1020,7 @@ Whatis command displays a single line description about a command.
   <ul class="command">whatis ifconfig<br />
   ifconfig (8) - configure a network interface</ul>
 
-<h2>40. locate command examples</h2>
+<h2>locate command examples</h2>
 
 Using locate command you can quickly search for the location of a specific file (or group of files).<br /> 
 Locate command uses the database created by updatedb.<br />
@@ -888,7 +1037,7 @@ The example below shows all files in the system that contains the word crontab i
   /usr/share/man/man5/crontab.5.gz<br />
   /usr/share/vim/vim72/syntax/crontab.vim</ul>
 
-<h2>41. man command examples</h2>
+<h2>man command examples</h2>
 
 Display the man page of a specific command.
 
@@ -920,7 +1069,7 @@ To view section 5 of crontab man page, do the following.<br />
 
   man 5 crontab
 
-<h2>42. tail command examples</h2>
+<h2>tail command examples</h2>
 
 Print the last 10 lines of a file by default.
 
@@ -938,7 +1087,7 @@ The command can be terminated using CTRL-C.
 
   <ul class="command">tail -f log-file</ul>
 
-<h2>43. less command examples</h2>
+<h2>less command examples</h2>
 
 less is very efficient while viewing huge log files, as it doesn’t need to load the full file while opening.
 
@@ -950,7 +1099,7 @@ One you open a file using less command, following two keys are very helpful.
   <ul class="command">CTRL+F – forward one window</ul>
   <ul class="command">CTRL+B – backward one window</ul>
 
-<h2>44. su command examples</h2>
+<h2>su command examples</h2>
 
 Switch to a different user account using su command.<br /> 
 Super user can switch to any other user without entering their password.
@@ -971,7 +1120,7 @@ Login to a specified user account, and execute the specified shell instead of th
 
   <ul class="command">su -s 'SHELLNAME' USERNAME</ul>
 
-<h2>45. mysql command examples</h2>
+<h2>mysql command examples</h2>
 
 mysql is probably the most widely used open source database on Linux.<br /> 
 Even if you don’t run a mysql database on your server, you might end-up using the mysql command ( client ) to connect to a mysql database running on the remote server.<br />
@@ -989,7 +1138,7 @@ To connect to a local mysql database.
 
 If you want to specify the mysql root password in the command line itself, enter it immediately after -p (without any space). 
 
-<h2>46. yum command examples</h2>
+<h2>yum command examples</h2>
 To install apache using yum.
 
   <ul class="command">yum install httpd</ul>
@@ -1003,7 +1152,7 @@ To uninstall/remove apache using yum.
 
   <ul class="command">yum remove httpd</ul>
 
-<h2>47. rpm command examples</h2>
+<h2>rpm command examples</h2>
 
 To install apache using rpm.
 
@@ -1019,13 +1168,13 @@ To uninstall/remove apache using rpm.
 
   <ul class="command">rpm -ev httpd</ul>
 
-<h2>48. ping command examples</h2>
+<h2>ping command examples</h2>
 
 Ping a remote host by sending only 5 packets.
 
   <ul class="command">ping -c 5 gmail.com</ul>
 
-<h2>49. date command examples</h2>
+<h2>date command examples</h2>
 
 Set the system date:
 
@@ -1038,7 +1187,7 @@ Once you’ve changed the system date, you should syncronize the hardware clock 
 
   style="background-color: lightgray style="font-family: Courier;">hwclock --systohc –utc
 
-<h2>50. wget command examples</h2>
+<h2>wget command examples</h2>
 
 The quick and effective method to download software, music, video from internet is using wget command.
 

@@ -15,6 +15,10 @@ body {
 	margin-left: 60px;
 }
 
+p {
+	padding-top: 7px;
+}
+
 h1 {
 	color: #990000;
 	background-color: #FFFFFF;
@@ -36,21 +40,25 @@ h3 {
 	font-size: 14px;
 }
 
+
+
 table {
 	border: 1px solid #dddddd;
     font-family: arial, sans-serif;
     border-collapse: collapse;
+    border-spacing: 1px;
     width: 100%;
+    table-layout : fixed;
+}   
+
+th {
+	text-align: left;
 }
 
-td, th {
-    text-align: left;
-    padding: 8px;
-	width:200px;
-}
+
 
 .header {
-	position: absolute;
+	position: fixed;
 	left: 650px;
 	top: 15px;
 	z-index: 1; /* menu's op de voorgrond */
@@ -61,6 +69,12 @@ td, th {
 	left: 650px;
 	top: 40px;
 	z-index: 1; /* menu's op de voorgrond */
+}
+
+.iframe {
+	border: 0;
+	frameborder: 0;
+	scrolling: "no";
 }
 
 .start {
@@ -352,6 +366,6 @@ span.dropt:hover span {
 	padding-left:200px;
 }
 
-#balk {
+.balk {
     background-color: #dddddd;
 }

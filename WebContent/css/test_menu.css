@@ -1,0 +1,84 @@
+nav, ul, li,  {
+	margin: 0; padding: 0; border: 0;
+	}
+
+nav {
+	/* margin: 10px auto; */
+	z-index: 3; 
+	text-align: left;
+	}
+
+nav ul ul {
+	z-index: 3; 
+	display: none;
+	}
+
+nav ul li:hover > ul {
+	z-index: 3; 
+		display: block;
+	}
+
+nav ul {
+	z-index: 3; 
+	/* background: #efefef;  
+	box-shadow: 0px 0px 9px rgba(0,0,0,0.15); */
+	list-style: none; /* voorkomt  punten voor worden */
+	position: relative;
+	margin: 0;
+	} 
+
+nav ul:after {
+	z-index: 3; 
+	content: ""; clear: both; display: block;
+	}
+
+nav ul li {
+	z-index: 3; 
+	float: left;
+	}
+			
+nav ul li:hover {
+	z-index: 3; 
+	background: #4b545f;
+	}
+
+nav ul li:hover a {
+	z-index: 3; 
+	color: #fff;
+	}
+		
+nav ul li a {
+	z-index: 3; 
+	display: block; padding: 10px 20px;
+	color: #757575; text-decoration: none;
+	}
+			
+		
+nav ul ul {
+	z-index: 3; 
+	background: #5f6975; padding: 0; /* border-radius: 20px; */
+	position: absolute; top: 100%; 
+	}
+
+nav ul ul li {
+	z-index: 3; 
+	float: none; 
+	border-top: 1px solid #6b727c; /* border-radius: 20px; */
+	border-bottom: 1px solid #575f6a; position: relative; /* border-radius: 20px; */
+	}
+
+nav ul ul li a {
+	z-index: 3; 
+	padding: 15px 40px;
+	color: #fff;
+	}	
+
+nav ul ul li a:hover {
+	z-index: 3; 
+	background: #4b545f;
+	}
+		
+nav ul ul ul {
+	z-index: 3; 
+	position: absolute; left: 100%; top:0;
+	}

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+	Remove this if you use the .htaccess -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<title>HTML</title>
+	<meta name="description" content="">
+	<meta name="author" content="jacco" >
+	<!-- persistent stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link rel="stylesheet" type="text/css" href="css/sober.css">
+	<link rel="stylesheet" type="text/css" href="css/sober.css" title="Default">
+	<link rel="alternate stylesheet" type="text/css" href="css/pinned_menu.css" title="pinned">
+
+	<link rel="alternate stylesheet" type="text/css" href="css/git.css" title="git">
+	<!-- <link rel="alternate stylesheet" type="text/css" href="css/python.css" title="python">
+		<link rel="alternate stylesheet" type="text/css" href="css/com_back.css" title="grey">
+	<link rel="alternate stylesheet" type="text/css" href="css/tcpdump.css" title="tcpdump"> -->
+	<link rel="alternate stylesheet" type="text/css" href="css/nmap.css" title="nmap">
+
+	<!-- <script src="scripts/nomouse.js"></script> -->
+	<script type="text/javascript" src="scripts/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src="scripts/col-test.js"></script>
+
+	<script src="scripts/swapstyle.js"></script>
+	<script type="text/javascript">
+	if( self != top ) { document.write('<style type="text/css">\n#backlinks { display: none; }\n<\/style>'); }
+	</script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+
+<body>
+<div>
+    <header>
+</div>
+<div style = "position:fixed;">
+	<nav>
+		<ul>
+			<li><img id="in_out" onclick="changeStyle('pinned')" src="images/Pin.png" width="30" height="30"></a>
+			<li><a href="index.html">Home</a>
+				<ul>
+					<li><a href="styles.html">Styles</a>
+						<ul>
+							<!-- <li><a href="#" onClick="changeStyle('stars');">stars</a></li> -->
+							<li><a href="#" onClick="changeStyle('grey');">cmd-line</a></li>
+							<li><a href="#" onClick="changeStyle('git');">git</a></li>
+							<!-- <li><a href="#" onClick="changeStyle('python');">python</a></li>
+							<li><a href="#" onClick="changeStyle('tcpdump');">tcpdump</a></li>
+							<li><a href="#" onClick="changeStyle('nmap');">nmap</a></li> -->
+							<li><a href="#" onClick="changeStyle('Default');">Reset to default</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		<li><a href="index.html">Naslag_OS <span class="caret"></span></a>
+			<ul>
+				<li><a href="linux_commands.html">Commands</a></li>
+				<li><a href="tcpdump.html">Tcpdump</a></li>
+				<li><a href="nmap.html">Nmap</a></li>
+				<li><a href="vim.html">Vim</a></li>
+				<li><a href="postgresql.html">Postgresql</a></li>
+			</ul>
+		</li>
+		<li><a href="index.html">Naslag<span class="caret"></span></a>
+			<ul>
+				<li><a href="cat_api.html">Elasticsearch</a></li>
+				<li><a href="docker.html">Docker</a></li>
+				<li><a href="Escape_code.html">Escape characters</a></li>
+				<li><a href="git.html#table">Git</a></li>
+				<li><a href="python.html">Python</a>
+					<ul>
+						<li><a href="python_examples.html">Examples</a></li>
+					</ul>
+				</li>
+				<li><a href="puppet.html">Puppet</a>
+					<ul>
+						<li><a href="puppet_training.html">Puppet_Training</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="url_naar.html">Off Site</a>
+
+			<ul>
+				<li><a href="http://www.apache.org/" target="_blank">apache</a>
+					<ul>
+						<li><a href="http://httpd.apache.org/docs/2.0/misc/rewriteguide.html" target="_blank">rewrite</a></li>
+						<li><a href="https://www.addedbytes.com/articles/for-beginners/url-rewriting-for-beginners/" target="_blank">rewrite_dummies </a></li>
+					</ul>
+				</li>
+				<li><a href="http://www.ibm.com">IBM</a>
+					<ul>
+						<li><a href="http://www.ibm.com/developerworks" target="_blank">developers</a></li>
+					</ul>
+				</li>
+				<li><a href="http://nl.wikipedia.org/wiki/HyperText_Markup_Language">HTML</a>
+						<ul>
+							<li><a href="http://www.w3.org/TR/html5/" target="_blank">W3C</a></li>
+							<li><a href="http://www.w3schools.com/html/html5_intro.asp" target="_blank">W3C_School</a></li>
+							<li><a href="http://validator.w3.org/" target="_blank">Validator</a></li>
+						</ul>
+					</li>
+				<li><a href="http://nl.wikipedia.org/wiki/CSS">CSS</a>
+						<ul>
+							<li><a href="http://www.w3.org/standards/techs/css" target="_blank">Current_Status</a></li>
+							<li><a href="http://www.w3schools.com/css/css3_intro.asp" target="_blank">W3C_School</a></li>
+							<li><a href="https://jigsaw.w3.org/css-validator/" target="_blank">Validator</a></li>
+						</ul>
+					</li>
+			</ul>
+		</li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="help.html">Help</a></li>
+	</ul>
+</nav>
+	</div>
+<br /> 
+<br />
+	<div class="header">
+		<iframe src="srchform.htm" width="400px" height="34px" border="0" frameborder="0" scrolling="no"></iframe>
+	</div>
+	
+	<div class="sub-header">
+		<input type="button" id="more_cols" value="More columns" />
+    	<input type="button" id="less_cols" value="Less columns" />
+    	<input type="button" id="more_gap" value="More gap" />
+    	<input type="button" id="less_gap" value="Less gap" />
+	</div>
+
+</header>
+
+<!-- <div class="container" id="container"> -->
+<div class="container" id="container">
+
+<h1>postgresql</h1>
+<p>Super simple. A quick sudo apt-get install postgresql will get you going. This will create a postgres user and automatically create a new cluster, so you won’t need to do an initdb.</p>
+
+<p>To run administration commands on your server, you’ll need to log in as the postgres user. <br />Start by setting a password for this user:</p>
+<p class="command"> sudo passwd postgres</p>
+<p>
+Now you can do a <br />
+</p>
+<p class="command">
+su - postgres </p>
+to become this user and You can make sure this is working by typing</p>
+<p class="command"> psql postgres </p>
+<p>and confirming that the prompt looks like this:</p><p class="command"> 'postgres=#’,</p> which indicates you’re a superuser.
+</p>
+<p>
+Creating a user and a database
+</p>
+<p class="command">
+CREATE USER sonar WITH PASSWORD 'sonar';<br />
+CREATE DATABASE sonar WITH OWNER sonar ENCODING 'UTF8';</p>
+<p>
+Let’s assume we have a typical scenario: a Rails application which needs a development and test DB. We’ll also want a user specifically for this application. I’ll explain how this would be done in MySQL, for comparison, and then PostgreSQL.
+</p>
+<p>
+Let’s do this in PostgreSQL. We’ll be using the terminal commands, so this will need to be done as your postgres superuser (on OSX, this might just be your normal user; on Linux, it’s probably the postgres user):
+</p>
+<p class="command">
+$ createuser rails --pwprompt<br />
+Enter password for new role: <enter password><br />
+Enter it again: <enter password><br />
+Shall the new role be a superuser? (y/n) n<br />
+Shall the new role be allowed to create databases? (y/n) y<br />
+Shall the new role be allowed to create more new roles? (y/n) n<br />
+<br />
+$ createdb -O rails blog_dev<br />
+</p>
+Now we’ve created a user ('rails’) who is not a superuser, but does have permission to create databases. This user will be allowed to drop and create its own databases (a similar set of permissions to our MySQL example above). <br />We then use the createdb command, creating a new database called blog and setting its owner to rails.
+</p>
+<p>
+You’ll now be able to use psql to log in as the new user and create another database:
+</p>
+<p class="command">
+$ psql postgres rails
+</p>
+<p class="command">
+postgres=> CREATE DATABASE blog_test;
+CREATE DATABASE
+</p>
+<p>
+<table>
+<col width="90">
+  <col width="200">
+<tr class="balk"><td class="command">\a</td><td>			Output format aligned/unaligned</td></tr>
+<tr><td class="command">\c (connect)</td><td>		[ -reuse-previous=on|off ] [ dbname [ username ] [ host ] [ port ] | conninfo ]</td></tr>
+<tr class="balk"><td class="command">\cd	</td><td>		change current working directory</td></tr>
+<tr><td class="command">\conninfo</td><td>		Outputs information about the current database connection.</td></tr>
+<tr class="balk"><td class="command">\copy </td><td>			{ table [ ( column_list ) ] | ( query ) } { from | to } { 'filename' | program 'command' | stdin | stdout | pstdin | pstdout } [ [ with ] ( option [, ...] ) ]</td></tr>
+<tr><td class="command">\d+	</td><td>		List of relations</td></tr>
+<tr class="balk"><td class="command">\da	</td><td>		List of aggregate functions</td></tr>
+<tr><td class="command">\db+	</td><td>		List of tablespaces</td></tr>
+<tr class="balk"><td class="command">\dc		</td><td>	List of conversions</td></tr>
+<tr><td class="command">\dD		</td><td>	List of domains</td></tr>
+<tr class="balk"><td class="command">\dd		</td><td>	Object descriptions</td></tr>
+<tr><td class="command">\ddp	</td><td>		Default access privileges</td></tr>
+<tr class="balk"><td class="command">\df		</td><td>	list of functions</td></tr>
+<tr><td class="command">\dp		</td><td>	Access privileges</td></tr>
+<tr class="balk"><td class="command">\drds 	</td><td>		[ role-pattern [ database-pattern ] ] Lists defined configuration settings. These settings can be role-specific, database-specific, or both.</td></tr>
+<tr><td class="command">\dT[S+] </td><td>		[ pattern ] Lists data types. If pattern is specified, only types whose names match the pattern are listed. If + is appended to the command name, each type is listed with its internal name and size, its allowed values if it is an enum type, and its associated permissions. By default, only user-created objects are shown; supply a pattern or the S modifier to include system objects</td></tr>
+<tr class="balk"><td class="command">\du 	</td><td>		To get a list of roles</td></tr>
+<tr><td class="command">\dx[+]	</td><td>		List of installed extensions</td></tr>
+<tr class="balk"><td class="command">\dy[+]	</td><td>		List of event triggers</td></tr>
+<tr><td class="command">\e \edit	</td><td>	[ filename ] [ line_number ] If filename is specified, the file is edited; after the editor exits, its content is copied back to the query buffer. If no filename is given, the current query buffer is copied to a temporary file which is then edited in the same fashion.</td></tr>
+<tr class="balk"><td class="command">\echo text [ ... ]</td><td>	Prints the arguments to the standard output, separated by one space and followed by a newline. This can be useful to intersperse information in the output of scripts. For example: \echo `date`		Tue Oct 26 21:40:57 CEST 1999</td></tr>
+<tr><td class="command">\ef 	</td><td>		[ function_description [ line_number ] ]    This command fetches and edits the definition of the named function, in the form of a CREATE OR REPLACE FUNCTION command. Editing is done in the same way as for \edit. After the editor exits, the updated command waits in the query buffer; type semicolon or \g to send it, or \r to cancel.</td></tr>
+<tr class="balk"><td class="command">\f [ string ]	</td><td>	Sets the field separator for unaligned query output. The default is the vertical bar (|). See also \pset for a generic way of setting output options.</td></tr>
+<tr><td class="command">\g [ filename ]</td><td>
+<tr class="balk"><td class="command">\g [ |command ]	</td><td>	Sends the current query input buffer to the server, and optionally stores the query's output in filename or pipes the output to the shell command command. The file or command is written to only if the query successfully returns zero or more tuples, not if the query fails or is a non-data-returning SQL command. A bare \g is essentially equivalent to a semicolon. A \g with argument is a "one-shot" alternative to the \o command.</td></tr>
+<tr><td class="command">\gset [ prefix ]</td><td>	Sends the current query input buffer to the server and stores the query's output into psql variables (see Variables). The query to be executed must return exactly one row. Each column of the row is stored into a separate variable, named the same as the column. For example:</td></tr>
+<tr class="balk"><td class="command"></td><td> 	=> SELECT 'hello' AS var1, 10 AS var2</td></tr>
+<tr><td class="command"> </td><td>  -> \gset</td></tr>
+<tr class="balk"><td class="command"> </td><td>  => \echo :var1 :var2</td></tr>
+<tr><td class="command"> </td><td>  hello 10</td></tr>
+<tr class="balk"><td class="command"> </td><td></td></tr>
+<tr><td class="command"> </td><td>	If you specify a prefix, that string is prepended to the query's column names to create the variable names to use:</td></tr>
+<tr class="balk"><td class="command"> </td><td></td></tr>
+<tr><td class="command"> </td><td>	=> SELECT 'hello' AS var1, 10 AS var2</td></tr>
+<tr class="balk"><td class="command"> </td><td>	-> \gset result_</td></tr>
+<tr><td class="command"> </td><td>	=> \echo :result_var1 :result_var2</td></tr>
+<tr class="balk"><td class="command"> </td><td>	hello 10</td></tr>
+<tr><td class="command"> </td><td></td></tr>
+<tr class="balk"><td class="command"> </td><td>	If a column result is NULL, the corresponding variable is unset rather than being set.</td></tr>
+<tr><td class="command"> </td><td></td></tr>
+<tr class="balk"><td class="command">  </td><td>	If the query fails or does not return one row, no variables are changed.</td></tr>
+<tr><td class="command">\h or<br /> \help [ command ]</td><td>	Gives syntax help on the specified SQL command. If command is not specified, then psql will list all the commands for which syntax help is available. If command is an asterisk (*), then syntax help on all SQL commands is shown.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td></td><td>Note: To simplify typing, commands that consists of several words do not have to be quoted. Thus it is fine to type \help alter table.</td></tr>
+<t class="balk"r><td>&nbsp;</td><td></td></tr>
+<tr><td class="command">\H or<br /> \html	</td><td>	Turns on HTML query output format. If the HTML format is already on, it is switched back to the default aligned text format. This command is for compatibility and convenience, but see \pset about setting other output options.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td class="command">\i or<br /> \include filename</td><td>	Reads input from the file filename and executes it as though it had been typed on the keyboard.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td></td><td> If filename is - (hyphen), then standard input is read until an EOF indication or \q meta-command. This can be used to intersperse interactive input with input from files. Note that Readline behavior will be used only if it is active at the outermost level.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+ <tr><td></td><td>Note: If you want to see the lines on the screen as they are read you must set the variable ECHO to all.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td class="command">\ir or<br /> \include_relative filename </td><td>The \ir command is similar to \i, but resolves relative file names differently. When executing in interactive mode, the two commands behave identically. However, when invoked from a script, \ir interprets file names relative to the directory in which the script is located, rather than the current working directory.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td class="command">\l[+] or<br /> \list[+] [ pattern ] </td><td> List the databases in the server and show their names, owners, character set encodings, and access privileges. If pattern is specified, only databases whose names match the pattern are listed. If + is appended to the command name, database sizes, default tablespaces, and descriptions are also displayed. (Size information is only available for databases that the current user can connect to.)</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td class="command">\lo_export loid filename </td><td>Reads the large object with OID loid from the database and writes it to filename. Note that this is subtly different from the server function lo_export, which acts with the permissions of the user that the database server runs as and on the server's file system.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+ <tr><td></td><td>Tip: Use \lo_list to find out the large object's OID.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td class="command">\lo_import filename [ comment ] </td><td>Stores the file into a PostgreSQL large object. Optionally, it associates the given comment with the object. Example:</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td></td><td>foo=> \lo_import '/home/peter/pictures/photo.xcf' 'a picture of me'</td></tr>
+<tr class="balk"><td>&nbsp;</td><td>lo_import 152801</td></tr>
+<tr><td>&nbsp;</td><td></td></tr>
+ <tr class="balk"><td>&nbsp;</td><td>The response indicates that the large object received object ID 152801, which can be used to access the newly-created large object in the future. For the sake of readability, it is recommended to always associate a human-readable comment with every object. Both OIDs and comments can be viewed with the \lo_list command.</td></tr>
+<tr><td>&nbsp;</td><td></td></tr>
+ <tr class="balk"><td>&nbsp;</td><td>Note that this command is subtly different from the server-side lo_import because it acts as the local user on the local file system, rather than the server's user and file system.</td></tr>
+<tr><td>&nbsp;</td><td></td></tr>
+<tr class="balk"><td class="command">\lo_list	</td><td>	Shows a list of all PostgreSQL large objects currently stored in the database, along with any comments provided for them.</td></tr>
+<tr><td>&nbsp;</td><td></td></tr>
+<tr class="balk"><td class="command">\lo_unlink loid	</td><td>	Deletes the large object with OID loid from the database.</td></tr>
+<tr><td>&nbsp;</td><td></td></tr>
+  <tr class="balk"><td>&nbsp;</td><td>Tip: Use \lo_list to find out the large object's OID.</td></tr>
+<tr><td>&nbsp;</td><td></td></tr>
+<tr class="balk"><td class="command">\o or<br /> \out [ filename ]</td><td></td></tr>
+<tr><td class="command">\o or<br /> \out [ |command ]	</td><td>Arranges to save future query results to the file filename or pipe future results to the shell command command. If no argument is specified, the query output is reset to the standard output.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+ <tr><td>&nbsp;</td><td>"Query results" includes all tables, command responses, and notices obtained from the database server, as well as output of various backslash commands that query the database (such as \d), but not error messages.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+ <tr><td>&nbsp;</td><td>       		Tip: To intersperse text output in between query results, use \qecho.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td class="command">\p or<br /> \print	</td><td>	Print the current query buffer to the standard output.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td class="command">\password [ username ]	</td><td>Changes the password of the specified user (by default, the current user). This command prompts for the new password, encrypts it, and sends it to the server as an ALTER ROLE command. This makes sure that the new password does not appear in cleartext in the command history, the server log, or elsewhere.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td class="command">\prompt [ text ] name	</td><td>Prompts the user to supply text, which is assigned to the variable name. An optional prompt string, text, can be specified. (For multiword prompts, surround the text with single quotes.)</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td>&nbsp;</td><td>    			By default, \prompt uses the terminal for input and output. However, if the -f command line switch was used, \prompt uses standard input and standard output.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td class="command">\pset [ option [ value ] ] </td><td>This command sets options affecting the output of query result tables. option indicates which option is to be set. The semantics of value vary depending on the selected option. For some options, omitting value causes the option to be toggled or unset, as described under the particular option. If no such behavior is mentioned, then omitting value just results in the current setting being displayed.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+ <tr><td></td><td>   			\pset without any arguments displays the current status of all printing options.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td></td><td>    			Adjustable printing options are:</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td>&nbsp;</td><td>    			<span class="output">border</span></td></tr>
+<tr><td>&nbsp;</td><td>        		The value must be a number. In general, the higher the number the more borders and lines the tables will have, but details depend on the particular format. In HTML format, this will translate directly into the border=... attribute. In most other formats only values 0 (no border), 1 (internal dividing lines), and 2 (table frame) make sense, and values above 2 will be treated the same as border = 2. The latex and latex-longtable formats additionally allow a value of 3 to add dividing lines between data rows.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td>&nbsp;</td><td>    			<span class="output">columns</span></td></tr>
+<tr class="balk"><td>&nbsp;</td><td>        		Sets the target width for the wrapped format, and also the width limit for determining whether output is wide enough to require the pager or switch to the vertical display in expanded auto mode. Zero (the default) causes the target width to be controlled by the environment variable COLUMNS, or the detected screen width if COLUMNS is not set. In addition, if columns is zero then the wrapped format only affects screen output. If columns is nonzero then file and pipe output is wrapped to that width as well.</td></tr>
+<tr><td>&nbsp;</td><td></td></tr>
+<tr class="balk"><td></td><td>    			<span class="output">expanded (or x)</span></td></tr>
+<tr><td>&nbsp;</td><td>        		If value is specified it must be either on or off, which will enable or disable expanded mode, or auto. If value is omitted the command toggles between the on and off settings. When expanded mode is enabled, query results are displayed in two columns, with the column name on the left and the data on the right. This mode is useful if the data wouldn't fit on the screen in the normal "horizontal" mode. In the auto setting, the expanded mode is used whenever the query output is wider than the screen, otherwise the regular mode is used. The auto setting is only effective in the aligned and wrapped formats. In other formats, it always behaves as if the expanded mode is off.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td>&nbsp;</td><td>    			<span class="output">fieldsep</span></td></tr>
+<tr class="balk"><td>&nbsp;</td><td>        		Specifies the field separator to be used in unaligned output format. That way one can create, for example, tab- or comma-separated output, which other programs might prefer. To set a tab as field separator, type \pset fieldsep '\t'. The default field separator is '|' (a vertical bar).</td></tr>
+<tr><td>&nbsp;</td><td></td></tr>
+<tr class="balk"><td>&nbsp;</td><td>    			<span class="output">fieldsep_zero</span></td></tr>
+<tr><td>&nbsp;</td><td>        		Sets the field separator to use in unaligned output format to a zero byte.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>    			
+<tr><td>&nbsp;</td><td><span class="output">footer</span></td></tr>
+<tr class="balk"><td>&nbsp;</td><td>        		If value is specified it must be either on or off which will enable or disable display of the table footer (the (n rows) count). If value is omitted the command toggles footer display on or off.</td></tr>
+<tr><td>&nbsp;</td><td>    			</td></tr>
+<tr class="balk"><td>&nbsp;</td><td>  <span class="output">format</span>      		</td></tr>
+<tr><td>&nbsp;</td><td>Sets the output format to one of unaligned, aligned, wrapped, html, asciidoc, latex (uses tabular), latex-longtable, or troff-ms. Unique abbreviations are allowed. (That would mean one letter is enough.)unaligned format writes all columns of a row on one line, separated by the currently active field separator. This is useful for creating output that might be intended to be read in by other programs (for example, tab-separated or comma-separated format).</td></tr>
+<tr class="balk"><td>&nbsp;</td><td>        		aligned format is the standard, human-readable, nicely formatted text output; this is the default.</td></tr>
+<tr><td>&nbsp;</td><td></td></tr>
+<tr class="balk"><td>&nbsp;</td><td>        		wrapped format is like aligned but wraps wide data values across lines to make the output fit in the target column width. The target width is determined as described under the columns option. Note that psql will not attempt to wrap column header titles; therefore, wrapped format behaves the same as aligned if the total width needed for column headers exceeds the target.</td></tr>
+<tr><td>&nbsp;</td><td></td></tr>
+<tr class="balk"><td>&nbsp;</td><td>        		The html, asciidoc, latex, latex-longtable, and troff-ms formats put out tables that are intended to be included in documents using the respective mark-up language. They are not complete documents! This might not be necessary in HTML, but in LaTeX you must have a complete document wrapper. latex-longtable also requires the LaTeX longtable and booktabs packages.</td></tr>
+<tr><td>&nbsp;</td><td>    			</td></tr>
+<tr class="balk"><td>&nbsp;</td><td><span class="output">linestyle</span></td></tr>
+<tr><td>&nbsp;</td><td>        		Sets the border line drawing style to one of ascii, old-ascii or unicode. Unique abbreviations are allowed. (That would mean one letter is enough.) The default setting is ascii. This option only affects the aligned and wrapped output formats.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td>&nbsp;</td><td>        		ascii style uses plain ASCII characters. Newlines in data are shown using a + symbol in the right-hand margin. When the wrapped format wraps data from one line to the next without a newline character, a dot (.) is shown in the right-hand margin of the first line, and again in the left-hand margin of the following line.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td>&nbsp;</td><td>        		old-ascii style uses plain ASCII characters, using the formatting style used in PostgreSQL 8.4 and earlier. Newlines in data are shown using a : symbol in place of the left-hand column separator. When the data is wrapped from one line to the next without a newline character, a ; symbol is used in place of the left-hand column separator.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+ <tr><td>&nbsp;</td><td>       		unicode style uses Unicode box-drawing characters. Newlines in data are shown using a carriage return symbol in the right-hand margin. When the data is wrapped from one line to the next without a newline character, an ellipsis symbol is shown in the right-hand margin of the first line, and again in the left-hand margin of the following line.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td>&nbsp;</td><td>        		When the border setting is greater than zero, the linestyle option also determines the characters with which the border lines are drawn. Plain ASCII characters work everywhere, but Unicode characters look nicer on displays that recognize them.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td>&nbsp;</td><td>    			<span class="output">null</span></td></tr>
+<tr class="balk"><td>&nbsp;</td><td>        		Sets the string to be printed in place of a null value. The default is to print nothing, which can easily be mistaken for an empty string. For example, one might prefer \pset null '(null)'.</td></tr>
+<tr><td>&nbsp;</td><td></td></tr>
+<tr class="balk"><td>&nbsp;</td><td>    			<span class="output">numericlocale</span></td></tr>
+<tr><td>&nbsp;</td><td>        		If value is specified it must be either on or off which will enable or disable display of a locale-specific character to separate groups of digits to the left of the decimal marker. If value is omitted the command toggles between regular and locale-specific numeric output.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td>&nbsp;</td><td>    			<span class="output">pager</span></td></tr>
+<tr class="balk"><td>&nbsp;</td><td>        		Controls use of a pager program for query and psql help output. If the environment variable PAGER is set, the output is piped to the specified program. Otherwise a platform-dependent default (such as more) is used.</td></tr>
+<tr><td>&nbsp;</td><td></td></tr>
+<tr class="balk"><td>&nbsp;</td><td>        		When the pager option is off, the pager program is not used. When the pager option is on, the pager is used when appropriate, i.e., when the output is to a terminal and will not fit on the screen. The pager option can also be set to always, which causes the pager to be used for all terminal output regardless of whether it fits on the screen. \pset pager without a value toggles pager use on and off.</td></tr>
+<tr><td>&nbsp;</td><td></td></tr>
+<tr class="balk"><td>&nbsp;</td><td>    			<span class="output">pager_min_lines</span></td></tr>
+<tr><td>&nbsp;</td><td>        		If pager_min_lines is set to a number greater than the page height, the pager program will not be called unless there are at least this many lines of output to show. The default setting is 0.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td>&nbsp;</td><td>    			<span class="output">recordsep</span></td></tr>
+<tr class="balk"><td>&nbsp;</td><td>        		Specifies the record (line) separator to use in unaligned output format. The default is a newline character.</td></tr>
+<tr><td>&nbsp;</td><td></td></tr>
+<tr class="balk"><td>&nbsp;</td><td>    			<span class="output">recordsep_zero</span></td></tr>
+<tr><td>&nbsp;</td><td>        		Sets the record separator to use in unaligned output format to a zero byte.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td>&nbsp;</td><td>    			<span class="output">tableattr (or T)</span></td></tr>
+<tr class="balk"><td>&nbsp;</td><td>        		In HTML format, this specifies attributes to be placed inside the table tag. This could for example be cellpadding or bgcolor. Note that you probably don't want to specify border here, as that is already taken care of by \pset border. If no value is given, the table attributes are unset.</td></tr>
+<tr><td>&nbsp;</td><td></td></tr>
+<tr class="balk"><td>&nbsp;</td><td>        		In latex-longtable format, this controls the proportional width of each column containing a left-aligned data type. It is specified as a whitespace-separated list of values, e.g. '0.2 0.2 0.6'. Unspecified output columns use the last specified value.</td></tr>
+<tr><td>&nbsp;</td><td></td></tr>
+<tr class="balk"><td>&nbsp;</td><td>    			<span class="output">title</span></td></tr>
+<tr><td>&nbsp;</td><td>        		Sets the table title for any subsequently printed tables. This can be used to give your output descriptive tags. If no value is given, the title is unset.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td>&nbsp;</td><td>    			tuples_only (or t)</td></tr>
+<tr class="balk"><td>&nbsp;</td><td>        		If value is specified it must be either on or off which will enable or disable tuples-only mode. If value is omitted the command toggles between regular and tuples-only output. Regular output includes extra information such as column headers, titles, and various footers. In tuples-only mode, only actual table data is shown.</td></tr>
+<tr><td>&nbsp;</td><td></td></tr>
+<tr class="balk"><td>&nbsp;</td><td>    			<span class="output">unicode_border_linestyle</span></td></tr>
+<tr><td>&nbsp;</td><td>        		Sets the border drawing style for the unicode line style to one of single or double.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td>&nbsp;</td><td>    			<span class="output">unicode_column_linestyle</span></td></tr>
+<tr class="balk"><td>&nbsp;</td><td>        		Sets the column drawing style for the unicode line style to one of single or double.</td></tr>
+<tr><td>&nbsp;</td><td></td></tr>
+<tr class="balk"><td>&nbsp;</td><td>    			<span class="output">unicode_header_linestyle</span></td></tr>
+<tr><td>&nbsp;</td><td>        		Sets the header drawing style for the unicode line style to one of single or double.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td>&nbsp;</td><td>    			Illustrations of how these different formats look can be seen in the Examples section.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td>&nbsp;</td><td>        		Tip: There are various shortcut commands for \pset. See \a, \C, \H, \t, \T, and \x.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td class="command">\q or<br /> \quit		</td><td>Quits the psql program. In a script file, only execution of that script is terminated.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td class="command">\qecho text [ ... ]	</td><td>This command is identical to \echo except that the output will be written to the query output channel, as set by \o.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td><tr></td></tr>
+<tr><td class="command">\r or<br /> \reset	</td><td>	Resets (clears) the query buffer.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td class="command">\s [ filename ]	</td><td>	Print psql's command line history to filename. If filename is omitted, the history is written to the standard output (using the pager if appropriate). This command is not available if psql was built without Readline support.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td class="command">\set [ name [ value [ ... ] ] ]</td><td> Sets the psql variable name to value, or if more than one value is given, to the concatenation of all of them. If only one argument is given, the variable is set with an empty value. To unset a variable, use the \unset command.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td>&nbsp;</td><td>    			\set without any arguments displays the names and values of all currently-set psql variables.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td>&nbsp;</td><td>    			Valid variable names can contain letters, digits, and underscores. See the section Variables below for details. Variable names are case-sensitive.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td>&nbsp;</td><td>    			Although you are welcome to set any variable to anything you want, psql treats several variables as special. They are documented in the section about variables.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td>&nbsp;</td><td>        		Note: This command is unrelated to the SQL command SET.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td class="command">\setenv name [ value ]</td><td> Sets the environment variable name to value, or if the value is not supplied, unsets the environment variable. Example:</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+ <tr><td>&nbsp;</td><td>   			testdb=> \setenv PAGER less</td></tr>
+<tr class="balk"><td>&nbsp;</td><td>    			testdb=> \setenv LESS -imx4F</td></tr>
+<tr><td>&nbsp;</td><td></td></tr>
+<tr class="balk"><td class="command">\sf[+] function_description </td><td>This command fetches and shows the definition of the named function, in the form of a CREATE OR REPLACE FUNCTION command. The definition is printed to the current query output channel, as set by \o.</td></tr>
+<tr><td>&nbsp;</td><td></td></tr>
+<tr class="balk"><td>&nbsp;</td><td>    			The target function can be specified by name alone, or by name and arguments, for example foo(integer, text). The argument types must be given if there is more than one function of the same name.</td></tr>
+<tr><td>&nbsp;</td><td></td></tr>
+<tr class="balk"><td>&nbsp;</td><td>    			If + is appended to the command name, then the output lines are numbered, with the first line of the function body being line 1.</td></tr>
+<tr><td class="command">\t			</td><td>Toggles the display of output column name headings and row count footer. This command is equivalent to \pset tuples_only and is provided for convenience.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td class="command">\T table_options	</td><td>Specifies attributes to be placed within the table tag in HTML output format. This command is equivalent to \pset tableattr table_options.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td class="command">\timing [ on | off ]</td><td>	Without parameter, toggles a display of how long each SQL statement takes, in milliseconds. With parameter, sets same.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td class="command">\unset name	</td><td>	Unsets (deletes) the psql variable name.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td class="command">\w or<br /> \write filename</td><td></td></tr>	
+<tr class="balk"><td class="command">\w or<br /> \write |command	</td><td>Outputs the current query buffer to the file filename or pipes it to the shell command command.</td></tr>
+<tr><td>&nbsp;</td><td></td></tr>
+<tr class="balk"><td class="command">\watch [ seconds ]	</td><td>Repeatedly execute the current query buffer (like \g) until interrupted or the query fails. Wait the specified number of seconds (default 2) between executions.</td></tr>
+<tr><td>&nbsp;</td><td></td></tr>
+<tr class="balk"><td class="command">\x [ on | off | auto ]</td><td>	Sets or toggles expanded table formatting mode. As such it is equivalent to \pset expanded.</td></tr>
+<tr><td>&nbsp;</td><td></td></tr>
+<tr class="balk"><td class="command">\z [ pattern ]	</td><td>	Lists tables, views and sequences with their associated access privileges. If a pattern is specified, only tables, views and sequences whose names match the pattern are listed.</td></tr>
+<tr><td>&nbsp;</td><td></td></tr>
+<tr class="balk"><td>&nbsp;</td><td>    			This is an alias for \dp ("display privileges").</td></tr>
+<tr><td class="command">\! [ command ]	</td><td>	Escapes to a separate shell or executes the shell command command. The arguments are not further interpreted; the shell will see them as-is. In particular, the variable substitution rules and backslash escapes do not apply.</td></tr>
+<tr class="balk"><td>&nbsp;</td><td></td></tr>
+<tr><td class="command">\? [ topic ]	</td><td>	Shows help information. The optional topic parameter (defaulting to commands) selects which part of psql is explained: commands describes psql's backslash commands; options describes the command-line options that can be passed to psql; and variables shows help about psql configuration variables.</td></tr>
+</table>
+</p>
+<p>https://www.postgresql.org/docs/9.3/static/app-pg-ctl.html</p>
+<p class="command">
+pg_ctl<br />
+<b>Name</b><br />
+pg_ctl -- initialize, start, stop, or control a PostgreSQL server<br />
+Synopsis<br />
+<br />
+pg_ctl init[db] [-s] [-D datadir] [-o initdb-options]<br />
+<br />
+pg_ctl start [-w] [-t seconds] [-s] [-D datadir] [-l filename] [-o options] [-p path] [-c]<br />
+<br />
+pg_ctl stop [-W] [-t seconds] [-s] [-D datadir] [-m s[mart] | f[ast] | i[mmediate] ]<br />
+<br />
+pg_ctl restart [-w] [-t seconds] [-s] [-D datadir] [-c] [-m s[mart] | f[ast] | i[mmediate] ] [-o options]<br />
+<br />
+pg_ctl reload [-s] [-D datadir]<br />
+<br />
+pg_ctl status [-D datadir]<br />
+<br />
+pg_ctl promote [-s] [-D datadir]<br />
+<br />
+pg_ctl kill signal_name process_id<br />
+<br />
+pg_ctl register [-N servicename] [-U username] [-P password] [-D datadir] [-S a[uto] | d[emand] ] [-w] [-t seconds] [-s] [-o options]<br />
+<br />
+pg_ctl unregister [-N servicename]<br />
+</p>
+
+
+
+</div>
+
+<footer>
+	<ul>
+	&copy; Copyright  by unknown
+	</ul>
+</footer>
+<!-- script tbv  de search box -->
+
+<script language="JavaScript">
+	<!--
+	var TRange=null;
+
+	function findString (str) {
+		if (parseInt(navigator.appVersion)<4) return;
+			var strFound;
+	if (window.find) {
+
+		// CODE FOR BROWSERS THAT SUPPORT window.find
+
+		strFound=self.find(str);
+ 		if (!strFound) {
+ 			strFound=self.find(str,0,1);
+			while (self.find(str,0,1)) continue;
+  			}
+ 		}
+ 	else if (navigator.appName.indexOf("Microsoft")!=-1) {
+
+  		// EXPLORER-SPECIFIC CODE
+
+  		if (TRange!=null) {
+   			TRange.collapse(false);
+   			strFound=TRange.findText(str);
+   			if (strFound) TRange.select();
+  		}
+  		if (TRange==null || strFound==0) {
+   			TRange=self.document.body.createTextRange();
+   			strFound=TRange.findText(str);
+   			if (strFound) TRange.select();
+  		}
+ 	}
+ 	else if (navigator.appName=="Opera") {
+  		alert ("Opera browsers not supported, sorry...")
+  	return;
+ 	}
+ 	if (!strFound) alert ("String '"+str+"' not found!")
+ 		return;
+	}
+	//-->
+</script>
+
+
+</body>
+</html>
+

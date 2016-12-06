@@ -1,0 +1,86 @@
+body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form, fieldset, input, textarea, blockquote {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 15px;
+	color: black;
+	margin-top: 3px;
+	margin-right: 50px;
+	margin-left: 60px;
+}
+
+h1 {
+	color: #990000;
+	background-color: #FFFFFF;
+	margin-top: 10px;
+	font-size: 22px;
+	text-indent: -20px;
+}
+
+h2 {
+	color: #990000;
+	background-color: #FFFFFF;
+	margin-top: 10px;
+	font-size: 16px;
+}
+
+h3 {
+	color: #990000;
+	background-color: #FFFFFF;
+	margin-top: 10px;
+	font-size: 14px;
+}
+
+p {
+    display: block;
+    margin-top: 1em;
+    margin-bottem: 1em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+table {
+	border: 1px solid #dddddd;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    width: 100%;
+}   
+
+th {
+	text-align: left;
+}
+
+td, td {
+	width: 250px;
+}
+em {
+	color: red;
+	font-weight: bold;
+}
+
+.command {
+	font-family: courier;
+	font-size: 90%;
+}
+
+.header {
+	position: fixed;
+	left: 650px;
+	top: 15px;
+	z-index: 1; /* menu's op de voorgrond */
+}
+
+.pos_right {
+	position: relative;	
+	left: 120px;
+	z-index: -1
+}
+
+#balk {
+    background-color: #dddddd;
+}
